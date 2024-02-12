@@ -1,0 +1,6 @@
+{
+  "appId": "com.ikejaelectric.cwf",
+  "appName": "IE CWF",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

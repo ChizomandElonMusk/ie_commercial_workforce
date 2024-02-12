@@ -1,0 +1,156 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_cedb2656"
+  },
+  {
+    "name": "crmd",
+    "path": "/crmd",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/index.vue",
+    "chunkName": "pages/crmd/index",
+    "_name": "_098aca9e"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_4449405c"
+  },
+  {
+    "name": "forgot",
+    "path": "/forgot",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/forgot.vue",
+    "chunkName": "pages/forgot",
+    "_name": "_14e1cd0b"
+  },
+  {
+    "name": "forms",
+    "path": "/forms",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/forms.vue",
+    "chunkName": "pages/forms",
+    "_name": "_5555b477"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_fc1c2a9e"
+  },
+  {
+    "name": "md-customer-ir",
+    "path": "/md-customer-ir",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/md-customer-ir.vue",
+    "chunkName": "pages/md-customer-ir",
+    "_name": "_e0b2aeac"
+  },
+  {
+    "name": "nmd-activity-checklist",
+    "path": "/nmd-activity-checklist",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/nmd-activity-checklist.vue",
+    "chunkName": "pages/nmd-activity-checklist",
+    "_name": "_1966c018"
+  },
+  {
+    "name": "nmd-pre-survey-checklist",
+    "path": "/nmd-pre-survey-checklist",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/nmd-pre-survey-checklist.vue",
+    "chunkName": "pages/nmd-pre-survey-checklist",
+    "_name": "_65bb8fe6"
+  },
+  {
+    "name": "payment-channel",
+    "path": "/payment-channel",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/payment-channel.vue",
+    "chunkName": "pages/payment-channel",
+    "_name": "_6e306bf8"
+  },
+  {
+    "name": "sent",
+    "path": "/sent",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/sent.vue",
+    "chunkName": "pages/sent",
+    "_name": "_18dc6b00"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/signup.vue",
+    "chunkName": "pages/signup",
+    "_name": "_08a55880"
+  },
+  {
+    "name": "user-info",
+    "path": "/user-info",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/user-info.vue",
+    "chunkName": "pages/user-info",
+    "_name": "_f3926d90"
+  },
+  {
+    "name": "vsm-checklist",
+    "path": "/vsm-checklist",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/vsm-checklist.vue",
+    "chunkName": "pages/vsm-checklist",
+    "_name": "_21cee4b1"
+  },
+  {
+    "name": "crmd-account_reactivation",
+    "path": "/crmd/account_reactivation",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/account_reactivation.vue",
+    "chunkName": "pages/crmd/account_reactivation",
+    "_name": "_59dc5a4c"
+  },
+  {
+    "name": "crmd-account_suspension",
+    "path": "/crmd/account_suspension",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/account_suspension.vue",
+    "chunkName": "pages/crmd/account_suspension",
+    "_name": "_1714a360"
+  },
+  {
+    "name": "crmd-correction_of_dials",
+    "path": "/crmd/correction_of_dials",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/correction_of_dials.vue",
+    "chunkName": "pages/crmd/correction_of_dials",
+    "_name": "_169e66fb"
+  },
+  {
+    "name": "crmd-correction_of_lar_par",
+    "path": "/crmd/correction_of_lar_par",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/correction_of_lar_par.vue",
+    "chunkName": "pages/crmd/correction_of_lar_par",
+    "_name": "_3792d8f7"
+  },
+  {
+    "name": "crmd-switch_to_actual_read",
+    "path": "/crmd/switch_to_actual_read",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/switch_to_actual_read.vue",
+    "chunkName": "pages/crmd/switch_to_actual_read",
+    "_name": "_2498e7a6"
+  },
+  {
+    "name": "crmd-switch_to_dormant",
+    "path": "/crmd/switch_to_dormant",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/switch_to_dormant.vue",
+    "chunkName": "pages/crmd/switch_to_dormant",
+    "_name": "_9a69f6b2"
+  },
+  {
+    "name": "crmd-switch_to_quantitative",
+    "path": "/crmd/switch_to_quantitative",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/switch_to_quantitative.vue",
+    "chunkName": "pages/crmd/switch_to_quantitative",
+    "_name": "_63895f7e"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_8f6b70cc"
+  }
+]
