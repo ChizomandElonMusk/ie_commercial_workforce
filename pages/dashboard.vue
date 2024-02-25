@@ -21,6 +21,7 @@
   
       <div class="row">
         <div class="row">
+
           <div class="col s12 center">
             <nuxt-link to="/crmd">
               <div class="card-panel orange">
@@ -33,6 +34,28 @@
           </div>
 
           <div class="col s12 center">
+            <nuxt-link to="/customer_mapping">
+              <div class="card-panel blue">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Customer Mapping</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center">
+            <nuxt-link to="/customer_details_validation">
+              <div class="card-panel purple">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Customer Details Validation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <!-- <div class="col s12 center">
             <nuxt-link to="./about">
               <div class="card-panel red lighten-1">
                 <span class="white-text">
@@ -41,7 +64,7 @@
                 </span>
               </div>
             </nuxt-link>
-          </div>
+          </div> -->
 
           <div class="col s12 center">
               <div class="card-panel red" @click="logOut">
