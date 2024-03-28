@@ -58,8 +58,8 @@
       data() {
         return {
           backgroundUrl,
-          username: '',
-          password: '',
+          username: 'cechehieuka',
+          password: '@@@1KingGod1234',
           hidePreLoader: true,
         }
       },
@@ -68,18 +68,82 @@
 
         signIn() {
           M.toast({html: '<b class="yellow-text">Please wait...</b>'})
-          let uName = this.username.trim()
-          let pWord = this.password.trim()
-          console.log(`password -> ${pWord}     username -> ${uName}`)
-          if (uName === '' || pWord === '') {
+          // this.$router.push('./dashboard')
+          this.username = this.username.trim()
+          this.password = this.password.trim()
+          // this.convertEmail(this.username, this.password)
+
+          // console.log(`username -> ${this.username}     password -> ${this.password}`)
+          if (this.username === '' || this.password === '') {
             M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
           } else {
             this.hidePreLoader = false
-            this.convertEmail(uName, pWord)
+            // this.callLoginApi()
+            this.convertEmail(this.username, this.password)
 
           }
 
         },
+
+
+        // async callLoginApi () {
+        //   try {
+
+
+
+        //     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
+        //       method: 'POST',
+        //       headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //       },
+        //       body: JSON.stringify({
+        //         usernameOrEmail: this.username, 
+        //         password: this.password,
+        //       })
+        //     });
+
+        //     console.log('content is being converted to json')
+        //     const content = await rawResponse.json();
+
+        //     console.log(content)
+
+
+        //     let responseCode = content.code
+        //     let message = content.message
+
+        //     console.log('if statement is being ran to check response')
+        //     console.log('response code ', responseCode)
+        //     console.log('response token ', content.token)
+        //     if(responseCode == "09" || responseCode == null || responseCode == undefined) {
+
+        //       M.toast({html: `<b class="red-text">${message}</b>`})
+        //       this.hidePreLoader = true
+
+        //     } else if(responseCode === '00') {
+
+        //         M.toast({html: `<b class="green-text">Welcome</b>`})
+        //         let token = content.token
+
+        //         if (process.client) {
+        //           localStorage.setItem('token', token)
+        //           // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
+        //         }
+
+        //         this.hidePreLoader = true
+        //         window.location = './dashboard'
+        //         // this.$router.push('./dashboard')
+        //     }
+
+        //   } catch (error) {
+        //     console.log(`Your error says -> ${error}`)
+        //     console.log(error)
+        //     M.toast({html: `<b class="red-text">${error}</b>`})
+        //     this.hidePreLoader = true
+        //   }
+
+
+        // },
 
         async convertEmail(uname, password) {
 
@@ -87,10 +151,11 @@
           let username = uname
           let pWord = password
 
-          let encrytedUsername = this.encryptWithAes256(username, encrptionKey)
+          // let encrytedUsername = this.encryptWithAes256(username, encrptionKey)
+          let encrytedUsername = username
           let encrytedPassword = this.encryptWithAes256(pWord, encrptionKey)
 
-          console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
+          // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
 
           console.log('trying api now........')
           
@@ -98,15 +163,14 @@
 
 
 
-            const rawResponse = await fetch('https://api.ikejaelectric.com/authservice/1.0/auth/login', {
+            const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
             method: 'POST',
               headers: {
-                'Auth': 'Bearer fae96b00-8ef4-3473-bfb6-c5b1107b2c2b', 
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                email: encrytedUsername, 
+                usernameOrEmail: encrytedUsername, 
                 password: encrytedPassword,
               })
             });
@@ -117,7 +181,7 @@
             console.log(content)
 
 
-            let responseCode = content.responseCode
+            let responseCode = content.code
             let message = content.message
             
             console.log('if statement is being ran to check response')
@@ -129,11 +193,13 @@
             } else if(responseCode === '00') {
 
                 M.toast({html: `<b class="green-text">Welcome</b>`})
-                let token = content.payload.token
+                let token = content.token
+                let userId = content.userId
 
                 if (process.client) {
                   localStorage.setItem('token', token)
-                  localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
+                  localStorage.setItem('userId', userId)
+                  // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
                 }
 
                 this.hidePreLoader = true

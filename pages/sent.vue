@@ -21,17 +21,7 @@
                 </h6>
             </div>
             <div class="col s12 center red-text">
-                <div class="row">
-                    <div class="col s12 center">
-                        <nuxt-link to="./forms">
-                            <div class="card-panel orange">
-                                <span class="white-text">
-                                    <h6>Back to forms</h6>
-                                </span>
-                            </div>
-                        </nuxt-link>
-                    </div>
-                </div>
+                
 
                 <div class="row">
                     <div class="col s12 center">

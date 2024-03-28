@@ -55,6 +55,83 @@
             </nuxt-link>
           </div>
 
+          <div class="col s12 center">
+            <nuxt-link to="/energy_theft">
+              <div class="card-panel grey">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Energy Theft</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <!-- <div class="col s12 center">
+            <nuxt-link to="/customer_complaints">
+              <div class="card-panel black">
+                <span class="white-text">
+                  <i class="material-icons white-text">folder_open</i>
+                  <h6 class="white-text">Customer Complaints</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center">
+            <nuxt-link to="/suspended_cv">
+              <div class="card-panel pink">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Suspended Customers Validation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center">
+            <nuxt-link to="/newly_installed_ppm">
+              <div class="card-panel red">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Newly Installed PPM CV</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div> -->
+
+          <div class="col s12 center">
+            <nuxt-link to="/none_vending_cv">
+              <div class="card-panel purple">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Non vending Customer Validation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <!-- <div class="col s12 center">
+            <nuxt-link to="/non_inclusion_capture">
+              <div class="card-panel blue darken-4">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Non-inclusion capture</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div> -->
+
+          <div class="col s12 center">
+            <nuxt-link to="/field_for_customer_visitation">
+              <div class="card-panel yellow">
+                <span class="black-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Customer visitation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
           <!-- <div class="col s12 center">
             <nuxt-link to="./about">
               <div class="card-panel red lighten-1">
@@ -113,12 +190,12 @@
         },
 
         async getFullname() {
-          this.fullname = localStorage.getItem('fullname')
+          // this.fullname = localStorage.getItem('fullname')
         }
       },
 
       created() {
-        this.getFullname()
+        // this.getFullname()
       }
   }
   </script>

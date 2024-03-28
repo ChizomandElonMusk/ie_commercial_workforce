@@ -14,6 +14,13 @@
     "_name": "_098aca9e"
   },
   {
+    "name": "customer_complaints",
+    "path": "/customer_complaints",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/customer_complaints/index.vue",
+    "chunkName": "pages/customer_complaints/index",
+    "_name": "_724fad34"
+  },
+  {
     "name": "customer_details_validation",
     "path": "/customer_details_validation",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/customer_details_validation/index.vue",
@@ -33,6 +40,20 @@
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/dashboard.vue",
     "chunkName": "pages/dashboard",
     "_name": "_4449405c"
+  },
+  {
+    "name": "energy_theft",
+    "path": "/energy_theft",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/energy_theft/index.vue",
+    "chunkName": "pages/energy_theft/index",
+    "_name": "_1898aa73"
+  },
+  {
+    "name": "field_for_customer_visitation",
+    "path": "/field_for_customer_visitation",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/field_for_customer_visitation/index.vue",
+    "chunkName": "pages/field_for_customer_visitation/index",
+    "_name": "_a9cea9ca"
   },
   {
     "name": "forgot",
@@ -63,6 +84,13 @@
     "_name": "_e0b2aeac"
   },
   {
+    "name": "newly_installed_ppm",
+    "path": "/newly_installed_ppm",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/newly_installed_ppm/index.vue",
+    "chunkName": "pages/newly_installed_ppm/index",
+    "_name": "_4acaa93e"
+  },
+  {
     "name": "nmd-activity-checklist",
     "path": "/nmd-activity-checklist",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/nmd-activity-checklist.vue",
@@ -75,6 +103,20 @@
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/nmd-pre-survey-checklist.vue",
     "chunkName": "pages/nmd-pre-survey-checklist",
     "_name": "_65bb8fe6"
+  },
+  {
+    "name": "non_inclusion_capture",
+    "path": "/non_inclusion_capture",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/non_inclusion_capture/index.vue",
+    "chunkName": "pages/non_inclusion_capture/index",
+    "_name": "_5de6653c"
+  },
+  {
+    "name": "none_vending_cv",
+    "path": "/none_vending_cv",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/none_vending_cv/index.vue",
+    "chunkName": "pages/none_vending_cv/index",
+    "_name": "_57e91787"
   },
   {
     "name": "payment-channel",
@@ -96,6 +138,13 @@
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/signup.vue",
     "chunkName": "pages/signup",
     "_name": "_08a55880"
+  },
+  {
+    "name": "suspended_cv",
+    "path": "/suspended_cv",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/suspended_cv/index.vue",
+    "chunkName": "pages/suspended_cv/index",
+    "_name": "_1954fefc"
   },
   {
     "name": "user-info",
@@ -138,6 +187,13 @@
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/correction_of_lar_par.vue",
     "chunkName": "pages/crmd/correction_of_lar_par",
     "_name": "_3792d8f7"
+  },
+  {
+    "name": "crmd-sent",
+    "path": "/crmd/sent",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/sent.vue",
+    "chunkName": "pages/crmd/sent",
+    "_name": "_6d99d909"
   },
   {
     "name": "crmd-switch_to_actual_read",

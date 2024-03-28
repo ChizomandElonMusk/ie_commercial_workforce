@@ -77,44 +77,67 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- cutomer name -->
+                        <!-- undertaking one -->
                         <div class="col s12">
+                            <select class="custom-select" v-model="service_type">
+                                <option value="" disabled selected>Service Type *</option>
+                                <option value="postpaid">Postpaid</option>
+                                <option value="prepaid">Prepaid</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row" v-if="service_type == 'postpaid'">
+                        <div class="col s9">
                             <input type="text" placeholder="Account number" v-model="account_number"> 
                         </div>
+                        <div class="col s3">
+                            <button class="btn btn-flat red white-text" @click="checkNumber()">Check</button>
+                        </div>
                     </div>
+                    <div class="row" v-if="service_type == 'prepaid'">
+                        <div class="col s9">
+                            <input type="text" placeholder="Meter number" v-model="meter_number"> 
+                        </div>
+                        <div class="col s3">
+                            <button class="btn btn-flat red white-text" @click="checkNumber()">Check</button>
+                        </div>
+                    </div>
+
 
                     <div class="row">
                         <!-- cutomer name -->
                         <div class="col s12">
-                            <input type="text" placeholder="Account type" v-model="account_type"> 
+                            <input type="text" placeholder="Account type" v-model="account_type" disabled> 
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- cutomer name -->
                         <div class="col s12">
-                            <input type="text" placeholder="Account name" v-model="account_name">
+                            <input type="text" placeholder="Account name" v-model="account_name" disabled>
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- cutomer name -->
                         <div class="col s12">
-                            <input type="text" placeholder="Tarrif" v-model="tarrif">
+                            <input type="text" placeholder="Tarrif" v-model="tarrif" disabled>
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- cutomer name -->
                         <div class="col s12">
-                            <input type="text" placeholder="Address" v-model="address">
+                            <input type="text" placeholder="Address" v-model="address" disabled>
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- business unit -->
                         <div class="col s12">
-                            <select class="custom-select" v-model="business_unit">
+                            <b>BU:</b> {{ business_unit }}
+                            <!-- <select class="custom-select" v-model="business_unit">
                                 <option value="" disabled selected>Business Unit *</option>
                                 <option value="Abule Egba">Abule Egba</option>
                                 <option value="Akowonjo">Akowonjo</option>
@@ -122,7 +145,7 @@
                                 <option value="Ikorodu">Ikorodu</option>
                                 <option value="Oshodi">Oshodi</option>
                                 <option value="Shomolu">Shomolu</option>
-                            </select>
+                            </select> -->
                         </div>
                     </div>
                     <br>
@@ -130,7 +153,8 @@
                     <div class="row">
                         <!-- undertaking one -->
                         <div class="col s12">
-                            <select class="custom-select" v-model="undertaking_one">
+                            <b>UT:</b> {{ undertaking_one }}
+                            <!-- <select class="custom-select" v-model="undertaking_one">
                                 <option value="" disabled selected>Undertaking *</option>
                                 <option value="ABORU">ABORU</option>
                                 <option value="ABULE-ODU">ABULE-ODU</option>
@@ -191,27 +215,27 @@
                                 <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
                                 <option value="OWUTU">OWUTU</option>
                                 <option value="PTC">PTC</option>
-                            </select>
+                            </select> -->
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- DT name -->
                         <div class="col s12">
-                            <input type="text" placeholder="DT name" v-model="dt_name">
+                            <input type="text" placeholder="DT name" v-model="dt_name" disabled>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="text" v-model="phone_number" placeholder="Phone number">
+                            <input type="text" v-model="phone_number" placeholder="Phone number" disabled>
                         </div>
                     </div>
 
                     <div class="row">
                         <!-- address -->
                         <div class="col s12">
-                            <input type="text" placeholder="Location" v-model="location">
+                            <input type="text" placeholder="Location" v-model="location" disabled>
                         </div>
                     </div>
 
@@ -220,9 +244,11 @@
                         <div class="col s12">
                             <select class="custom-select" v-model="reason_for_dormancy">
                                 <option value="" disabled selected>Reason for dormancy *</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
+                                <option value="Untraceable">Untraceable</option>
+                                <option value="Duplicated Bill or Account">Duplicated Bill or Account</option>
+                                <option value="Demolished">Demolished</option>
+                                <option value="Multiple Accounts for same apartment">Multiple Accounts for same apartment</option>
+                                <option value="PPM Installed">PPM Installed</option>=
                             </select>
                         </div>
                     </div>
@@ -235,9 +261,9 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Pic 1
+                                Pic of Evidence
                             </h6>
-                            <button class="btn red btn-large" @click="imagePickerForTheServiceWireFromPoleToMeteringPoint()">
+                            <button class="btn red btn-large" @click="imagePickerForEvidence()">
                                 <i class="material-icons white-text">camera_alt</i>
                             </button>
                             <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -247,54 +273,13 @@
                     <!-- output for pic of the service wire from pole to metering point -->
                     <div class="row">
                         <div class="col s12">
-                            <img class=" responsive-img" id="output-pic-of-the-service-wire-from-pole-to-metering-point" />
+                            <img class=" responsive-img" id="output-pic-of-evidence" />
                         </div>
                     </div>
 
 
 
-                    <div class="row">
-                        <!-- Pic of building* -->
-                        <div class="col s12">
-                            <h6 class="red-text">
-                                <!-- Picture of building * -->
-                                Pic 2
-                            </h6>
-                            <button class="btn red btn-large" @click="imagePickerBuilding()">
-                                <i class="material-icons white-text">camera_alt</i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- output for pic of building -->
-                    <div class="row">
-                        <div class="col s12">
-                            <img class=" responsive-img" id="output-pic-of-building" />
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="row">
-                        <!--  Picture of installation /Cut Out/ metering point 1 * -->
-                        <div class="col s12">
-                            <h6 class="red-text">
-                                <!-- Picture of installation /Cut Out/ metering point 1  -->
-                                Pic 3
-                            </h6>
-                            <button class="btn red btn-large" @click="imagePickerForInstallationCutOutMeteringPointOne()">
-                                <i class="material-icons white-text">camera_alt</i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- output for pic of the service wire from pole to metering point one -->
-                    <div class="row">
-                        <div class="col s12">
-                            <img class=" responsive-img" id="output-pic-of-installation-cut-out-metering-point-one" />
-                        </div>
-                    </div>
+                    
 
 
                     <div class="row">
@@ -369,12 +354,15 @@
   import imageCompression from 'browser-image-compression';
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
+  import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
 
   export default {
       layout: 'admin_main',
       data() {
         return {
-            account_number: '',
+            service_type: 'postpaid',
+            account_number: '0102111612',
+            meter_number: '43901910984',
             account_type: '',
             account_name: '',
             tarrif: '',
@@ -385,6 +373,8 @@
             phone_number: '',
             location: '',
             reason_for_dormancy: '',
+            userId: null,
+            pic_of_evidence: '',
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -470,6 +460,79 @@
 
       methods: {
 
+        async checkNumber () {
+            
+
+            if (this.service_type == 'prepaid') {
+
+                // await checkCustomerMeterNumber(this.meter_number)
+                console.log('make postpaid call')
+                try {
+
+                    const response = await checkCustomerMeterNumber(this.meter_number)
+
+                    // console.log(response)
+
+                    // console.log(response.accountNumber)
+                    console.log('this is response from mods ', response)
+                    
+                    let users_meter_number = response.meterNumber
+                    
+                    if (users_meter_number == '') {
+                        M.toast({html: `<b class="red-text">Please check meter number agian</b>`})
+                    } else {
+                        let users_account_number = response.accountNumber
+                        users_account_number = users_account_number.trim()
+                        this.getCustomerInfo(users_account_number)
+                    }
+                } catch (error) {
+                    console.log(error)
+                    console.log(this.service_type)
+                    M.toast({html: `<b class="red-text">${error}</b>`})
+                }
+            } else if (this.service_type == 'postpaid') {
+                this.getCustomerInfo(this.account_number)
+            }
+        },
+
+        async getCustomerInfo(accountNumber) {
+            
+            try {
+                let response = await getCustomerInfoApi(accountNumber)
+                console.log(response)
+                this.printCurrentPosition()
+                
+                this.account_type = response.accountType
+                this.account_name = response.accountName
+                this.tarrif = response.tariff
+                this.address = response.address
+                this.address = response.address
+                this.business_unit = response.bu
+                this.undertaking_one = response.ut
+                this.dt_name = response.dtName
+                this.phone_number = response.mobileNumber
+                
+                // if (users_meter_number == '') {
+                //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
+                // } else {
+                //     let users_account_number = response.accountNumber
+                //     users_account_number = users_account_number.trim()
+                // }
+            } catch (error) {
+                console.log(error)
+                console.log(this.service_type)
+                M.toast({html: `<b class="red-text">${error}</b>`})
+            }
+        },
+
+        async printCurrentPosition () {
+            const coordinates = await Geolocation.getCurrentPosition();
+
+            this.lat = coordinates.coords.latitude
+            this.long = coordinates.coords.longitude
+            this.location = `${ this.long }, ${ this.lat }`
+            console.log('this is location ', this.location)
+        },
 
 
         trySign() {
@@ -638,6 +701,85 @@
                 var file = new Blob([ia], {type:mimeString});
                 this.signature = new File([file], `ieOfficerSignature${file.type.replace('image/', '.')}`)
             }
+        },
+
+        generateRandomString() {
+            let result = '';
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            for (let i = 0; i < 10; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        },
+
+        async imagePickerForEvidence () {
+
+            // Call the element loader after the app has been rendered the first time
+            defineCustomElements(window);
+
+            const image = await Camera.getPhoto({
+                quality: 100,
+                allowEditing: false,
+                resultType: CameraResultType.Base64
+            });
+
+
+            const rawData = window.atob(image.base64String);
+            const bytes = new Array(rawData.length);
+            for (var x = 0; x < rawData.length; x++) {
+                bytes[x] = rawData.charCodeAt(x);
+            }
+            const arr = new Uint8Array(bytes);
+            const blob = new Blob([arr], {type: 'image/jpeg'});
+            console.log(blob)
+
+
+
+            this.doSomethingWithFilesimagePickerForEvidence(blob)
+        },
+
+        async doSomethingWithFilesimagePickerForEvidence(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2, 
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-evidence');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+                
+                this.pic_of_evidence = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_evidence)
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'SwitchToDormant_Evidence', this.pic_of_evidence)
+                console.log(xx)
+
+                
+                
+                
+                
+            } catch (error) {
+                // // console.log(error);
+            }
+
         },
 
 
@@ -1732,125 +1874,47 @@
             this.last_purchase_date = date + ' '+ time
 
             
-            if (this.business_unit == '' || this.inspection_conclusion == '') {
+            if (this.business_unit == '') {
 
             
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
             } else {
 
-                var checkList = ""
-                checkList = {
-                    oldSealNumber: this.old_seal,
-                    businessUnit: this.business_unit,
-                    meterPaymentType: this.meter_payment_type,
-                    meterMake: this.meter_manufacturer,
-                    recommendation: this.recommendation,
-                    mcb: this.mcb,
-                    recommendedEnergyRecovery: "",
-                    recommendedTariff: this.recommended_tariff,
-                    remainingTime: "",
-                    customerType: this.customer_type,
-                    customerCategory: this.customer_category,
-                    dtName: this.dt_name,
-                    energyData: "",
-                    readingTime1: "",
-                    longitude: this.long,
-                    currentTariff: this.current_tariff,
-                    customersSignature: "",
-                    editEndTime: "",
-                    customerName: this.customer_name,
-                    meterBoxType: this.meter_type_box,
-                    meteringStatus: this.meter_status,
-                    tube: this.tube,
-                    numberOfServiceWires: this.no_of_service_wires,
-                    feederName: this.feeder_name,
-                    ieOfficersName: localStorage.getItem('fullname'),
-                    lastUpdateTime: "",
-                    meteringInitiative: '',
-                    customersName: this.customer_name,
-                    meterNumber: this.meter_serial_number,
-                    activity: '',
-                    newSealNumber: this.new_seal,
-                    latitude: this.lat,
-                    creditOnMeter: this.credit_reading_on_meter,
-                    simSerialNumber: "",
-                    readingTime: "",
-                    phoneNumber: this.phone_number,
-                    editStartTime: "",
-                    address: this.address,
-                    srNumber: this.meter_serial_number,
-                    meterSerialNumber: this.meter_serial_number,
-                    dtCapacity: this.dt_capacity,
-                    accountNumber: this.account_number,
-                    furtherRemarks: this.further_remarks,
-                    undertaking: this.undertaking_one,
-                    meterManufacturer: this.meter_manufacturer,
-                    meterType: this.meter_type,
-                    serviceWireToMeter: this.no_of_service_wires,
-                    inspectionConclusion: this.inspection_conclusion,
-                    user: localStorage.getItem('fullname'),
-                    natureOfBusiness: this.nature_of_business,
-                    alignmentStatus: this.alignment_status,
-                    replacementMeterSerialNumber: this.replacement_meter_serial_number,
-                    meterTypeByManufacturer: this.meter_type_by_manufacturer,
-                    meterCondition: this.meter_condition,
-                    lastPurchaseDate: this.last_purchase_date,
-                    lastPurchaseAmount: this.last_purchase_amount,
-                    sealStatus: this.seal_status
-                }
-
-                checkList = JSON.stringify(checkList)
-
-                
-                
-                var formData = new FormData()
-                formData.append("files", this.pic_of_the_service_wire_from_pole_to_metering_point);
-                formData.append("files", this.pic_of_internal_connection_if_seal_is_broken);
-                // formData.append("files", this.pic_of_internal_connection_if_seal_is_broken2);
-                formData.append("files", this.pic_of_installation_cutout_metering_point);
-                formData.append("files", this.pic_of_installation_cutout_metering_point2);
-                formData.append("files", this.pic_of_installation_cutout_metering_point3);
-                formData.append("files", this.pic_of_invitation_notice_to_customer);
-                formData.append("files", this.pic_of_last_bill_vending_receipt);
-                formData.append("files", this.pic_of_last_bill_vending_receipt2);
-                formData.append("files", this.pic_of_last_bill_vending_receipt3);
-                formData.append("files", this.pic_of_meter_nameplate);
-                formData.append("files", this.pic_of_meter_nameplate2);
-                formData.append("files", this.pic_of_meter_nameplate3);
-                formData.append("files", this.pic_of_seal_as_met);
-                formData.append("files", this.pic_of_building);
-                formData.append("files", this.pic_of_bypass);
-                formData.append("files", this.pic_of_bypass2);
-                formData.append("files", this.pic_of_bypass3);
-                formData.append('files', this.signature)
-                
-                formData.append("checklist", checkList)
-
-                // console.log(this.signature)
-                // console.log('clicked')
-                
-                
-
-
                 
                 try {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/ieforms/1.0/checklist/submit', {
+                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/switchToDormant', {
                         method: 'POST',
                         headers: {
-                            'Authorization': 'Bearer ' + localStorage.token, 
-                            'Auth': 'Bearer fae96b00-8ef4-3473-bfb6-c5b1107b2c2b', 
-                            'form_type': 'vsm',
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + localStorage.token,
 
                         },
-                        body: formData,
+                        body: JSON.stringify({
+                            serviceType: this.service_type,
+                            accountNo: this.account_number,
+                            meterNo: this.meter_number,
+                            accountType: this.account_type,
+                            accountName: this.account_name,
+                            tariff: this.tarrif,
+                            address: this.address,
+                            bu: this.business_unit,
+                            ut: this.undertaking_one,
+                            dt: this.dt_name,
+                            phoneNo: this.phone_number,
+                            location: this.location,
+                            dateOfSuspension: this.date_of_suspension,
+                            remarks: this.remarks,
+                            picOfEvidence: this.pic_of_evidence.name,
+                        }),
                     })
 
                     const response = await rawResponse.json()
 
-                    // console.log(response)
+                    console.log(response)
 
-                    if (response.code == '00') {
+                    if (response.statusMsg == 'Success') {
                         this.hideLoader = true
                         this.$router.push('./sent')
                     } else if (response.status == 500) {
@@ -1862,7 +1926,7 @@
                         }
                     }
                 } catch (error) {
-                    // console.log(error)
+                    console.log(error)
                     M.toast({html: `<b class="red-text">${error}</b>`})
                 }
 
@@ -1924,13 +1988,7 @@
         //     ]
         // },
 
-        // get longitude and latitude
-        async printCurrentPosition () {
-            const coordinates = await Geolocation.getCurrentPosition();
-
-            this.lat = coordinates.coords.latitude
-            this.long = coordinates.coords.longitude
-        },
+        
 
         // let me try to create a new signature
         showSignatureModule() {
@@ -1960,10 +2018,10 @@
 
 
         this.trySign()
+        this.userId = localStorage.getItem('userId')
       },
 
       created() {
-        this.printCurrentPosition()
        
       }
   }
