@@ -79,13 +79,8 @@
                     
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -248,37 +243,18 @@
                         </div>
                     </div>
 
-                    <div class="row" >
-                        <div class="col s12">
-                            <select class="custom-select" v-model="type_of_infra">
-                                <option value="" disabled selected>Type of Infraction *</option>
-                                <option value="Meter Bypass">Meter Bypass</option>
-                                <option value="Burnt Meter or Faulty meter not on postpaid">Burnt Meter or Faulty meter not on postpaid</option>
-                                <option value="Meter dispensing free">Meter dispensing free</option>
-                                <option value="Free rider">Free rider</option>
-                                <option value="suspended account but connected to power">suspended account but connected to power</option>
-                                <option value="negative reading">negative reading</option>
-                                <option value="others">others</option>
-                            </select>
+                    <div class="row">
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Meter Bypass', 'Burnt Meter or Faulty meter not on postpaid', 'Meter dispensing free', 'Free rider', 'Suspended account but connected to power', 'Negative reading', 'Others']" :default="'Type of Infraction'" class="" v-model="type_of_infra" />
                         </div>
                     </div>
-                    <br>
+                    
 
                     <div class="row">
-                        <div class="col s12">
-                            <select class="custom-select" v-model="duration_of_theft">
-                                <option value="" disabled selected>Duration of theft *</option>
-                                <option value="2">2</option>
-                                <!-- <option value="Burnt Meter or Faulty meter not on postpaid">Burnt Meter or Faulty meter not on postpaid</option>
-                                <option value="Meter dispensing free">Meter dispensing free</option>
-                                <option value="Free rider">Free rider</option>
-                                <option value="suspended account but connected to power">suspended account but connected to power</option>
-                                <option value="negative reading">negative reading</option>
-                                <option value="others">others</option> -->
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['1', '2', '3', '4', '5', '6', '7', '8']" :default="'Duration of theft'" class="" v-model="duration_of_theft" />
                         </div>
                     </div>
-
 
 
                     <div class="row">
@@ -430,12 +406,16 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',
@@ -2051,6 +2031,8 @@
                     if (response.statusMsg == 'Success') {
                         this.hideLoader = true
                         this.$router.push('../sent')
+                        localStorage.setItem('service_type', '')
+                        localStorage.setItem('meter_number', '')
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
@@ -2141,6 +2123,21 @@
             this.hideModal = true
             this.hideForm = false
         },
+
+        getMeterNumberFromStorage() {
+            let service_type = localStorage.getItem('service_type')
+            let meter_number = localStorage.getItem('meter_number')
+            service_type = service_type.trim()
+            meter_number = meter_number.trim()
+
+            if (service_type == '' && meter_number == '') {
+                
+            } else {
+                this.meter_number = meter_number
+                this.checkNumber()
+            }
+            console.log('service type: ', service_type, '. meter number: ', meter_number);
+        },
       },
 
       mounted() {
@@ -2154,6 +2151,8 @@
             var elems = document.querySelectorAll('select');
             var instances = M.FormSelect.init(elems);
         });
+
+        this.getMeterNumberFromStorage()
 
        
 

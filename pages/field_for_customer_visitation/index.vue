@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['prepaid']" :default="'prepaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -239,16 +234,11 @@
                     </div>
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="type_of_building">
-                                <option value="" disabled selected>Type of building *</option>
-                                <option value="Bungalow">Bungalow</option>
-                                <option value="Duplex">Duplex</option>
-                                <option value="Storey building">Storey building</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Bungalow', 'Duplex', 'Storey building']" :default="'Type of building *'" class="" v-model="type_of_building" />
                         </div>
                     </div>
+
 
                     <p>
                         <b>
@@ -276,38 +266,27 @@
                     <br>
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="vacant_status">
-                                <option value="" disabled selected>Vacant or occupied? </option>
-                                <option value="Vacant">Vacant</option>
-                                <option value="Occupied">Occupied</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Vacant', 'Occupied']" :default="'Vacant or occupied?'" class="" v-model="vacant_status" />
                         </div>
                     </div>
-                    <br>
+
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="user_of_premise">
-                                <option value="" disabled selected> Use of premise </option>
-                                <option value="Residential">Residential</option>
-                                <option value="Commercial">Commercial</option>
-                                <option value="Bar or lounge">Bar or lounge</option>
-                                <option value="Motel">Motel</option>
-                                <option value="School">School</option>
-                                <option value="Church">Church</option>
-                                <option value="Church">Church</option>
-                                <option value="Mosque">Mosque</option>
-                                <option value="Agriculture">Agriculture</option>
-                                <option value="Nylon factory">Nylon factory</option>
-                                <option value="Pure water factory">Pure water factory</option>
-                                <option value="Other">Other</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Residential', 
+                            'Commercial', 
+                            'Bar or lounge', 
+                            'Motel', 
+                            'School', 
+                            'Church', 
+                            'Mosque', 
+                            'Agriculture', 
+                            'Nylon factory', 
+                            'Pure water factory', 
+                            'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
                         </div>
                     </div>
-                    <br>
 
                     <div class="row">
                         <!-- address -->
@@ -317,7 +296,7 @@
                     </div>
                     <br>
 
-                    <div class="row">
+                    <div class="row center">
                         <div class="col s12">
                             <b>
                                 Is account mapped to correct DT?
@@ -334,7 +313,7 @@
                     </div>
                     <br>
 
-                    <div class="row">
+                    <div class="row center">
                         <div class="col s12">
                             <b>
                                 Is customer phone no. correct?
@@ -351,7 +330,7 @@
                     </div>
                     <br>
 
-                    <div class="row">
+                    <div class="row center">
                         <div class="col s12">
                             <b>
                                 Is customer address correct?
@@ -368,7 +347,7 @@
                     </div>
                     <br>
 
-                    <div class="row">
+                    <div class="row center">
                         <div class="col s12">
                             <b>
                                 Is meter bypassed?
@@ -385,7 +364,7 @@
                     </div>
                     <br>
 
-                    <div class="row">
+                    <div class="row center">
                         <div class="col s12">
                             <b>
                                 Any complaints from the customer?
@@ -552,14 +531,20 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
+            // account_number: '',
             meter_number: '43901910984',
+            // meter_number: '',
             account_type: '',
             account_name: '',
             tarrif: '',
@@ -683,8 +668,18 @@
             console.log(this.is_account_mapped_to_correct_dt)
         },
         isAccountMappedToCorrectDTNo(){
-            this.is_account_mapped_to_correct_dt = 'No'
-            window.location = '../customer_mapping'
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+
+            if (this.meter_number == '') {
+                M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
+            } else {
+                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('meter_number', this.meter_number)
+                this.is_account_mapped_to_correct_dt = 'No'
+                window.location = '../customer_mapping'
+            }
+            
         },
 
         isCustomerPhoneNoCorrectYes(){
@@ -693,8 +688,17 @@
             console.log(this.is_customer_phone_no_correct)
         },
         isCustomerPhoneNoCorrectNo(){
-            this.is_customer_phone_no_correct = 'No'
-            window.location = '../customer_details_validation'
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+
+            if (this.meter_number == '') {
+                M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
+            } else {
+                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('meter_number', this.meter_number)
+                this.is_customer_phone_no_correct = 'No'
+                window.location = '../customer_details_validation'
+            }
         },
 
         isCustomerAddressCorrectYes(){
@@ -703,14 +707,32 @@
             console.log(this.is_customer_phone_no_correct)
         },
         isCustomerAddressCorrectNo(){
-            this.is_customer_address_correct = 'No'
-            window.location = '../customer_details_validation'
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+
+            if (this.meter_number == '') {
+                M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
+            } else {
+                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('meter_number', this.meter_number)
+                this.is_customer_address_correct = 'No'
+                window.location = '../customer_details_validation'
+            }   
         },
 
         isMeterBypassedtYes(){
-            this.is_meter_bypassed = 'Yes'
-            window.location = '../energy_theft'
-            console.log(this.is_meter_bypassed)
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+
+            if (this.meter_number == '') {
+                M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
+            } else {
+                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('meter_number', this.meter_number)
+                this.is_meter_bypassed = 'Yes'
+                window.location = '../energy_theft'
+                console.log(this.is_meter_bypassed)
+            }
         },
         isMeterBypassedtNo(){
             this.is_meter_bypassed = 'No'
@@ -719,9 +741,18 @@
         },
 
         customerCompliantYes(){
-            this.customer_complaint = 'Yes'
-            window.location = '../customer_complaints'
-            console.log(this.is_meter_bypassed)
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+
+            if (this.meter_number == '') {
+                M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
+            } else {
+                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('meter_number', this.meter_number)
+                this.customer_complaint = 'Yes'
+                window.location = '../customer_complaints'
+                console.log(this.is_meter_bypassed)
+            }
         },
         customerCompliantNo(){
             this.customer_complaint = 'No'

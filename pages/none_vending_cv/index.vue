@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -240,27 +235,10 @@
                     </div>
 
                     <div class="row">
-                        <!-- business unit -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="validation_outcomes">
-                                <option value="" disabled selected>Validation Outcomes *</option>
-                                <option value="Meter ok">Meter ok</option>
-                                <option value="Suspected Bypass">Suspected Bypass</option>
-                                <option value="Vacant apartment">Vacant apartment</option>
-                                <option value="Meter Burnt">Meter Burnt</option>
-                                <option value="Under Disconnection">Under Disconnection</option>
-                                <option value="Huge Outstanding/Meter Abandoned">Huge Outstanding/Meter Abandoned</option>
-                                <option value="Faulty meter not on Postpaid">Faulty meter not on Postpaid</option>
-                                <option value="Meter Replaced">Meter Replaced</option>
-                                <option value="Customer now on postpaid">Customer now on postpaid</option>
-                                <option value="Meter dispensing free">Meter dispensing free</option>
-                                <option value="No meter found">No meter found</option>
-                                <option value="Others">Others</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Meter ok', 'Suspected Bypass', 'Vacant apartment', 'Meter Burnt', 'Under Disconnection', 'Huge Outstanding/Meter Abandoned', 'Faulty meter not on Postpaid', 'Meter Replaced', 'Customer now on postpaid', 'Meter dispensing free', 'No meter found', 'Others']" :default="'Validation Outcomes'" class="" v-model="validation_outcomes" />
                         </div>
                     </div>
-                    <br>
-
 
 
                     <div class="row">
@@ -394,12 +372,16 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',

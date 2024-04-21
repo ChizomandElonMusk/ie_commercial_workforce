@@ -20,6 +20,7 @@
     "@capacitor/geolocation": "^4.1.0",
     "@capacitor/ios": "4.5.0",
     "@ionic/pwa-elements": "^3.1.1",
+    "@mrmikkou/custom-select": "^0.0.5",
     "@nuxtjs/axios": "^5.13.6",
     "browser-image-compression": "^2.0.0",
     "core-js": "^3.15.1",

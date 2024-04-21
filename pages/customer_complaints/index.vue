@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -305,11 +300,16 @@
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
 
+  import CustomSelect from '~/components/CustomSelect.vue'
+
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',
@@ -2014,6 +2014,8 @@
                     if (response.code == '00') {
                         this.hideLoader = true
                         this.$router.push('./sent')
+                        localStorage.setItem('service_type', '')
+                        localStorage.setItem('meter_number', '')
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
@@ -2104,6 +2106,21 @@
             this.hideModal = true
             this.hideForm = false
         },
+
+        getMeterNumberFromStorage() {
+            let service_type = localStorage.getItem('service_type')
+            let meter_number = localStorage.getItem('meter_number')
+            service_type = service_type.trim()
+            meter_number = meter_number.trim()
+
+            if (service_type == '' && meter_number == '') {
+                
+            } else {
+                this.meter_number = meter_number
+                this.checkNumber()
+            }
+            console.log('service type: ', service_type, '. meter number: ', meter_number);
+        },
       },
 
       mounted() {
@@ -2117,6 +2134,8 @@
             var elems = document.querySelectorAll('select');
             var instances = M.FormSelect.init(elems);
         });
+
+        this.getMeterNumberFromStorage()
 
        
 

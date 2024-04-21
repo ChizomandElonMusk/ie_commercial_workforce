@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -417,12 +412,17 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import CustomSelect from '~/components/CustomSelect.vue'
+
 
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',

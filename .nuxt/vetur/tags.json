@@ -2,6 +2,9 @@
   "AdminNavBar": {
     "description": "Auto imported from components/AdminNavBar.vue"
   },
+  "CustomSelect": {
+    "description": "Auto imported from components/CustomSelect.vue"
+  },
   "Forgot": {
     "description": "Auto imported from components/Forgot.vue"
   },

@@ -109,3 +109,5 @@ export async function uploadImage(userId, accountNumber, docType, file) {
         return error
     }
 }
+
+

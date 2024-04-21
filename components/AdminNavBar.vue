@@ -37,7 +37,7 @@
     },
 
     created() {
-      this.checkToken()
+      // this.checkToken()
     }
   }
   

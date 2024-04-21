@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -329,24 +324,13 @@
                         </div>
                     </div>
 
-
                     <div class="row">
-                        <div class="col s12">
-                            <h6 class="red-text">Remarks:</h6>
-                            <select class="custom-select" v-model="remarks">
-                                <option value="" disabled selected>Remarks</option>
-                                <option value="Vacant Apartment">Vacant Apartment</option>
-                                <option value="Disconnection due to non-payment">Disconnection due to non-payment</option>
-                                <option value="Demolished">Demolished</option>
-                                <option value="Customer’s Requests">Customer’s Requests</option>
-                                <option value="PPM Installed">PPM Installed</option>
-                                <option value="Under Renovation">Under Renovation</option>
-                                <option value="Untraceable">Untraceable</option>
-                                <option value="DT Out of circuit">DT Out of circuit</option>
-                                <option value="Duplicated Bill or Account">Duplicated Bill or Account</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Vacant Apartment', 'Disconnection due to non-payment', 'Demolished', 'Customer’s Requests', 'PPM Installed', 'Under Renovation', 'Untraceable', 'DT Out of circuit', 'Duplicated Bill or Account']" :default="'Remarks'" class="" v-model="remarks" />
                         </div>
                     </div>
+
+                    
                     <div class="row">
                         <div class="col s12">
                             <h6 class="red-text">Additional Remarks:</h6>
@@ -420,12 +404,16 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',
@@ -464,7 +452,7 @@
             pic_of_last_bill_vending_receipt3: '',
             pic_of_invitation_notice_to_customer: '',
 
-            remarks: '',
+            remarks: null,
             additional_remark: '',
             
             

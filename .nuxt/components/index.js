@@ -1,4 +1,5 @@
 export { default as AdminNavBar } from '../../components/AdminNavBar.vue'
+export { default as CustomSelect } from '../../components/CustomSelect.vue'
 export { default as Forgot } from '../../components/Forgot.vue'
 export { default as Login } from '../../components/Login.vue'
 export { default as Logo } from '../../components/Logo.vue'

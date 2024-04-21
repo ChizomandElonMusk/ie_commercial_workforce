@@ -77,13 +77,8 @@
                 <form @submit.prevent style="margin-top: 20px">
 
                     <div class="row">
-                        <!-- undertaking one -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="service_type">
-                                <option value="" disabled selected>Service Type *</option>
-                                <option value="postpaid">Postpaid</option>
-                                <option value="prepaid">Prepaid</option>
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -240,18 +235,11 @@
                     </div>
 
                     <div class="row">
-                        <!-- business unit -->
-                        <div class="col s12">
-                            <select class="custom-select" v-model="reason_for_dormancy">
-                                <option value="" disabled selected>Reason for dormancy *</option>
-                                <option value="Untraceable">Untraceable</option>
-                                <option value="Duplicated Bill or Account">Duplicated Bill or Account</option>
-                                <option value="Demolished">Demolished</option>
-                                <option value="Multiple Accounts for same apartment">Multiple Accounts for same apartment</option>
-                                <option value="PPM Installed">PPM Installed</option>=
-                            </select>
+                        <div class="col s12" style="margin-bottom: 15px;">
+                            <CustomSelect :options="['Untraceable', 'Duplicated Bill or Account', 'Demolished', 'Multiple Accounts for same apartment', 'PPM Installed']" :default="'Reason for dormancy'" class="" v-model="reason_for_dormancy" />
                         </div>
                     </div>
+                    
 
 
 
@@ -355,12 +343,15 @@
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
   import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
-
+  import CustomSelect from '~/components/CustomSelect.vue';
   export default {
       layout: 'admin_main',
+      components: {
+            CustomSelect,
+        },
       data() {
         return {
-            service_type: 'postpaid',
+            service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
             account_type: '',
@@ -372,7 +363,7 @@
             dt_name: '',
             phone_number: '',
             location: '',
-            reason_for_dormancy: '',
+            reason_for_dormancy: null,
             userId: null,
             pic_of_evidence: '',
 
