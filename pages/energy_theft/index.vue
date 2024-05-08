@@ -2127,8 +2127,7 @@
         getMeterNumberFromStorage() {
             let service_type = localStorage.getItem('service_type')
             let meter_number = localStorage.getItem('meter_number')
-            service_type = service_type.trim()
-            meter_number = meter_number.trim()
+            
 
             if (service_type == '' && meter_number == '') {
                 
@@ -2136,7 +2135,6 @@
                 this.meter_number = meter_number
                 this.checkNumber()
             }
-            console.log('service type: ', service_type, '. meter number: ', meter_number);
         },
       },
 

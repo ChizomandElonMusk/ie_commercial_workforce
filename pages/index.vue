@@ -47,6 +47,9 @@
   <script>
     import backgroundUrl from '~/assets/images/angled_background.jpg'
     import PreLoader from '~/components/PreLoader.vue'
+    import { Geolocation } from '@capacitor/geolocation';
+
+
     export default {
       head() {
         return {// Other meta information
@@ -60,11 +63,23 @@
           backgroundUrl,
           username: 'cechehieuka',
           password: '@@@1KingGod1234',
+          lat: '',
+          long: '',
           hidePreLoader: true,
         }
       },
 
       methods: {
+
+        // get longitude and latitude
+        async getCurrentPosition () {
+          const coordinates = await Geolocation.getCurrentPosition();
+
+          this.lat = coordinates.coords.latitude
+          this.long = coordinates.coords.longitude
+          this.location = `${ this.long }, ${ this.lat }`
+          console.log(this.location);
+        },
 
         signIn() {
           M.toast({html: '<b class="yellow-text">Please wait...</b>'})
@@ -172,6 +187,8 @@
               body: JSON.stringify({
                 usernameOrEmail: encrytedUsername, 
                 password: encrytedPassword,
+                latitude: this.lat,
+                longitude: this.long
               })
             });
 
@@ -250,6 +267,7 @@
       },
 
       created() {
+        this.getCurrentPosition()
         // this.testAPI()
         // let v = this.$store.state.token
         // console.log(v)

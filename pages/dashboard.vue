@@ -66,7 +66,7 @@
             </nuxt-link>
           </div>
 
-          <!-- <div class="col s12 center">
+          <div class="col s12 center">
             <nuxt-link to="/customer_complaints">
               <div class="card-panel black">
                 <span class="white-text">
@@ -76,6 +76,9 @@
               </div>
             </nuxt-link>
           </div>
+          
+
+          <!-- 
 
           <div class="col s12 center">
             <nuxt-link to="/suspended_cv">
@@ -195,6 +198,8 @@
       },
 
       created() {
+        localStorage.setItem('service_type', '')
+        localStorage.setItem('meter_number', '')
         // this.getFullname()
       }
   }
