@@ -9,13 +9,15 @@ const _098aca9e = () => interopDefault(import('../pages/crmd/index.vue' /* webpa
 const _724fad34 = () => interopDefault(import('../pages/customer_complaints/index.vue' /* webpackChunkName: "pages/customer_complaints/index" */))
 const _39223022 = () => interopDefault(import('../pages/customer_details_validation/index.vue' /* webpackChunkName: "pages/customer_details_validation/index" */))
 const _b123b5d0 = () => interopDefault(import('../pages/customer_mapping/index.vue' /* webpackChunkName: "pages/customer_mapping/index" */))
-const _4449405c = () => interopDefault(import('../pages/dashboard.vue' /* webpackChunkName: "pages/dashboard" */))
+const _3a913d3b = () => interopDefault(import('../pages/dashboard_ie_force.vue' /* webpackChunkName: "pages/dashboard_ie_force" */))
 const _1898aa73 = () => interopDefault(import('../pages/energy_theft/index.vue' /* webpackChunkName: "pages/energy_theft/index" */))
 const _a9cea9ca = () => interopDefault(import('../pages/field_for_customer_visitation/index.vue' /* webpackChunkName: "pages/field_for_customer_visitation/index" */))
 const _14e1cd0b = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _5555b477 = () => interopDefault(import('../pages/forms.vue' /* webpackChunkName: "pages/forms" */))
+const _38b49d20 = () => interopDefault(import('../pages/ie_force.vue' /* webpackChunkName: "pages/ie_force" */))
 const _fc1c2a9e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _e0b2aeac = () => interopDefault(import('../pages/md-customer-ir.vue' /* webpackChunkName: "pages/md-customer-ir" */))
+const _acb91572 = () => interopDefault(import('../pages/menu.vue' /* webpackChunkName: "pages/menu" */))
 const _4acaa93e = () => interopDefault(import('../pages/newly_installed_ppm/index.vue' /* webpackChunkName: "pages/newly_installed_ppm/index" */))
 const _1966c018 = () => interopDefault(import('../pages/nmd-activity-checklist.vue' /* webpackChunkName: "pages/nmd-activity-checklist" */))
 const _65bb8fe6 = () => interopDefault(import('../pages/nmd-pre-survey-checklist.vue' /* webpackChunkName: "pages/nmd-pre-survey-checklist" */))
@@ -69,9 +71,9 @@ export const routerOptions = {
     component: _b123b5d0,
     name: "customer_mapping"
   }, {
-    path: "/dashboard",
-    component: _4449405c,
-    name: "dashboard"
+    path: "/dashboard_ie_force",
+    component: _3a913d3b,
+    name: "dashboard_ie_force"
   }, {
     path: "/energy_theft",
     component: _1898aa73,
@@ -89,6 +91,10 @@ export const routerOptions = {
     component: _5555b477,
     name: "forms"
   }, {
+    path: "/ie_force",
+    component: _38b49d20,
+    name: "ie_force"
+  }, {
     path: "/login",
     component: _fc1c2a9e,
     name: "login"
@@ -96,6 +102,10 @@ export const routerOptions = {
     path: "/md-customer-ir",
     component: _e0b2aeac,
     name: "md-customer-ir"
+  }, {
+    path: "/menu",
+    component: _acb91572,
+    name: "menu"
   }, {
     path: "/newly_installed_ppm",
     component: _4acaa93e,

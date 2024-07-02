@@ -35,7 +35,7 @@
 
           <div class="col s12 center">
             <nuxt-link to="/customer_mapping">
-              <div class="card-panel blue">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Customer Mapping</h6>
@@ -46,7 +46,7 @@
 
           <div class="col s12 center">
             <nuxt-link to="/customer_details_validation">
-              <div class="card-panel purple">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Customer Details Validation</h6>
@@ -57,7 +57,7 @@
 
           <div class="col s12 center">
             <nuxt-link to="/energy_theft">
-              <div class="card-panel grey">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Energy Theft</h6>
@@ -65,6 +65,17 @@
               </div>
             </nuxt-link>
           </div>
+
+          <!-- <div class="col s12 center">
+            <nuxt-link to="/newly_installed_ppm">
+              <div class="card-panel red">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>Newly Installed PPM CV</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div> -->
 
           <div class="col s12 center">
             <nuxt-link to="/customer_complaints">
@@ -91,20 +102,11 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
-            <nuxt-link to="/newly_installed_ppm">
-              <div class="card-panel red">
-                <span class="white-text">
-                  <i class="material-icons">folder_open</i>
-                  <h6>Newly Installed PPM CV</h6>
-                </span>
-              </div>
-            </nuxt-link>
-          </div> -->
+           -->
 
           <div class="col s12 center">
             <nuxt-link to="/none_vending_cv">
-              <div class="card-panel purple">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Non vending Customer Validation</h6>
@@ -126,8 +128,8 @@
 
           <div class="col s12 center">
             <nuxt-link to="/field_for_customer_visitation">
-              <div class="card-panel yellow">
-                <span class="black-text">
+              <div class="card-panel orange">
+                <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Customer visitation</h6>
                 </span>
@@ -197,9 +199,13 @@
         }
       },
 
-      created() {
+      mounted() {
         localStorage.setItem('service_type', '')
         localStorage.setItem('meter_number', '')
+      },
+
+      created() {
+        
         // this.getFullname()
       }
   }

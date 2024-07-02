@@ -243,6 +243,13 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col s12">
+                            <h6 class="red-text">Comments:</h6>
+                            <textarea placeholder="Comments" class="materialize-textarea" v-model="comments"></textarea>
+                        </div>
+                    </div>
+
 
                     
 
@@ -321,14 +328,9 @@
             dt_name: '',
             phone_number: '',
             location: '',
-            new_phone_number: '',
-            additional_phone_number: '',
-            email: '',
-            date_of_suspension: '',
-            account_status: '',
             userId: null,
-            pic_of_wire_down: '',
-            pic_of_fv: '',
+            complaints: '',
+            comments: '',
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -1868,7 +1870,7 @@
 
 
 
-        async sumbitVSM() {
+        async submit() {
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -1876,13 +1878,9 @@
             this.address = this.address.trim()
             this.feeder_name = this.feeder_name.trim()
             this.dt_name = this.dt_name.trim()
-            this.alignment_status = this.alignment_status.trim()
-            this.recommended_tariff = this.recommended_tariff.trim()
-            this.meter_type_by_manufacturer = this.meter_type_by_manufacturer.trim()
-            this.credit_reading_on_meter = this.credit_reading_on_meter.trim()
-            this.further_remarks = this.further_remarks.trim()
             this.phone_number = this.phone_number.trim()
-            this.inspection_conclusion = this.inspection_conclusion.trim()
+            this.complaints = this.complaints.trim()
+            this.comments = this.comments.trim()
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -1893,127 +1891,53 @@
             this.last_purchase_date = date + ' '+ time
 
             
-            if (this.business_unit == '' || this.inspection_conclusion == '') {
+            if (this.business_unit == '' || this.complaints == '') {
 
             
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
             } else {
 
-                var checkList = ""
-                checkList = {
-                    oldSealNumber: this.old_seal,
-                    businessUnit: this.business_unit,
-                    meterPaymentType: this.meter_payment_type,
-                    meterMake: this.meter_manufacturer,
-                    recommendation: this.recommendation,
-                    mcb: this.mcb,
-                    recommendedEnergyRecovery: "",
-                    recommendedTariff: this.recommended_tariff,
-                    remainingTime: "",
-                    customerType: this.customer_type,
-                    customerCategory: this.customer_category,
-                    dtName: this.dt_name,
-                    energyData: "",
-                    readingTime1: "",
-                    longitude: this.long,
-                    currentTariff: this.current_tariff,
-                    customersSignature: "",
-                    editEndTime: "",
-                    customerName: this.customer_name,
-                    meterBoxType: this.meter_type_box,
-                    meteringStatus: this.meter_status,
-                    tube: this.tube,
-                    numberOfServiceWires: this.no_of_service_wires,
-                    feederName: this.feeder_name,
-                    ieOfficersName: localStorage.getItem('fullname'),
-                    lastUpdateTime: "",
-                    meteringInitiative: '',
-                    customersName: this.customer_name,
-                    meterNumber: this.meter_serial_number,
-                    activity: '',
-                    newSealNumber: this.new_seal,
-                    latitude: this.lat,
-                    creditOnMeter: this.credit_reading_on_meter,
-                    simSerialNumber: "",
-                    readingTime: "",
-                    phoneNumber: this.phone_number,
-                    editStartTime: "",
-                    address: this.address,
-                    srNumber: this.meter_serial_number,
-                    meterSerialNumber: this.meter_serial_number,
-                    dtCapacity: this.dt_capacity,
-                    accountNumber: this.account_number,
-                    furtherRemarks: this.further_remarks,
-                    undertaking: this.undertaking_one,
-                    meterManufacturer: this.meter_manufacturer,
-                    meterType: this.meter_type,
-                    serviceWireToMeter: this.no_of_service_wires,
-                    inspectionConclusion: this.inspection_conclusion,
-                    user: localStorage.getItem('fullname'),
-                    natureOfBusiness: this.nature_of_business,
-                    alignmentStatus: this.alignment_status,
-                    replacementMeterSerialNumber: this.replacement_meter_serial_number,
-                    meterTypeByManufacturer: this.meter_type_by_manufacturer,
-                    meterCondition: this.meter_condition,
-                    lastPurchaseDate: this.last_purchase_date,
-                    lastPurchaseAmount: this.last_purchase_amount,
-                    sealStatus: this.seal_status
-                }
-
-                checkList = JSON.stringify(checkList)
-
-                
-                
-                var formData = new FormData()
-                formData.append("files", this.pic_of_the_service_wire_from_pole_to_metering_point);
-                formData.append("files", this.pic_of_internal_connection_if_seal_is_broken);
-                // formData.append("files", this.pic_of_internal_connection_if_seal_is_broken2);
-                formData.append("files", this.pic_of_installation_cutout_metering_point);
-                formData.append("files", this.pic_of_installation_cutout_metering_point2);
-                formData.append("files", this.pic_of_installation_cutout_metering_point3);
-                formData.append("files", this.pic_of_invitation_notice_to_customer);
-                formData.append("files", this.pic_of_last_bill_vending_receipt);
-                formData.append("files", this.pic_of_last_bill_vending_receipt2);
-                formData.append("files", this.pic_of_last_bill_vending_receipt3);
-                formData.append("files", this.pic_of_meter_nameplate);
-                formData.append("files", this.pic_of_meter_nameplate2);
-                formData.append("files", this.pic_of_meter_nameplate3);
-                formData.append("files", this.pic_of_seal_as_met);
-                formData.append("files", this.pic_of_building);
-                formData.append("files", this.pic_of_bypass);
-                formData.append("files", this.pic_of_bypass2);
-                formData.append("files", this.pic_of_bypass3);
-                formData.append('files', this.signature)
-                
-                formData.append("checklist", checkList)
-
-                // console.log(this.signature)
-                // console.log('clicked')
-                
-                
-
-
                 
                 try {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/ieforms/1.0/checklist/submit', {
+                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/customerComplaint', {
                         method: 'POST',
                         headers: {
-                            'Authorization': 'Bearer ' + localStorage.token, 
-                            'Auth': 'Bearer fae96b00-8ef4-3473-bfb6-c5b1107b2c2b', 
-                            'form_type': 'vsm',
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + localStorage.token,
 
                         },
-                        body: formData,
+                        body: JSON.stringify({
+                            serviceType: this.service_type,
+                            accountNo: this.account_number,
+                            meterNo: this.meter_number,
+                            accountType: this.account_type,
+                            accountName: this.account_name,
+                            tariff: this.tarrif,
+                            address: this.address,
+                            bu: this.business_unit,
+                            ut: this.undertaking_one,
+                            dt: this.dt_name,
+                            phoneNo: this.phone_number,
+                            location: this.location,
+                            newPhoneNo: this.new_phone_number,
+                            additionalPhoneNo: this.additional_phone_number,
+                            emailAddress: this.email,
+                            isCustomerConnected: this.is_customer_connected,
+                            remarks: this.remarks,
+                            picWireDown: this.pic_of_wire_down.name,
+                            picFrontView: this.pic_of_fv.name
+                        }),
                     })
 
                     const response = await rawResponse.json()
 
-                    // console.log(response)
+                    console.log(response)
 
-                    if (response.code == '00') {
+                    if (response.statusMsg == 'Success') {
                         this.hideLoader = true
-                        this.$router.push('./sent')
+                        this.$router.push('../sent')
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
                     } else if (response.status == 500) {
@@ -2021,11 +1945,11 @@
                         M.toast({html: `<b class="red-text">Session expired</b>`})
                         if(process.client) {
                             localStorage.clear()
-                            window.location = './'
+                            window.location = '../'
                         }
                     }
                 } catch (error) {
-                    // console.log(error)
+                    console.log(error)
                     M.toast({html: `<b class="red-text">${error}</b>`})
                 }
 

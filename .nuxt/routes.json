@@ -35,11 +35,11 @@
     "_name": "_b123b5d0"
   },
   {
-    "name": "dashboard",
-    "path": "/dashboard",
-    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_4449405c"
+    "name": "dashboard_ie_force",
+    "path": "/dashboard_ie_force",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/dashboard_ie_force.vue",
+    "chunkName": "pages/dashboard_ie_force",
+    "_name": "_3a913d3b"
   },
   {
     "name": "energy_theft",
@@ -70,6 +70,13 @@
     "_name": "_5555b477"
   },
   {
+    "name": "ie_force",
+    "path": "/ie_force",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/ie_force.vue",
+    "chunkName": "pages/ie_force",
+    "_name": "_38b49d20"
+  },
+  {
     "name": "login",
     "path": "/login",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/login.vue",
@@ -82,6 +89,13 @@
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/md-customer-ir.vue",
     "chunkName": "pages/md-customer-ir",
     "_name": "_e0b2aeac"
+  },
+  {
+    "name": "menu",
+    "path": "/menu",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/menu.vue",
+    "chunkName": "pages/menu",
+    "_name": "_acb91572"
   },
   {
     "name": "newly_installed_ppm",

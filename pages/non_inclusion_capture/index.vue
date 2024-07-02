@@ -2212,7 +2212,7 @@
       },
 
       created() {
-       this.serverModuleResponse()
+    //    this.serverModuleResponse()
       }
   }
   </script>

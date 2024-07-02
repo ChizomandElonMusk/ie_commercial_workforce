@@ -62,7 +62,7 @@
         return {
           backgroundUrl,
           username: 'cechehieuka',
-          password: '@@@1KingGod1234',
+          password: '@@@1KingGod12345',
           lat: '',
           long: '',
           hidePreLoader: true,
@@ -220,7 +220,7 @@
                 }
 
                 this.hidePreLoader = true
-                this.$router.push('./dashboard')
+                this.$router.push('./menu')
             }
 
             
@@ -266,8 +266,12 @@
         
       },
 
-      created() {
+      mounted() {
         this.getCurrentPosition()
+      },
+
+      created() {
+        
         // this.testAPI()
         // let v = this.$store.state.token
         // console.log(v)
