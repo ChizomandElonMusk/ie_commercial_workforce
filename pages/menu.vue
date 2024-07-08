@@ -1,23 +1,24 @@
 <template>
     <div style="padding-top: 20px;" class="container">
-      <!-- <div class="row">
-        <div>
-          <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">
-            Menu
-          </h6>
+      <div class="row">
+        <div class="col s12">
+          <b class="red white-text btn" @click="logOut">
+            <i class="material-icons">lock</i> 
+          </b>
+          <b class="grey-text btn disabled">Menu</b>
         </div>
-      </div> -->
+      </div>
 
       <!-- <div class="row">
         <Logo style="margin-bottom: 50px; margin-top: 10px;"/>
       </div> -->
 
-      <div class="row" style="padding-bottom: 10px;">
+      <!-- <div class="row" style="padding-bottom: 10px;">
         <div class="col s12">
           <b class=" grey-text darken-4">Welcome,</b> <br>
           <b style="font-size: 20px; color: #757575;" class="">{{fullname}}</b>
         </div>
-      </div>
+      </div> -->
   
       <div class="row">
         <div class="row">
@@ -34,17 +35,6 @@
           </div>
 
           
-
-          
-
-          <div class="col s12 center">
-              <div class="card-panel red" @click="logOut">
-                  <span class="white-text">
-                    <i class="material-icons">lock</i>
-                    <h6>Logout</h6>
-                  </span>
-              </div>
-          </div>
         </div>
 
       </div>

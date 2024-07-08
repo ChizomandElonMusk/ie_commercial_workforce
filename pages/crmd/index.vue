@@ -1,17 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
-
         <div class="row">
-            <nuxt-link to="../dashboard" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-    
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100; margin-bottom: 20px;">
-                    CRMD
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
+                    Back 
+                </nuxt-link>
+                <b class="grey-text btn disabled">CRMD</b>
             </div>
         </div>
   

@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="./" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Account Reactivation
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="./" class="red white-text btn">
+                    Back 
+                </nuxt-link>
+                <b class="grey-text btn disabled">Account Reactivation</b>
             </div>
         </div>
   
@@ -399,6 +395,7 @@
             location: '',
             date_of_suspension: '',
             userId: null,
+            dtNumber: '',
 
             pic_of_connection: '',
             pic_of_psf: '',
@@ -481,6 +478,8 @@
 
             dataURI: '',
 
+            
+
         }
       },
 
@@ -496,7 +495,7 @@
             if (this.service_type == 'prepaid') {
 
                 // await checkCustomerMeterNumber(this.meter_number)
-                console.log('make postpaid call')
+                console.log('make prepaid call')
                 try {
 
                     const response = await checkCustomerMeterNumber(this.meter_number)
@@ -541,6 +540,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dtNumber = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -1933,7 +1933,7 @@
 
                 console.log('service type: ', this.service_type, 'account name: ',this.account_name, this.meter_number, this.account_type, this.account_name)
                 console.log(this.tarrif, this.address, this.business_unit, this.undertaking_one, this.dt_name)
-                console.log(this.phone_number, this.location, this.date_of_suspension, this.remarks, 'pic of connection: ', this.pic_of_connection.name, 'pic of psf: ', this.pic_of_psf.name)
+                console.log(this.phone_number, this.location, this.date_of_suspension, this.remarks, 'pic of connection: ', this.pic_of_connection.name, 'pic of psf: ', this.pic_of_psf.name, 'dtNo: ', this.dtNumber)
                 
                 try {
                     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/accountReactivation', {
@@ -1955,6 +1955,7 @@
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
+                            dtNo: this.dtNumber,
                             phoneNo: this.phone_number,
                             location: this.location,
                             dateOfSuspension: this.date_of_suspension,

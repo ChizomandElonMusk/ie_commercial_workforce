@@ -1,21 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
-      <!-- <div class="row">
-        <div>
-          <h6 class="red-text" style="font-weight: 100; margin-bottom: 20px;">
-            Menu
-          </h6>
-        </div>
-      </div> -->
-
       <div class="row">
-        <Logo style="margin-bottom: 50px; margin-top: 50px;"/>
-      </div>
-
-      <div class="row" style="padding-bottom: 10px;">
         <div class="col s12">
-          <b class=" grey-text darken-4">Welcome,</b> <br>
-          <b style="font-size: 20px; color: #757575;" class="">{{fullname}}</b>
+          <nuxt-link to="./ie_force" class="red white-text btn">
+              Back 
+          </nuxt-link>
+          <b class="grey-text btn disabled">IE FORCE</b>
         </div>
       </div>
   
