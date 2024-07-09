@@ -1892,6 +1892,7 @@
 
 
         async submit() {
+            console.log('this. is dt num', this.dtNumber);
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -1931,9 +1932,7 @@
                 
 
 
-                console.log('service type: ', this.service_type, 'account name: ',this.account_name, this.meter_number, this.account_type, this.account_name)
-                console.log(this.tarrif, this.address, this.business_unit, this.undertaking_one, this.dt_name)
-                console.log(this.phone_number, this.location, this.date_of_suspension, this.remarks, 'pic of connection: ', this.pic_of_connection.name, 'pic of psf: ', this.pic_of_psf.name, 'dtNo: ', this.dtNumber)
+                
                 
                 try {
                     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/accountReactivation', {

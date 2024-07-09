@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="./" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Account Suspension
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="./" class="red white-text btn">
+                    Back 
+                </nuxt-link>
+                <b class="grey-text btn disabled">Account Suspension</b>
             </div>
         </div>
   
@@ -427,6 +423,7 @@
             location: '',
             date_of_suspension: '',
             userId: null,
+            dtNumber: '',
             pic_of_cwd: '',
             pic_of_fv: '',
             pic_of_ado_issued: '',
@@ -569,6 +566,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dtNumber = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -2165,6 +2163,7 @@
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
             } else {
+                
 
                 
                 
@@ -2192,6 +2191,7 @@
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
+                            dtNo: this.dtNumber,
                             phoneNo: this.phone_number,
                             location: this.location,
                             dateOfSuspension: this.date_of_suspension,

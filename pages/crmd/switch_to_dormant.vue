@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="./" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Switch to Dormant
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="./" class="red white-text btn">
+                    Back 
+                </nuxt-link>
+                <b class="grey-text btn disabled">Switch to Dormant</b>
             </div>
         </div>
   
@@ -365,6 +361,7 @@
             location: '',
             reason_for_dormancy: null,
             userId: null,
+            dtNumber: '',
             pic_of_evidence: '',
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
@@ -502,6 +499,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dtNumber = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -1893,6 +1891,7 @@
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
+                            dtNo: this.dtNumber,
                             phoneNo: this.phone_number,
                             location: this.location,
                             dateOfSuspension: this.date_of_suspension,

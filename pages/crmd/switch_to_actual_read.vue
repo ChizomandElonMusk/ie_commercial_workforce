@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="./" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Switch to Actual Read
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="./" class="red white-text btn">
+                    Back 
+                </nuxt-link>
+                <b class="grey-text btn disabled">Switch to Actual Read</b>
             </div>
         </div>
   
@@ -441,6 +437,7 @@
             dials: '',
             consumption: '',
             userId: null,
+            dtNumber: '',
 
             pic_of_building: '',
             pic_of_fpm: '',
@@ -583,6 +580,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dtNumber = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -2072,6 +2070,7 @@
 
 
         async submit() {
+            console.log('this. is dt num', this.dtNumber);
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -2129,6 +2128,7 @@
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
+                            dtNo: this.dtNumber,
                             phoneNo: this.phone_number,
                             location: this.location,
                             dials: this.dials,
