@@ -322,7 +322,7 @@
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px;">
-                            <CustomSelect :options="['Vacant Apartment', 'Disconnection due to non-payment', 'Demolished', 'Customer’s Requests', 'PPM Installed', 'Under Renovation', 'Untraceable', 'DT Out of circuit', 'Duplicated Bill or Account']" :default="'Remarks'" class="" v-model="remarks" />
+                            <CustomSelect :options="['Vacant Apartment', 'Disconnection due to non-payment', 'Demolished', 'Customer’s Requests', 'PPM Installed', 'Under Renovation', 'Untraceable', 'DT Out of circuit', 'Duplicated Bill or Account']" :default="'Reason for suspension'" class="" v-model="remarks" />
                         </div>
                     </div>
 

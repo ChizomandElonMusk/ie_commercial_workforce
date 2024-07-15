@@ -260,7 +260,7 @@
                         <div class="col s12">
                             <h6 class="red-text">
                                 <!-- Picture of building * -->
-                                Additional pic 1
+                                Picture of MobiForm
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerAdditionalPic1()">
                                 <i class="material-icons white-text">camera_alt</i>

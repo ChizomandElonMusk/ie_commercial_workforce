@@ -243,13 +243,19 @@
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="text" v-model="par" placeholder="PAR">
+                            <input type="number" v-model.number="par" placeholder="PAR">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="text" v-model="lar" placeholder="LAR">
+                            <input type="number" v-model.number="lar" placeholder="LAR">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="number" v-model.number="kwh" placeholder="KHW" readonly>
                         </div>
                     </div>
 
@@ -262,6 +268,20 @@
                     <div class="row">
                         <div class="col s12">
                             <input type="text" v-model="consumption" placeholder="Consumption">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
+                            <CustomSelect :options="['s25', 'p20', 'p25', 'p50']" :default="'Meter Type'" class="" />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
+                            <CustomSelect :options="['4.2', '5.2', '6.2', '7.2', '8.2', '9.2', '10.2']" :default="'Meter Dials'" class="" />
                         </div>
                     </div>
 
@@ -296,7 +316,7 @@
                         <div class="col s12">
                             <h6 class="red-text">
                                 <!-- Picture of building * -->
-                                Functional postpaid meter
+                                Picture of the meter showing LAR
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerFunctionPostpaidMeter()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -319,7 +339,7 @@
                         <div class="col s12">
                             <h6 class="red-text">
                                 <!-- Picture of installation /Cut Out/ metering point 1  -->
-                                Additional photos
+                                Picture of meter showing PAR
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForAdditionalPhotos()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -432,8 +452,9 @@
             phone_number: '',
             location: '',
             meter_number: '',
-            par: '',
-            lar: '',
+            par: 0,
+            lar: 0,
+            // kwh: 0,
             dials: '',
             consumption: '',
             userId: null,
@@ -523,6 +544,14 @@
 
             dataURI: '',
 
+        }
+      },
+
+      computed: {
+        kwh: {
+            get() {
+             return this.par - this.lar
+        }
         }
       },
 
