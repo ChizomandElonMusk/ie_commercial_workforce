@@ -274,14 +274,14 @@
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
-                            <CustomSelect :options="['s25', 'p20', 'p25', 'p50']" :default="'Meter Type'" class="" />
+                            <CustomSelect :options="['s25', 'p20', 'p25', 'p50']" :default="'Meter Type'" v-model="meter_type" class="" />
                         </div>
                     </div>
 
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
-                            <CustomSelect :options="['4.2', '5.2', '6.2', '7.2', '8.2', '9.2', '10.2']" :default="'Meter Dials'" class="" />
+                            <CustomSelect :options="['4.2', '5.2', '6.2', '7.2', '8.2', '9.2', '10.2']" :default="'Meter Dials'" v-model="dials" class="" />
                         </div>
                     </div>
 
@@ -451,7 +451,7 @@
             account_status: '',
             phone_number: '',
             location: '',
-            meter_number: '',
+            meter_type: '',
             par: 0,
             lar: 0,
             // kwh: 0,
@@ -506,7 +506,6 @@
             meter_manufacturer: '',
             meter_type_by_manufacturer: '',
             meter_payment_type: '',
-            meter_type: '',
             meter_type_box: '',
             tube: false,
             mcb: '',
@@ -600,9 +599,7 @@
                 this.printCurrentPosition()
                 
                 this.account_type = response.accountType
-                this.account_name = response.accountName
                 this.tarrif = response.tariff
-                this.address = response.address
                 this.address = response.address
                 this.business_unit = response.bu
                 this.account_status = response.accountStatus
@@ -2099,7 +2096,6 @@
 
 
         async submit() {
-            console.log('this. is dt num', this.dtNumber);
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -2138,6 +2134,10 @@
 
                 
                 try {
+                    console.log(this.kwh);
+                    console.log(this.kwh);
+                    console.log(this.dials);
+                    console.log(this.meter_type);
                     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/switchToActualRead', {
                         method: 'POST',
                         headers: {
@@ -2152,6 +2152,7 @@
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            accountStatus: this.account_status,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,
@@ -2161,8 +2162,10 @@
                             phoneNo: this.phone_number,
                             location: this.location,
                             dials: this.dials,
+                            meterType: this.meter_type,
                             par: this.par,
                             lar: this.lar,
+                            kwh: this.kwh,
                             consumption: this.consumption,
                             remarks: this.remarks,
                             picOfBuilding: this.pic_of_building.name,

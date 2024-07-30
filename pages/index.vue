@@ -62,7 +62,7 @@
         return {
           backgroundUrl,
           username: 'cechehieuka',
-          password: '@@@1KingGod12345',
+          password: '@@@1KingGod123456',
           lat: '',
           long: '',
           hidePreLoader: true,
@@ -172,7 +172,7 @@
 
           // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
 
-          console.log('trying api now........')
+          // console.log('trying api now........')
           
           try {
 

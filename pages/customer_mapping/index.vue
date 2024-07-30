@@ -1,7 +1,7 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="../dashboard" class="red white-text btn">
+            <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
                 Back
             </nuxt-link>
         </div>
@@ -247,7 +247,7 @@
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="text" v-model="new_dt_nomenclature" placeholder="New DT Nomenclature">
+                            <input type="text" v-model="new_dt_nomenclature" placeholder="P DT">
                         </div>
                     </div>
 

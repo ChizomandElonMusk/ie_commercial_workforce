@@ -352,6 +352,7 @@
             meter_number: '43901910984',
             account_type: '',
             account_name: '',
+            account_status: '',
             tarrif: '',
             address: '',
             business_unit: '',
@@ -494,7 +495,7 @@
                 this.account_name = response.accountName
                 this.tarrif = response.tariff
                 this.address = response.address
-                this.address = response.address
+                this.account_status = response.accountStatus
                 this.business_unit = response.bu
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
@@ -1886,6 +1887,7 @@
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            accountStatus: this.account_status,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,

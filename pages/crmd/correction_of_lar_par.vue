@@ -1937,7 +1937,10 @@
 
 
         async submit() {
-            console.log('this. is dt num', this.dtNumber);
+            console.log(this.account_status);
+            console.log(this.account_status);
+            console.log(this.account_status);
+            console.log(this.account_status);
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -1987,6 +1990,7 @@
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            accountStats: this.account_status,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,
