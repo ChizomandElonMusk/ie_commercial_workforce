@@ -36,6 +36,18 @@
     "chunkName": "pages/dashboard_ie_force"
   },
   {
+    "name": "dt_assigned",
+    "path": "/dt_assigned",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/dt_assigned.vue",
+    "chunkName": "pages/dt_assigned"
+  },
+  {
+    "name": "e_services",
+    "path": "/e_services",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/e_services/index.vue",
+    "chunkName": "pages/e_services/index"
+  },
+  {
     "name": "energy_theft",
     "path": "/energy_theft",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/energy_theft/index.vue",
@@ -196,6 +208,12 @@
     "path": "/crmd/switch_to_quantitative",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/crmd/switch_to_quantitative.vue",
     "chunkName": "pages/crmd/switch_to_quantitative"
+  },
+  {
+    "name": "e_services-transactions",
+    "path": "/e_services/transactions",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/e_services/transactions.vue",
+    "chunkName": "pages/e_services/transactions"
   },
   {
     "name": "index",

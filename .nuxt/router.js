@@ -10,6 +10,8 @@ const _724fad34 = () => interopDefault(import('../pages/customer_complaints/inde
 const _39223022 = () => interopDefault(import('../pages/customer_details_validation/index.vue' /* webpackChunkName: "pages/customer_details_validation/index" */))
 const _b123b5d0 = () => interopDefault(import('../pages/customer_mapping/index.vue' /* webpackChunkName: "pages/customer_mapping/index" */))
 const _3a913d3b = () => interopDefault(import('../pages/dashboard_ie_force.vue' /* webpackChunkName: "pages/dashboard_ie_force" */))
+const _e0401c36 = () => interopDefault(import('../pages/dt_assigned.vue' /* webpackChunkName: "pages/dt_assigned" */))
+const _1f1030e3 = () => interopDefault(import('../pages/e_services/index.vue' /* webpackChunkName: "pages/e_services/index" */))
 const _1898aa73 = () => interopDefault(import('../pages/energy_theft/index.vue' /* webpackChunkName: "pages/energy_theft/index" */))
 const _a9cea9ca = () => interopDefault(import('../pages/field_for_customer_visitation/index.vue' /* webpackChunkName: "pages/field_for_customer_visitation/index" */))
 const _14e1cd0b = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
@@ -37,6 +39,7 @@ const _6d99d909 = () => interopDefault(import('../pages/crmd/sent.vue' /* webpac
 const _2498e7a6 = () => interopDefault(import('../pages/crmd/switch_to_actual_read.vue' /* webpackChunkName: "pages/crmd/switch_to_actual_read" */))
 const _9a69f6b2 = () => interopDefault(import('../pages/crmd/switch_to_dormant.vue' /* webpackChunkName: "pages/crmd/switch_to_dormant" */))
 const _63895f7e = () => interopDefault(import('../pages/crmd/switch_to_quantitative.vue' /* webpackChunkName: "pages/crmd/switch_to_quantitative" */))
+const _1890f0d4 = () => interopDefault(import('../pages/e_services/transactions.vue' /* webpackChunkName: "pages/e_services/transactions" */))
 const _8f6b70cc = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -74,6 +77,14 @@ export const routerOptions = {
     path: "/dashboard_ie_force",
     component: _3a913d3b,
     name: "dashboard_ie_force"
+  }, {
+    path: "/dt_assigned",
+    component: _e0401c36,
+    name: "dt_assigned"
+  }, {
+    path: "/e_services",
+    component: _1f1030e3,
+    name: "e_services"
   }, {
     path: "/energy_theft",
     component: _1898aa73,
@@ -182,6 +193,10 @@ export const routerOptions = {
     path: "/crmd/switch_to_quantitative",
     component: _63895f7e,
     name: "crmd-switch_to_quantitative"
+  }, {
+    path: "/e_services/transactions",
+    component: _1890f0d4,
+    name: "e_services-transactions"
   }, {
     path: "/",
     component: _8f6b70cc,

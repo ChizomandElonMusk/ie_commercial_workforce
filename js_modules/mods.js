@@ -111,3 +111,66 @@ export async function uploadImage(userId, accountNumber, docType, file) {
 }
 
 
+export async function getPaymentHistory(meter_number, date_from, date_to) {
+    // let token = localStorage.getItem('jdotwdott')
+    // var passwords = ""
+    // meter_number = {
+    //     param: "0102327327",
+    // }
+    // meter_number = JSON.stringify(meter_number)
+    // let meter_number = '0102111612'
+
+    try {
+        // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+        const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.token,
+
+            },
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
+
+export async function getAllDTList(username) {
+    username = 'paseeperi'
+
+    try {
+        // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+        const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getESRDTLink?username=' + username, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.token,
+
+            },
+        })
+
+        const response = await rawResponse.json()
+        console.log(response)
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}

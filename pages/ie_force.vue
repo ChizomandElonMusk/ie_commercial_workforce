@@ -23,7 +23,7 @@
             </div>
 
             <div class="col s12 center">
-                <nuxt-link to="/ds">
+                <nuxt-link to="/dt_assigned">
                     <div class="card-panel orange">
                         <span class="white-text">
                             <i class="material-icons">folder_open</i>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="col s12 center">
-                <nuxt-link to="/customer_details_validation">
+                <nuxt-link to="../e_services">
                     <div class="card-panel orange">
                         <span class="white-text">
                             <i class="material-icons">folder_open</i>

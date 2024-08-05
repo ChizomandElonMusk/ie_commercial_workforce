@@ -187,11 +187,17 @@
               body: JSON.stringify({
                 usernameOrEmail: encrytedUsername, 
                 password: encrytedPassword,
-                latitude: this.lat,
-                longitude: this.long
+                latitude: '6.595176845',
+                longitude: '3.358090054'
               })
+              
             });
-
+            // body: JSON.stringify({
+            //     usernameOrEmail: encrytedUsername, 
+            //     password: encrytedPassword,
+            //     latitude: this.lat,
+            //     longitude: this.long
+            //   })
             console.log('content is being converted to json')
             const content = await rawResponse.json();
 
