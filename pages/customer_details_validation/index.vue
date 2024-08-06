@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="../dashboard" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Customer Details Validation
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
+                    Back
+                </nuxt-link>
+                <b class="grey-text btn disabled" style="font-size: 11px;">Customer Details Validation</b>
             </div>
         </div>
   
@@ -397,6 +393,8 @@
             service_type: null,
             account_number: '0102111612',
             meter_number: '43901910984',
+            dt_no: '',
+            account_status: '',
             account_type: '',
             account_name: '',
             tarrif: '',
@@ -410,7 +408,6 @@
             additional_phone_number: '',
             email: '',
             is_customer_connected: '',
-            account_status: '',
             userId: null,
             pic_of_wire_down: '',
             pic_of_fv: '',
@@ -539,7 +536,7 @@
             try {
                 let response = await getCustomerInfoApi(accountNumber)
                 console.log(response)
-                this.printCurrentPosition()
+                await this.printCurrentPosition()
                 
                 this.account_type = response.accountType
                 this.account_name = response.accountName
@@ -550,6 +547,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dt_no = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -2003,6 +2001,8 @@
                             accountName: this.account_name,
                             tariff: this.tarrif,
                             address: this.address,
+                            accountStatus: this.account_status,
+                            dtNo: this.dt_no,
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
@@ -2017,6 +2017,8 @@
                             picFrontView: this.pic_of_fv.name
                         }),
                     })
+
+                    console.log(this.dt_no);
 
                     const response = await rawResponse.json()
 

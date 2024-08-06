@@ -187,11 +187,18 @@
               body: JSON.stringify({
                 usernameOrEmail: encrytedUsername, 
                 password: encrytedPassword,
-                latitude: '6.595176845',
-                longitude: '3.358090054'
+                latitude: this.lat,
+                longitude: this.long
               })
               
             });
+            // body: JSON.stringify({
+            //     usernameOrEmail: encrytedUsername, 
+            //     password: encrytedPassword,
+            //     latitude: '6.595176845',
+            //     longitude: '3.358090054'
+            //   })
+
             // body: JSON.stringify({
             //     usernameOrEmail: encrytedUsername, 
             //     password: encrytedPassword,

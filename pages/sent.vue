@@ -25,7 +25,7 @@
 
                 <div class="row">
                     <div class="col s12 center">
-                        <nuxt-link to="./dashboard">
+                        <nuxt-link to="./dashboard_ie_force">
                             <div class="card-panel red">
                                 <span class="white-text">
                                     <h6>Back to menu</h6>

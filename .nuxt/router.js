@@ -9,11 +9,11 @@ const _098aca9e = () => interopDefault(import('../pages/crmd/index.vue' /* webpa
 const _724fad34 = () => interopDefault(import('../pages/customer_complaints/index.vue' /* webpackChunkName: "pages/customer_complaints/index" */))
 const _39223022 = () => interopDefault(import('../pages/customer_details_validation/index.vue' /* webpackChunkName: "pages/customer_details_validation/index" */))
 const _b123b5d0 = () => interopDefault(import('../pages/customer_mapping/index.vue' /* webpackChunkName: "pages/customer_mapping/index" */))
+const _41b24616 = () => interopDefault(import('../pages/customer_visitation/index.vue' /* webpackChunkName: "pages/customer_visitation/index" */))
 const _3a913d3b = () => interopDefault(import('../pages/dashboard_ie_force.vue' /* webpackChunkName: "pages/dashboard_ie_force" */))
 const _e0401c36 = () => interopDefault(import('../pages/dt_assigned.vue' /* webpackChunkName: "pages/dt_assigned" */))
 const _1f1030e3 = () => interopDefault(import('../pages/e_services/index.vue' /* webpackChunkName: "pages/e_services/index" */))
 const _1898aa73 = () => interopDefault(import('../pages/energy_theft/index.vue' /* webpackChunkName: "pages/energy_theft/index" */))
-const _a9cea9ca = () => interopDefault(import('../pages/field_for_customer_visitation/index.vue' /* webpackChunkName: "pages/field_for_customer_visitation/index" */))
 const _14e1cd0b = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _5555b477 = () => interopDefault(import('../pages/forms.vue' /* webpackChunkName: "pages/forms" */))
 const _38b49d20 = () => interopDefault(import('../pages/ie_force.vue' /* webpackChunkName: "pages/ie_force" */))
@@ -74,6 +74,10 @@ export const routerOptions = {
     component: _b123b5d0,
     name: "customer_mapping"
   }, {
+    path: "/customer_visitation",
+    component: _41b24616,
+    name: "customer_visitation"
+  }, {
     path: "/dashboard_ie_force",
     component: _3a913d3b,
     name: "dashboard_ie_force"
@@ -89,10 +93,6 @@ export const routerOptions = {
     path: "/energy_theft",
     component: _1898aa73,
     name: "energy_theft"
-  }, {
-    path: "/field_for_customer_visitation",
-    component: _a9cea9ca,
-    name: "field_for_customer_visitation"
   }, {
     path: "/forgot",
     component: _14e1cd0b,

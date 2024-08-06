@@ -1,15 +1,11 @@
 <template>
     <div style="padding-top: 20px;" class="container">
         <div class="row">
-            <nuxt-link to="../dashboard" class="red white-text btn">
-                Back
-            </nuxt-link>
-        </div>
-        <div class="row">
-            <div>
-                <h6 class="red-text center" style="font-weight: 100">
-                    Non-Vending Customer Validation
-                </h6>
+            <div class="col s12">
+                <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
+                    Back
+                </nuxt-link>
+                <b class="grey-text btn disabled" style="font-size: 10px;"> Non-Vending Customer Validation</b>
             </div>
         </div>
   
@@ -386,6 +382,7 @@
             meter_number: '43901910984',
             account_type: '',
             account_name: '',
+            dt_no: '',
             tarrif: '',
             address: '',
             business_unit: '',
@@ -539,6 +536,7 @@
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
+                this.dt_no = response.dtNo
                 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -2066,6 +2064,8 @@
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            accountStatus: this.account_status,
+                            dtNo: this.dt_no,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,

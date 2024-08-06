@@ -67,7 +67,9 @@
             </nuxt-link>
           </div> -->
 
-          <div class="col s12 center">
+          <!-- customer complaint -->
+
+          <!-- <div class="col s12 center">
             <nuxt-link to="/customer_complaints">
               <div class="card-panel black">
                 <span class="white-text">
@@ -76,7 +78,7 @@
                 </span>
               </div>
             </nuxt-link>
-          </div>
+          </div> -->
           
 
           <!-- 
@@ -117,7 +119,7 @@
           </div> -->
 
           <div class="col s12 center">
-            <nuxt-link to="/field_for_customer_visitation">
+            <nuxt-link to="/customer_visitation">
               <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
