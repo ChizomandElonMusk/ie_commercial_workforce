@@ -771,7 +771,7 @@
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
                 
-                this.pic_of_wire_down = new File([compressedFile], imageFileName + `pictureOfWireDown${compressedFile.type.replace('image/', '.')}`)
+                this.pic_of_wire_down = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
                 console.log(this.pic_of_wire_down)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
@@ -780,7 +780,7 @@
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerDetails_WireDown', this.pic_of_wire_down)
+                var xx = await uploadImage(this.userId, this.account_number, 'SuspendedCustomer_WireDown', this.pic_of_wire_down)
                 console.log(xx)
 
                 
@@ -843,7 +843,7 @@
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
                 
-                this.pic_of_fv = new File([compressedFile], imageFileName + `pictureOfFV${compressedFile.type.replace('image/', '.')}`)
+                this.pic_of_fv = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
                 console.log(this.pic_of_fv)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
@@ -852,7 +852,7 @@
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerDetails_FrontView', this.pic_of_fv)
+                var xx = await uploadImage(this.userId, this.account_number, 'SuspendedCustomer_FrontView', this.pic_of_fv)
                 console.log(xx)
 
                 

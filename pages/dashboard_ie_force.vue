@@ -56,7 +56,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasNewlyInstalledMeterCV == true">
             <nuxt-link to="/newly_installed_ppm">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -85,7 +85,7 @@
 
           <div class="col s12 center" v-if="hasSuspendedCustomerValidation == true">
             <nuxt-link to="/suspended_cv">
-              <div class="card-panel pink">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Suspended Customers Validation</h6>
@@ -118,7 +118,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasCustomerVisitation == true">
             <nuxt-link to="/customer_visitation">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -187,7 +187,7 @@
 
         // not done
         hasNewlyInstalledMeterCV() {
-            return this.permissions.includes('SWITCH_TO_QUANTITATIVE')
+            return this.permissions.includes('PPM_CUSTOMER_VALIDATION')
         },
 
         hasCustomerComplaint() {
@@ -208,7 +208,7 @@
 
         // not done
         hasCustomerVisitation() {
-            return this.permissions.includes('NON_INCLUSION_CAPTURE')
+            return this.permissions.includes('SUSPENDED_CUSTOMER_VISITATION')
         },
 
       },

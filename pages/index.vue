@@ -286,7 +286,6 @@
       },
 
       created() {
-        localStorage.clear()
         // this.testAPI()
         // let v = this.$store.state.token
         // console.log(v)
