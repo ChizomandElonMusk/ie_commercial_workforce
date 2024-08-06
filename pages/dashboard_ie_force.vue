@@ -23,7 +23,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasCustomerMapping == true">
             <nuxt-link to="/customer_mapping">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -34,7 +34,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasCustomerDetailsValidation == true">
             <nuxt-link to="/customer_details_validation">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -45,7 +45,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasEnergyTheft == true">
             <nuxt-link to="/energy_theft">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -56,34 +56,34 @@
             </nuxt-link>
           </div>
 
-          <!-- <div class="col s12 center">
+          <div class="col s12 center">
             <nuxt-link to="/newly_installed_ppm">
-              <div class="card-panel red">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
-                  <h6>Newly Installed PPM CV</h6>
+                  <h6>Newly Installed Meter CV</h6>
                 </span>
               </div>
             </nuxt-link>
-          </div> -->
+          </div>
 
           <!-- customer complaint -->
 
-          <!-- <div class="col s12 center">
+          <div class="col s12 center" v-if="hasCustomerComplaint == true">
             <nuxt-link to="/customer_complaints">
-              <div class="card-panel black">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons white-text">folder_open</i>
                   <h6 class="white-text">Customer Complaints</h6>
                 </span>
               </div>
             </nuxt-link>
-          </div> -->
+          </div>
           
 
-          <!-- 
+          
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasSuspendedCustomerValidation == true">
             <nuxt-link to="/suspended_cv">
               <div class="card-panel pink">
                 <span class="white-text">
@@ -94,9 +94,9 @@
             </nuxt-link>
           </div>
 
-           -->
+          
 
-          <div class="col s12 center">
+          <div class="col s12 center" v-if="hasNonVendingCustomerValidation == true">
             <nuxt-link to="/none_vending_cv">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -107,16 +107,16 @@
             </nuxt-link>
           </div>
 
-          <!-- <div class="col s12 center">
+          <div class="col s12 center" v-if="hasNonInclusionCapture == true">
             <nuxt-link to="/non_inclusion_capture">
-              <div class="card-panel blue darken-4">
+              <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Non-inclusion capture</h6>
                 </span>
               </div>
             </nuxt-link>
-          </div> -->
+          </div>
 
           <div class="col s12 center">
             <nuxt-link to="/customer_visitation">
@@ -140,14 +140,7 @@
             </nuxt-link>
           </div> -->
 
-          <div class="col s12 center">
-              <div class="card-panel red" @click="logOut">
-                  <span class="white-text">
-                    <i class="material-icons">lock</i>
-                    <h6>Logout</h6>
-                  </span>
-              </div>
-          </div>
+          
         </div>
 
       </div>
@@ -178,6 +171,50 @@
         }
       },
 
+
+      computed: {
+        hasCustomerMapping() {
+            return this.permissions.includes('CUSTOMER_MAPPING')
+        },
+
+        hasCustomerDetailsValidation() {
+            return this.permissions.includes('CUSTOMER_DETAILS_VALIDATION')
+        },
+
+        hasEnergyTheft() {
+            return this.permissions.includes('ENERGY_THEFT')
+        },
+
+        // not done
+        hasNewlyInstalledMeterCV() {
+            return this.permissions.includes('SWITCH_TO_QUANTITATIVE')
+        },
+
+        hasCustomerComplaint() {
+            return this.permissions.includes('CUSTOMER_COMPLAINTS')
+        },
+
+        hasSuspendedCustomerValidation() {
+            return this.permissions.includes('SUSPENDED_CUSTOMER_VISITATION')
+        },
+
+        hasNonVendingCustomerValidation() {
+            return this.permissions.includes('NON_VENDING_CUSTOMER_VALIDATION')
+        },
+        
+        hasNonInclusionCapture() {
+            return this.permissions.includes('NON_INCLUSION_CAPTURE')
+        },
+
+        // not done
+        hasCustomerVisitation() {
+            return this.permissions.includes('NON_INCLUSION_CAPTURE')
+        },
+
+      },
+
+
+
       methods: {
         logOut() {
           if(process.client) {
@@ -197,7 +234,7 @@
       },
 
       created() {
-        
+        this.permissions = localStorage.getItem('forms')
         // this.getFullname()
       }
   }

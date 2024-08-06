@@ -275,7 +275,7 @@
 
                     <div class="row center">
                         <div class="col s12">
-                            <button class="btn btn-large red" style="width: 300px; margin-top: 20px; margin-bottom: 20px;" @click="sumbitVSM">Submit</button>
+                            <button class="btn btn-large red" style="width: 300px; margin-top: 20px; margin-bottom: 20px;" @click="submit">Submit</button>
                         </div>
                     </div>
 
@@ -315,6 +315,8 @@
             meter_number: '43901910984',
             account_type: '',
             account_name: '',
+            account_status: '',
+            dt_no: '',
             tarrif: '',
             address: '',
             business_unit: '',
@@ -1908,6 +1910,8 @@
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            accountStatus: this.account_status,
+                            dtNo: this.dt_no,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,
@@ -1915,13 +1919,8 @@
                             dt: this.dt_name,
                             phoneNo: this.phone_number,
                             location: this.location,
-                            newPhoneNo: this.new_phone_number,
-                            additionalPhoneNo: this.additional_phone_number,
-                            emailAddress: this.email,
-                            isCustomerConnected: this.is_customer_connected,
-                            remarks: this.remarks,
-                            picWireDown: this.pic_of_wire_down.name,
-                            picFrontView: this.pic_of_fv.name
+                            complaint: this.complaints,
+                            comments: this.comments
                         }),
                     })
 

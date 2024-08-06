@@ -71,6 +71,8 @@
             localStorage.removeItem('token')
             window.location = './'
           }
+          localStorage.clear()
+
         },
 
         async getFullname() {

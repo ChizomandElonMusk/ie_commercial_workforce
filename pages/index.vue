@@ -224,10 +224,12 @@
 
                 M.toast({html: `<b class="green-text">Welcome</b>`})
                 let token = content.token
+                let forms = content.forms
                 let userId = content.userId
 
                 if (process.client) {
                   localStorage.setItem('token', token)
+                  localStorage.setItem('forms', forms)
                   localStorage.setItem('userId', userId)
                   // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
                 }
@@ -284,7 +286,7 @@
       },
 
       created() {
-        
+        localStorage.clear()
         // this.testAPI()
         // let v = this.$store.state.token
         // console.log(v)
