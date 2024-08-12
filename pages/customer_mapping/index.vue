@@ -68,16 +68,16 @@
 
         
         <!-- form starts here -->
-        <div class="row" :class="{'hide': hideForm}">
+        <div class="row" :class="{'hide': hideForm}" @change="newDTinAnotherUTStateChange">
             <div class="col s12">
                 <form @submit.prevent style="margin-top: 20px">
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <div class="col s12" style="margin-bottom: 15px;">
                             <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
-                    <div class="row" v-if="service_type == 'postpaid'">
+                    <div class="row" v-if="service_type == 'postpaid'" :class="{'hide': hideOtherFormElements}">
                         <div class="col s9">
                             <input type="text" placeholder="Account number" v-model="account_number"> 
                         </div>
@@ -85,7 +85,7 @@
                             <button class="btn btn-flat red white-text" @click="checkNumber()">Check</button>
                         </div>
                     </div>
-                    <div class="row" v-if="service_type == 'prepaid'">
+                    <div class="row" v-if="service_type == 'prepaid'" :class="{'hide': hideOtherFormElements}">
                         <div class="col s9">
                             <input type="text" placeholder="Meter number" v-model="meter_number"> 
                         </div>
@@ -107,162 +107,224 @@
 
                      -->
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- cutomer name -->
                         <div class="col s12">
                             <input type="text" placeholder="Account type" v-model="account_type" disabled> 
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- cutomer name -->
                         <div class="col s12">
                             <input type="text" placeholder="Account name" v-model="account_name" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- cutomer name -->
                         <div class="col s12">
                             <input type="text" placeholder="Tarrif" v-model="tarrif" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- cutomer name -->
                         <div class="col s12">
                             <input type="text" placeholder="Address" v-model="address" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- business unit -->
                         <div class="col s12">
                             <b>BU:</b> {{ business_unit }}
-                            <!-- <select class="custom-select" v-model="business_unit">
-                                <option value="" disabled selected>Business Unit *</option>
-                                <option value="Abule Egba">Abule Egba</option>
-                                <option value="Akowonjo">Akowonjo</option>
-                                <option value="Ikeja">Ikeja</option>
-                                <option value="Ikorodu">Ikorodu</option>
-                                <option value="Oshodi">Oshodi</option>
-                                <option value="Shomolu">Shomolu</option>
-                            </select> -->
                         </div>
                     </div>
                     <br>
                     
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- undertaking one -->
                         <div class="col s12">
                             <b>UT:</b> {{ undertaking_one }}
-                            <!-- <select class="custom-select" v-model="undertaking_one">
-                                <option value="" disabled selected>Undertaking *</option>
-                                <option value="ABORU">ABORU</option>
-                                <option value="ABULE-ODU">ABULE-ODU</option>
-                                <option value="ABULE-TAYLOR">ABULE-TAYLOR</option>
-                                <option value="ADIYAN">ADIYAN</option>
-                                <option value="AGO">AGO</option>
-                                <option value="AIT">AIT</option>
-                                <option value="AJAO">AJAO</option>
-                                <option value="AKUTE">AKUTE</option>
-                                <option value="AMUWO">AMUWO</option>
-                                <option value="ANIFOWOSHE">ANIFOWOSHE</option>
-                                <option value="ANTHONY MEGA">ANTHONY MEGA</option>
-                                <option value="AYANGBUREN">AYANGBUREN</option>
-                                <option value="AYOBO">AYOBO</option>
-                                <option value="BARIGA">BARIGA</option>
-                                <option value="DOPEMU">DOPEMU</option>
-                                <option value="EGBEDA">EGBEDA</option>
-                                <option value="EPE">EPE</option>
-                                <option value="FAGBA">FAGBA</option>
-                                <option value="GOWON-ESTATE">GOWON-ESTATE</option>
-                                <option value="IDIMU">IDIMU</option>
-                                <option value="IFAKO">IFAKO</option>
-                                <option value="IGANDO">IGANDO</option>
-                                <option value="IGBOBI">IGBOBI</option>
-                                <option value="IGBOBI MEGA">IGBOBI MEGA</option>
-                                <option value="IGBOGBO">IGBOGBO</option>
-                                <option value="IJAIYE">IJAIYE</option>
-                                <option value="IJEDE">IJEDE</option>
-                                <option value="IJEGUN">IJEGUN</option>
-                                <option value="IJU">IJU</option>
-                                <option value="IKOSI">IKOSI</option>
-                                <option value="IKOTUN">IKOTUN</option>
-                                <option value="ILUPEJU">ILUPEJU</option>
-                                <option value="ILUPEJU MEGA">ILUPEJU MEGA</option>
-                                <option value="IPAJA">IPAJA</option>
-                                <option value="ISOLO">ISOLO</option>
-                                <option value="KETU">KETU</option>
-                                <option value="LAMBE">LAMBE</option>
-                                <option value="LASUNWON">LASUNWON</option>
-                                <option value="MAGODO">MAGODO</option>
-                                <option value="MAGODO MEGA">MAGODO MEGA</option>
-                                <option value="MENDE">MENDE</option>
-                                <option value="OBA AKRAN">OBA AKRAN</option>
-                                <option value="ODOGUNYAN">ODOGUNYAN</option>
-                                <option value="OGBA">OGBA</option>
-                                <option value="OGUDU">OGUDU</option>
-                                <option value="OJODU">OJODU</option>
-                                <option value="OKE-AFA">OKE-AFA</option>
-                                <option value="OKE-IRA">OKE-IRA</option>
-                                <option value="OKE-ODO">OKE-ODO</option>
-                                <option value="OKOTA">OKOTA</option>
-                                <option value="OLATEJU">OLATEJU</option>
-                                <option value="OLOWORA">OLOWORA</option>
-                                <option value="OREGUN">OREGUN</option>
-                                <option value="ORILE-AGEGE">ORILE-AGEGE</option>
-                                <option value="OSHODI">OSHODI</option>
-                                <option value="OWORO">OWORO</option>
-                                <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
-                                <option value="OWUTU">OWUTU</option>
-                                <option value="PTC">PTC</option>
-                            </select> -->
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- DT name -->
                         <div class="col s12">
-                            <input type="text" placeholder="DT name" v-model="dt_name" disabled>
+                            <b>DT:</b>
+                            <input type="text" placeholder="DT" v-model="dt_name" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <div class="col s12">
+                            <b>DT number:</b>
+                            <input type="text" v-model="dt_no" placeholder="DT number" disabled>
+                        </div>
+                    </div>
+                    
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
+                        <div class="col s12">
+                            <b>Current feeder band:</b>
+                            <input type="text" v-model="current_feeder_band" placeholder="Current feeder band" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
+                        <div class="col s12">
+                            <b>Phone number:</b>
                             <input type="text" v-model="phone_number" placeholder="Phone number" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <!-- address -->
                         <div class="col s12">
                             <input type="text" placeholder="Location" v-model="location" disabled>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" :class="{'hide': hideOtherFormElements}">
                         <div class="col s12">
-                            <input type="text" v-model="new_dt_nomenclature" placeholder="P DT">
+                            <p>
+                                <b>
+                                    Is new DT in another UT?
+                                </b>
+                                <br>
+                                <label>
+                                    <input name="is_dt_in_another_ut" type="radio" value="yes" v-model="is_dt_in_another_ut" checked />
+                                    <span>Yes</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="is_dt_in_another_ut" type="radio" value="no" v-model="is_dt_in_another_ut" />
+                                    <span>No</span>
+                                </label>
+                            </p>
                         </div>
                     </div>
 
-                    <p>
-                        <b>
-                            Is new DT in another UT?
-                        </b>
-                        <br>
-                        <label>
-                            <input name="customer_connected" type="radio" value="yes" v-model="is_dt_in_another_ut" checked />
-                            <span>Yes</span>
-                        </label>
-                        </p>
-                        <p>
-                        <label>
-                            <input name="customer_connected" type="radio" value="no" v-model="is_dt_in_another_ut" />
-                            <span>No</span>
-                        </label>
-                    </p>
+                    <div class="row" :class="{'hide': hideProposedData}">
+                        <div class="col s12">
+                            <table class="striped">
+                                <tbody>
+
+                                    <tr>
+                                        <td>Proposed DT No:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_dt_number }}</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Proposed DT Name:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_dt_name }}</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Proposed DT Name:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_dt_name }}</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Proposed UT:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_ut }}</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Proposed BU:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_bu }}</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Proposed Feeder Band:</td>
+                                        <td>
+                                            <b class="black-text">{{ proposed_feeder_band }}</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Mapping Status:</td>
+                                        <td>
+                                            <b class="black-text">{{ mapping_status }}</b>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row center" :class="{'hide': hideSearchBtn}">
+                        <div class="col s12" >
+                            <button class="btn btn-large orange black-text col s12" style="margin-bottom: 20px;"  @click="showSearchScreen">Search Proposed DT</button>
+                        </div>
+                    </div> -->
+
+                    <div class="row center" :class="{'hide': hideSearchScreen}">
+                        <div class="col s12">
+                            <button class="btn btn-large red col s12" style="margin-bottom: 20px;" @click="cancelSearch">Cancel Search</button>
+                        </div>
+                    </div>
+
+                    <div class="row" :class="{'hide': hideSearchScreen}">
+                        <div class="col s9">
+                            <input type="text" placeholder="Enter DT" v-model="dtSearchQuery"> 
+                        </div>
+                        <div class="col s3">
+                            <button class="btn btn-flat red white-text" @click="searchDT()">Search</button>
+                        </div>
+
+                        <!-- dt table list -->
+                        <div class="col s12">
+                            <table class="striped">
+                                <thead>
+                                    <tr>
+                                        <th>DT No</th>
+                                        <th>DT Name</th>
+                                        <th>Feeder Band</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody v-for="(dt, index) in dtList" :id="dt.dtNo">
+                                    <tr>
+                                        <td @click="selectedData(dt)">
+                                            {{ dt.dtNo }}
+                                            <!-- <a href="#!" v-on:click="getPaymentRec(dt.dtNo, trans.agencyCode)">
+                                                {{ index + 1 }}
+                                            </a> -->
+                                        </td>
+                                        <td>{{ dt.dtName }}</td>
+                                        <td>{{ dt.feederBand }}</td>
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="col s12 center" :class="{'hide': hideLoading}">
+                            <b class="grey-text">Please wait...</b>
+                        </div>
+
+                        <div class="col s12 center" :class="{'hide': hideNoData}">
+                            <b class="grey-text">No data available</b>
+                        </div>
+                    </div>
+
+                    <!-- Upgrade, downgrade or same  -->
+                    <!-- Search proposed DT  -->
 
 
 
@@ -297,9 +359,9 @@
 
 
 
-                    <div class="row center">
+                    <div class="row center" :class="{'hide': hideOtherFormElements}">
                         <div class="col s12">
-                            <button class="btn btn-large red" style="width: 300px; margin-top: 20px; margin-bottom: 20px;" @click="submit">Submit</button>
+                            <button class="btn btn-large red col s12" style="margin-bottom: 20px;" @click="submit">Submit</button>
                         </div>
                     </div>
 
@@ -323,7 +385,7 @@
   import imageCompression from 'browser-image-compression';
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
-  import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import { checkCustomerMeterNumber, getCustomerInfoApi, getDTSearch, uploadImage, hello } from '~/js_modules/mods'
   import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
@@ -339,6 +401,7 @@
             account_type: '',
             account_name: '',
             dt_no: '',
+            current_feeder_band: '',
             account_status: '',
             tarrif: '',
             address: '',
@@ -348,9 +411,36 @@
             phone_number: '',
             location: '',
             new_dt_nomenclature: '',
-            is_dt_in_another_ut: '',
+            is_dt_in_another_ut: 'no',
             additional_phone_number: '',
+            dtList: [],
+            selectedDT: '',
             userId: null,
+            dtSearchQuery: '',
+
+            proposed_dt_number: '',
+            proposed_dt_name: '',
+            proposed_ut: '',
+            proposed_bu: '', 
+            proposed_feeder_band: '',
+            mapping_status: '',
+
+            feederHierarchy: {
+                'A': 4,
+                'Bilateral': 4,
+                'B': 3,
+                'C': 2,
+                'D': 1
+            },
+
+            hideSearchBtn: true,
+            hideOtherFormElements: false,
+            hideSearchScreen: true,
+            hideProposedData: true,
+            hideLoading: true,
+            hideNoData: true,
+
+
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -415,7 +505,7 @@
             long: '',
 
             dataURL: '',
-            hideLoader: true,
+            hideLoading: true,
             showSignature: false,
 
             hideModal: true,
@@ -435,6 +525,109 @@
       },
 
       methods: {
+
+        async newDTinAnotherUTStateChange () {
+            this.current_feeder_band = this.current_feeder_band.trim()
+            if(this.current_feeder_band == '') {
+                M.toast({html: `<b class="red-text">Please fetch customer data!</b>`})
+                this.is_dt_in_another_ut = 'no'
+            } else {
+                this.is_dt_in_another_ut = this.is_dt_in_another_ut.trim()
+                if(this.is_dt_in_another_ut == 'yes' || this.is_dt_in_another_ut == '') {
+                    // this.hideSearchBtn = false
+                    this.hideOtherFormElements = true
+                    this.hideSearchBtn = true
+                    this.hideSearchScreen = false
+                    this.dtList = []
+                    // this.hideProposedData = true
+                } else if(this.is_dt_in_another_ut == 'no'){
+                    this.hideOtherFormElements = false
+                    this.hideSearchScreen = true
+                    this.hideProposedData = true
+                }
+            }
+            // this.hideOtherFormElements = true
+            // this.hideSearchBtn = true
+            // this.hideSearchScreen = false
+            // this.hideProposedData =
+        },
+
+        async showSearchScreen () {
+            this.hideOtherFormElements = true
+            this.hideSearchBtn = true
+            this.hideSearchScreen = false
+        },
+        
+        async cancelSearch () {
+            this.hideOtherFormElements = false
+            this.hideSearchScreen = true
+            this.is_dt_in_another_ut = 'no'
+        },
+
+        async searchDT () {
+            // console.log('clicked');
+            this.hideLoading = false
+            this.hideNoData = true
+            this.hideSearchBtn = true
+            this.dtSearchQuery = this.dtSearchQuery.trim()
+            if(this.dtSearchQuery == '') {
+                this.hideLoading = true
+                M.toast({html: `<b class="red-text">Search field can not be empty!</b>`})
+            } else {
+                this.hideSearchBtn = true
+                let responseSearch = await getDTSearch(this.dtSearchQuery)
+                
+                if(responseSearch.length == 0) {
+                    this.hideNoData = false
+                } else {
+                    this.dtList = responseSearch
+                    this.hideNoData = true
+                }
+                this.hideLoading = true
+                // console.log(responseSearch);
+            }
+        },
+
+        async selectedData (dt) {
+            this.selectedDT = dt
+            console.log('this is the selected DT ', this.selectedDT);
+            this.proposed_dt_number = dt.dtNo
+            this.proposed_dt_name = dt.dtName
+            this.proposed_feeder_band = dt.feederBand
+            this.proposed_ut = dt.ut
+
+            this.hideOtherFormElements = false
+            this.hideSearchScreen = true
+            this.hideProposedData = false
+            // this.is_dt_in_another_ut = 'no'
+            this.mapping_status = this.compareFeeder(this.current_feeder_band, this.proposed_feeder_band)
+        },
+
+        compareFeeder(currentFeeder, proposedFeeder) {
+            // Normalize 'Bilateral' to 'A'
+            currentFeeder = currentFeeder === 'Bilateral' ? 'A' : currentFeeder;
+            proposedFeeder = proposedFeeder === 'Bilateral' ? 'A' : proposedFeeder;
+
+            // Get the hierarchy levels
+            const currentLevel = this.feederHierarchy[currentFeeder];
+            const proposedLevel = this.feederHierarchy[proposedFeeder];
+            console.log(currentLevel);
+            console.log(proposedLevel);
+
+            // Check if the feeders are valid
+            if (currentLevel === undefined || proposedLevel === undefined) {
+                return "Invalid feeder type";
+            }
+
+            // Compare the levels
+            if (currentLevel === proposedLevel) {
+                return "Same";
+            } else if (proposedLevel > currentLevel) {
+                return "Upgrade";
+            } else {
+                return "Downgrade";
+            }
+        },
 
 
         async checkNumber () {
@@ -488,6 +681,7 @@
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
                 this.dt_no = response.dtNo
+                this.current_feeder_band = response.feederBand
                 this.account_status = response.accountStatus
                 
                 // if (users_meter_number == '') {
@@ -1798,6 +1992,13 @@
                             location: this.location,
                             newDt: this.new_dt_nomenclature,
                             isDtInOtherUt: this.is_dt_in_another_ut,
+                            currentFeederBand: this.current_feeder_band,
+                            proposedDtNo: this.proposed_dt_number,
+                            proposedDtName: this.proposed_dt_name,
+                            proposedUt: this.proposed_ut,
+                            proposedBu: this.proposed_bu,
+                            proposedFeederBand: this.proposed_feeder_band,
+                            mappingStatus: this.mapping_status
                         }),
                     })
 

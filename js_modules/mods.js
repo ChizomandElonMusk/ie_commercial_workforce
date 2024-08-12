@@ -174,3 +174,30 @@ export async function getAllDTList(username) {
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
 }
+
+export async function getDTSearch(searchString) {
+    // searchString = 'ojo'
+
+    try {
+        // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+        const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getDTSearch?searchString=' + searchString, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.token,
+
+            },
+        })
+
+        const response = await rawResponse.json()
+        return response
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
