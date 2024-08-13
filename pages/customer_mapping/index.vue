@@ -584,7 +584,7 @@
                     this.hideNoData = true
                 }
                 this.hideLoading = true
-                // console.log(responseSearch);
+                console.log(responseSearch);
             }
         },
 
@@ -595,6 +595,7 @@
             this.proposed_dt_name = dt.dtName
             this.proposed_feeder_band = dt.feederBand
             this.proposed_ut = dt.ut
+            this.proposed_bu = dt.bu
 
             this.hideOtherFormElements = false
             this.hideSearchScreen = true
