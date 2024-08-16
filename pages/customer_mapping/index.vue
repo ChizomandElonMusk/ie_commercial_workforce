@@ -2087,8 +2087,11 @@
         async printCurrentPosition () {
             const coordinates = await Geolocation.getCurrentPosition();
 
-            this.lat = coordinates.coords.latitude
-            this.long = coordinates.coords.longitude
+            // this.lat = coordinates.coords.latitude
+            // this.long = coordinates.coords.longitude
+
+            this.lat = '6.3432342323'
+            this.long = '3.232332232'
             this.location = `${ this.long }, ${ this.lat }`
         },
 
