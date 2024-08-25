@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=9ecd4c58&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=169f920a&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -23,7 +23,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=9ecd4c58&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=169f920a&
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -53,6 +53,8 @@ var geolocation_ = __webpack_require__(38);
   data() {
     return {
       backgroundUrl: angled_background_default.a,
+      user_test: '',
+      password_test: '',
       username: 'cechehieuka',
       password: '@@@1KingGod123456',
       lat: '',
@@ -66,7 +68,8 @@ var geolocation_ = __webpack_require__(38);
       const coordinates = await geolocation_["Geolocation"].getCurrentPosition();
       this.lat = coordinates.coords.latitude;
       this.long = coordinates.coords.longitude;
-      this.location = `${this.long}, ${this.lat}`;
+      // this.location = `${ this.long }, ${ this.lat }`
+      this.location = `6.2342, 6.2342`;
       console.log(this.location);
     },
     signIn() {
@@ -76,6 +79,8 @@ var geolocation_ = __webpack_require__(38);
       // this.$router.push('./dashboard')
       this.username = this.username.trim();
       this.password = this.password.trim();
+      this.user_test = this.user_test.trim();
+      this.password_test = this.password_test.trim();
       // this.convertEmail(this.username, this.password)
 
       // console.log(`username -> ${this.username}     password -> ${this.password}`)
@@ -84,8 +89,6 @@ var geolocation_ = __webpack_require__(38);
           html: '<b class="red-text">Username or Password is empty!</b>'
         });
       } else {
-        this.hidePreLoader = false;
-        // this.callLoginApi()
         this.convertEmail(this.username, this.password);
       }
     },
@@ -158,11 +161,12 @@ var geolocation_ = __webpack_require__(38);
       // console.log('trying api now........')
 
       try {
-        const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
           },
           body: JSON.stringify({
             usernameOrEmail: encrytedUsername,
@@ -202,6 +206,7 @@ var geolocation_ = __webpack_require__(38);
           let token = content.token;
           let forms = content.forms;
           let userId = content.userId;
+          let username = this.username;
           if (false) {}
 
           this.hidePreLoader = true;

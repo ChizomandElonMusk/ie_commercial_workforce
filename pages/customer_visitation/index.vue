@@ -5,7 +5,7 @@
                 <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
                     Back
                 </nuxt-link>
-                <b class="grey-text btn disabled" style="font-size: 10px;"> Customer Details Validation</b>
+                <b class="grey-text btn disabled" style="font-size: 10px;"> Customer Visitation</b>
             </div>
         </div>
   
@@ -537,9 +537,9 @@
       data() {
         return {
             service_type: null,
-            account_number: '0102111612',
+            account_number: '',
             // account_number: '',
-            meter_number: '43901910984',
+            meter_number: '',
             // meter_number: '',
             account_type: '',
             account_name: '',
@@ -2322,12 +2322,13 @@
 
                 
                 try {
-                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer ' + localStorage.token,
+                            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
 
                         },
                         body: JSON.stringify({

@@ -284,7 +284,7 @@ async function checkCustomerMeterNumber(meterNumber) {
   };
   CustomerMeterNumber = JSON.stringify(CustomerMeterNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/accountlookup', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/accountlookup', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -329,7 +329,7 @@ async function getCustomerInfoApi(accountNumber) {
   };
   CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/info', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/info', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -357,10 +357,11 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("docType", docType);
   formData.append("file", file);
   try {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/upload/document', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       },
       body: formData
     });
@@ -391,11 +392,15 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   // let meter_number = '0102111612'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
+    console.log(date_from, date_to);
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -415,13 +420,17 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   }
 }
 async function getAllDTList(username) {
-  username = 'paseeperi';
+  // username = 'paseeperi'
+  console.log(username);
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getESRDTLink?username=' + username, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getESRDTLink?username=' + username, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -444,13 +453,15 @@ async function getDTSearch(searchString) {
   // searchString = 'ojo'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getDTSearch?searchString=' + searchString, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getDTSearch?searchString=' + searchString, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
+    console.log(response);
     const response = await rawResponse.json();
     return response;
 

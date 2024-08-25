@@ -382,8 +382,10 @@
       data() {
         return {
             service_type: null,
-            account_number: '0102111612',
-            meter_number: '43901910984',
+            account_number: '',
+            meter_number: '',
+            // account_number: '0102111612',
+            // meter_number: '43901910984',
             account_type: '',
             account_name: '',
             account_status: '',
@@ -1937,12 +1939,13 @@
                 
                 
                 try {
-                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/accountReactivation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountReactivation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer ' + localStorage.token,
+                            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
 
                         },
                         body: JSON.stringify({

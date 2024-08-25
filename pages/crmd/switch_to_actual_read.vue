@@ -261,12 +261,6 @@
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="text" v-model="dials" placeholder="Dials">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s12">
                             <input type="text" v-model="consumption" placeholder="Consumption">
                         </div>
                     </div>
@@ -439,8 +433,8 @@
       data() {
         return {
             service_type: null,
-            account_number: '0102111612',
-            meter_number: '43901910984',
+            account_number: '',
+            meter_number: '',
             account_type: '',
             account_name: '',
             tarrif: '',
@@ -599,6 +593,7 @@
                 this.printCurrentPosition()
                 
                 this.account_type = response.accountType
+                this.account_name = response.accountName
                 this.tarrif = response.tariff
                 this.address = response.address
                 this.business_unit = response.bu
@@ -2138,12 +2133,13 @@
                     console.log(this.kwh);
                     console.log(this.dials);
                     console.log(this.meter_type);
-                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/crmd/switchToActualRead', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/switchToActualRead', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer ' + localStorage.token,
+                            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
 
                         },
                         body: JSON.stringify({

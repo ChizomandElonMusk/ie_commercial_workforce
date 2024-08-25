@@ -143,11 +143,15 @@
       },
 
       methods: {
+        
+      },
 
+      mounted() {
+        this.permissions = localStorage.getItem('forms')
       },
 
       created() {
-        this.permissions = localStorage.getItem('forms')
+        
       }
   }
   </script>

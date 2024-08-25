@@ -299,7 +299,7 @@
 
                                 <tbody v-for="(dt, index) in dtList" :id="dt.dtNo">
                                     <tr>
-                                        <td @click="selectedData(dt)">
+                                        <td @click="selectedData(dt)" class="blue-text">
                                             {{ dt.dtNo }}
                                             <!-- <a href="#!" v-on:click="getPaymentRec(dt.dtNo, trans.agencyCode)">
                                                 {{ index + 1 }}
@@ -396,8 +396,8 @@
       data() {
         return {
             service_type: null,
-            account_number: '0102111612',
-            meter_number: '43901910984',
+            account_number: '',
+            meter_number: '',
             account_type: '',
             account_name: '',
             dt_no: '',
@@ -1966,14 +1966,15 @@
             } else {
 
                 
-                
+                 
                 try {
-                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/customermapping', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer ' + localStorage.token,
+                            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
 
                         },
                         body: JSON.stringify({
@@ -2087,11 +2088,8 @@
         async printCurrentPosition () {
             const coordinates = await Geolocation.getCurrentPosition();
 
-            // this.lat = coordinates.coords.latitude
-            // this.long = coordinates.coords.longitude
-
-            this.lat = '6.3432342323'
-            this.long = '3.232332232'
+            this.lat = coordinates.coords.latitude
+            this.long = coordinates.coords.longitude
             this.location = `${ this.long }, ${ this.lat }`
         },
 

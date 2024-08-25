@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_6825965f_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_6825965f_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_6825965f_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_6825965f_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_6825965f_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_11a13d11_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(80);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_11a13d11_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_11a13d11_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_11a13d11_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dt_assigned_vue_vue_type_style_index_0_id_11a13d11_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-6825965f]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-11a13d11]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -34,7 +34,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dt_assigned.vue?vue&type=template&id=6825965f&scoped=true&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dt_assigned.vue?vue&type=template&id=11a13d11&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -43,26 +43,26 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-6825965f>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-6825965f>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-11a13d11>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-11a13d11>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "/ie_force"
     }
-  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-6825965f>DT Assigned</b>")], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-6825965f><div class=\"row\" data-v-6825965f><div class=\"col s12\" data-v-6825965f><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-11a13d11>DT Assigned</b>")], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-11a13d11><div class=\"row\" data-v-11a13d11><div class=\"col s12\" data-v-11a13d11><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-6825965f><div class=\"row\" data-v-6825965f><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-6825965f>DONE</a></div> <div class=\"row\" data-v-6825965f><div class=\"container\" data-v-6825965f><div class=\"row\" data-v-6825965f><div class=\"col s12 center\" data-v-6825965f><h6 data-v-6825965f>Sign here!</h6></div></div> <div class=\"row\" data-v-6825965f><div class=\"col s12 center\" data-v-6825965f><canvas id=\"sig-canvas\" width=\"250px\" data-v-6825965f>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-6825965f><div class=\"col s12 center\" data-v-6825965f><div class=\"col s6\" data-v-6825965f><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-6825965f>Save</button></div> <div class=\"col s6\" data-v-6825965f><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-6825965f>Clear</button></div></div></div> <br data-v-6825965f> <div class=\"row\" data-v-6825965f><div class=\"col s12\" data-v-6825965f><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-6825965f>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-11a13d11><div class=\"row\" data-v-11a13d11><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-11a13d11>DONE</a></div> <div class=\"row\" data-v-11a13d11><div class=\"container\" data-v-11a13d11><div class=\"row\" data-v-11a13d11><div class=\"col s12 center\" data-v-11a13d11><h6 data-v-11a13d11>Sign here!</h6></div></div> <div class=\"row\" data-v-11a13d11><div class=\"col s12 center\" data-v-11a13d11><canvas id=\"sig-canvas\" width=\"250px\" data-v-11a13d11>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-11a13d11><div class=\"col s12 center\" data-v-11a13d11><div class=\"col s6\" data-v-11a13d11><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-11a13d11>Save</button></div> <div class=\"col s6\" data-v-11a13d11><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-11a13d11>Clear</button></div></div></div> <br data-v-11a13d11> <div class=\"row\" data-v-11a13d11><div class=\"col s12\" data-v-11a13d11><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-11a13d11>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-6825965f><div class=\"col s12\" data-v-6825965f><form style=\"margin-top: 20px\" data-v-6825965f><div" + _vm._ssrClass("row", {
+  }) + " data-v-11a13d11><div class=\"col s12\" data-v-11a13d11><form style=\"margin-top: 20px\" data-v-11a13d11><div" + _vm._ssrClass("row", {
     'hide': _vm.hideLoading
-  }) + " data-v-6825965f><div class=\"col s12 grey-text center\" data-v-6825965f><h5 data-v-6825965f>\n                            Please wait ...\n                        </h5></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-11a13d11><div class=\"col s12 grey-text center\" data-v-11a13d11><h5 data-v-11a13d11>\n                            Please wait ...\n                        </h5></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideDTList
-  }) + " data-v-6825965f><div class=\"col s12\" data-v-6825965f><table class=\"striped\" data-v-6825965f><thead data-v-6825965f><tr data-v-6825965f><th data-v-6825965f>DT No.</th> <th data-v-6825965f>DT Name</th></tr></thead> " + _vm._ssrList(_vm.dtAssignedList, function (dt, index) {
-    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-6825965f><tr data-v-6825965f><td data-v-6825965f><a href=\"#!\" data-v-6825965f>" + _vm._ssrEscape("\n                                        " + _vm._s(dt.dtNo) + "\n                                    ") + "</a></td> <td data-v-6825965f>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td></tr></tbody>";
+  }) + " data-v-11a13d11><div class=\"col s12\" data-v-11a13d11><table class=\"striped\" data-v-11a13d11><thead data-v-11a13d11><tr data-v-11a13d11><th data-v-11a13d11>DT No.</th> <th data-v-11a13d11>DT Name</th></tr></thead> " + _vm._ssrList(_vm.dtAssignedList, function (dt, index) {
+    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-11a13d11><tr data-v-11a13d11><td data-v-11a13d11><a href=\"#!\" data-v-11a13d11>" + _vm._ssrEscape("\n                                        " + _vm._s(dt.dtNo) + "\n                                    ") + "</a></td> <td data-v-11a13d11>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td></tr></tbody>";
   }) + "</table></div></div></form></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/dt_assigned.vue?vue&type=template&id=6825965f&scoped=true&
+// CONCATENATED MODULE: ./pages/dt_assigned.vue?vue&type=template&id=11a13d11&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dt_assigned.vue?vue&type=script&lang=js&
 var dt_assignedvue_type_script_lang_js_ = __webpack_require__(56);
@@ -91,7 +91,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "6825965f",
+  "11a13d11",
   "303b83f8"
   
 )
@@ -255,7 +255,7 @@ async function checkCustomerMeterNumber(meterNumber) {
   };
   CustomerMeterNumber = JSON.stringify(CustomerMeterNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/accountlookup', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/accountlookup', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -300,7 +300,7 @@ async function getCustomerInfoApi(accountNumber) {
   };
   CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/info', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/info', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -328,10 +328,11 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("docType", docType);
   formData.append("file", file);
   try {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/upload/document', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       },
       body: formData
     });
@@ -362,11 +363,15 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   // let meter_number = '0102111612'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
+    console.log(date_from, date_to);
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -386,13 +391,17 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   }
 }
 async function getAllDTList(username) {
-  username = 'paseeperi';
+  // username = 'paseeperi'
+  console.log(username);
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getESRDTLink?username=' + username, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getESRDTLink?username=' + username, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -415,13 +424,15 @@ async function getDTSearch(searchString) {
   // searchString = 'ojo'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getDTSearch?searchString=' + searchString, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getDTSearch?searchString=' + searchString, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
+    console.log(response);
     const response = await rawResponse.json();
     return response;
 
@@ -470,9 +481,10 @@ async function getDTSearch(searchString) {
       dtAssignedList: [],
       hideDTList: true,
       hideLoading: true,
+      username: '',
       service_type: null,
       // account_number: '0102111612',
-      meter_number: '0102111612',
+      meter_number: '',
       account_type: '',
       account_name: '',
       account_status: '',
@@ -559,8 +571,7 @@ async function getDTSearch(searchString) {
       try {
         this.hideLoading = false;
         this.hideDTList = true;
-        let username = 'paseeperi';
-        this.dtAssignedList = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_4__[/* getAllDTList */ "b"])(username);
+        this.dtAssignedList = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_4__[/* getAllDTList */ "b"])(this.username);
         this.hideLoading = true;
         this.hideDTList = false;
       } catch (error) {}
@@ -1851,6 +1862,7 @@ async function getDTSearch(searchString) {
     });
     this.trySign();
     this.userId = localStorage.getItem('userId');
+    this.username = localStorage.getItem('username');
     this.getDtList();
   },
   created() {
@@ -1874,7 +1886,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("62b024de", content, true, context)
+  add("3a76a403", content, true, context)
 };
 
 /***/ })

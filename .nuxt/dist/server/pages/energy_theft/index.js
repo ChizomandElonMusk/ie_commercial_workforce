@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5129e56c_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5129e56c_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5129e56c_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5129e56c_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5129e56c_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_eff5839e_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_eff5839e_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_eff5839e_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_eff5839e_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_eff5839e_prod_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-5129e56c]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-eff5839e]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 module.exports = ___CSS_LOADER_EXPORT___;
 
@@ -34,7 +34,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=template&id=5129e56c&scoped=true&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=template&id=eff5839e&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -43,16 +43,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-5129e56c>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-eff5839e>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-5129e56c>Energy Theft</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-eff5839e>Energy Theft</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-5129e56c><div class=\"row\" data-v-5129e56c><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-5129e56c>DONE</a></div> <div class=\"row\" data-v-5129e56c><div class=\"container\" data-v-5129e56c><div class=\"row\" data-v-5129e56c><div class=\"col s12 center\" data-v-5129e56c><h6 data-v-5129e56c>Sign here!</h6></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12 center\" data-v-5129e56c><canvas id=\"sig-canvas\" width=\"250px\" data-v-5129e56c>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12 center\" data-v-5129e56c><div class=\"col s6\" data-v-5129e56c><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-5129e56c>Save</button></div> <div class=\"col s6\" data-v-5129e56c><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-5129e56c>Clear</button></div></div></div> <br data-v-5129e56c> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-5129e56c>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-eff5839e><div class=\"row\" data-v-eff5839e><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-eff5839e>DONE</a></div> <div class=\"row\" data-v-eff5839e><div class=\"container\" data-v-eff5839e><div class=\"row\" data-v-eff5839e><div class=\"col s12 center\" data-v-eff5839e><h6 data-v-eff5839e>Sign here!</h6></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12 center\" data-v-eff5839e><canvas id=\"sig-canvas\" width=\"250px\" data-v-eff5839e>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12 center\" data-v-eff5839e><div class=\"col s6\" data-v-eff5839e><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-eff5839e>Save</button></div> <div class=\"col s6\" data-v-eff5839e><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-eff5839e>Clear</button></div></div></div> <br data-v-eff5839e> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-eff5839e>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-5129e56c>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-5129e56c>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-eff5839e>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-eff5839e>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -64,7 +64,7 @@ var render = function render() {
       },
       expression: "service_type"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-5129e56c><div class=\"col s9\" data-v-5129e56c><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-5129e56c></div> <div class=\"col s3\" data-v-5129e56c><button class=\"btn btn-flat red white-text\" data-v-5129e56c>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-5129e56c><div class=\"col s9\" data-v-5129e56c><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-5129e56c></div> <div class=\"col s3\" data-v-5129e56c><button class=\"btn btn-flat red white-text\" data-v-5129e56c>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><b data-v-5129e56c>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-5129e56c> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><b data-v-5129e56c>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-5129e56c></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-5129e56c>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-eff5839e><div class=\"col s9\" data-v-eff5839e><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-eff5839e></div> <div class=\"col s3\" data-v-eff5839e><button class=\"btn btn-flat red white-text\" data-v-eff5839e>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-eff5839e><div class=\"col s9\" data-v-eff5839e><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-eff5839e></div> <div class=\"col s3\" data-v-eff5839e><button class=\"btn btn-flat red white-text\" data-v-eff5839e>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><b data-v-eff5839e>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-eff5839e> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><b data-v-eff5839e>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-eff5839e></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-eff5839e>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Meter Bypass', 'Burnt Meter or Faulty meter not on postpaid', 'Meter dispensing free', 'Free rider', 'Suspended account but connected to power', 'Negative reading', 'Others'],
       "default": 'Type of Infraction'
@@ -76,7 +76,7 @@ var render = function render() {
       },
       expression: "type_of_infra"
     }
-  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-5129e56c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-5129e56c>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-eff5839e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-eff5839e>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['1', '2', '3', '4', '5', '6', '7', '8'],
       "default": 'Duration of theft'
@@ -88,11 +88,11 @@ var render = function render() {
       },
       expression: "duration_of_theft"
     }
-  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><h6 class=\"red-text\" data-v-5129e56c>\n                            Picture of theft\n                        </h6> <button class=\"btn red btn-large\" data-v-5129e56c><i class=\"material-icons white-text\" data-v-5129e56c>camera_alt</i></button></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><img id=\"output-pic-of-theft\" class=\"responsive-img\" data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><h6 class=\"red-text\" data-v-5129e56c>\n                            Picture of Bypass\n                        </h6> <button class=\"btn red btn-large\" data-v-5129e56c><i class=\"material-icons white-text\" data-v-5129e56c>camera_alt</i></button></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><img id=\"output-pic-of-bypass\" class=\"responsive-img\" data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><h6 class=\"red-text\" data-v-5129e56c>\n                            Additional Pic\n                        </h6> <button class=\"btn red btn-large\" data-v-5129e56c><i class=\"material-icons white-text\" data-v-5129e56c>camera_alt</i></button></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><img id=\"output-pic-of-additional\" class=\"responsive-img\" data-v-5129e56c></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><h6 class=\"red-text\" data-v-5129e56c>\n                            Picture of customer meter if any\n                        </h6> <button class=\"btn red btn-large\" data-v-5129e56c><i class=\"material-icons white-text\" data-v-5129e56c>camera_alt</i></button></div></div> <div class=\"row\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-5129e56c></div></div> <div class=\"row center\" data-v-5129e56c></div> <div class=\"row center\" data-v-5129e56c><div class=\"col s12\" data-v-5129e56c><button class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px; margin-bottom: 20px;\" data-v-5129e56c>Submit</button></div></div>")], 2)])])], 2)], 2);
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><h6 class=\"red-text\" data-v-eff5839e>\n                            Picture of theft\n                        </h6> <button class=\"btn red btn-large\" data-v-eff5839e><i class=\"material-icons white-text\" data-v-eff5839e>camera_alt</i></button></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><img id=\"output-pic-of-theft\" class=\"responsive-img\" data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><h6 class=\"red-text\" data-v-eff5839e>\n                            Picture of Bypass\n                        </h6> <button class=\"btn red btn-large\" data-v-eff5839e><i class=\"material-icons white-text\" data-v-eff5839e>camera_alt</i></button></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><img id=\"output-pic-of-bypass\" class=\"responsive-img\" data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><h6 class=\"red-text\" data-v-eff5839e>\n                            Additional Pic\n                        </h6> <button class=\"btn red btn-large\" data-v-eff5839e><i class=\"material-icons white-text\" data-v-eff5839e>camera_alt</i></button></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><img id=\"output-pic-of-additional\" class=\"responsive-img\" data-v-eff5839e></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><h6 class=\"red-text\" data-v-eff5839e>\n                            Picture of customer meter if any\n                        </h6> <button class=\"btn red btn-large\" data-v-eff5839e><i class=\"material-icons white-text\" data-v-eff5839e>camera_alt</i></button></div></div> <div class=\"row\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-eff5839e></div></div> <div class=\"row center\" data-v-eff5839e></div> <div class=\"row center\" data-v-eff5839e><div class=\"col s12\" data-v-eff5839e><button class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px; margin-bottom: 20px;\" data-v-eff5839e>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/energy_theft/index.vue?vue&type=template&id=5129e56c&scoped=true&
+// CONCATENATED MODULE: ./pages/energy_theft/index.vue?vue&type=template&id=eff5839e&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=script&lang=js&
 var energy_theftvue_type_script_lang_js_ = __webpack_require__(57);
@@ -121,7 +121,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "5129e56c",
+  "eff5839e",
   "f0256518"
   
 )
@@ -289,7 +289,7 @@ async function checkCustomerMeterNumber(meterNumber) {
   };
   CustomerMeterNumber = JSON.stringify(CustomerMeterNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/accountlookup', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/accountlookup', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -334,7 +334,7 @@ async function getCustomerInfoApi(accountNumber) {
   };
   CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
   try {
-    const rawResponse = await fetch('https://api.ikejaelectric.com:8243/ie/harmony/v1/customer/info', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/ie/harmony/v1/customer/info', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d',
@@ -362,10 +362,11 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("docType", docType);
   formData.append("file", file);
   try {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/upload/document', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document', {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       },
       body: formData
     });
@@ -396,11 +397,15 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   // let meter_number = '0102111612'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
+    console.log(date_from, date_to);
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -420,13 +425,17 @@ async function getPaymentHistory(meter_number, date_from, date_to) {
   }
 }
 async function getAllDTList(username) {
-  username = 'paseeperi';
+  // username = 'paseeperi'
+  console.log(username);
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getESRDTLink?username=' + username, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getESRDTLink?username=' + username, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
     const response = await rawResponse.json();
@@ -449,13 +458,15 @@ async function getDTSearch(searchString) {
   // searchString = 'ojo'
 
   try {
-    // const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/getDTSearch?searchString=' + searchString, {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getDTSearch?searchString=' + searchString, {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + localStorage.token
+        'Authorization': 'Bearer ' + localStorage.token,
+        'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
       }
     });
+    console.log(response);
     const response = await rawResponse.json();
     return response;
 
@@ -502,8 +513,8 @@ async function getDTSearch(searchString) {
   data() {
     return {
       service_type: null,
-      account_number: '0102111612',
-      meter_number: '43901910984',
+      account_number: '',
+      meter_number: '',
       account_type: '',
       account_name: '',
       dt_no: '',
@@ -1762,12 +1773,13 @@ async function getDTSearch(searchString) {
       } else {
         try {
           console.log(this.dt_no);
-          const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/energyTheft', {
+          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer ' + localStorage.token
+              'Authorization': 'Bearer ' + localStorage.token,
+              'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6'
             },
             body: JSON.stringify({
               serviceType: this.service_type,
@@ -1918,7 +1930,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("24a8d49e", content, true, context)
+  add("38573315", content, true, context)
 };
 
 /***/ })

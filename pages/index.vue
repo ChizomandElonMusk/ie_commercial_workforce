@@ -61,6 +61,8 @@
       data() {
         return {
           backgroundUrl,
+          user_test: '',
+          password_test: '',
           username: 'cechehieuka',
           password: '@@@1KingGod123456',
           lat: '',
@@ -77,7 +79,8 @@
 
           this.lat = coordinates.coords.latitude
           this.long = coordinates.coords.longitude
-          this.location = `${ this.long }, ${ this.lat }`
+          // this.location = `${ this.long }, ${ this.lat }`
+          this.location = `6.2342, 6.2342`
           console.log(this.location);
         },
 
@@ -86,16 +89,16 @@
           // this.$router.push('./dashboard')
           this.username = this.username.trim()
           this.password = this.password.trim()
+
+          this.user_test = this.user_test.trim()
+          this.password_test = this.password_test.trim()
           // this.convertEmail(this.username, this.password)
 
           // console.log(`username -> ${this.username}     password -> ${this.password}`)
           if (this.username === '' || this.password === '') {
             M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
           } else {
-            this.hidePreLoader = false
-            // this.callLoginApi()
             this.convertEmail(this.username, this.password)
-
           }
 
         },
@@ -178,11 +181,12 @@
 
 
 
-            const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
+            const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
             method: 'POST',
               headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
               },
               body: JSON.stringify({
                 usernameOrEmail: encrytedUsername, 
@@ -226,11 +230,13 @@
                 let token = content.token
                 let forms = content.forms
                 let userId = content.userId
+                let username = this.username
 
                 if (process.client) {
                   localStorage.setItem('token', token)
                   localStorage.setItem('forms', forms)
                   localStorage.setItem('userId', userId)
+                  localStorage.setItem('username', username)
                   // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
                 }
 

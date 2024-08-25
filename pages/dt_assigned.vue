@@ -178,11 +178,12 @@
             dtAssignedList: [],
             hideDTList: true,
             hideLoading: true,
+            username: '',
 
 
             service_type: null,
             // account_number: '0102111612',
-            meter_number: '0102111612',
+            meter_number: '',
             account_type: '',
             account_name: '',
             account_status: '',
@@ -290,9 +291,7 @@
             try {
                 this.hideLoading = false
                 this.hideDTList = true
-
-                let username = 'paseeperi'
-                this.dtAssignedList = await getAllDTList(username)
+                this.dtAssignedList = await getAllDTList(this.username)
 
                 this.hideLoading = true
                 this.hideDTList = false
@@ -1903,6 +1902,7 @@
 
         this.trySign()
         this.userId = localStorage.getItem('userId')
+        this.username = localStorage.getItem('username')
         this.getDtList()
       },
 

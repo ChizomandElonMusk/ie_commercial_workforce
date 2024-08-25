@@ -46,9 +46,6 @@
  */
 
 
-/*! Capacitor: https://capacitorjs.com/ - MIT License */
-
-
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -60,6 +57,9 @@
  * https://github.com/webcomponents/webcomponentsjs/blob/4efecd7e0e/src/ShadowCSS/ShadowCSS.js
  * https://github.com/angular/angular/blob/master/packages/compiler/src/shadow_css.ts
  */
+
+
+/*! Capacitor: https://capacitorjs.com/ - MIT License */
 
 
 /*!
