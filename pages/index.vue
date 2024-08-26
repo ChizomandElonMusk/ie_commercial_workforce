@@ -63,8 +63,9 @@
           backgroundUrl,
           user_test: '',
           password_test: '',
-          username: 'cechehieuka',
-          password: '@@@1KingGod123456',
+          username: '',
+          password: '',
+          // password: '@@@1KingGod123456',
           lat: '',
           long: '',
           hidePreLoader: true,
@@ -80,8 +81,8 @@
           this.lat = coordinates.coords.latitude
           this.long = coordinates.coords.longitude
           // this.location = `${ this.long }, ${ this.lat }`
-          this.location = `6.2342, 6.2342`
-          console.log(this.location);
+          // this.location = `6.2342, 6.2342`
+          console.log(this.lat, this.long);
         },
 
         signIn() {
