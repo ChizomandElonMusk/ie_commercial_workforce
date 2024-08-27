@@ -746,28 +746,34 @@
 
         async imagePickerForPictureOfConnection () {
 
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if(this.meter_number == '' && this.account_number == '') {
+                M.toast({html: `<b class="red-text">Please enter an Account OR Meter Number</b>`})
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
 
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
 
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], {type: 'image/jpeg'});
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForPictureOfConnection(blob)
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], {type: 'image/jpeg'});
-            console.log(blob)
-            
-
-            
-            this.doSomethingWithFilesimagePickerForPictureOfConnection(blob)
         },
 
 
@@ -822,28 +828,37 @@
 
         async imagePickerForPictureOfPSF () {
 
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if(this.meter_number == '' && this.account_number == '') {
+                M.toast({html: `<b class="red-text">Please enter an Account OR Meter Number</b>`})
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
 
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
 
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], {type: 'image/jpeg'});
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForPictureOfPSF(blob)
+
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], {type: 'image/jpeg'});
-            console.log(blob)
 
-
-
-            this.doSomethingWithFilesimagePickerForPictureOfPSF(blob)
+            
         },
 
 

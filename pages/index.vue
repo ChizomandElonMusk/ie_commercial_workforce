@@ -14,7 +14,7 @@
               <form @submit.prevent>
                   <div class="row">
                       <div class="input-field col s12">
-                          <input type="text" class="black-text focus" placeholder="" id="username" ref="username" v-model="username">
+                          <input type="text" class="black-text focus" placeholder="" id="username" ref="username" v-model="username" focused>
                           <label for="username">Username</label>
                       </div>
                   </div>
@@ -65,6 +65,7 @@
           password_test: '',
           username: '',
           password: '',
+          // username: 'cechehieuka',
           // password: '@@@1KingGod123456',
           lat: '',
           long: '',
@@ -285,11 +286,26 @@
           // console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
           return encryptedDataB64.replace(/(.{56})/g,'$1\n');
         },
+
+        getUsernameFromLocalStorage() {
+          try {
+            let uname = localStorage.getItem('username')
+            if(uname == null || uname == undefined) {
+              this.username = ''
+            } else {
+              this.username = uname
+            }
+            // if(uname)
+          } catch (error) {
+            
+          }
+        },
         
       },
 
       mounted() {
         this.getCurrentPosition()
+        this.getUsernameFromLocalStorage()
       },
 
       created() {

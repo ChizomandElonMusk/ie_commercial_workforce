@@ -185,7 +185,7 @@ export async function getAllDTList(username) {
 }
 
 export async function getDTSearch(searchString) {
-    // searchString = 'ojo'
+    searchString = searchString.toLowerCase()
 
     try {
         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
@@ -211,4 +211,61 @@ export async function getDTSearch(searchString) {
         console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
     }
+}
+
+
+
+export async function getEsrFormHistory(date_from, date_to) {
+    // let token = localStorage.getItem('jdotwdott')
+    // var passwords = ""
+    // meter_number = {
+    //     param: "0102327327",
+    // }
+    // meter_number = JSON.stringify(meter_number)
+    // let meter_number = '0102111612'
+
+    try {
+        console.log(date_from, date_to);
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getFormReport?startDate=' + date_from + '&endDate=' + date_to, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.token,
+                'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
+
+            },
+        })
+
+        const response = await rawResponse.json()
+        console.log(response.status)
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
+        
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+export async function logOut() {
+    if(process.client) {
+      localStorage.removeItem('token')
+      window.location = './'
+    }
+    localStorage.setItem('service_type', '')
+    localStorage.setItem('meter_number', '')
+    localStorage.setItem('token', '')
+    localStorage.setItem('forms', '')
+    localStorage.setItem('userId', '')
+
 }

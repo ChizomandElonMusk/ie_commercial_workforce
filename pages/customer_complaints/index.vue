@@ -1934,6 +1934,7 @@
                         this.$router.push('../sent')
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
+                        localStorage.setItem('account_number', '')
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
@@ -2027,16 +2028,23 @@
 
         getMeterNumberFromStorage() {
             let service_type = localStorage.getItem('service_type')
-            let meter_number = localStorage.getItem('meter_number')
             service_type = service_type.trim()
-            meter_number = meter_number.trim()
 
-            if (service_type == '' && meter_number == '') {
-                
+            let meter_number = localStorage.getItem('meter_number')
+            meter_number = meter_number.trim()
+            let account_number = localStorage.getItem('account_number')
+            account_number = account_number.trim()
+
+            if (service_type == '' && meter_number == '' && account_number == '') {
+                console.log('it is undefined');
             } else {
                 this.meter_number = meter_number
+                this.account_number = account_number
+                this.service_type = service_type
                 this.checkNumber()
+                console.log('i was called here hre hre');
             }
+            
             console.log('service type: ', service_type, '. meter number: ', meter_number);
         },
       },

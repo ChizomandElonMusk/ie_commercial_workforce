@@ -74,7 +74,7 @@
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px;">
-                            <CustomSelect :options="['prepaid']" :default="'prepaid'" class="" v-model="service_type" />
+                            <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class="" v-model="service_type" />
                         </div>
                     </div>
 
@@ -669,11 +669,12 @@
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
 
-            if (this.meter_number == '') {
+            if (this.meter_number == '' && this.account_number == '') {
                 M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
             } else {
-                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('service_type', this.service_type)
                 localStorage.setItem('meter_number', this.meter_number)
+                localStorage.setItem('account_number', this.account_number)
                 this.is_account_mapped_to_correct_dt = 'No'
                 window.location = '../customer_mapping'
             }
@@ -689,11 +690,12 @@
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
 
-            if (this.meter_number == '') {
+            if (this.meter_number == '' && this.account_number == '') {
                 M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
             } else {
-                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('service_type', this.service_type)
                 localStorage.setItem('meter_number', this.meter_number)
+                localStorage.setItem('account_number', this.account_number)
                 this.is_customer_phone_no_correct = 'No'
                 window.location = '../customer_details_validation'
             }
@@ -708,11 +710,12 @@
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
 
-            if (this.meter_number == '') {
+            if (this.meter_number == '' && this.account_number == '') {
                 M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
             } else {
-                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('service_type', this.service_type)
                 localStorage.setItem('meter_number', this.meter_number)
+                localStorage.setItem('account_number', this.account_number)
                 this.is_customer_address_correct = 'No'
                 window.location = '../customer_details_validation'
             }   
@@ -722,11 +725,12 @@
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
 
-            if (this.meter_number == '') {
+            if (this.meter_number == '' && this.account_number == '') {
                 M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
             } else {
-                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('service_type', this.service_type)
                 localStorage.setItem('meter_number', this.meter_number)
+                localStorage.setItem('account_number', this.account_number)
                 this.is_meter_bypassed = 'Yes'
                 window.location = '../energy_theft'
                 console.log(this.is_meter_bypassed)
@@ -742,11 +746,12 @@
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
 
-            if (this.meter_number == '') {
+            if (this.meter_number == '' && this.account_number == '') {
                 M.toast({html: `<b class="red-text">Please enter a valid meter number</b>`})
             } else {
-                localStorage.setItem('service_type', 'prepaid')
+                localStorage.setItem('service_type', this.service_type)
                 localStorage.setItem('meter_number', this.meter_number)
+                localStorage.setItem('account_number', this.account_number)
                 this.customer_complaint = 'Yes'
                 window.location = '../customer_complaints'
                 console.log(this.is_meter_bypassed)

@@ -14,6 +14,7 @@ const _3a913d3b = () => interopDefault(import('../pages/dashboard_ie_force.vue' 
 const _e0401c36 = () => interopDefault(import('../pages/dt_assigned.vue' /* webpackChunkName: "pages/dt_assigned" */))
 const _1f1030e3 = () => interopDefault(import('../pages/e_services/index.vue' /* webpackChunkName: "pages/e_services/index" */))
 const _1898aa73 = () => interopDefault(import('../pages/energy_theft/index.vue' /* webpackChunkName: "pages/energy_theft/index" */))
+const _1ca1e05c = () => interopDefault(import('../pages/esr_form_history.vue' /* webpackChunkName: "pages/esr_form_history" */))
 const _14e1cd0b = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _5555b477 = () => interopDefault(import('../pages/forms.vue' /* webpackChunkName: "pages/forms" */))
 const _38b49d20 = () => interopDefault(import('../pages/ie_force.vue' /* webpackChunkName: "pages/ie_force" */))
@@ -93,6 +94,10 @@ export const routerOptions = {
     path: "/energy_theft",
     component: _1898aa73,
     name: "energy_theft"
+  }, {
+    path: "/esr_form_history",
+    component: _1ca1e05c,
+    name: "esr_form_history"
   }, {
     path: "/forgot",
     component: _14e1cd0b,

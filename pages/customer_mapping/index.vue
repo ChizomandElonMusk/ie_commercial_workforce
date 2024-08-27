@@ -190,7 +190,7 @@
                         <div class="col s12">
                             <p>
                                 <b>
-                                    Is new DT in another UT?
+                                    Is DT Mapping correct
                                 </b>
                                 <br>
                                 <label>
@@ -411,7 +411,7 @@
             phone_number: '',
             location: '',
             new_dt_nomenclature: '',
-            is_dt_in_another_ut: 'no',
+            is_dt_in_another_ut: 'yes',
             additional_phone_number: '',
             dtList: [],
             selectedDT: '',
@@ -530,17 +530,17 @@
             this.current_feeder_band = this.current_feeder_band.trim()
             if(this.current_feeder_band == '') {
                 M.toast({html: `<b class="red-text">Please fetch customer data!</b>`})
-                this.is_dt_in_another_ut = 'no'
+                this.is_dt_in_another_ut = 'yes'
             } else {
                 this.is_dt_in_another_ut = this.is_dt_in_another_ut.trim()
-                if(this.is_dt_in_another_ut == 'yes' || this.is_dt_in_another_ut == '') {
+                if(this.is_dt_in_another_ut == 'no' || this.is_dt_in_another_ut == '') {
                     // this.hideSearchBtn = false
                     this.hideOtherFormElements = true
                     this.hideSearchBtn = true
                     this.hideSearchScreen = false
                     this.dtList = []
                     // this.hideProposedData = true
-                } else if(this.is_dt_in_another_ut == 'no'){
+                } else if(this.is_dt_in_another_ut == 'yes'){
                     this.hideOtherFormElements = false
                     this.hideSearchScreen = true
                     this.hideProposedData = true
@@ -561,7 +561,8 @@
         async cancelSearch () {
             this.hideOtherFormElements = false
             this.hideSearchScreen = true
-            this.is_dt_in_another_ut = 'no'
+            this.is_dt_in_another_ut = 'yes'
+            this.dtSearchQuery = ''
         },
 
         async searchDT () {
@@ -602,6 +603,7 @@
             this.hideProposedData = false
             // this.is_dt_in_another_ut = 'no'
             this.mapping_status = this.compareFeeder(this.current_feeder_band, this.proposed_feeder_band)
+            this.dtSearchQuery = ''
         },
 
         compareFeeder(currentFeeder, proposedFeeder) {
@@ -2013,6 +2015,7 @@
                         this.$router.push('../sent')
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
+                        localStorage.setItem('account_number', '')
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
@@ -2106,12 +2109,20 @@
 
         getMeterNumberFromStorage() {
             let service_type = localStorage.getItem('service_type')
-            let meter_number = localStorage.getItem('meter_number')
+            service_type = service_type.trim()
 
-            if (service_type == '' || meter_number == '') {
+            let meter_number = localStorage.getItem('meter_number')
+            meter_number = meter_number.trim()
+            
+            let account_number = localStorage.getItem('account_number')
+            account_number = account_number.trim()
+
+            if (service_type == '' && meter_number == '' && account_number == '') {
                 console.log('it is undefined');
             } else {
                 this.meter_number = meter_number
+                this.account_number = account_number
+                this.service_type = service_type
                 this.checkNumber()
                 console.log('i was called here hre hre');
             }

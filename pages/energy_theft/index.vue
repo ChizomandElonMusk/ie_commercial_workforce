@@ -248,32 +248,10 @@
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px;">
-                            <CustomSelect :options="['1', '2', '3', '4', '5', '6', '7', '8']" :default="'Duration of theft'" class="" v-model="duration_of_theft" />
+                            <CustomSelect :options="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',]" :default="'Duration of theft'" class="" v-model="duration_of_theft" />
                         </div>
                     </div>
 
-
-                    <div class="row">
-                        <!-- Pic of the service wire from pole to metering point * -->
-                        <div class="col s12">
-                            
-                            <h6 class="red-text">
-                                <!-- Picture of the service wire from pole metering point -->
-                                Picture of theft
-                            </h6>
-                            <button class="btn red btn-large" @click="imagePickerForTheft()">
-                                <i class="material-icons white-text">camera_alt</i>
-                            </button>
-                            <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                        </div>
-                    </div>
-
-                    <!-- output for pic of the service wire from pole to metering point -->
-                    <div class="row">
-                        <div class="col s12">
-                            <img class=" responsive-img" id="output-pic-of-theft" />
-                        </div>
-                    </div>
 
 
                     <div class="row">
@@ -299,13 +277,69 @@
                     </div>
 
 
+
+
                     <div class="row">
                         <!-- Pic of the service wire from pole to metering point * -->
                         <div class="col s12">
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Additional Pic
+                                <!-- Formerly Picture of theft -->
+                                Picture of notification
+                            </h6>
+                            <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                <i class="material-icons white-text">camera_alt</i>
+                            </button>
+                            <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                        </div>
+                    </div>
+
+                    <!-- output for pic of the service wire from pole to metering point -->
+                    <div class="row">
+                        <div class="col s12">
+                            <img class=" responsive-img" id="output-pic-of-theft" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <!-- Pic of the service wire from pole to metering point * -->
+                        <div class="col s12">
+                            
+                            <h6 class="red-text">
+                                <!-- Picture of the service wire from pole metering point -->
+                                <!-- Formerly Picture of customer meter if any -->
+                                Picture of building
+                            </h6>
+                            <button class="btn red btn-large" @click="imagePickerForMeter()">
+                                <i class="material-icons white-text">camera_alt</i>
+                            </button>
+                            <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                        </div>
+                    </div>
+
+                    <!-- output for pic of the service wire from pole to metering point -->
+                    <div class="row">
+                        <div class="col s12">
+                            <img class=" responsive-img" id="output-pic-of-meter" />
+                        </div>
+                    </div>
+
+
+                    
+
+
+                    <div class="row">
+                        <!-- Pic of the service wire from pole to metering point * -->
+                        <div class="col s12">
+                            
+                            <h6 class="red-text">
+                                <!-- Picture of the service wire from pole metering point -->
+                                <!-- Fomerly Additional Pic -->
+                                Seal as met
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForAdditional()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -322,27 +356,7 @@
                     </div>
 
 
-                    <div class="row">
-                        <!-- Pic of the service wire from pole to metering point * -->
-                        <div class="col s12">
-                            
-                            <h6 class="red-text">
-                                <!-- Picture of the service wire from pole metering point -->
-                                Picture of customer meter if any
-                            </h6>
-                            <button class="btn red btn-large" @click="imagePickerForMeter()">
-                                <i class="material-icons white-text">camera_alt</i>
-                            </button>
-                            <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                        </div>
-                    </div>
-
-                    <!-- output for pic of the service wire from pole to metering point -->
-                    <div class="row">
-                        <div class="col s12">
-                            <img class=" responsive-img" id="output-pic-of-meter" />
-                        </div>
-                    </div>
+                    
 
 
 
@@ -2035,6 +2049,7 @@
                         this.$router.push('../sent')
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
+                        localStorage.setItem('account_number', '')
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
@@ -2128,15 +2143,24 @@
 
         getMeterNumberFromStorage() {
             let service_type = localStorage.getItem('service_type')
-            let meter_number = localStorage.getItem('meter_number')
-            
+            service_type = service_type.trim()
 
-            if (service_type == '' && meter_number == '') {
-                
+            let meter_number = localStorage.getItem('meter_number')
+            meter_number = meter_number.trim()
+            let account_number = localStorage.getItem('account_number')
+            account_number = account_number.trim()
+
+            if (service_type == '' && meter_number == '' && account_number == '') {
+                console.log('it is undefined');
             } else {
                 this.meter_number = meter_number
+                this.account_number = account_number
+                this.service_type = service_type
                 this.checkNumber()
+                console.log('i was called here hre hre');
             }
+            
+            console.log('service type: ', service_type, '. meter number: ', meter_number);
         },
       },
 

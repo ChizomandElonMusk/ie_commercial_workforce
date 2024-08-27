@@ -243,7 +243,7 @@
 
             service_type: null,
             // account_number: '0102111612',
-            meter_number: '0102111612',
+            meter_number: '',
             account_type: '',
             account_name: '',
             account_status: '',

@@ -231,6 +231,7 @@
       mounted() {
         localStorage.setItem('service_type', '')
         localStorage.setItem('meter_number', '')
+        localStorage.setItem('account_number', '')
       },
 
       created() {

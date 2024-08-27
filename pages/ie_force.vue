@@ -23,6 +23,17 @@
             </div>
 
             <div class="col s12 center">
+                <nuxt-link to="/esr_form_history">
+                    <div class="card-panel orange">
+                        <span class="white-text">
+                            <i class="material-icons">folder_open</i>
+                            <h6>ESR Form History</h6>
+                        </span>
+                    </div>
+                </nuxt-link>
+            </div>
+
+            <div class="col s12 center">
                 <nuxt-link to="/dt_assigned">
                     <div class="card-panel orange">
                         <span class="white-text">
@@ -88,6 +99,7 @@
       mounted() {
         localStorage.setItem('service_type', '')
         localStorage.setItem('meter_number', '')
+        localStorage.setItem('account_number', '')
       },
 
       created() {

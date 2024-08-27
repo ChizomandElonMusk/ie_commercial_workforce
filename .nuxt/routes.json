@@ -70,6 +70,13 @@
     "_name": "_1898aa73"
   },
   {
+    "name": "esr_form_history",
+    "path": "/esr_form_history",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/esr_form_history.vue",
+    "chunkName": "pages/esr_form_history",
+    "_name": "_1ca1e05c"
+  },
+  {
     "name": "forgot",
     "path": "/forgot",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/forgot.vue",

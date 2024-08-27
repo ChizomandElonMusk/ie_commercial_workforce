@@ -71,7 +71,11 @@
             localStorage.removeItem('token')
             window.location = './'
           }
-          localStorage.clear()
+          localStorage.setItem('service_type', '')
+          localStorage.setItem('meter_number', '')
+          localStorage.setItem('token', '')
+          localStorage.setItem('forms', '')
+          localStorage.setItem('userId', '')
 
         },
 
