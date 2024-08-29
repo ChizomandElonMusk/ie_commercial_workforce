@@ -12,25 +12,36 @@
         <div class="row">
 
             <div class="col s12 center">
-                <a href="https://www.ie-payments.com/pay-bill" target="_blank">
-                    <div class="card-panel orange">
-                        <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>Bill Payment</h6>
-                        </span>
-                    </div>
-                </a>
+              <a href="https://www.ie-payments.com/pay-bill" target="_blank">
+                  <div class="card-panel orange">
+                      <span class="white-text">
+                          <i class="material-icons">folder_open</i>
+                          <h6>Bill Payment</h6>
+                      </span>
+                  </div>
+              </a>
             </div>
 
             <div class="col s12 center">
-                <nuxt-link to="/e_services/transactions">
-                    <div class="card-panel orange">
-                        <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>Payment History</h6>
-                        </span>
-                    </div>
-                </nuxt-link>
+              <nuxt-link to="/e_services/payment_history">
+                  <div class="card-panel orange">
+                      <span class="white-text">
+                          <i class="material-icons">folder_open</i>
+                          <h6>Payment History</h6>
+                      </span>
+                  </div>
+              </nuxt-link>
+            </div>
+
+            <div class="col s12 center">
+              <nuxt-link to="/e_services/billing_history">
+                  <div class="card-panel orange">
+                      <span class="white-text">
+                          <i class="material-icons">folder_open</i>
+                          <h6>Billing History</h6>
+                      </span>
+                  </div>
+              </nuxt-link>
             </div>
 
         </div>

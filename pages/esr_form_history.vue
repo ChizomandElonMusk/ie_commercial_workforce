@@ -2,7 +2,7 @@
     <div style="padding-top: 20px;" class="container">
         <div class="row">
             <div class="col s12">
-                <nuxt-link to="./" class="red white-text btn">
+                <nuxt-link to="./ie_force" class="red white-text btn">
                     Back 
                 </nuxt-link>
                 <b class="grey-text btn disabled">ESR Form History</b>

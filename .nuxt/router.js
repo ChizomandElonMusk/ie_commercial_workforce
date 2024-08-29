@@ -40,7 +40,8 @@ const _6d99d909 = () => interopDefault(import('../pages/crmd/sent.vue' /* webpac
 const _2498e7a6 = () => interopDefault(import('../pages/crmd/switch_to_actual_read.vue' /* webpackChunkName: "pages/crmd/switch_to_actual_read" */))
 const _9a69f6b2 = () => interopDefault(import('../pages/crmd/switch_to_dormant.vue' /* webpackChunkName: "pages/crmd/switch_to_dormant" */))
 const _63895f7e = () => interopDefault(import('../pages/crmd/switch_to_quantitative.vue' /* webpackChunkName: "pages/crmd/switch_to_quantitative" */))
-const _1890f0d4 = () => interopDefault(import('../pages/e_services/transactions.vue' /* webpackChunkName: "pages/e_services/transactions" */))
+const _d7044ebe = () => interopDefault(import('../pages/e_services/billing_history.vue' /* webpackChunkName: "pages/e_services/billing_history" */))
+const _5eabefac = () => interopDefault(import('../pages/e_services/payment_history.vue' /* webpackChunkName: "pages/e_services/payment_history" */))
 const _8f6b70cc = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -199,9 +200,13 @@ export const routerOptions = {
     component: _63895f7e,
     name: "crmd-switch_to_quantitative"
   }, {
-    path: "/e_services/transactions",
-    component: _1890f0d4,
-    name: "e_services-transactions"
+    path: "/e_services/billing_history",
+    component: _d7044ebe,
+    name: "e_services-billing_history"
+  }, {
+    path: "/e_services/payment_history",
+    component: _5eabefac,
+    name: "e_services-payment_history"
   }, {
     path: "/",
     component: _8f6b70cc,

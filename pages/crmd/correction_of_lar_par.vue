@@ -368,7 +368,7 @@
   import imageCompression from 'browser-image-compression';
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
-  import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, hello } from '~/js_modules/mods'
+  import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut } from '~/js_modules/mods'
   import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
@@ -504,6 +504,7 @@
                     if (users_meter_number == '') {
                         M.toast({html: `<b class="red-text">Please check meter number agian</b>`})
                     } else {
+                        this.account_number = response.accountNumber
                         let users_account_number = response.accountNumber
                         users_account_number = users_account_number.trim()
                         this.getCustomerInfo(users_account_number)
@@ -731,28 +732,36 @@
 
         async imagePickerForPAR () {
 
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if(this.meter_number == '' && this.account_number == '') {
+                M.toast({html: `<b class="red-text">Please enter an Account OR Meter Number</b>`})
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
 
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
 
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], {type: 'image/jpeg'});
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForPAR(blob)
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], {type: 'image/jpeg'});
-            console.log(blob)
 
-
-
-            this.doSomethingWithFilesimagePickerForPAR(blob)
+            
         },
 
         async doSomethingWithFilesimagePickerForPAR(event) {
@@ -802,28 +811,36 @@
 
         async imagePickerAdditionalPic () {
 
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if(this.meter_number == '' && this.account_number == '') {
+                M.toast({html: `<b class="red-text">Please enter an Account OR Meter Number</b>`})
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
 
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
 
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], {type: 'image/jpeg'});
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerAdditionalPic(blob)
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], {type: 'image/jpeg'});
-            console.log(blob)
 
-
-
-            this.doSomethingWithFilesimagePickerAdditionalPic(blob)
+            
         },
 
             async doSomethingWithFilesimagePickerAdditionalPic(event) {
@@ -1937,10 +1954,7 @@
 
 
         async submit() {
-            console.log(this.account_status);
-            console.log(this.account_status);
-            console.log(this.account_status);
-            console.log(this.account_status);
+            M.toast({html: '<b class="yellow-text">Please wait...</b>'})
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -2020,10 +2034,7 @@
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
-                        if(process.client) {
-                            localStorage.clear()
-                            window.location = './'
-                        }
+                        await logOut()
                     }
                 } catch (error) {
                     console.log(error)

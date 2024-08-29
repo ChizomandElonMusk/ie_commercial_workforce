@@ -31,7 +31,11 @@ export async function checkCustomerMeterNumber(meterNumber) {
         if (users_meter_number == '') {
             M.toast({html: `<b class="red-text">Please check meter number agian</b>`})
         } else {
-            return response
+            if(response.status == 500) {
+                await logOut()
+            } else {
+                return response
+            }
             // let users_account_number = response.accountNumber
             // console.log(users_account_number)
             // users_account_number = users_account_number.trim()
@@ -64,7 +68,11 @@ export async function getCustomerInfoApi(accountNumber) {
         })
 
         const response = await rawResponse.json()
-        return response
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
     } catch (error) {
         console.log(error)
         M.toast({html: `<b class="red-text">${error}</b>`})
@@ -101,7 +109,11 @@ export async function uploadImage(userId, accountNumber, docType, file) {
         }
         // console.log(response)
 
-        return response
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
 
        
     } catch (error) {
@@ -136,8 +148,55 @@ export async function getPaymentHistory(meter_number, date_from, date_to) {
         })
 
         const response = await rawResponse.json()
+        // console.log(response)
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
+
+        // console.log(response)
+
+        // console.log(response.passwords)
+        // console.log(response)
+        // return response
+    } catch (error) {
+        console.log(error)
+        M.toast({html: `<b class="red-text">${error}</b>`})
+    }
+}
+
+
+export async function getBillingHistory(meter_number, date_from, date_to) {
+    // let token = localStorage.getItem('jdotwdott')
+    // var passwords = ""
+    // meter_number = {
+    //     param: "0102327327",
+    // }
+    // meter_number = JSON.stringify(meter_number)
+    // let meter_number = '0102111612'
+
+    try {
+        console.log(date_from, date_to);
+        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getBillingHistory?accountNumber=' + meter_number + '&startDate=' + date_from + '&endDate=' + date_to, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.token,
+                'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
+
+            },
+        })
+
+        const response = await rawResponse.json()
         console.log(response)
-        return response
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
 
         // console.log(response)
 
@@ -170,8 +229,12 @@ export async function getAllDTList(username) {
         })
 
         const response = await rawResponse.json()
-        console.log(response)
-        return response
+        // console.log(response)
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
 
         // console.log(response)
 
@@ -200,7 +263,11 @@ export async function getDTSearch(searchString) {
 
         console.log(response)
         const response = await rawResponse.json()
-        return response
+        if(response.status == 500) {
+            await logOut()
+        } else {
+            return response
+        }
 
         // console.log(response)
 
@@ -257,15 +324,19 @@ export async function getEsrFormHistory(date_from, date_to) {
     }
 }
 
+
 export async function logOut() {
     if(process.client) {
-      localStorage.removeItem('token')
-      window.location = './'
+        M.toast({ html: `<b class="red-text">Session expired</b>` })
+        localStorage.removeItem('token')
+        localStorage.setItem('service_type', '')
+        localStorage.setItem('meter_number', '')
+        localStorage.setItem('token', '')
+        localStorage.setItem('forms', '')
+        localStorage.setItem('userId', '')
+
+        window.location.href = '/'
     }
-    localStorage.setItem('service_type', '')
-    localStorage.setItem('meter_number', '')
-    localStorage.setItem('token', '')
-    localStorage.setItem('forms', '')
-    localStorage.setItem('userId', '')
+    
 
 }

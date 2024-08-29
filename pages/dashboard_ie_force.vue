@@ -216,12 +216,6 @@
 
 
       methods: {
-        logOut() {
-          if(process.client) {
-            localStorage.removeItem('token')
-            window.location = './'
-          }
-        },
 
         async getFullname() {
           // this.fullname = localStorage.getItem('fullname')
