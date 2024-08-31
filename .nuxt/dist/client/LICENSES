@@ -80,9 +80,11 @@ Element.isConnected()
  * https://github.com/angular/angular/blob/master/packages/compiler/src/shadow_css.ts
  */
 
+
+/*!
+DOMTokenList
+*/
+
 /*!
 Element.isConnected()
 */
-
-
-/*! Capacitor: https://capacitorjs.com/ - MIT License */

@@ -1,325 +1,326 @@
 <template>
-    <div>
-      
-      <div class="row full-width">
-        <div class="col s12 m6" style="margin-top: 130px">
-            <Logo/>
-            <div class="container">
-              <div class="row">
-                <h5 class="center red-text">
-                  IE Commercial Workforce
-                </h5>
-                <PreLoader class="center" :class="{'hide': hidePreLoader}"/>
+  <div>
+
+    <div class="row full-width">
+      <div class="col s12 m6" style="margin-top: 130px">
+        <Logo />
+        <div class="container">
+          <div class="row">
+            <h5 class="center red-text">
+              IE Commercial Workforce
+            </h5>
+            <PreLoader class="center" :class="{ 'hide': hidePreLoader }" />
+          </div>
+          <form @submit.prevent>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="black-text focus" placeholder="" id="username" ref="username"
+                  v-model="username" focused>
+                <label for="username">Username</label>
               </div>
-              <form @submit.prevent>
-                  <div class="row">
-                      <div class="input-field col s12">
-                          <input type="text" class="black-text focus" placeholder="" id="username" ref="username" v-model="username" focused>
-                          <label for="username">Username</label>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="input-field col s12">
-                          <input type="password" class="black-text" placeholder="" id="password" v-model="password">
-                          <label for="password">Password</label>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="input-field col s12">
-                          <button class="red btn btn-large col s12" @click="signIn">
-                              Login
-                          </button>
-                      </div>
-                  </div>
-                  
-              </form>
             </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="password" class="black-text" placeholder="" id="password" v-model="password">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button class="red btn btn-large col s12" @click="signIn">
+                  Login
+                </button>
+              </div>
+            </div>
+
+          </form>
         </div>
-        
-        <div class="col s12 m6 full-width hide-on-small-and-down" :style="{ backgroundImage: `url(${backgroundUrl})` }">
-  
-        </div>
-  
       </div>
+
+      <div class="col s12 m6 full-width hide-on-small-and-down" :style="{ backgroundImage: `url(${backgroundUrl})` }">
+
+      </div>
+
     </div>
-  </template>
-  
-  <script>
-    import backgroundUrl from '~/assets/images/angled_background.jpg'
-    import PreLoader from '~/components/PreLoader.vue'
-    import { Geolocation } from '@capacitor/geolocation';
+  </div>
+</template>
+
+<script>
+import backgroundUrl from '~/assets/images/angled_background.jpg'
+import PreLoader from '~/components/PreLoader.vue'
+import { getCurrentPosition } from '~/js_modules/mods'
 
 
-    export default {
-      head() {
-        return {// Other meta information
-          script: [
-            { hid: 'cryptojs', src: 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js', defer: true }
-          ]
-        }
-      },
-      data() {
-        return {
-          backgroundUrl,
-          user_test: '',
-          password_test: '',
-          username: '',
-          password: '',
-          // username: 'cechehieuka',
-          // password: '@@@1KingGod123456',
-          lat: '',
-          long: '',
-          hidePreLoader: true,
-        }
-      },
+export default {
+  head() {
+    return {// Other meta information
+      script: [
+        { hid: 'cryptojs', src: 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js', defer: true }
+      ]
+    }
+  },
+  data() {
+    return {
+      backgroundUrl,
+      user_test: '',
+      password_test: '',
+      username: '',
+      password: '',
+      // username: 'cechehieuka',
+      // password: '@@@1KingGod123456',
+      lat: '',
+      long: '',
+      hidePreLoader: true,
+    }
+  },
 
-      methods: {
-
-        // get longitude and latitude
-        async getCurrentPosition () {
-          const coordinates = await Geolocation.getCurrentPosition();
-
-          this.lat = coordinates.coords.latitude
-          this.long = coordinates.coords.longitude
-          // this.location = `${ this.long }, ${ this.lat }`
-          // this.location = `6.2342, 6.2342`
-          console.log(this.lat, this.long);
-        },
-
-        signIn() {
-          M.toast({html: '<b class="yellow-text">Please wait...</b>'})
-          // this.$router.push('./dashboard')
-          this.username = this.username.trim()
-          this.password = this.password.trim()
-
-          this.user_test = this.user_test.trim()
-          this.password_test = this.password_test.trim()
-          // this.convertEmail(this.username, this.password)
-
-          // console.log(`username -> ${this.username}     password -> ${this.password}`)
-          if (this.username === '' || this.password === '') {
-            M.toast({html: '<b class="red-text">Username or Password is empty!</b>'})
-          } else {
-            this.convertEmail(this.username, this.password)
-          }
-
-        },
-
-
-        // async callLoginApi () {
-        //   try {
+  methods: {
 
 
 
-        //     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
-        //       method: 'POST',
-        //       headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //       },
-        //       body: JSON.stringify({
-        //         usernameOrEmail: this.username, 
-        //         password: this.password,
-        //       })
-        //     });
-
-        //     console.log('content is being converted to json')
-        //     const content = await rawResponse.json();
-
-        //     console.log(content)
 
 
-        //     let responseCode = content.code
-        //     let message = content.message
+    signIn() {
+      M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
+      // this.$router.push('./dashboard')
+      this.username = this.username.trim()
+      this.password = this.password.trim()
 
-        //     console.log('if statement is being ran to check response')
-        //     console.log('response code ', responseCode)
-        //     console.log('response token ', content.token)
-        //     if(responseCode == "09" || responseCode == null || responseCode == undefined) {
+      this.user_test = this.user_test.trim()
+      this.password_test = this.password_test.trim()
+      // this.convertEmail(this.username, this.password)
 
-        //       M.toast({html: `<b class="red-text">${message}</b>`})
-        //       this.hidePreLoader = true
+      // console.log(`username -> ${this.username}     password -> ${this.password}`)
+      if (this.username === '' || this.password === '') {
+        M.toast({ html: '<b class="red-text">Username or Password is empty!</b>' })
+      } else {
+        this.convertEmail(this.username, this.password)
+      }
 
-        //     } else if(responseCode === '00') {
-
-        //         M.toast({html: `<b class="green-text">Welcome</b>`})
-        //         let token = content.token
-
-        //         if (process.client) {
-        //           localStorage.setItem('token', token)
-        //           // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
-        //         }
-
-        //         this.hidePreLoader = true
-        //         window.location = './dashboard'
-        //         // this.$router.push('./dashboard')
-        //     }
-
-        //   } catch (error) {
-        //     console.log(`Your error says -> ${error}`)
-        //     console.log(error)
-        //     M.toast({html: `<b class="red-text">${error}</b>`})
-        //     this.hidePreLoader = true
-        //   }
+    },
 
 
-        // },
-
-        async convertEmail(uname, password) {
-
-          let encrptionKey = 'astsk@#$001!!!*&^'
-          let username = uname
-          let pWord = password
-
-          // let encrytedUsername = this.encryptWithAes256(username, encrptionKey)
-          let encrytedUsername = username
-          let encrytedPassword = this.encryptWithAes256(pWord, encrptionKey)
-
-          // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
-
-          // console.log('trying api now........')
-          
-          try {
+    // async callLoginApi () {
+    //   try {
 
 
 
-            const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
-            method: 'POST',
-              headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
-              },
-              body: JSON.stringify({
-                usernameOrEmail: encrytedUsername, 
-                password: encrytedPassword,
-                latitude: this.lat,
-                longitude: this.long
-              })
-              
-            });
-            // body: JSON.stringify({
-            //     usernameOrEmail: encrytedUsername, 
-            //     password: encrytedPassword,
-            //     latitude: '6.595176845',
-            //     longitude: '3.358090054'
-            //   })
+    //     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify({
+    //         usernameOrEmail: this.username, 
+    //         password: this.password,
+    //       })
+    //     });
 
-            // body: JSON.stringify({
-            //     usernameOrEmail: encrytedUsername, 
-            //     password: encrytedPassword,
-            //     latitude: this.lat,
-            //     longitude: this.long
-            //   })
-            console.log('content is being converted to json')
-            const content = await rawResponse.json();
+    //     console.log('content is being converted to json')
+    //     const content = await rawResponse.json();
 
-            console.log(content)
+    //     console.log(content)
 
 
-            let responseCode = content.code
-            let message = content.message
-            
-            console.log('if statement is being ran to check response')
-            if(responseCode == "09" || responseCode == null || responseCode == undefined) {
+    //     let responseCode = content.code
+    //     let message = content.message
 
-              M.toast({html: `<b class="red-text">${message}</b>`})
-              this.hidePreLoader = true
+    //     console.log('if statement is being ran to check response')
+    //     console.log('response code ', responseCode)
+    //     console.log('response token ', content.token)
+    //     if(responseCode == "09" || responseCode == null || responseCode == undefined) {
 
-            } else if(responseCode === '00') {
+    //       M.toast({html: `<b class="red-text">${message}</b>`})
+    //       this.hidePreLoader = true
 
-                M.toast({html: `<b class="green-text">Welcome</b>`})
-                let token = content.token
-                let forms = content.forms
-                let userId = content.userId
-                let username = this.username
+    //     } else if(responseCode === '00') {
 
-                if (process.client) {
-                  localStorage.setItem('token', token)
-                  localStorage.setItem('forms', forms)
-                  localStorage.setItem('userId', userId)
-                  localStorage.setItem('username', username)
-                  // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
-                }
+    //         M.toast({html: `<b class="green-text">Welcome</b>`})
+    //         let token = content.token
 
-                this.hidePreLoader = true
-                this.$router.push('./menu')
-            }
+    //         if (process.client) {
+    //           localStorage.setItem('token', token)
+    //           // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
+    //         }
 
-            
+    //         this.hidePreLoader = true
+    //         window.location = './dashboard'
+    //         // this.$router.push('./dashboard')
+    //     }
 
-            
-
-          } catch (error) {
-              console.log(`Your error says -> ${error}`)
-              M.toast({html: `<b class="red-text">${error}</b>`})
-              this.hidePreLoader = true
-          }
-            
+    //   } catch (error) {
+    //     console.log(`Your error says -> ${error}`)
+    //     console.log(error)
+    //     M.toast({html: `<b class="red-text">${error}</b>`})
+    //     this.hidePreLoader = true
+    //   }
 
 
+    // },
+
+    async convertEmail(uname, password) {
+
+      let encrptionKey = 'astsk@#$001!!!*&^'
+      let username = uname
+      let pWord = password
+
+      // let encrytedUsername = this.encryptWithAes256(username, encrptionKey)
+      let encrytedUsername = username
+      let encrytedPassword = this.encryptWithAes256(pWord, encrptionKey)
+
+      // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
+
+      // console.log('trying api now........')
+
+      try {
+
+
+
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Auth': 'Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6',
           },
+          body: JSON.stringify({
+            usernameOrEmail: encrytedUsername,
+            password: encrytedPassword,
+            latitude: this.lat,
+            longitude: this.long
+          })
+
+        });
+        // body: JSON.stringify({
+        //     usernameOrEmail: encrytedUsername, 
+        //     password: encrytedPassword,
+        //     latitude: '6.595176845',
+        //     longitude: '3.358090054'
+        //   })
+
+        // body: JSON.stringify({
+        //     usernameOrEmail: encrytedUsername, 
+        //     password: encrytedPassword,
+        //     latitude: this.lat,
+        //     longitude: this.long
+        //   })
+        console.log('content is being converted to json')
+        const content = await rawResponse.json();
+
+        console.log(content)
 
 
-        encryptWithAes256(messageToEncrypt, encryptorKey){
+        let responseCode = content.code
+        let message = content.message
 
-          // Generate random 16 bytes salt
-          var salt = CryptoJS.lib.WordArray.random(128/8);
+        console.log('if statement is being ran to check response')
+        if (responseCode == "09" || responseCode == null || responseCode == undefined) {
 
-          // Derive key
-          var key = CryptoJS.PBKDF2(
-              encryptorKey, 
-              salt, 
-              { keySize: 256/32, iterations: 1000, hasher: CryptoJS.algo.SHA512 }     // Apply SHA512
-          );                                                                         
-          // console.log("derived key:\n" + key);
+          M.toast({ html: `<b class="red-text">${message}</b>` })
+          this.hidePreLoader = true
 
-          // Generate random 16 bytes init vector (iv)
-          var iv = CryptoJS.lib.WordArray.random(128/8);
+        } else if (responseCode === '00') {
 
-          // Encrypt
-          var cipherText = CryptoJS.AES.encrypt(messageToEncrypt, key, {iv: iv});
+          M.toast({ html: `<b class="green-text">Welcome</b>` })
+          let token = content.token
+          let forms = content.forms
+          let userId = content.userId
+          let username = this.username
 
-          // Concatenate
-          var encryptedData = salt.clone().concat(iv).concat(cipherText.ciphertext);  // Concatenate on binary level
-          var encryptedDataB64 = encryptedData.toString(CryptoJS.enc.Base64);         // Base64 encode the result
-          // console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
-          return encryptedDataB64.replace(/(.{56})/g,'$1\n');
-        },
-
-        getUsernameFromLocalStorage() {
-          try {
-            let uname = localStorage.getItem('username')
-            if(uname == null || uname == undefined) {
-              this.username = ''
-            } else {
-              this.username = uname
-            }
-            // if(uname)
-          } catch (error) {
-            
+          if (process.client) {
+            localStorage.setItem('token', token)
+            localStorage.setItem('forms', forms)
+            localStorage.setItem('userId', userId)
+            localStorage.setItem('username', username)
+            // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
           }
-        },
-        
-      },
 
-      mounted() {
-        this.getCurrentPosition()
-        this.getUsernameFromLocalStorage()
-      },
+          this.hidePreLoader = true
+          this.$router.push('./menu')
+        }
 
-      created() {
-        // this.testAPI()
-        // let v = this.$store.state.token
-        // console.log(v)
 
-        // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
 
-        // let vv = this.$store.getters.myGetter;
-        // console.log(vv)
 
+
+      } catch (error) {
+        console.log(`Your error says -> ${error}`)
+        M.toast({ html: `<b class="red-text">${error}</b>` })
+        this.hidePreLoader = true
+      }
+
+
+
+    },
+
+
+    encryptWithAes256(messageToEncrypt, encryptorKey) {
+
+      // Generate random 16 bytes salt
+      var salt = CryptoJS.lib.WordArray.random(128 / 8);
+
+      // Derive key
+      var key = CryptoJS.PBKDF2(
+        encryptorKey,
+        salt,
+        { keySize: 256 / 32, iterations: 1000, hasher: CryptoJS.algo.SHA512 }     // Apply SHA512
+      );
+      // console.log("derived key:\n" + key);
+
+      // Generate random 16 bytes init vector (iv)
+      var iv = CryptoJS.lib.WordArray.random(128 / 8);
+
+      // Encrypt
+      var cipherText = CryptoJS.AES.encrypt(messageToEncrypt, key, { iv: iv });
+
+      // Concatenate
+      var encryptedData = salt.clone().concat(iv).concat(cipherText.ciphertext);  // Concatenate on binary level
+      var encryptedDataB64 = encryptedData.toString(CryptoJS.enc.Base64);         // Base64 encode the result
+      // console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
+      return encryptedDataB64.replace(/(.{56})/g, '$1\n');
+    },
+
+    getUsernameFromLocalStorage() {
+      try {
+        let uname = localStorage.getItem('username')
+        if (uname == null || uname == undefined) {
+          this.username = ''
+        } else {
+          this.username = uname
+        }
+        // if(uname)
+      } catch (error) {
 
       }
+    },
+
+  },
+
+  async mounted() {
+    try {
+      const { long, lat } = await getCurrentPosition()
+      console.log(long, lat);
+      this.long = long
+      this.lat = lat
+    } catch (error) {
+
     }
-  </script>
-  
+
+    this.getUsernameFromLocalStorage()
+  },
+
+  created() {
+    // this.testAPI()
+    // let v = this.$store.state.token
+    // console.log(v)
+
+    // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
+
+    // let vv = this.$store.getters.myGetter;
+    // console.log(vv)
+
+
+  }
+}
+</script>

@@ -3580,31 +3580,31 @@ const createNext = ssrContext => opts => {
 /* 38 */
 /***/ (function(module, exports) {
 
-module.exports = require("@capacitor/geolocation");
+module.exports = require("url");
 
 /***/ }),
 /* 39 */
 /***/ (function(module, exports) {
 
-module.exports = require("url");
+module.exports = require("browser-image-compression");
 
 /***/ }),
 /* 40 */
 /***/ (function(module, exports) {
 
-module.exports = require("browser-image-compression");
+module.exports = require("@capacitor/camera");
 
 /***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
-module.exports = require("@capacitor/camera");
+module.exports = require("@ionic/pwa-elements/loader");
 
 /***/ }),
 /* 42 */
 /***/ (function(module, exports) {
 
-module.exports = require("@ionic/pwa-elements/loader");
+module.exports = require("@capacitor/geolocation");
 
 /***/ })
 /******/ ]);

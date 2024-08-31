@@ -435,11 +435,11 @@
 
 
 <script>
-import { Geolocation } from '@capacitor/geolocation';
+// import { Geolocation } from '@capacitor/geolocation';
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut } from '~/js_modules/mods'
+import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -1198,12 +1198,13 @@ export default {
         // },
 
         // get longitude and latitude
-        async printCurrentPosition() {
-            const coordinates = await Geolocation.getCurrentPosition();
+        async printCurrentPosition () {
+            const { long, lat } = await getCurrentPosition();
 
-            this.lat = coordinates.coords.latitude
-            this.long = coordinates.coords.longitude
-            this.location = `${this.long}, ${this.lat}`
+            this.long = long
+            this.lat = lat
+            
+            this.location = `${ this.long }, ${ this.lat }`
         },
 
         // let me try to create a new signature

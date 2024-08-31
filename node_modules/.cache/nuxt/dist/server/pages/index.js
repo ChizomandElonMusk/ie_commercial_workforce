@@ -8,22 +8,22 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=564d1393&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=12ffcf18&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 130px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<h5 class=\"center red-text\">\n              IE Commercial Workforce\n            </h5> "), _c('PreLoader', {
+  return _c('div', [_vm._ssrNode("<div class=\"row full-width\">", "</div>", [_vm._ssrNode("<div class=\"col s12 m6\" style=\"margin-top: 130px\">", "</div>", [_c('Logo'), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"container\">", "</div>", [_vm._ssrNode("<div class=\"row\">", "</div>", [_vm._ssrNode("<h5 class=\"center red-text\">\n            IE Commercial Workforce\n          </h5> "), _c('PreLoader', {
     staticClass: "center",
     class: {
       'hide': _vm.hidePreLoader
     }
-  })], 2), _vm._ssrNode(" <form><div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\" focused" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><button class=\"red btn btn-large col s12\">\n                          Login\n                      </button></div></div></form>")], 2)], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
+  })], 2), _vm._ssrNode(" <form><div class=\"row\"><div class=\"input-field col s12\"><input type=\"text\" placeholder id=\"username\" focused" + _vm._ssrAttr("value", _vm.username) + " class=\"black-text focus\"> <label for=\"username\">Username</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><input type=\"password\" placeholder id=\"password\"" + _vm._ssrAttr("value", _vm.password) + " class=\"black-text\"> <label for=\"password\">Password</label></div></div> <div class=\"row\"><div class=\"input-field col s12\"><button class=\"red btn btn-large col s12\">\n                Login\n              </button></div></div></form>")], 2)], 2), _vm._ssrNode(" <div class=\"col s12 m6 full-width hide-on-small-and-down\"" + _vm._ssrStyle(null, {
     backgroundImage: `url(${_vm.backgroundUrl})`
   }, null) + "></div>")], 2)]);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=564d1393&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=12ffcf18&
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -32,8 +32,8 @@ var angled_background_default = /*#__PURE__*/__webpack_require__.n(angled_backgr
 // EXTERNAL MODULE: ./components/PreLoader.vue + 4 modules
 var PreLoader = __webpack_require__(48);
 
-// EXTERNAL MODULE: external "@capacitor/geolocation"
-var geolocation_ = __webpack_require__(38);
+// EXTERNAL MODULE: ./js_modules/mods.js
+var mods = __webpack_require__(45);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
 
@@ -65,15 +65,6 @@ var geolocation_ = __webpack_require__(38);
     };
   },
   methods: {
-    // get longitude and latitude
-    async getCurrentPosition() {
-      const coordinates = await geolocation_["Geolocation"].getCurrentPosition();
-      this.lat = coordinates.coords.latitude;
-      this.long = coordinates.coords.longitude;
-      // this.location = `${ this.long }, ${ this.lat }`
-      // this.location = `6.2342, 6.2342`
-      console.log(this.lat, this.long);
-    },
     signIn() {
       M.toast({
         html: '<b class="yellow-text">Please wait...</b>'
@@ -261,8 +252,16 @@ var geolocation_ = __webpack_require__(38);
       } catch (error) {}
     }
   },
-  mounted() {
-    this.getCurrentPosition();
+  async mounted() {
+    try {
+      const {
+        long,
+        lat
+      } = await Object(mods["d" /* getCurrentPosition */])();
+      console.log(long, lat);
+      this.long = long;
+      this.lat = lat;
+    } catch (error) {}
     this.getUsernameFromLocalStorage();
   },
   created() {
@@ -305,6 +304,405 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* nuxt-component-imports */
 installComponents(component, {Logo: __webpack_require__(50).default,PreLoader: __webpack_require__(48).default})
 
+
+/***/ }),
+
+/***/ 45:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return checkCustomerMeterNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getCustomerInfoApi; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return uploadImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getPaymentHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getBillingHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getAllDTList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getDTSearch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getEsrFormHistory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return logOut; });
+/* unused harmony export getCoordinates */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getCurrentPosition; });
+async function checkCustomerMeterNumber(meterNumber) {
+  var CustomerMeterNumber = "";
+  CustomerMeterNumber = {
+    param1: meterNumber
+  };
+  CustomerMeterNumber = JSON.stringify(CustomerMeterNumber);
+  try {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/ie/harmony/v1/customer/accountlookup", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d",
+        "Content-Type": "application/json"
+      },
+      body: CustomerMeterNumber
+    });
+    const response = await rawResponse.json();
+    // return response
+
+    // console.log(response)
+
+    // console.log(response.accountNumber)
+    console.log(response);
+    let users_meter_number = response.meterNumber;
+    if (users_meter_number == "") {
+      M.toast({
+        html: `<b class="red-text">Please check meter number agian</b>`
+      });
+    } else {
+      if (response.status == 500) {
+        await logOut();
+      } else {
+        return response;
+      }
+      // let users_account_number = response.accountNumber
+      // console.log(users_account_number)
+      // users_account_number = users_account_number.trim()
+      // await getCustomerInfoApi(users_account_number)
+    }
+  } catch (error) {
+    console.log(error);
+    console.log(this.service_type);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getCustomerInfoApi(accountNumber) {
+  M.toast({
+    html: `<b class="yellow-text">Please wait</b>`
+  });
+  var CustomerAccountNumber = "";
+  CustomerAccountNumber = {
+    accountNumber: accountNumber
+  };
+  CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
+  try {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/ie/harmony/v1/customer/info", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer 1ba5295b-3525-3a8c-9b23-69a82e45fb2d",
+        "Content-Type": "application/json"
+      },
+      body: CustomerAccountNumber
+    });
+    const response = await rawResponse.json();
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function uploadImage(userId, accountNumber, docType, file) {
+  M.toast({
+    html: `<b class="yellow-text">Uploading </b>`
+  });
+  console.log(userId, accountNumber, docType, file);
+  var formData = new FormData();
+  formData.append("userId", userId);
+  formData.append("accountNo", accountNumber);
+  formData.append("docType", docType);
+  formData.append("file", file);
+  try {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      },
+      body: formData
+    });
+    const response = await rawResponse.json();
+    if (response.statusMsg == "Success") {
+      M.toast({
+        html: `<b class="green-text">Success </b>`
+      });
+    }
+    // console.log(response)
+
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+    return error;
+  }
+}
+async function getPaymentHistory(meter_number, date_from, date_to) {
+  // let token = localStorage.getItem('jdotwdott')
+  // var passwords = ""
+  // meter_number = {
+  //     param: "0102327327",
+  // }
+  // meter_number = JSON.stringify(meter_number)
+  // let meter_number = '0102111612'
+
+  try {
+    console.log(date_from, date_to);
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" + meter_number + "&startDate=" + date_from + "&endDate=" + date_to, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      }
+    });
+    const response = await rawResponse.json();
+    // console.log(response)
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getBillingHistory(meter_number, date_from, date_to) {
+  // let token = localStorage.getItem('jdotwdott')
+  // var passwords = ""
+  // meter_number = {
+  //     param: "0102327327",
+  // }
+  // meter_number = JSON.stringify(meter_number)
+  // let meter_number = '0102111612'
+
+  try {
+    console.log(date_from, date_to);
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getBillingHistory?accountNumber=" + meter_number + "&startDate=" + date_from + "&endDate=" + date_to, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      }
+    });
+    const response = await rawResponse.json();
+    console.log(response);
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getAllDTList(username) {
+  // username = 'paseeperi'
+  console.log(username);
+  try {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getESRDTLink?username=" + username, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      }
+    });
+    const response = await rawResponse.json();
+    // console.log(response)
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getDTSearch(searchString) {
+  searchString = searchString.toLowerCase();
+  try {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getDTSearch?searchString=" + searchString, {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      }
+    });
+    console.log(response);
+    const response = await rawResponse.json();
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function getEsrFormHistory(date_from, date_to) {
+  // let token = localStorage.getItem('jdotwdott')
+  // var passwords = ""
+  // meter_number = {
+  //     param: "0102327327",
+  // }
+  // meter_number = JSON.stringify(meter_number)
+  // let meter_number = '0102111612'
+
+  try {
+    console.log(date_from, date_to);
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getFormReport?startDate=" + date_from + "&endDate=" + date_to, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.token,
+        Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6"
+      }
+    });
+    const response = await rawResponse.json();
+    console.log(response.status);
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({
+      html: `<b class="red-text">${error}</b>`
+    });
+  }
+}
+async function logOut() {
+  if (false) {}
+}
+function getCoordinates() {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      M.toast({
+        html: `<b class="red-text">Geolocation is not available on the server side</b>`
+      });
+      reject(new Error("Geolocation is not available on the server side"));
+      return;
+    }
+    if (!navigator.geolocation) {
+      M.toast({
+        html: `<b class="red-text">Geolocation is not supported by your browser</b>`
+      });
+      reject(new Error("Geolocation is not supported by your browser"));
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(position => {
+      const long = position.coords.longitude;
+      const lat = position.coords.latitude;
+      resolve({
+        long,
+        lat
+      });
+    }, error => {
+      handleError(error);
+      reject(error);
+    }, {
+      enableHighAccuracy: true,
+      timeout: 7000,
+      maximumAge: 0
+    });
+  });
+}
+function handleError(error) {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      M.toast({
+        html: `<b class="red-text">User denied the request for geolocation</b>`
+      });
+      break;
+    case error.POSITION_UNAVAILABLE:
+      M.toast({
+        html: `<b class="red-text">Location information is unavailable</b>`
+      });
+      break;
+    case error.TIMEOUT:
+      M.toast({
+        html: `<b class="red-text">The request to get user location timed out</b>`
+      });
+      break;
+    default:
+      M.toast({
+        html: `<b class="red-text">The request to get user location timed out</b>`
+      });
+      break;
+  }
+}
+function getCurrentPosition() {
+  return getCoordinates().then(({
+    long,
+    lat
+  }) => {
+    // console.log(`Longitude: ${long}, Latitude: ${lat}`)
+    // this.long = long
+    // this.lat = lat
+    // Do something with the coordinates
+    return {
+      long,
+      lat
+    };
+  }).catch(error => {
+    console.error('Error getting coordinates:', error);
+  });
+}
 
 /***/ }),
 

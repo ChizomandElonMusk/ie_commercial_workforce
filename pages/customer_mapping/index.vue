@@ -381,11 +381,11 @@
   
   
   <script>
-  import { Geolocation } from '@capacitor/geolocation';
+//   import { Geolocation } from '@capacitor/geolocation';
   import imageCompression from 'browser-image-compression';
   import { Camera, CameraResultType } from '@capacitor/camera';
   import { defineCustomElements } from '@ionic/pwa-elements/loader';
-  import { checkCustomerMeterNumber, getCustomerInfoApi, getDTSearch, uploadImage, logOut } from '~/js_modules/mods'
+  import { checkCustomerMeterNumber, getCustomerInfoApi, getDTSearch, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
   import CustomSelect from '~/components/CustomSelect.vue'
 
   export default {
@@ -2088,10 +2088,11 @@
 
         // get longitude and latitude
         async printCurrentPosition () {
-            const coordinates = await Geolocation.getCurrentPosition();
+            const { long, lat } = await getCurrentPosition();
 
-            this.lat = coordinates.coords.latitude
-            this.long = coordinates.coords.longitude
+            this.long = long
+            this.lat = lat
+            
             this.location = `${ this.long }, ${ this.lat }`
         },
 
