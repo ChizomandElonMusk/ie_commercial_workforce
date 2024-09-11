@@ -243,27 +243,28 @@
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="number" v-model.number="par" placeholder="PAR">
+                            <input type="text" v-model.number="par" placeholder="PAR" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="number" v-model.number="lar" placeholder="LAR">
+                            <input type="text" v-model.number="lar" placeholder="LAR" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12">
-                            <input type="number" v-model.number="kwh" placeholder="KHW" readonly>
+                            <label for="kwh">KWH</label>
+                            <input type="text" v-model.number="kwh" placeholder="KWH" readonly id="kwh">
                         </div>
                     </div>
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col s12">
                             <input type="text" v-model="consumption" placeholder="Consumption">
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="row">
@@ -446,8 +447,8 @@
             phone_number: '',
             location: '',
             meter_type: '',
-            par: 0,
-            lar: 0,
+            par: '',
+            lar: '',
             // kwh: 0,
             dials: '',
             consumption: '',

@@ -74,7 +74,7 @@
                 <div class="col s12">
                     <form @submit.prevent style="margin-top: 20px" @change="checkAllNo">
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class=""
                                     v-model="service_type" />
@@ -96,33 +96,33 @@
                             <div class="col s3">
                                 <button class="btn btn-flat red white-text" @click="checkNumber()">Check</button>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Account type" v-model="account_type" disabled>
+                                <input type="text" placeholder="Customer type" v-model="account_type" >
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Account name" v-model="account_name" disabled>
+                                <input type="text" placeholder="Account name" v-model="account_name" >
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Tarrif" v-model="tarrif" disabled>
+                                <input type="text" placeholder="Tarrif" v-model="tarrif" >
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Address" v-model="address" disabled>
+                                <input type="text" placeholder="Address" v-model="address" >
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@
                             <!-- business unit -->
                             <div class="col s12">
                                 <b>BU:</b> {{ business_unit }}
-                                <!-- <select class="custom-select" v-model="business_unit">
+                                <select class="custom-select" v-model="business_unit">
                                 <option value="" disabled selected>Business Unit *</option>
                                 <option value="Abule Egba">Abule Egba</option>
                                 <option value="Akowonjo">Akowonjo</option>
@@ -138,7 +138,7 @@
                                 <option value="Ikorodu">Ikorodu</option>
                                 <option value="Oshodi">Oshodi</option>
                                 <option value="Shomolu">Shomolu</option>
-                            </select> -->
+                            </select>
                             </div>
                         </div>
                         <br>
@@ -147,7 +147,7 @@
                             <!-- undertaking one -->
                             <div class="col s12">
                                 <b>UT:</b> {{ undertaking_one }}
-                                <!-- <select class="custom-select" v-model="undertaking_one">
+                                <select class="custom-select" v-model="undertaking_one">
                                 <option value="" disabled selected>Undertaking *</option>
                                 <option value="ABORU">ABORU</option>
                                 <option value="ABULE-ODU">ABULE-ODU</option>
@@ -208,28 +208,28 @@
                                 <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
                                 <option value="OWUTU">OWUTU</option>
                                 <option value="PTC">PTC</option>
-                            </select> -->
+                            </select>
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- DT name -->
                             <div class="col s12">
-                                <input type="text" placeholder="DT name" v-model="dt_name" disabled>
+                                <input type="text" placeholder="DT name" v-model="dt_name">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col s12">
-                                <input type="text" v-model="phone_number" placeholder="Phone number" disabled>
+                                <input type="text" v-model="phone_number" placeholder="Phone number">
                             </div>
                         </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col s12">
-                                <input type="text" v-model="account_status" placeholder="Account status" disabled>
+                                <input type="text" v-model="account_status" placeholder="Account status" >
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -273,7 +273,7 @@
                             </div>
                         </div>
 
-                        <p>
+                        <!-- <p>
                             <b>
                                 Is account mapped to correct DT?
                             </b>
@@ -309,10 +309,10 @@
                                 <input name="is_meter_bypassed" type="radio" v-model="is_meter_bypassed" value="No" />
                                 <span>No</span>
                             </label>
-                        </p>
+                        </p> -->
 
 
-                        <p>
+                        <!-- <p>
                             <b>
                                 Is customer free rider?
                             </b>
@@ -329,7 +329,7 @@
                                     v-model="is_customer_free_rider" />
                                 <span>No</span>
                             </label>
-                        </p>
+                        </p> -->
 
 
                         <div class="row" v-if="showReasonField">
@@ -373,27 +373,23 @@
                         </div>
 
 
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
+                        <!-- <div class="row">
                             <div class="col s12">
 
                                 <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
                                     Vending slip/receipt, postpaid payment receipt
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPaymentReceipt()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
                             </div>
                         </div>
 
-                        <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
                                 <img class=" responsive-img" id="output-pic-of-payment-receipt" />
                             </div>
-                        </div>
+                        </div> -->
 
 
                         <div class="row">

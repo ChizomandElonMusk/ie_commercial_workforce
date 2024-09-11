@@ -15,13 +15,6 @@
 
 
 /*!
- * Vue.js v2.7.14
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
-
-
-/*!
 DOMTokenList
 */
 
@@ -34,6 +27,17 @@ Creative Commons Zero v1.0 Universal
 /*!
 Element.getRootNode()
 */
+
+/*!
+Element.isConnected()
+*/
+
+
+/*!
+ * Vue.js v2.7.14
+ * (c) 2014-2022 Evan You
+ * Released under the MIT License.
+ */
 
 /*!
 Element.isConnected()
@@ -79,12 +83,3 @@ Element.isConnected()
  * @param {Object=} options
  * @returns {Function}
  */
-
-
-/*!
-DOMTokenList
-*/
-
-/*!
-Element.isConnected()
-*/

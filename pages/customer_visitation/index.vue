@@ -221,7 +221,7 @@
 
                         <div class="row">
                             <div class="col s12">
-                                <input type="text" v-model="phone_number" placeholder="Phone number" disabled>
+                                <input type="text" v-model="phone_number" placeholder="Phone number">
                             </div>
                         </div>
 

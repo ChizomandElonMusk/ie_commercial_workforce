@@ -253,7 +253,7 @@
                         </div>
                     </div>
 
-                    <p>
+                    <!-- <p>
                         <b>
                             If suspended, is customer connected?
                         </b>
@@ -268,7 +268,7 @@
                             <input name="customer_connected" type="radio" value="No" />
                             <span>No</span>
                         </label>
-                    </p>
+                    </p> -->
 
 
 
@@ -278,7 +278,7 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Customers property showing wire down if any
+                                Photo of the building
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForWireDown()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -295,27 +295,24 @@
                     </div>
 
 
-                    <div class="row">
-                        <!-- Pic of the service wire from pole to metering point * -->
+                    <!-- <div class="row">
                         <div class="col s12">
                             
                             <h6 class="red-text">
-                                <!-- Picture of the service wire from pole metering point -->
                                 Customers property showing front view
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForCFV()">
                                 <i class="material-icons white-text">camera_alt</i>
                             </button>
-                            <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- output for pic of the service wire from pole to metering point -->
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col s12">
                             <img class=" responsive-img" id="output-pic-of-CFV" />
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="row">
