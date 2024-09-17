@@ -4,7 +4,7 @@ exports.modules = {
 /***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/logo.e97530d.png";
+module.exports = __webpack_require__.p + "img/logo.d2f3c61.png";
 
 /***/ }),
 
@@ -15,7 +15,7 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -23,14 +23,14 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js&
-/* harmony default export */ var Logovue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js
+/* harmony default export */ var Logovue_type_script_lang_js = ({
   name: 'TinaLogo'
 });
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Logovue_type_script_lang_js_ = (Logovue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Logovue_type_script_lang_js = (Logovue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -46,7 +46,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_Logovue_type_script_lang_js_,
+  components_Logovue_type_script_lang_js,
   render,
   staticRenderFns,
   false,

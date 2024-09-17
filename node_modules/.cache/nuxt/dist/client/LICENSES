@@ -1,17 +1,8 @@
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- *
- * This file is a port of shadowCSS from webcomponents.js to TypeScript.
- * https://github.com/webcomponents/webcomponentsjs/blob/4efecd7e0e/src/ShadowCSS/ShadowCSS.js
- * https://github.com/angular/angular/blob/master/packages/compiler/src/shadow_css.ts
+/*!
+ * Vue.js v2.7.16
+ * (c) 2014-2023 Evan You
+ * Released under the MIT License.
  */
-
-
-/*! Capacitor: https://capacitorjs.com/ - MIT License */
 
 
 /*!
@@ -27,17 +18,6 @@ Creative Commons Zero v1.0 Universal
 /*!
 Element.getRootNode()
 */
-
-/*!
-Element.isConnected()
-*/
-
-
-/*!
- * Vue.js v2.7.14
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
 
 /*!
 Element.isConnected()
@@ -83,3 +63,6 @@ Element.isConnected()
  * @param {Object=} options
  * @returns {Function}
  */
+
+
+/*! Capacitor: https://capacitorjs.com/ - MIT License */

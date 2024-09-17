@@ -37,6 +37,10 @@ export default {
     { src: '~/plugins/materialize.js', mode: 'client' },
   ],
 
+  generate: {
+    dir: 'dist'
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -47,8 +51,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@mrmikkou/custom-select'
+    '@mrmikkou/custom-select',
   ],
+
+  capacitor: {
+    icon: 'assets/icon.png',
+    splash: 'assets/splash.png',
+  },  
 
   axios: {
     // baseURL: process.env.API_URL,

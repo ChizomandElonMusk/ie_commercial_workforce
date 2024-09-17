@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forms.vue?vue&type=template&id=2a9ba99e&scoped=true&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forms.vue?vue&type=template&id=2a9ba99e&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -46,10 +46,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/forms.vue?vue&type=template&id=2a9ba99e&scoped=true&
+// CONCATENATED MODULE: ./pages/forms.vue?vue&type=template&id=2a9ba99e&scoped=true
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forms.vue?vue&type=script&lang=js&
-/* harmony default export */ var formsvue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forms.vue?vue&type=script&lang=js
+/* harmony default export */ var formsvue_type_script_lang_js = ({
   layout: 'admin_main',
   data() {
     return {
@@ -73,8 +73,8 @@ var staticRenderFns = [];
   methods: {},
   created() {}
 });
-// CONCATENATED MODULE: ./pages/forms.vue?vue&type=script&lang=js&
- /* harmony default export */ var pages_formsvue_type_script_lang_js_ = (formsvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./pages/forms.vue?vue&type=script&lang=js
+ /* harmony default export */ var pages_formsvue_type_script_lang_js = (formsvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -90,7 +90,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  pages_formsvue_type_script_lang_js_,
+  pages_formsvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,

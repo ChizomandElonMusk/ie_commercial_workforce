@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=template&id=311bdbb1&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=template&id=311bdbb1
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -18,7 +18,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/signup.vue?vue&type=template&id=311bdbb1&
+// CONCATENATED MODULE: ./pages/signup.vue?vue&type=template&id=311bdbb1
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -27,10 +27,10 @@ var angled_background_default = /*#__PURE__*/__webpack_require__.n(angled_backgr
 // EXTERNAL MODULE: ./components/SignUp.vue + 4 modules
 var SignUp = __webpack_require__(77);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/signup.vue?vue&type=script&lang=js
 
 
-/* harmony default export */ var signupvue_type_script_lang_js_ = ({
+/* harmony default export */ var signupvue_type_script_lang_js = ({
   data() {
     return {
       backgroundUrl: angled_background_default.a
@@ -40,8 +40,8 @@ var SignUp = __webpack_require__(77);
     SignUp: SignUp["default"]
   }
 });
-// CONCATENATED MODULE: ./pages/signup.vue?vue&type=script&lang=js&
- /* harmony default export */ var pages_signupvue_type_script_lang_js_ = (signupvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./pages/signup.vue?vue&type=script&lang=js
+ /* harmony default export */ var pages_signupvue_type_script_lang_js = (signupvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -54,7 +54,7 @@ var componentNormalizer = __webpack_require__(2);
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  pages_signupvue_type_script_lang_js_,
+  pages_signupvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -75,7 +75,7 @@ installComponents(component, {Logo: __webpack_require__(50).default,SignUp: __we
 /***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/logo.e97530d.png";
+module.exports = __webpack_require__.p + "img/logo.d2f3c61.png";
 
 /***/ }),
 
@@ -86,7 +86,7 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -94,14 +94,14 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js&
-/* harmony default export */ var Logovue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js
+/* harmony default export */ var Logovue_type_script_lang_js = ({
   name: 'TinaLogo'
 });
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Logovue_type_script_lang_js_ = (Logovue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Logovue_type_script_lang_js = (Logovue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -117,7 +117,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_Logovue_type_script_lang_js_,
+  components_Logovue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -134,7 +134,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
+module.exports = __webpack_require__.p + "img/angled_background.c716e15.jpg";
 
 /***/ }),
 
@@ -145,7 +145,7 @@ module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=template&id=3d4e84ed&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=template&id=3d4e84ed
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -161,10 +161,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=template&id=3d4e84ed&
+// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=template&id=3d4e84ed
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=script&lang=js&
-/* harmony default export */ var SignUpvue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=script&lang=js
+/* harmony default export */ var SignUpvue_type_script_lang_js = ({
   methods: {
     loadFocus() {
       this.$refs.email.focus();
@@ -174,8 +174,8 @@ var staticRenderFns = [];
     this.loadFocus();
   }
 });
-// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_SignUpvue_type_script_lang_js_ = (SignUpvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_SignUpvue_type_script_lang_js = (SignUpvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -191,7 +191,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_SignUpvue_type_script_lang_js_,
+  components_SignUpvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,

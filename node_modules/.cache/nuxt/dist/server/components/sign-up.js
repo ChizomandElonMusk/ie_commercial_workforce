@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=template&id=3d4e84ed&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=template&id=3d4e84ed
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -24,10 +24,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=template&id=3d4e84ed&
+// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=template&id=3d4e84ed
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=script&lang=js&
-/* harmony default export */ var SignUpvue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/SignUp.vue?vue&type=script&lang=js
+/* harmony default export */ var SignUpvue_type_script_lang_js = ({
   methods: {
     loadFocus() {
       this.$refs.email.focus();
@@ -37,8 +37,8 @@ var staticRenderFns = [];
     this.loadFocus();
   }
 });
-// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_SignUpvue_type_script_lang_js_ = (SignUpvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/SignUp.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_SignUpvue_type_script_lang_js = (SignUpvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -54,7 +54,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_SignUpvue_type_script_lang_js_,
+  components_SignUpvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,

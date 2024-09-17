@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Forgot.vue?vue&type=template&id=3d628ff6&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Forgot.vue?vue&type=template&id=3d628ff6
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -24,10 +24,10 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Forgot.vue?vue&type=template&id=3d628ff6&
+// CONCATENATED MODULE: ./components/Forgot.vue?vue&type=template&id=3d628ff6
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Forgot.vue?vue&type=script&lang=js&
-/* harmony default export */ var Forgotvue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Forgot.vue?vue&type=script&lang=js
+/* harmony default export */ var Forgotvue_type_script_lang_js = ({
   methods: {
     loadFocus() {
       this.$refs.email.focus();
@@ -37,8 +37,8 @@ var staticRenderFns = [];
     this.loadFocus();
   }
 });
-// CONCATENATED MODULE: ./components/Forgot.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Forgotvue_type_script_lang_js_ = (Forgotvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/Forgot.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Forgotvue_type_script_lang_js = (Forgotvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -54,7 +54,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_Forgotvue_type_script_lang_js_,
+  components_Forgotvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -75,7 +75,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forgot.vue?vue&type=template&id=14ac484c&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forgot.vue?vue&type=template&id=14ac484c
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -85,23 +85,23 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/forgot.vue?vue&type=template&id=14ac484c&
+// CONCATENATED MODULE: ./pages/forgot.vue?vue&type=template&id=14ac484c
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
 var angled_background_default = /*#__PURE__*/__webpack_require__.n(angled_background);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forgot.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/forgot.vue?vue&type=script&lang=js
 
-/* harmony default export */ var forgotvue_type_script_lang_js_ = ({
+/* harmony default export */ var forgotvue_type_script_lang_js = ({
   data() {
     return {
       backgroundUrl: angled_background_default.a
     };
   }
 });
-// CONCATENATED MODULE: ./pages/forgot.vue?vue&type=script&lang=js&
- /* harmony default export */ var pages_forgotvue_type_script_lang_js_ = (forgotvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./pages/forgot.vue?vue&type=script&lang=js
+ /* harmony default export */ var pages_forgotvue_type_script_lang_js = (forgotvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -114,7 +114,7 @@ var componentNormalizer = __webpack_require__(2);
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  pages_forgotvue_type_script_lang_js_,
+  pages_forgotvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -135,7 +135,7 @@ installComponents(component, {Logo: __webpack_require__(50).default,Forgot: __we
 /***/ 49:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/logo.e97530d.png";
+module.exports = __webpack_require__.p + "img/logo.d2f3c61.png";
 
 /***/ }),
 
@@ -146,7 +146,7 @@ module.exports = __webpack_require__.p + "img/logo.e97530d.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=template&id=ac56e43a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -154,14 +154,14 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a&
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=template&id=ac56e43a
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js&
-/* harmony default export */ var Logovue_type_script_lang_js_ = ({
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Logo.vue?vue&type=script&lang=js
+/* harmony default export */ var Logovue_type_script_lang_js = ({
   name: 'TinaLogo'
 });
-// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Logovue_type_script_lang_js_ = (Logovue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./components/Logo.vue?vue&type=script&lang=js
+ /* harmony default export */ var components_Logovue_type_script_lang_js = (Logovue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(2);
 
@@ -177,7 +177,7 @@ function injectStyles (context) {
 /* normalize component */
 
 var component = Object(componentNormalizer["a" /* default */])(
-  components_Logovue_type_script_lang_js_,
+  components_Logovue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -194,7 +194,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 /***/ 51:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/angled_background.3974983.jpg";
+module.exports = __webpack_require__.p + "img/angled_background.c716e15.jpg";
 
 /***/ })
 
