@@ -165,6 +165,7 @@
           name: '',
           email: '',
           message: '',
+          permissions: '',
   
           scheduleList: [],
   
@@ -223,13 +224,17 @@
       },
 
       mounted() {
-        localStorage.setItem('service_type', '')
+        if(typeof localStorage !== 'undefined'){
+          localStorage.setItem('service_type', '')
         localStorage.setItem('meter_number', '')
         localStorage.setItem('account_number', '')
+        }
       },
 
       created() {
-        this.permissions = localStorage.getItem('forms')
+        if(typeof localStorage !== 'undefined'){
+          this.permissions = localStorage.getItem('forms')
+        }
         // this.getFullname()
       }
   }
