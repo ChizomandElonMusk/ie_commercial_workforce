@@ -1,4 +1,4 @@
-export async function checkCustomerMeterNumber(meterNumber) {
+export async function checkCustomerMeterNumber(meterNumber, internal) {
   var CustomerMeterNumber = "";
   CustomerMeterNumber = {
     param1: meterNumber,
@@ -29,9 +29,16 @@ export async function checkCustomerMeterNumber(meterNumber) {
     let users_meter_number = response.meterNumber;
 
     if (users_meter_number == "") {
-      M.toast({
-        html: `<b class="red-text">Please check meter number agian</b>`,
-      });
+      if(internal == true){
+        M.toast({
+          html: `<b class="yellow-text">Please wait</b>`,
+        });
+      } else {
+        M.toast({
+          html: `<b class="red-text">Please check meter number agian</b>`,
+        });
+      }
+      return response;
     } else {
       if (response.status == 500) {
         await logOut();
@@ -123,7 +130,7 @@ export async function uploadImage(userId, accountNumber, docType, file) {
   }
 }
 
-export async function getPaymentHistory(meter_number, date_from, date_to) {
+export async function getPaymentHistory(meter_numberX, date_from, date_to) {
   // let token = localStorage.getItem('jdotwdott')
   // var passwords = ""
   // meter_number = {
@@ -131,45 +138,95 @@ export async function getPaymentHistory(meter_number, date_from, date_to) {
   // }
   // meter_number = JSON.stringify(meter_number)
   // let meter_number = '0102111612'
+  let meter_number = meter_numberX
+  let x = await checkCustomerMeterNumber(meter_number, true)
+  console.log(`this is the account number ${x}`);
 
-  try {
-    console.log(date_from, date_to);
-    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-    const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" +
-        meter_number +
-        "&startDate=" +
-        date_from +
-        "&endDate=" +
-        date_to,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + localStorage.token,
-          Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
-        },
+  if(x.meterNumber == '' || x == 'undefined') {
+
+    try {
+      console.log(date_from, date_to);
+      // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+      const rawResponse = await fetch(
+        "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" +
+          meter_number +
+          "&startDate=" +
+          date_from +
+          "&endDate=" +
+          date_to,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token,
+            Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          },
+        }
+      );
+  
+      const response = await rawResponse.json();
+      // console.log(response)
+      if (response.status == 500) {
+        await logOut();
+      } else {
+        return response;
       }
-    );
-
-    const response = await rawResponse.json();
-    // console.log(response)
-    if (response.status == 500) {
-      await logOut();
-    } else {
-      return response;
+  
+      // console.log(response)
+  
+      // console.log(response.passwords)
+      // console.log(response)
+      // return response
+    } catch (error) {
+      console.log(error);
+      M.toast({ html: `<b class="red-text">${error}</b>` });
     }
 
-    // console.log(response)
+  }else if(x.accountNumber != '' && x.code == '00') {
+    meter_number = x.accountNumber
 
-    // console.log(response.passwords)
-    // console.log(response)
-    // return response
-  } catch (error) {
-    console.log(error);
-    M.toast({ html: `<b class="red-text">${error}</b>` });
-  }
+    try {
+      console.log(date_from, date_to);
+      // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+      const rawResponse = await fetch(
+        "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" +
+          meter_number +
+          "&startDate=" +
+          date_from +
+          "&endDate=" +
+          date_to,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token,
+            Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          },
+        }
+      );
+  
+      const response = await rawResponse.json();
+      // console.log(response)
+      if (response.status == 500) {
+        await logOut();
+      } else {
+        return response;
+      }
+  
+      // console.log(response)
+  
+      // console.log(response.passwords)
+      // console.log(response)
+      // return response
+    } catch (error) {
+      console.log(error);
+      M.toast({ html: `<b class="red-text">${error}</b>` });
+    }
+  }  
+
+  
 }
 
 export async function getBillingHistory(meter_number, date_from, date_to) {
