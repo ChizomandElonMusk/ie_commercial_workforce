@@ -355,6 +355,12 @@
                         </div>
                     </div>
 
+                    <div class="row">
+                        <div class="col s12 input-field">
+                            <textarea class=" materialize-textarea" name="" id="" placeholder="Further Remarks" v-model="further_remarks"></textarea>
+                        </div>
+                    </div>
+
 
                     
 
@@ -2040,7 +2046,7 @@
 
                 
                 try { 
-                    console.log(this.dt_no);
+                    console.log(this.further_remarks);
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
@@ -2071,6 +2077,7 @@
                             picBypass: this.pic_of_bypass.name,
                             picAdditional: this.pic_of_additional.name,
                             picMeter: this.pic_of_meter.name,
+                            furtherRemark: this.further_remarks,
                         }),
                     })
 
