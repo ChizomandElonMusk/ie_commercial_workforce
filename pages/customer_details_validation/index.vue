@@ -351,9 +351,9 @@
 
 
 
-                    <div class="row center">
+                    <div class="row center safe-area-bottom">
                         <div class="col s12">
-                            <button class="btn btn-large red" style="width: 300px; margin-top: 20px; margin-bottom: 20px;" @click="submit">Submit</button>
+                            <button class="btn btn-large red" style="width: 300px; margin-top: 20px;" @click="submit" :disabled="disabled_bool">Submit</button>
                         </div>
                     </div>
 
@@ -387,6 +387,7 @@
         },
       data() {
         return {
+            disabled_bool: false,
             service_type: null,
             account_number: '',
             meter_number: '',
@@ -1991,16 +1992,22 @@
             this.last_purchase_date = date + ' '+ time
 
             
+
+            
             if (this.business_unit == '') {
 
             
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
+            } else if(this.pic_of_wire_down.name == undefined) {
+                M.toast({html: '<b class="red-text">Please upload picture of building</b>'})
             } else {
 
                 
                 try {
+                    this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerDetailsValidation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerDetailsValidation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2054,6 +2061,7 @@
                 } catch (error) {
                     console.log(error)
                     M.toast({html: `<b class="red-text">${error}</b>`})
+                    this.disabled_bool = false
                 }
 
             }

@@ -448,11 +448,11 @@
 
 
 
-                        <div class="row center">
+                        <div class="row center safe-area-bottom">
                             <div class="col s12">
                                 <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px; margin-bottom: 20px;"
-                                    @click="submit">Submit</button>
+                                    style="width: 300px; margin-top: 20px;"
+                                    @click="submit" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
 
@@ -486,6 +486,7 @@ export default {
     },
     data() {
         return {
+            disabled_bool: false,
             service_type: 'postpaid',
             account_number: '',
             meter_number: '',
@@ -1136,7 +1137,9 @@ export default {
 
 
                 try {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/nonInclusionCapture', {
+                    this.disabled_bool = true
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/nonInclusionCapture', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/nonInclusionCapture', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1179,7 +1182,7 @@ export default {
                     if (response.statusMsg == 'Success') {
                         this.hideLoader = true
                         this.$router.push('../sent')
-                    } else if (response.status == 500) {
+                    } else if (rawResponse.status == 500) {
                         console.log(response.status)
                         M.toast({ html: `<b class="red-text">Session expired</b>` })
                         await logOut()
@@ -1187,6 +1190,7 @@ export default {
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })
+                    this.disabled_bool = false
                 }
 
             }

@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_8d7128d6_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(97);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_8d7128d6_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_8d7128d6_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_8d7128d6_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_8d7128d6_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_1b6d236c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(97);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_1b6d236c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_1b6d236c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_1b6d236c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_correction_of_dials_vue_vue_type_style_index_0_id_1b6d236c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-8d7128d6]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-1b6d236c]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/crmd/correction_of_dials.vue?vue&type=template&id=8d7128d6&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/crmd/correction_of_dials.vue?vue&type=template&id=1b6d236c&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,16 +44,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-8d7128d6>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-8d7128d6>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-1b6d236c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1b6d236c>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "./"
     }
-  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-8d7128d6>Correction of Dials</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-8d7128d6>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-1b6d236c>Correction of Dials</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-1b6d236c>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-8d7128d6><div class=\"row\" data-v-8d7128d6><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-8d7128d6>DONE</a></div> <div class=\"row\" data-v-8d7128d6><div class=\"container\" data-v-8d7128d6><div class=\"row\" data-v-8d7128d6><div class=\"col s12 center\" data-v-8d7128d6><h6 data-v-8d7128d6>Sign here!</h6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12 center\" data-v-8d7128d6><canvas id=\"sig-canvas\" width=\"250px\" data-v-8d7128d6>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12 center\" data-v-8d7128d6><div class=\"col s6\" data-v-8d7128d6><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-8d7128d6>Save</button></div> <div class=\"col s6\" data-v-8d7128d6><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-8d7128d6>Clear</button></div></div></div> <br data-v-8d7128d6> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-8d7128d6>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-1b6d236c><div class=\"row\" data-v-1b6d236c><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-1b6d236c>DONE</a></div> <div class=\"row\" data-v-1b6d236c><div class=\"container\" data-v-1b6d236c><div class=\"row\" data-v-1b6d236c><div class=\"col s12 center\" data-v-1b6d236c><h6 data-v-1b6d236c>Sign here!</h6></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12 center\" data-v-1b6d236c><canvas id=\"sig-canvas\" width=\"250px\" data-v-1b6d236c>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12 center\" data-v-1b6d236c><div class=\"col s6\" data-v-1b6d236c><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-1b6d236c>Save</button></div> <div class=\"col s6\" data-v-1b6d236c><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-1b6d236c>Clear</button></div></div></div> <br data-v-1b6d236c> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-1b6d236c>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-8d7128d6>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-8d7128d6>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-8d7128d6>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-8d7128d6>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-8d7128d6>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-1b6d236c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1b6d236c>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-1b6d236c>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-1b6d236c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-1b6d236c>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -65,11 +65,11 @@ var render = function render() {
       },
       expression: "service_type"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-8d7128d6><div class=\"col s9\" data-v-8d7128d6><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-8d7128d6></div> <div class=\"col s3\" data-v-8d7128d6><button class=\"btn btn-flat red white-text\" data-v-8d7128d6>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-8d7128d6><div class=\"col s9\" data-v-8d7128d6><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-8d7128d6></div> <div class=\"col s3\" data-v-8d7128d6><button class=\"btn btn-flat red white-text\" data-v-8d7128d6>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><b data-v-8d7128d6>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-8d7128d6> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><b data-v-8d7128d6>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Meter type\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"Old Dial\"" + _vm._ssrAttr("value", _vm.old_dial) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><input type=\"text\" placeholder=\"New Dial\"" + _vm._ssrAttr("value", _vm.new_dial) + " data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><h6 class=\"red-text\" data-v-8d7128d6>\n                            Meter Front View showing number of dials\n                        </h6> <button class=\"btn red btn-large\" data-v-8d7128d6><i class=\"material-icons white-text\" data-v-8d7128d6>camera_alt</i></button></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><img id=\"output-pic-of-the-FVSNOD\" class=\"responsive-img\" data-v-8d7128d6></div></div> <div class=\"row\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><h6 class=\"red-text\" data-v-8d7128d6>Remarks:</h6> <textarea placeholder=\"Remarks\" class=\"materialize-textarea\" data-v-8d7128d6>" + _vm._ssrEscape(_vm._s(_vm.remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-8d7128d6></div> <div class=\"row center\" data-v-8d7128d6><div class=\"col s12\" data-v-8d7128d6><button class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px; margin-bottom: 20px;\" data-v-8d7128d6>Submit</button></div></div>")], 2)])])], 2)], 2);
+  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-1b6d236c><div class=\"col s9\" data-v-1b6d236c><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-1b6d236c></div> <div class=\"col s3\" data-v-1b6d236c><button class=\"btn btn-flat red white-text\" data-v-1b6d236c>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-1b6d236c><div class=\"col s9\" data-v-1b6d236c><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-1b6d236c></div> <div class=\"col s3\" data-v-1b6d236c><button class=\"btn btn-flat red white-text\" data-v-1b6d236c>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><b data-v-1b6d236c>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-1b6d236c> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><b data-v-1b6d236c>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Meter type\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"Old Dial\"" + _vm._ssrAttr("value", _vm.old_dial) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><input type=\"text\" placeholder=\"New Dial\"" + _vm._ssrAttr("value", _vm.new_dial) + " data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><h6 class=\"red-text\" data-v-1b6d236c>\n                            Meter Front View showing number of dials\n                        </h6> <button class=\"btn red btn-large\" data-v-1b6d236c><i class=\"material-icons white-text\" data-v-1b6d236c>camera_alt</i></button></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><img id=\"output-pic-of-the-FVSNOD\" class=\"responsive-img\" data-v-1b6d236c></div></div> <div class=\"row\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><h6 class=\"red-text\" data-v-1b6d236c>Remarks:</h6> <textarea placeholder=\"Remarks\" class=\"materialize-textarea\" data-v-1b6d236c>" + _vm._ssrEscape(_vm._s(_vm.remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-1b6d236c></div> <div class=\"row center safe-area-bottom\" data-v-1b6d236c><div class=\"col s12\" data-v-1b6d236c><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-1b6d236c>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/crmd/correction_of_dials.vue?vue&type=template&id=8d7128d6&scoped=true
+// CONCATENATED MODULE: ./pages/crmd/correction_of_dials.vue?vue&type=template&id=1b6d236c&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/crmd/correction_of_dials.vue?vue&type=script&lang=js
 var correction_of_dialsvue_type_script_lang_js = __webpack_require__(70);
@@ -98,7 +98,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "8d7128d6",
+  "1b6d236c",
   "f8d9f588"
   
 )
@@ -332,6 +332,7 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("accountNo", accountNumber);
   formData.append("docType", docType);
   formData.append("file", file);
+  // "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
   try {
     const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
@@ -718,6 +719,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
   },
   data() {
     return {
+      disabled_bool: false,
       service_type: null,
       account_number: '',
       meter_number: '',
@@ -1967,7 +1969,9 @@ module.exports = ___CSS_LOADER_EXPORT___;
         this.hideLoader = true;
       } else {
         try {
+          this.disabled_bool = true;
           const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/correctionOfDials', {
+            // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/correctionOfDials', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -2002,7 +2006,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
           if (response.statusMsg == 'Success') {
             this.hideLoader = true;
             this.$router.push('./sent');
-          } else if (response.status == 500) {
+          } else if (rawResponse.status == 500) {
             console.log(response.status);
             M.toast({
               html: `<b class="red-text">Session expired</b>`
@@ -2014,6 +2018,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
           M.toast({
             html: `<b class="red-text">${error}</b>`
           });
+          this.disabled_bool = false;
         }
       }
     },
@@ -2115,7 +2120,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("56c2ba28", content, true, context)
+  add("6a1b573d", content, true, context)
 };
 
 /***/ })

@@ -318,11 +318,11 @@
 
 
 
-                        <div class="row center">
+                        <div class="row center safe-area-bottom">
                             <div class="col s12">
                                 <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px; margin-bottom: 20px;"
-                                    @click="submit">Submit</button>
+                                    style="width: 300px; margin-top: 20px;"
+                                    @click="submit" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
 
@@ -355,6 +355,7 @@ export default {
     },
     data() {
         return {
+            disabled_bool: false,
             service_type: null,
             account_number: '',
             meter_number: '',
@@ -1891,7 +1892,9 @@ export default {
 
 
                 try {
+                    this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/switchToDormant', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/switchToDormant', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1936,6 +1939,7 @@ export default {
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })
+                    this.disabled_bool = false
                 }
 
             }

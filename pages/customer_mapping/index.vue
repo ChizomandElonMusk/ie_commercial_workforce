@@ -359,9 +359,9 @@
 
 
 
-                    <div class="row center" :class="{'hide': hideOtherFormElements}">
+                    <div class="row center safe-area-bottom" :class="{'hide': hideOtherFormElements}">
                         <div class="col s12">
-                            <button class="btn btn-large red col s12" style="margin-bottom: 20px;" @click="submit">Submit</button>
+                            <button class="btn btn-large red col s12"  @click="submit" :disabled="disabled_bool">Submit</button>
                         </div>
                     </div>
 
@@ -395,6 +395,7 @@
         },
       data() {
         return {
+            disabled_bool: false,
             service_type: null,
             account_number: '',
             meter_number: '',
@@ -1972,7 +1973,9 @@
                 
                  
                 try {
+                    this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2018,7 +2021,7 @@
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
                         localStorage.setItem('account_number', '')
-                    } else if (response.status == 500) {
+                    } else if (rawResponse.status == 500) {
                         console.log(response.status)
                         M.toast({html: `<b class="red-text">Session expired</b>`})
                         await logOut()
@@ -2026,6 +2029,7 @@
                 } catch (error) {
                     console.log(error)
                     M.toast({html: `<b class="red-text">${error}</b>`})
+                    this.disabled_bool = false
                 }
 
             }
