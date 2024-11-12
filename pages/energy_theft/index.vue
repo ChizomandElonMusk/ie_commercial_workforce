@@ -248,7 +248,7 @@
 
                     <div class="row">
                         <div class="col s12" style="margin-bottom: 15px;">
-                            <CustomSelect :options="['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',]" :default="'Duration of theft'" class="" v-model="duration_of_theft" />
+                            <CustomSelect :options="['unknown', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',]" :default="'Duration of theft'" class="" v-model="duration_of_theft" />
                         </div>
                     </div>
 
@@ -260,7 +260,7 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Picture of Bypass
+                                Picture of Bypass (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForBypass()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -286,7 +286,7 @@
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
                                 <!-- Formerly Picture of theft -->
-                                Picture of notification
+                                Picture of notification (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForTheft()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -312,7 +312,7 @@
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
                                 <!-- Formerly Picture of customer meter if any -->
-                                Picture of building
+                                Picture of building (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForMeter()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -339,7 +339,7 @@
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
                                 <!-- Fomerly Additional Pic -->
-                                Seal as met
+                                Seal as met (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForAdditional()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -357,7 +357,7 @@
 
                     <div class="row">
                         <div class="col s12 input-field">
-                            <textarea class=" materialize-textarea" name="" id="" placeholder="Further Remarks" v-model="further_remarks"></textarea>
+                            <textarea class=" materialize-textarea" name="" id="" placeholder="Further Remarks (*)" v-model="further_remarks"></textarea>
                         </div>
                     </div>
 
@@ -2040,6 +2040,16 @@
             
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
+            } else if (this.pic_of_bypass == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Bypass *</b>' })
+            } else if (this.pic_of_theft == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of notification *</b>' })
+            } else if (this.pic_of_meter == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of building *</b>' })
+            } else if (this.pic_of_additional == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Seal as met *</b>' })
+            } else if (this.further_remarks == '') {
+                M.toast({ html: '<b class="red-text">Please add Further remarks *</b>' })
             } else {
                 
                 

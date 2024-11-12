@@ -295,7 +295,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Photo of building
+                                    Photo of building (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPhotoOfBuilding()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -318,7 +318,7 @@
                             <div class="col s12">
                                 <h6 class="red-text">
                                     <!-- Picture of building * -->
-                                    Picture of the meter showing LAR
+                                    Picture of the meter showing LAR (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerFunctionPostpaidMeter()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -341,7 +341,7 @@
                             <div class="col s12">
                                 <h6 class="red-text">
                                     <!-- Picture of installation /Cut Out/ metering point 1  -->
-                                    Picture of meter showing PAR
+                                    Picture of meter showing PAR (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForAdditionalPhotos()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -406,8 +406,7 @@
 
                         <div class="row center safe-area-bottom">
                             <div class="col s12">
-                                <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px;"
+                                <button class="btn btn-large red" style="width: 300px; margin-top: 20px;"
                                     @click="submit()" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
@@ -2163,6 +2162,12 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            } else if (this.pic_of_building == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of building *</b>' })
+            } else if (this.pic_of_fpm == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of the meter showing LAR *</b>' })
+            } else if (this.pic_of_additional_photo == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of the meter showing PAR *</b>' })
             } else {
 
 
@@ -2176,7 +2181,7 @@ export default {
                     this.consumption = this.kwh
 
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/switchToActualRead', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/switchToActualRead', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/switchToActualRead', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

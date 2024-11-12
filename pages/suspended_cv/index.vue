@@ -246,13 +246,13 @@
                             </b>
                             <br>
                             <label>
-                                <input name="customer_connected" type="radio" checked />
+                                <input name="customer_connected" value="Yes" type="radio" v-model="customer_connected"checked />
                                 <span>Yes</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="customer_connected" type="radio" />
+                                <input name="customer_connected" value="No" type="radio" v-model="customer_connected"/>
                                 <span>No</span>
                             </label>
                         </p>
@@ -265,7 +265,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Customers property showing wire down if any
+                                    Customers property showing wire down (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForWireDown()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -288,7 +288,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Customers property showing front view
+                                    Customers property showing front view (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForCFV()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -378,6 +378,7 @@ export default {
     data() {
         return {
             disabled_bool: false,
+            customer_connected: 'Yes',
             service_type: 'postpaid',
             account_number: '',
             meter_number: '',
@@ -1957,6 +1958,7 @@ export default {
 
 
         async submit() {
+            
             M.toast({html: '<b class="yellow-text">Please wait...</b>'})
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
@@ -1987,6 +1989,10 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            } else if (this.pic_of_wire_down == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of customer wire down *</b>' })
+            } else if (this.pic_of_fv == '') {
+                M.toast({ html: '<b class="red-text">Please add front view *</b>' })
             } else {
 
 

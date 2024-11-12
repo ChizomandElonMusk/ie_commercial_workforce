@@ -256,7 +256,7 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Front View of meter showing PAR
+                                Front View of meter showing PAR (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForPAR()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -279,7 +279,8 @@
                         <div class="col s12">
                             <h6 class="red-text">
                                 <!-- Picture of building * -->
-                                Additional pic
+                                Front View of meter showing LAR (*)
+                                
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerAdditionalPic()">
                                 <i class="material-icons white-text">camera_alt</i>
@@ -1985,6 +1986,10 @@
             
                 M.toast({html: '<b class="red-text">Fill all the field marked with *</b>'})
                 this.hideLoader = true
+            } else if (this.pic_of_frontview == '') {
+                M.toast({ html: '<b class="red-text">Please add pic meter showing PAR *</b>' })
+            } else if (this.pic_of_additional_pic == '') {
+                M.toast({ html: '<b class="red-text">Please add pic meter showing LAR *</b>' })
             } else {
 
                 

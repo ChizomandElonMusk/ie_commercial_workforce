@@ -101,28 +101,28 @@
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Customer type" v-model="account_type" >
+                                <input type="text" placeholder="Customer type" v-model="account_type">
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Account name" v-model="account_name" >
+                                <input type="text" placeholder="Account name" v-model="account_name">
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Tarrif" v-model="tarrif" >
+                                <input type="text" placeholder="Tarrif" v-model="tarrif">
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
-                                <input type="text" placeholder="Address" v-model="address" >
+                                <input type="text" placeholder="Address" v-model="address">
                             </div>
                         </div>
 
@@ -131,14 +131,14 @@
                             <div class="col s12">
                                 <b>BU:</b> {{ business_unit }}
                                 <select class="custom-select" v-model="business_unit">
-                                <option value="" disabled selected>Business Unit *</option>
-                                <option value="Abule Egba">Abule Egba</option>
-                                <option value="Akowonjo">Akowonjo</option>
-                                <option value="Ikeja">Ikeja</option>
-                                <option value="Ikorodu">Ikorodu</option>
-                                <option value="Oshodi">Oshodi</option>
-                                <option value="Shomolu">Shomolu</option>
-                            </select>
+                                    <option value="" disabled selected>Business Unit *</option>
+                                    <option value="Abule Egba">Abule Egba</option>
+                                    <option value="Akowonjo">Akowonjo</option>
+                                    <option value="Ikeja">Ikeja</option>
+                                    <option value="Ikorodu">Ikorodu</option>
+                                    <option value="Oshodi">Oshodi</option>
+                                    <option value="Shomolu">Shomolu</option>
+                                </select>
                             </div>
                         </div>
                         <br>
@@ -148,67 +148,67 @@
                             <div class="col s12">
                                 <b>UT:</b> {{ undertaking_one }}
                                 <select class="custom-select" v-model="undertaking_one">
-                                <option value="" disabled selected>Undertaking *</option>
-                                <option value="ABORU">ABORU</option>
-                                <option value="ABULE-ODU">ABULE-ODU</option>
-                                <option value="ABULE-TAYLOR">ABULE-TAYLOR</option>
-                                <option value="ADIYAN">ADIYAN</option>
-                                <option value="AGO">AGO</option>
-                                <option value="AIT">AIT</option>
-                                <option value="AJAO">AJAO</option>
-                                <option value="AKUTE">AKUTE</option>
-                                <option value="AMUWO">AMUWO</option>
-                                <option value="ANIFOWOSHE">ANIFOWOSHE</option>
-                                <option value="ANTHONY MEGA">ANTHONY MEGA</option>
-                                <option value="AYANGBUREN">AYANGBUREN</option>
-                                <option value="AYOBO">AYOBO</option>
-                                <option value="BARIGA">BARIGA</option>
-                                <option value="DOPEMU">DOPEMU</option>
-                                <option value="EGBEDA">EGBEDA</option>
-                                <option value="EPE">EPE</option>
-                                <option value="FAGBA">FAGBA</option>
-                                <option value="GOWON-ESTATE">GOWON-ESTATE</option>
-                                <option value="IDIMU">IDIMU</option>
-                                <option value="IFAKO">IFAKO</option>
-                                <option value="IGANDO">IGANDO</option>
-                                <option value="IGBOBI">IGBOBI</option>
-                                <option value="IGBOBI MEGA">IGBOBI MEGA</option>
-                                <option value="IGBOGBO">IGBOGBO</option>
-                                <option value="IJAIYE">IJAIYE</option>
-                                <option value="IJEDE">IJEDE</option>
-                                <option value="IJEGUN">IJEGUN</option>
-                                <option value="IJU">IJU</option>
-                                <option value="IKOSI">IKOSI</option>
-                                <option value="IKOTUN">IKOTUN</option>
-                                <option value="ILUPEJU">ILUPEJU</option>
-                                <option value="ILUPEJU MEGA">ILUPEJU MEGA</option>
-                                <option value="IPAJA">IPAJA</option>
-                                <option value="ISOLO">ISOLO</option>
-                                <option value="KETU">KETU</option>
-                                <option value="LAMBE">LAMBE</option>
-                                <option value="LASUNWON">LASUNWON</option>
-                                <option value="MAGODO">MAGODO</option>
-                                <option value="MAGODO MEGA">MAGODO MEGA</option>
-                                <option value="MENDE">MENDE</option>
-                                <option value="OBA AKRAN">OBA AKRAN</option>
-                                <option value="ODOGUNYAN">ODOGUNYAN</option>
-                                <option value="OGBA">OGBA</option>
-                                <option value="OGUDU">OGUDU</option>
-                                <option value="OJODU">OJODU</option>
-                                <option value="OKE-AFA">OKE-AFA</option>
-                                <option value="OKE-IRA">OKE-IRA</option>
-                                <option value="OKE-ODO">OKE-ODO</option>
-                                <option value="OKOTA">OKOTA</option>
-                                <option value="OLATEJU">OLATEJU</option>
-                                <option value="OLOWORA">OLOWORA</option>
-                                <option value="OREGUN">OREGUN</option>
-                                <option value="ORILE-AGEGE">ORILE-AGEGE</option>
-                                <option value="OSHODI">OSHODI</option>
-                                <option value="OWORO">OWORO</option>
-                                <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
-                                <option value="OWUTU">OWUTU</option>
-                                <option value="PTC">PTC</option>
-                            </select>
+                                    <option value="" disabled selected>Undertaking *</option>
+                                    <option value="ABORU">ABORU</option>
+                                    <option value="ABULE-ODU">ABULE-ODU</option>
+                                    <option value="ABULE-TAYLOR">ABULE-TAYLOR</option>
+                                    <option value="ADIYAN">ADIYAN</option>
+                                    <option value="AGO">AGO</option>
+                                    <option value="AIT">AIT</option>
+                                    <option value="AJAO">AJAO</option>
+                                    <option value="AKUTE">AKUTE</option>
+                                    <option value="AMUWO">AMUWO</option>
+                                    <option value="ANIFOWOSHE">ANIFOWOSHE</option>
+                                    <option value="ANTHONY MEGA">ANTHONY MEGA</option>
+                                    <option value="AYANGBUREN">AYANGBUREN</option>
+                                    <option value="AYOBO">AYOBO</option>
+                                    <option value="BARIGA">BARIGA</option>
+                                    <option value="DOPEMU">DOPEMU</option>
+                                    <option value="EGBEDA">EGBEDA</option>
+                                    <option value="EPE">EPE</option>
+                                    <option value="FAGBA">FAGBA</option>
+                                    <option value="GOWON-ESTATE">GOWON-ESTATE</option>
+                                    <option value="IDIMU">IDIMU</option>
+                                    <option value="IFAKO">IFAKO</option>
+                                    <option value="IGANDO">IGANDO</option>
+                                    <option value="IGBOBI">IGBOBI</option>
+                                    <option value="IGBOBI MEGA">IGBOBI MEGA</option>
+                                    <option value="IGBOGBO">IGBOGBO</option>
+                                    <option value="IJAIYE">IJAIYE</option>
+                                    <option value="IJEDE">IJEDE</option>
+                                    <option value="IJEGUN">IJEGUN</option>
+                                    <option value="IJU">IJU</option>
+                                    <option value="IKOSI">IKOSI</option>
+                                    <option value="IKOTUN">IKOTUN</option>
+                                    <option value="ILUPEJU">ILUPEJU</option>
+                                    <option value="ILUPEJU MEGA">ILUPEJU MEGA</option>
+                                    <option value="IPAJA">IPAJA</option>
+                                    <option value="ISOLO">ISOLO</option>
+                                    <option value="KETU">KETU</option>
+                                    <option value="LAMBE">LAMBE</option>
+                                    <option value="LASUNWON">LASUNWON</option>
+                                    <option value="MAGODO">MAGODO</option>
+                                    <option value="MAGODO MEGA">MAGODO MEGA</option>
+                                    <option value="MENDE">MENDE</option>
+                                    <option value="OBA AKRAN">OBA AKRAN</option>
+                                    <option value="ODOGUNYAN">ODOGUNYAN</option>
+                                    <option value="OGBA">OGBA</option>
+                                    <option value="OGUDU">OGUDU</option>
+                                    <option value="OJODU">OJODU</option>
+                                    <option value="OKE-AFA">OKE-AFA</option>
+                                    <option value="OKE-IRA">OKE-IRA</option>
+                                    <option value="OKE-ODO">OKE-ODO</option>
+                                    <option value="OKOTA">OKOTA</option>
+                                    <option value="OLATEJU">OLATEJU</option>
+                                    <option value="OLOWORA">OLOWORA</option>
+                                    <option value="OREGUN">OREGUN</option>
+                                    <option value="ORILE-AGEGE">ORILE-AGEGE</option>
+                                    <option value="OSHODI">OSHODI</option>
+                                    <option value="OWORO">OWORO</option>
+                                    <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
+                                    <option value="OWUTU">OWUTU</option>
+                                    <option value="PTC">PTC</option>
+                                </select>
                             </div>
                         </div>
 
@@ -254,16 +254,16 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect :options="['Residential',
-                        'Commercial',
-                        'Bar or lounge',
-                        'Motel',
-                        'School',
-                        'Church',
-                        'Mosque',
-                        'Agriculture',
-                        'Nylon factory',
-                        'Pure water factory',
-                        'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
+                                    'Commercial',
+                                    'Bar or lounge',
+                                    'Motel',
+                                    'School',
+                                    'Church',
+                                    'Mosque',
+                                    'Agriculture',
+                                    'Nylon factory',
+                                    'Pure water factory',
+                                    'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
                             </div>
                         </div>
 
@@ -450,8 +450,7 @@
 
                         <div class="row center safe-area-bottom">
                             <div class="col s12">
-                                <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px;"
+                                <button class="btn btn-large red" style="width: 300px; margin-top: 20px;"
                                     @click="submit" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
@@ -863,32 +862,29 @@ export default {
 
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
-            } else {
-                // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
 
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
+            // Call the element loader after the app has been rendered the first time
+            defineCustomElements(window);
+
+            const image = await Camera.getPhoto({
+                quality: 100,
+                allowEditing: false,
+                resultType: CameraResultType.Base64
+            });
 
 
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
-                }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForPremises(blob)
+            const rawData = window.atob(image.base64String);
+            const bytes = new Array(rawData.length);
+            for (var x = 0; x < rawData.length; x++) {
+                bytes[x] = rawData.charCodeAt(x);
             }
+            const arr = new Uint8Array(bytes);
+            const blob = new Blob([arr], { type: 'image/jpeg' });
+            console.log(blob)
+
+
+
+            this.doSomethingWithFilesimagePickerForPremises(blob)
 
 
         },
@@ -1021,34 +1017,28 @@ export default {
 
         async imagePickerForMeter() {
 
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
-            } else {
-                // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
+            // Call the element loader after the app has been rendered the first time
+            defineCustomElements(window);
 
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
+            const image = await Camera.getPhoto({
+                quality: 100,
+                allowEditing: false,
+                resultType: CameraResultType.Base64
+            });
 
 
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
-                }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForMeter(blob)
+            const rawData = window.atob(image.base64String);
+            const bytes = new Array(rawData.length);
+            for (var x = 0; x < rawData.length; x++) {
+                bytes[x] = rawData.charCodeAt(x);
             }
+            const arr = new Uint8Array(bytes);
+            const blob = new Blob([arr], { type: 'image/jpeg' });
+            console.log(blob)
+
+
+
+            this.doSomethingWithFilesimagePickerForMeter(blob)
 
 
         },
@@ -1103,7 +1093,7 @@ export default {
 
 
         async submit() {
-            M.toast({html: '<b class="yellow-text">Please wait...</b>'})
+            M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -1133,13 +1123,17 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            } else if (this.pic_of_premise == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of picture of premises, customer wiring *</b>' })
+            } else if (this.pic_of_meter == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
             } else {
 
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/nonInclusionCapture', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/nonInclusionCapture', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/nonInclusionCapture', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/nonInclusionCapture', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1252,13 +1246,13 @@ export default {
         // },
 
         // get longitude and latitude
-        async printCurrentPosition () {
+        async printCurrentPosition() {
             const { long, lat } = await getCurrentPosition();
 
             this.long = long
             this.lat = lat
-            
-            this.location = `${ this.long }, ${ this.lat }`
+
+            this.location = `${this.long}, ${this.lat}`
         },
 
         // let me try to create a new signature
@@ -1290,6 +1284,7 @@ export default {
 
         this.trySign()
         this.userId = localStorage.getItem('userId')
+        this.printCurrentPosition()
     },
 
     created() {

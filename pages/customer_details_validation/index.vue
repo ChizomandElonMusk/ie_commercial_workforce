@@ -278,7 +278,7 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Photo of the building
+                                Photo of the building (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForWireDown()">
                                 <i class="material-icons white-text">camera_alt</i>

@@ -250,7 +250,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Pic of Evidence
+                                    Pic of Evidence (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForEvidence()">
                                     <i class="material-icons white-text">camera_alt</i>

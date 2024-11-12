@@ -238,13 +238,13 @@
                             </b>
                             <br>
                             <label>
-                                <input name="installation_ok" type="radio" checked />
+                                <input name="installation_ok" type="radio" value="Yes" v-model="installation_ok" checked />
                                 <span>Yes</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="installation_ok" type="radio" />
+                                <input name="installation_ok" type="radio" value="No"  v-model="installation_ok" />
                                 <span>No</span>
                             </label>
                         </p>
@@ -255,13 +255,13 @@
                             </b>
                             <br>
                             <label>
-                                <input name="meter_activated" type="radio" checked />
+                                <input name="meter_activated" type="radio" value="Yes" v-model="meter_activated" checked />
                                 <span>Yes</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="meter_activated" type="radio" />
+                                <input name="meter_activated" type="radio" value="No" v-model="meter_activated">
                                 <span>No</span>
                             </label>
                         </p>
@@ -272,13 +272,13 @@
                             </b>
                             <br>
                             <label>
-                                <input name="customer_been_able_to_recharge" type="radio" checked />
+                                <input name="customer_been_able_to_recharge" type="radio" value="Yes" v-model="customer_been_able_to_recharge" checked />
                                 <span>Yes</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="customer_been_able_to_recharge" type="radio" />
+                                <input name="customer_been_able_to_recharge" type="radio" value="No" v-model="customer_been_able_to_recharge" />
                                 <span>No</span>
                             </label>
                         </p>
@@ -289,13 +289,13 @@
                             </b>
                             <br>
                             <label>
-                                <input name="meter_infractions" type="radio" checked />
+                                <input name="meter_infractions" type="radio" value="Yes" v-model="meter_infractions" checked />
                                 <span>Yes</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="meter_infractions" type="radio" />
+                                <input name="meter_infractions" type="radio" value="No" v-model="meter_infractions" />
                                 <span>No</span>
                             </label>
                         </p>
@@ -308,7 +308,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Picture of Meter
+                                    Picture of Meter (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForMeter()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -332,7 +332,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Picture of apartment
+                                    Picture of apartment (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerApartment()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -466,10 +466,10 @@ export default {
             account_status: '',
             dt_no: '',
             userId: null,
-            installation_ok: '',
-            meter_activated: '',
-            customer_been_able_to_recharge: '',
-            meter_infractions: '',
+            installation_ok: 'Yes',
+            meter_activated: 'Yes',
+            customer_been_able_to_recharge: 'Yes',
+            meter_infractions: 'Yes',
             pic_of_meter: '',
             pic_of_apartment: '',
             pic_of_infra: '',
@@ -1053,6 +1053,11 @@ export default {
 
 
         async submit() {
+            console.log(`This is the installation ok ${this.installation_ok}`);
+            console.log(`This is the meter activated ${this.meter_activated}`);
+            console.log(`This is the recharge ${this.customer_been_able_to_recharge}`);
+            console.log(`This is the infraction ${this.meter_infractions}`);
+
             M.toast({html: '<b class="yellow-text">Please wait...</b>'})
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
@@ -1083,6 +1088,14 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            } else if (this.pic_of_meter == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Meter *</b>' })
+            } else if (this.pic_of_apartment == '') {
+                M.toast({ html: '<b class="red-text">Please add pic Apartment*</b>' })
+            } else if (this.meter_infractions == 'Yes') {
+                if (this.pic_of_infra == '') {
+                    M.toast({ html: '<b class="red-text">Please add pic Infraction*</b>' })
+                }
             } else {
 
 

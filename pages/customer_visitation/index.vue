@@ -355,6 +355,10 @@
                                 <div class="col s6">
                                     <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
                                 </div>
+
+                                <div class="col s12 input-field">
+                                    <input type="text" placeholder="Enter Physical Customer Address" :class="{'hide': hidePhysicalCustomerAddress}" v-model="physical_customer_address">
+                                </div>
                             </form>
                         </div>
                         <br>
@@ -428,7 +432,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Take pictures of premises, customer wiring
+                                    Take pictures of premises, customer wiring (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPremises()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -474,7 +478,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    House number, meter(s)
+                                    House number, meter(s) (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForMeter()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -556,6 +560,7 @@ export default {
     },
     data() {
         return {
+            physical_customer_address: '',
             disabled_bool: false,
             service_type: null,
             account_number: '',
@@ -665,6 +670,7 @@ export default {
 
             hideModal: true,
             hideForm: false,
+            hidePhysicalCustomerAddress: true,
 
 
 
@@ -726,6 +732,7 @@ export default {
             this.is_customer_address_correct = 'Yes'
             this.is_customer_address_correct_green = true
             console.log(this.is_customer_phone_no_correct)
+            this.hidePhysicalCustomerAddress = true
         },
         isCustomerAddressCorrectNo() {
             this.meter_number = this.meter_number.trim()
@@ -734,11 +741,13 @@ export default {
             if (this.meter_number == '' && this.account_number == '') {
                 M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
             } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
-                this.is_customer_address_correct = 'No'
-                window.location = '../customer_details_validation'
+                this.hidePhysicalCustomerAddress = false
+                this.is_customer_address_correct_green = false
+                // localStorage.setItem('service_type', this.service_type)
+                // localStorage.setItem('meter_number', this.meter_number)
+                // localStorage.setItem('account_number', this.account_number)
+                // this.is_customer_address_correct = 'No'
+                // window.location = '../customer_details_validation'
             }
         },
 
@@ -2370,13 +2379,17 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            }  else if (this.pic_of_premise == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Premises, customer wiring *</b>' })
+            } else if (this.pic_of_meter == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
             } else {
 
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2409,6 +2422,7 @@ export default {
                             isAccountMappedToCorrectDT: this.is_account_mapped_to_correct_dt,
                             isCustomerPhoneNoCorrect: this.is_customer_phone_no_correct,
                             isCustomerAddressCorrect: this.is_customer_address_correct,
+                            physicalCustomerAddress: this.physical_customer_address,
                             isMeterByPassed: this.is_meter_bypassed,
                             customerComplaint: this.customer_complaint,
                             otherRemarks: this.other_remarks,

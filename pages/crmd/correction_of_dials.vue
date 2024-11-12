@@ -251,7 +251,7 @@
                             
                             <h6 class="red-text">
                                 <!-- Picture of the service wire from pole metering point -->
-                                Meter Front View showing number of dials
+                                Meter Front View showing number of dials (*)
                             </h6>
                             <button class="btn red btn-large" @click="imagePickerForFVSNOD()">
                                 <i class="material-icons white-text">camera_alt</i>
