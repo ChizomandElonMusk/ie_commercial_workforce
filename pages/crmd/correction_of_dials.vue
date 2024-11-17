@@ -1922,10 +1922,9 @@
                     if (response.statusMsg == 'Success') {
                         this.hideLoader = true
                         this.$router.push('./sent')
-                    } else if (rawResponse.status == 500) {
+                    } else if (response.status == 500) {
                         console.log(response.status)
-                        M.toast({html: `<b class="red-text">Session expired</b>`})
-                        await logOut()
+                        M.toast({html: `<b class="red-text">Network Error</b>`})
                     }
                 } catch (error) {
                     console.log(error)

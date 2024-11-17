@@ -2103,10 +2103,9 @@
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
                         localStorage.setItem('account_number', '')
-                    } else if (rawResponse.status == 500) {
+                    } else if (response.status == 500) {
                         console.log(response.status)
-                        M.toast({html: `<b class="red-text">Session expired</b>`})
-                        await logOut()
+                        M.toast({html: `<b class="red-text">Network Error</b>`})
                     }
                 } catch (error) {
                     console.log(error)
