@@ -27,7 +27,7 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <button class="red btn btn-large col s12" @click="signIn">
+                <button class="red btn btn-large col s12" @click="signIn" :disabled="disabled">
                   Login
                 </button>
               </div>
@@ -66,6 +66,7 @@ export default {
       password_test: '',
       username: '',
       password: '',
+      disabled: false,
       // username: 'cechehieuka',
       // password: '@@@1KingGod123456',
       lat: '',
@@ -176,7 +177,7 @@ export default {
       try {
 
 
-
+        this.disabled = true
         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
         const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
           method: 'POST',
@@ -220,6 +221,7 @@ export default {
 
           M.toast({ html: `<b class="red-text">${message}</b>` })
           this.hidePreLoader = true
+          this.disabled = false
 
         } else if (responseCode === '00') {
 
