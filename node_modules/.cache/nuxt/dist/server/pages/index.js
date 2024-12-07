@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=0da24f76
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=21e1324c
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -23,7 +23,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=0da24f76
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=21e1324c
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -156,8 +156,8 @@ var mods = __webpack_require__(45);
 
       try {
         this.disabled = true;
-        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
-        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
+          // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -702,6 +702,7 @@ function getCoordinates() {
       });
     }, error => {
       handleError(error);
+      console.log('this is geo error: ', error);
       reject(error);
     }, {
       enableHighAccuracy: true,

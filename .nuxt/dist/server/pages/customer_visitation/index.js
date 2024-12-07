@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c85c0d8_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c85c0d8_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c85c0d8_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c85c0d8_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4c85c0d8_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c5a0007a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c5a0007a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c5a0007a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c5a0007a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c5a0007a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-4c85c0d8]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-c5a0007a]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_visitation/index.vue?vue&type=template&id=4c85c0d8&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_visitation/index.vue?vue&type=template&id=c5a0007a&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,16 +44,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-4c85c0d8>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-c5a0007a>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" style=\"font-size: 10px;\" data-v-4c85c0d8> Customer Visitation</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" style=\"font-size: 10px;\" data-v-c5a0007a> Customer Visitation</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-4c85c0d8><div class=\"row\" data-v-4c85c0d8><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-4c85c0d8>DONE</a></div> <div class=\"row\" data-v-4c85c0d8><div class=\"container\" data-v-4c85c0d8><div class=\"row\" data-v-4c85c0d8><div class=\"col s12 center\" data-v-4c85c0d8><h6 data-v-4c85c0d8>Sign here!</h6></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12 center\" data-v-4c85c0d8><canvas id=\"sig-canvas\" width=\"250px\" data-v-4c85c0d8>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12 center\" data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-4c85c0d8>Save</button></div> <div class=\"col s6\" data-v-4c85c0d8><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-4c85c0d8>Clear</button></div></div></div> <br data-v-4c85c0d8> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-4c85c0d8>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-c5a0007a><div class=\"row\" data-v-c5a0007a><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-c5a0007a>DONE</a></div> <div class=\"row\" data-v-c5a0007a><div class=\"container\" data-v-c5a0007a><div class=\"row\" data-v-c5a0007a><div class=\"col s12 center\" data-v-c5a0007a><h6 data-v-c5a0007a>Sign here!</h6></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12 center\" data-v-c5a0007a><canvas id=\"sig-canvas\" width=\"250px\" data-v-c5a0007a>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12 center\" data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-c5a0007a>Save</button></div> <div class=\"col s6\" data-v-c5a0007a><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-c5a0007a>Clear</button></div></div></div> <br data-v-c5a0007a> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-c5a0007a>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-4c85c0d8>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4c85c0d8>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-c5a0007a>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-c5a0007a>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -65,7 +65,7 @@ var render = function render() {
       },
       expression: "service_type"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-4c85c0d8><div class=\"col s9\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-4c85c0d8></div> <div class=\"col s3\" data-v-4c85c0d8><button class=\"btn btn-flat red white-text\" data-v-4c85c0d8>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-4c85c0d8><div class=\"col s9\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-4c85c0d8></div> <div class=\"col s3\" data-v-4c85c0d8><button class=\"btn btn-flat red white-text\" data-v-4c85c0d8>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-4c85c0d8> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                            ") + "</div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Phone number\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-4c85c0d8></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4c85c0d8>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-c5a0007a><div class=\"col s9\" data-v-c5a0007a><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-c5a0007a></div> <div class=\"col s3\" data-v-c5a0007a><button class=\"btn btn-flat red white-text\" data-v-c5a0007a>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-c5a0007a><div class=\"col s9\" data-v-c5a0007a><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-c5a0007a></div> <div class=\"col s3\" data-v-c5a0007a><button class=\"btn btn-flat red white-text\" data-v-c5a0007a>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-c5a0007a> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                            ") + "</div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Phone number\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-c5a0007a></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-c5a0007a>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Bungalow', 'Duplex', 'Storey building'],
       "default": 'Type of building *'
@@ -77,7 +77,7 @@ var render = function render() {
       },
       expression: "type_of_building"
     }
-  })], 1)]), _vm._ssrNode(" <p data-v-4c85c0d8><b data-v-4c85c0d8>\n                            Shared bill or meter?\n                        </b> <br data-v-4c85c0d8> <label data-v-4c85c0d8><input name=\"shared_bill_or_meter\" type=\"radio\" value=\"Yes\" checked=\"checked\" data-v-4c85c0d8> <span data-v-4c85c0d8>Yes</span></label></p> <p data-v-4c85c0d8><label data-v-4c85c0d8><input name=\"shared_bill_or_meter\" type=\"radio\" value=\"No\"" + _vm._ssrAttr("checked", _vm._q(_vm.shared_bill_or_meter, "No")) + " data-v-4c85c0d8> <span data-v-4c85c0d8>No</span></label></p> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8>" + (_vm.shared_bill_or_meter === 'Yes' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.shared_bill_or_meter_input) + " data-v-4c85c0d8>" : "<!---->") + "</div></div> <br data-v-4c85c0d8> "), _vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4c85c0d8>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" <p data-v-c5a0007a><b data-v-c5a0007a>\n                            Shared bill or meter?\n                        </b> <br data-v-c5a0007a> <label data-v-c5a0007a><input name=\"shared_bill_or_meter\" type=\"radio\" value=\"Yes\" checked=\"checked\" data-v-c5a0007a> <span data-v-c5a0007a>Yes</span></label></p> <p data-v-c5a0007a><label data-v-c5a0007a><input name=\"shared_bill_or_meter\" type=\"radio\" value=\"No\"" + _vm._ssrAttr("checked", _vm._q(_vm.shared_bill_or_meter, "No")) + " data-v-c5a0007a> <span data-v-c5a0007a>No</span></label></p> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a>" + (_vm.shared_bill_or_meter === 'Yes' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.shared_bill_or_meter_input) + " data-v-c5a0007a>" : "<!---->") + "</div></div> <br data-v-c5a0007a> "), _vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-c5a0007a>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Vacant', 'Occupied'],
       "default": 'Vacant or occupied?'
@@ -89,7 +89,7 @@ var render = function render() {
       },
       expression: "vacant_status"
     }
-  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-4c85c0d8>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4c85c0d8>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-c5a0007a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-c5a0007a>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Residential', 'Commercial', 'Bar or lounge', 'Motel', 'School', 'Church', 'Mosque', 'Agriculture', 'Nylon factory', 'Pure water factory', 'Other'],
       "default": 'Use of premise'
@@ -101,23 +101,23 @@ var render = function render() {
       },
       expression: "user_of_premise"
     }
-  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8>" + (_vm.user_of_premise === 'Others' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.other_comment) + " data-v-4c85c0d8>" : "<!---->") + "</div></div> <br data-v-4c85c0d8> <div class=\"row center\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>\n                                Is account mapped to correct DT?\n                            </b></div> <form data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button" + _vm._ssrClass("btn btn-small red", {
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a>" + (_vm.user_of_premise === 'Others' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.other_comment) + " data-v-c5a0007a>" : "<!---->") + "</div></div> <br data-v-c5a0007a> <div class=\"row center\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>\n                                Is account mapped to correct DT?\n                            </b></div> <form data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button" + _vm._ssrClass("btn btn-small red", {
     'green': _vm.is_account_mapped_to_correct_dt_green
-  }) + " data-v-4c85c0d8>Yes</button></div> <div class=\"col s6\" data-v-4c85c0d8><button class=\"btn btn-small red\" data-v-4c85c0d8>No</button></div></form></div> <br data-v-4c85c0d8> <div class=\"row center\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>\n                                Is customer phone no. correct?\n                            </b></div> <form data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button" + _vm._ssrClass("btn btn-small red", {
+  }) + " data-v-c5a0007a>Yes</button></div> <div class=\"col s6\" data-v-c5a0007a><button class=\"btn btn-small red\" data-v-c5a0007a>No</button></div></form></div> <br data-v-c5a0007a> <div class=\"row center\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>\n                                Is customer phone no. correct?\n                            </b></div> <form data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button" + _vm._ssrClass("btn btn-small red", {
     'green': _vm.is_customer_phone_no_correct_green
-  }) + " data-v-4c85c0d8>Yes</button></div> <div class=\"col s6\" data-v-4c85c0d8><button class=\"btn btn-small red\" data-v-4c85c0d8>No</button></div></form></div> <br data-v-4c85c0d8> <div class=\"row center\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>\n                                Is customer address correct?\n                            </b></div> <form data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button" + _vm._ssrClass("btn btn-small red", {
+  }) + " data-v-c5a0007a>Yes</button></div> <div class=\"col s6\" data-v-c5a0007a><button class=\"btn btn-small red\" data-v-c5a0007a>No</button></div></form></div> <br data-v-c5a0007a> <div class=\"row center\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>\n                                Is customer address correct?\n                            </b></div> <form data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button" + _vm._ssrClass("btn btn-small red", {
     'green': _vm.is_customer_address_correct_green
-  }) + " data-v-4c85c0d8>Yes</button></div> <div class=\"col s6\" data-v-4c85c0d8><button class=\"btn btn-small red\" data-v-4c85c0d8>No</button></div> <div class=\"col s12 input-field\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Enter Physical Customer Address\"" + _vm._ssrAttr("value", _vm.physical_customer_address) + _vm._ssrClass(null, {
+  }) + " data-v-c5a0007a>Yes</button></div> <div class=\"col s6\" data-v-c5a0007a><button class=\"btn btn-small red\" data-v-c5a0007a>No</button></div> <div class=\"col s12 input-field\" data-v-c5a0007a><input type=\"text\" placeholder=\"Enter Physical Customer Address\"" + _vm._ssrAttr("value", _vm.physical_customer_address) + _vm._ssrClass(null, {
     'hide': _vm.hidePhysicalCustomerAddress
-  }) + " data-v-4c85c0d8></div></form></div> <br data-v-4c85c0d8> <div class=\"row center\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>\n                                Is meter bypassed?\n                            </b></div> <form data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button class=\"btn btn-small red\" data-v-4c85c0d8>Yes</button></div> <div class=\"col s6\" data-v-4c85c0d8><button" + _vm._ssrClass("btn btn-small red", {
+  }) + " data-v-c5a0007a></div></form></div> <br data-v-c5a0007a> <div class=\"row center\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>\n                                Is meter bypassed?\n                            </b></div> <form data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button class=\"btn btn-small red\" data-v-c5a0007a>Yes</button></div> <div class=\"col s6\" data-v-c5a0007a><button" + _vm._ssrClass("btn btn-small red", {
     'green': _vm.is_meter_bypassed_green
-  }) + " data-v-4c85c0d8>No</button></div></form></div> <br data-v-4c85c0d8> <div class=\"row center\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><b data-v-4c85c0d8>\n                                Any complaints from the customer?\n                            </b></div> <form data-v-4c85c0d8><div class=\"col s6\" data-v-4c85c0d8><button class=\"btn btn-small red\" data-v-4c85c0d8>Yes</button></div> <div class=\"col s6\" data-v-4c85c0d8><button" + _vm._ssrClass("btn btn-small red", {
+  }) + " data-v-c5a0007a>No</button></div></form></div> <br data-v-c5a0007a> <div class=\"row center\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><b data-v-c5a0007a>\n                                Any complaints from the customer?\n                            </b></div> <form data-v-c5a0007a><div class=\"col s6\" data-v-c5a0007a><button class=\"btn btn-small red\" data-v-c5a0007a>Yes</button></div> <div class=\"col s6\" data-v-c5a0007a><button" + _vm._ssrClass("btn btn-small red", {
     'green': _vm.customer_complaint_green
-  }) + " data-v-4c85c0d8>No</button></div></form></div> <br data-v-4c85c0d8> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><input type=\"text\" placeholder=\"Other remarks\"" + _vm._ssrAttr("value", _vm.other_remarks) + " data-v-4c85c0d8></div></div> <br data-v-4c85c0d8> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><h6 class=\"red-text\" data-v-4c85c0d8>\n                                Take pictures of premises, customer wiring (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4c85c0d8><i class=\"material-icons white-text\" data-v-4c85c0d8>camera_alt</i></button></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><img id=\"output-pic-of-premises\" class=\"responsive-img\" data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><h6 class=\"red-text\" data-v-4c85c0d8>\n                                Vending slip/receipt, postpaid payment receipt\n                            </h6> <button class=\"btn red btn-large\" data-v-4c85c0d8><i class=\"material-icons white-text\" data-v-4c85c0d8>camera_alt</i></button></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><img id=\"output-pic-of-payment-receipt\" class=\"responsive-img\" data-v-4c85c0d8></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><h6 class=\"red-text\" data-v-4c85c0d8>\n                                House number, meter(s) (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4c85c0d8><i class=\"material-icons white-text\" data-v-4c85c0d8>camera_alt</i></button></div></div> <div class=\"row\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-4c85c0d8></div></div> <div class=\"row center\" data-v-4c85c0d8></div> <div class=\"row center safe-area-bottom\" data-v-4c85c0d8><div class=\"col s12\" data-v-4c85c0d8><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-4c85c0d8>Submit</button></div></div>")], 2)])])], 2)], 2);
+  }) + " data-v-c5a0007a>No</button></div></form></div> <br data-v-c5a0007a> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><input type=\"text\" placeholder=\"Other remarks\"" + _vm._ssrAttr("value", _vm.other_remarks) + " data-v-c5a0007a></div></div> <br data-v-c5a0007a> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><h6 class=\"red-text\" data-v-c5a0007a>\n                                Take pictures of premises, customer wiring (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-c5a0007a><i class=\"material-icons white-text\" data-v-c5a0007a>camera_alt</i></button></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><img id=\"output-pic-of-premises\" class=\"responsive-img\" data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><h6 class=\"red-text\" data-v-c5a0007a>\n                                Vending slip/receipt, postpaid payment receipt\n                            </h6> <button class=\"btn red btn-large\" data-v-c5a0007a><i class=\"material-icons white-text\" data-v-c5a0007a>camera_alt</i></button></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><img id=\"output-pic-of-payment-receipt\" class=\"responsive-img\" data-v-c5a0007a></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><h6 class=\"red-text\" data-v-c5a0007a>\n                                House number, meter(s) (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-c5a0007a><i class=\"material-icons white-text\" data-v-c5a0007a>camera_alt</i></button></div></div> <div class=\"row\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-c5a0007a></div></div> <div class=\"row center\" data-v-c5a0007a></div> <div class=\"row center safe-area-bottom\" data-v-c5a0007a><div class=\"col s12\" data-v-c5a0007a><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large green\" style=\"width: 300px; margin-top: 20px;\" data-v-c5a0007a>Fake Negative Geo</button></div> <div class=\"col s12\" data-v-c5a0007a><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large green\" style=\"width: 300px; margin-top: 20px;\" data-v-c5a0007a>Get Geolocation</button></div> <div class=\"col s12\" data-v-c5a0007a><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-c5a0007a>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/customer_visitation/index.vue?vue&type=template&id=4c85c0d8&scoped=true
+// CONCATENATED MODULE: ./pages/customer_visitation/index.vue?vue&type=template&id=c5a0007a&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_visitation/index.vue?vue&type=script&lang=js
 var customer_visitationvue_type_script_lang_js = __webpack_require__(55);
@@ -146,7 +146,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "4c85c0d8",
+  "c5a0007a",
   "73516ff5"
   
 )
@@ -663,6 +663,7 @@ function getCoordinates() {
       });
     }, error => {
       handleError(error);
+      console.log('this is geo error: ', error);
       reject(error);
     }, {
       enableHighAccuracy: true,
@@ -2272,11 +2273,15 @@ module.exports = ___CSS_LOADER_EXPORT___;
         M.toast({
           html: '<b class="red-text">Please add pic of House number, meter(s) *</b>'
         });
+      } else if (this.long < 3 || this.lat < 6) {
+        M.toast({
+          'html': '<b class="red-text">Incorrect Geo Location</b>'
+        });
       } else {
         try {
           this.disabled_bool = true;
-          // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+            // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -2392,7 +2397,29 @@ module.exports = ___CSS_LOADER_EXPORT___;
       } = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* getCurrentPosition */ "d"])();
       this.long = long;
       this.lat = lat;
+      console.log(this.long, this.lat);
+      if (this.long < 3 || this.lat < 6) {
+        console.log('Logitude and latitude are wrong');
+      } else {
+        this.location = `${this.long}, ${this.lat}`;
+      }
+    },
+    async fakeNegativeGeo() {
+      const {
+        long,
+        lat
+      } = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* getCurrentPosition */ "d"])();
+      let longRand = Math.random() * -1;
+      let latRand = Math.random() * -2;
+      console.log('this is the longRand: ', longRand);
+      console.log('this is the latRand: ', latRand);
+      this.long = longRand;
+      this.lat = latRand;
+      console.log(this.long, this.lat);
       this.location = `${this.long}, ${this.lat}`;
+      M.toast({
+        'html': '<b class="red-text">Incorrect Geo Location Set</b>'
+      });
     },
     // leßßt me try to create a new signature
     showSignatureModule() {
@@ -2435,7 +2462,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("6edfc41e", content, true, context)
+  add("526ec41c", content, true, context)
 };
 
 /***/ })

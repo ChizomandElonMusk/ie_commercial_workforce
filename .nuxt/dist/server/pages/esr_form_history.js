@@ -603,6 +603,7 @@ function getCoordinates() {
       });
     }, error => {
       handleError(error);
+      console.log('this is geo error: ', error);
       reject(error);
     }, {
       enableHighAccuracy: true,

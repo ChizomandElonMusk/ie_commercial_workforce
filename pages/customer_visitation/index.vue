@@ -279,16 +279,16 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect :options="['Residential',
-                        'Commercial',
-                        'Bar or lounge',
-                        'Motel',
-                        'School',
-                        'Church',
-                        'Mosque',
-                        'Agriculture',
-                        'Nylon factory',
-                        'Pure water factory',
-                        'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
+                                    'Commercial',
+                                    'Bar or lounge',
+                                    'Motel',
+                                    'School',
+                                    'Church',
+                                    'Mosque',
+                                    'Agriculture',
+                                    'Nylon factory',
+                                    'Pure water factory',
+                                    'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
                             </div>
                         </div>
 
@@ -357,7 +357,9 @@
                                 </div>
 
                                 <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address" :class="{'hide': hidePhysicalCustomerAddress}" v-model="physical_customer_address">
+                                    <input type="text" placeholder="Enter Physical Customer Address"
+                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
+                                        v-model="physical_customer_address">
                                 </div>
                             </form>
                         </div>
@@ -524,9 +526,16 @@
 
                         <div class="row center safe-area-bottom">
                             <div class="col s12">
-                                <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px;"
-                                    @click="submit"  :disabled="disabled_bool">Submit</button>
+                                <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
+                                    @click="fakeNegativeGeo" :disabled="disabled_bool">Fake Negative Geo</button>
+                            </div>
+                            <div class="col s12">
+                                <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
+                                    @click="printCurrentPosition" :disabled="disabled_bool">Get Geolocation</button>
+                            </div>
+                            <div class="col s12">
+                                <button class="btn btn-large red" style="width: 300px; margin-top: 20px;"
+                                    @click="submit" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
 
@@ -2379,17 +2388,19 @@ export default {
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
-            }  else if (this.pic_of_premise == '') {
+            } else if (this.pic_of_premise == '') {
                 M.toast({ html: '<b class="red-text">Please add pic of Premises, customer wiring *</b>' })
             } else if (this.pic_of_meter == '') {
                 M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
+            } else if (this.long < 3 || this.lat < 6) {
+                M.toast({'html':'<b class="red-text">Incorrect Geo Location</b>'})
             } else {
 
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2513,10 +2524,32 @@ export default {
 
             this.long = long
             this.lat = lat
+            console.log(this.long, (this.lat));
+            if (this.long < 3 || this.lat < 6) {
+                console.log('Logitude and latitude are wrong');
+            } else {
+                this.location = `${this.long}, ${this.lat}`
+            }
 
-            this.location = `${this.long}, ${this.lat}`
+
         },
 
+        async fakeNegativeGeo() {
+            const { long, lat } = await getCurrentPosition();
+
+            let longRand = Math.random() * -1
+            let latRand = Math.random() * -2
+            console.log('this is the longRand: ', longRand);
+            console.log('this is the latRand: ', latRand);
+
+            this.long = longRand
+            this.lat = latRand
+            console.log(this.long, (this.lat));
+            this.location = `${this.long}, ${this.lat}`
+            M.toast({'html':'<b class="red-text">Incorrect Geo Location Set</b>'})
+
+
+        },
         // leßßt me try to create a new signature
         showSignatureModule() {
             this.hideModal = false
