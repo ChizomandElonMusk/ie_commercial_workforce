@@ -578,6 +578,10 @@
             } else {
                 this.hideSearchBtn = true
                 let responseSearch = await getDTSearch(this.dtSearchQuery)
+                console.log('this is the response for res ', responseSearch)
+                console.log('this is the response for res ', responseSearch)
+                console.log('this is the response for res ', responseSearch)
+                console.log('this is the response for res ', responseSearch)
                 
                 if(responseSearch.length == 0) {
                     this.hideNoData = false

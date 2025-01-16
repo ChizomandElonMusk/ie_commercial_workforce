@@ -76,7 +76,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class=""
+                                <CustomSelect :options="['postpaid']" :default="'postpaid'" class=""
                                     v-model="service_type" />
                             </div>
                         </div>
@@ -274,7 +274,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
-                                <CustomSelect :options="['s25', 'p20', 'p25', 'p50']" :default="'Meter Type'"
+                                <CustomSelect :options="['s25', 'p20', 'p25', 'p50']" :default="'Meter Type *'"
                                     v-model="meter_type" class="" />
                             </div>
                         </div>
@@ -283,7 +283,7 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px; margin-top: 15px">
                                 <CustomSelect :options="['4.2', '5.2', '6.2', '7.2', '8.2', '9.2', '10.2']"
-                                    :default="'Meter Dials'" v-model="dials" class="" />
+                                    :default="'Meter Dials *'" v-model="dials" class="" />
                             </div>
                         </div>
 
@@ -2157,7 +2157,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.meter_type == 'Meter Type *' || this.dials == 'Meter Dials *') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })

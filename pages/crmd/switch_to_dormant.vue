@@ -76,7 +76,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class=""
+                                <CustomSelect :options="['postpaid']" :default="'postpaid'" class=""
                                     v-model="service_type" />
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect
                                     :options="['Untraceable', 'Duplicated Bill or Account', 'Demolished', 'Multiple Accounts for same apartment', 'PPM Installed']"
-                                    :default="'Reason for dormancy'" class="" v-model="reason_for_dormancy" />
+                                    :default="'Reason for dormancy *'" class="" v-model="reason_for_dormancy" />
                             </div>
                         </div>
 
@@ -1883,7 +1883,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.remarks == '' || this.remarks == null || this.remarks == 'Reason for dormancy *') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })

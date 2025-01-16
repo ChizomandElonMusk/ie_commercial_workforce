@@ -76,7 +76,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class=""
+                                <CustomSelect :options="['postpaid']" :default="'postpaid'" class=""
                                     v-model="service_type" />
                             </div>
                         </div>
@@ -327,7 +327,7 @@
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect
                                     :options="['Vacant Apartment', 'Disconnection due to non-payment', 'Demolished', 'Customer’s Requests', 'PPM Installed', 'Under Renovation', 'Untraceable', 'DT Out of circuit', 'Duplicated Bill or Account']"
-                                    :default="'Reason for suspension'" class="" v-model="remarks" />
+                                    :default="'Reason for suspension *'" class="" v-model="remarks" />
                             </div>
                         </div>
 
@@ -2176,8 +2176,12 @@ export default {
 
         async submit() {
             M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
+            console.log('this is the remarks ', this.remarks)
+            console.log('this is the remarks ', this.remarks)
+            console.log('this is the remarks ', this.remarks)
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
+            this.remarks = this.remarks.trim()
             this.undertaking_one = this.undertaking_one.trim()
             this.customer_name = this.customer_name.trim()
             this.address = this.address.trim()
@@ -2200,7 +2204,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.remarks == '' || this.remarks == null || this.remarks == 'Reason for suspension *') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
@@ -2222,8 +2226,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountSuspension', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountSuspension', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountSuspension', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountSuspension', {
 
                         method: 'POST',
                         headers: {

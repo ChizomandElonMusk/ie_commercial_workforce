@@ -76,7 +76,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['postpaid', 'prepaid']" :default="'postpaid'" class=""
+                                <CustomSelect :options="['postpaid']" :default="'postpaid'" class=""
                                     v-model="service_type" />
                             </div>
                         </div>
