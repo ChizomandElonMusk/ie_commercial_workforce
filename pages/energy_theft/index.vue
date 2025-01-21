@@ -245,7 +245,7 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect
-                                    :options="['Meter Bypass', 'PUMPING MACHINE ON DIRECT', 'Under Billing', 'Burnt Meter or Faulty meter not on postpaid', 'Meter dispensing free', 'Free rider', 'Suspended account but connected to power', 'Negative reading', 'Others']"
+                                    :options="['Meter Bypass', 'Pumping Machine On Direct', 'Meter Tampered', 'Under Billing', 'Burnt Meter or Faulty meter not on postpaid', 'Meter dispensing free', 'Free rider', 'Suspended account but connected to power', 'Negative reading', 'Others']"
                                     :default="'Type of Infraction *'" class="" v-model="type_of_infra" />
                             </div>
                         </div>
@@ -541,6 +541,17 @@ export default {
 
             dataURI: '',
 
+        }
+    },
+
+    watch: {
+        type_of_infra(newVal) {
+            if (newVal === 'Negative reading') {
+                console.log('Negative reading oooo');
+                console.log('Negative reading oooo');
+                console.log('Negative reading oooo');
+                console.log('Negative reading oooo');
+            }
         }
     },
 

@@ -529,7 +529,7 @@
                                 <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
                                     @click="fakeNegativeGeo" :disabled="disabled_bool">Fake Negative Geo</button>
                             </div>
-                            <div class="col s12">
+                            <div class="col s12" :class="{ 'hide': hideNewLocationBtn }">
                                 <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
                                     @click="printCurrentPosition" :disabled="disabled_bool">Get Geolocation</button>
                             </div>
@@ -569,6 +569,7 @@ export default {
     },
     data() {
         return {
+            hideNewLocationBtn: true,
             physical_customer_address: '',
             disabled_bool: false,
             service_type: null,
@@ -2393,14 +2394,15 @@ export default {
             } else if (this.pic_of_meter == '') {
                 M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
             } else if (this.long < 3 || this.lat < 6) {
-                M.toast({'html':'<b class="red-text">Incorrect Geo Location</b>'})
+                M.toast({ 'html': '<b class="red-text">Incorrect Geo Location</b>' })
+                this.hideNewLocationBtn = false
             } else {
 
 
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2452,7 +2454,7 @@ export default {
                         this.$router.push('../sent')
                     } else if (response.status == 500) {
                         console.log(response.status)
-                        M.toast({html: `<b class="red-text">Network Error</b>`})
+                        M.toast({ html: `<b class="red-text">Network Error</b>` })
                     }
                 } catch (error) {
                     console.log(error)
@@ -2526,12 +2528,30 @@ export default {
             this.lat = lat
             console.log(this.long, (this.lat));
             if (this.long < 3 || this.lat < 6) {
-                console.log('Logitude and latitude are wrong');
+                this.hideNewLocationBtn = false
             } else {
                 this.location = `${this.long}, ${this.lat}`
             }
 
+            let randomNumber = this.generateRandomNumber()
 
+            console.log('Request number', randomNumber);
+
+
+        },
+
+        generateRandomNumber () {
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            const milliseconds = date.getMilliseconds();
+
+            const randomNumber = `${year}${month}${day}${hours}${minutes}${seconds}${milliseconds}`;
+            return Math.abs(randomNumber);
         },
 
         async fakeNegativeGeo() {
@@ -2546,7 +2566,7 @@ export default {
             this.lat = latRand
             console.log(this.long, (this.lat));
             this.location = `${this.long}, ${this.lat}`
-            M.toast({'html':'<b class="red-text">Incorrect Geo Location Set</b>'})
+            M.toast({ 'html': '<b class="red-text">Incorrect Geo Location Set</b>' })
 
 
         },

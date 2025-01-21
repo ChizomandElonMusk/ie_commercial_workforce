@@ -440,7 +440,11 @@ export function getCoordinates() {
       (error) => {
         handleError(error);
         console.log('this is geo error: ', error);
-        reject(error);
+        const long = 0;
+        const lat = 0;
+        resolve({ long, lat });
+        
+        // resolve(error);
       },
       { enableHighAccuracy: true, timeout: 7000, maximumAge: 0 }
     );
