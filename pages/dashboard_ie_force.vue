@@ -34,6 +34,18 @@
             </nuxt-link>
           </div>
 
+          <div class="col s12 center" v-if="hasCustomerMapping == true">
+            <nuxt-link to="/idb_customer_mapping">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>IDB Box Number Mapping</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+
           <div class="col s12 center" v-if="hasCustomerDetailsValidation == true">
             <nuxt-link to="/customer_details_validation">
               <div class="card-panel orange">
