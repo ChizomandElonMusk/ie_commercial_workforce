@@ -18,6 +18,7 @@ const _1ca1e05c = () => interopDefault(import('../pages/esr_form_history.vue' /*
 const _14e1cd0b = () => interopDefault(import('../pages/forgot.vue' /* webpackChunkName: "pages/forgot" */))
 const _5555b477 = () => interopDefault(import('../pages/forms.vue' /* webpackChunkName: "pages/forms" */))
 const _4dda24a0 = () => interopDefault(import('../pages/idb_customer_mapping/index.vue' /* webpackChunkName: "pages/idb_customer_mapping/index" */))
+const _58bd967e = () => interopDefault(import('../pages/idb_customer_visitation/index.vue' /* webpackChunkName: "pages/idb_customer_visitation/index" */))
 const _38b49d20 = () => interopDefault(import('../pages/ie_force.vue' /* webpackChunkName: "pages/ie_force" */))
 const _fc1c2a9e = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _e0b2aeac = () => interopDefault(import('../pages/md-customer-ir.vue' /* webpackChunkName: "pages/md-customer-ir" */))
@@ -112,6 +113,10 @@ export const routerOptions = {
     path: "/idb_customer_mapping",
     component: _4dda24a0,
     name: "idb_customer_mapping"
+  }, {
+    path: "/idb_customer_visitation",
+    component: _58bd967e,
+    name: "idb_customer_visitation"
   }, {
     path: "/ie_force",
     component: _38b49d20,

@@ -45,6 +45,8 @@
             </nuxt-link>
           </div>
 
+          
+
 
           <div class="col s12 center" v-if="hasCustomerDetailsValidation == true">
             <nuxt-link to="/customer_details_validation">
@@ -136,6 +138,17 @@
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
                   <h6>Customer visitation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center" v-if="hasCustomerVisitation == true">
+            <nuxt-link to="/idb_customer_visitation">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  <i class="material-icons">folder_open</i>
+                  <h6>IDB Customer visitation</h6>
                 </span>
               </div>
             </nuxt-link>

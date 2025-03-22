@@ -89,6 +89,46 @@ export async function getCustomerInfoApi(accountNumber) {
   }
 }
 
+// this is DT customerInfoApi 43901910984
+export async function getIDBCustomerInfoApi(accountNumber) {
+  console.log(`this is the meter number from the mode ${accountNumber}`);
+  M.toast({ html: `<b class="yellow-text">Please wait</b>` });
+  let token = localStorage.getItem('token')
+  console.log(token);
+  var CustomerAccountNumber = "";
+  // CustomerAccountNumber = {
+  //   accountNumber: accountNumber,
+  // };
+  // CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
+  try {
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo?meterNo="+accountNumber,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer "+ token,
+          Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    // http://192.168.6.183:8087/cwfrestapi/api/v1/customerinfo?meterNo=43901910984
+    const response = await rawResponse.json();
+    console.log(`This is the response ${response}`);
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+  } catch (error) {
+    console.log(error);
+    M.toast({ html: `<b class="red-text">${error}</b>` });
+  }
+}
+
+
+
+
 export async function uploadImage(userId, accountNumber, docType, file) {
   M.toast({ html: `<b class="yellow-text">Uploading </b>` });
   console.log(userId, accountNumber, docType, file);
@@ -100,8 +140,8 @@ export async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
 
   try {
-    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {
         method: "POST",
         headers: {
@@ -413,44 +453,129 @@ export async function logOut() {
   }
 }
 
+// export function getCoordinates() {
+//   return new Promise((resolve, reject) => {
+//     if (!process.client) {
+//       M.toast({
+//         html: `<b class="red-text">Geolocation is not available on the server side</b>`,
+//       });
+//       reject(new Error("Geolocation is not available on the server side"));
+//       return;
+//     }
+
+//     if (!navigator.geolocation) {
+//       M.toast({
+//         html: `<b class="red-text">Geolocation is not supported by your browser</b>`,
+//       });
+//       reject(new Error("Geolocation is not supported by your browser"));
+//       return;
+//     }
+
+//     navigator.geolocation.getCurrentPosition(
+//       (position) => {
+//         const long = position.coords.longitude;
+//         const lat = position.coords.latitude;
+//         resolve({ long, lat });
+//       },
+//       (error) => {
+//         handleError(error);
+//         console.log('this is geo error: ', error);
+//         const long = 0;
+//         const lat = 0;
+//         resolve({ long, lat });
+        
+//         // resolve(error);
+//       },
+//       { enableHighAccuracy: true, timeout: 7000, maximumAge: 0 }
+//     );
+//   });
+// }
+
+// function handleError(error) {
+//   switch (error.code) {
+//     case error.PERMISSION_DENIED:
+//       M.toast({
+//         html: `<b class="red-text">User denied the request for geolocation</b>`,
+//       });
+//       break;
+//     case error.POSITION_UNAVAILABLE:
+//       M.toast({
+//         html: `<b class="red-text">Location information is unavailable</b>`,
+//       });
+//       break;
+//     case error.TIMEOUT:
+//       M.toast({
+//         html: `<b class="red-text">The request to get user location timed out</b>`,
+//       });
+//       break;
+//     default:
+//       M.toast({
+//         html: `<b class="red-text">The request to get user location timed out</b>`,
+//       });
+//       break;
+//   }
+// }
+
+// export function getCurrentPosition (){
+//     return getCoordinates()
+//       .then(({ long, lat }) => {
+//         // console.log(`Longitude: ${long}, Latitude: ${lat}`)
+//         // this.long = long
+//         // this.lat = lat
+//         // Do something with the coordinates
+//         return { long, lat }  
+//       })
+//       .catch(error => {
+//         console.error('Error getting coordinates:', error)
+//       })
+// }
+
+
+
 export function getCoordinates() {
   return new Promise((resolve, reject) => {
+    // Check if running on the client side
     if (!process.client) {
       M.toast({
         html: `<b class="red-text">Geolocation is not available on the server side</b>`,
       });
-      reject(new Error("Geolocation is not available on the server side"));
+      resolve({ long: 0, lat: 0 }); // Resolve with default values
       return;
     }
 
+    // Check if geolocation is supported by the browser
     if (!navigator.geolocation) {
       M.toast({
         html: `<b class="red-text">Geolocation is not supported by your browser</b>`,
       });
-      reject(new Error("Geolocation is not supported by your browser"));
+      resolve({ long: 0, lat: 0 }); // Resolve with default values
       return;
     }
 
+    // Get the current position
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const long = position.coords.longitude;
         const lat = position.coords.latitude;
-        resolve({ long, lat });
+        resolve({ long, lat }); // Resolve with coordinates
       },
       (error) => {
-        handleError(error);
-        console.log('this is geo error: ', error);
-        const long = 0;
-        const lat = 0;
-        resolve({ long, lat });
-        
-        // resolve(error);
+        handleError(error); // Show error toast
+
+        // Handle specific errors
+        if (error.code === error.POSITION_UNAVAILABLE || error.message.includes("kCLErrorLocationUnknown")) {
+          console.warn("Location unknown. Retrying or falling back to default values.");
+          resolve({ long: 0, lat: 0 }); // Resolve with default values
+        } else {
+          resolve({ long: 0, lat: 0 }); // Resolve with default values for other errors
+        }
       },
       { enableHighAccuracy: true, timeout: 7000, maximumAge: 0 }
     );
   });
 }
 
+// Handle geolocation errors
 function handleError(error) {
   switch (error.code) {
     case error.PERMISSION_DENIED:
@@ -470,22 +595,21 @@ function handleError(error) {
       break;
     default:
       M.toast({
-        html: `<b class="red-text">The request to get user location timed out</b>`,
+        html: `<b class="red-text">An unknown error occurred while fetching location</b>`,
       });
       break;
   }
 }
 
-export function getCurrentPosition (){
-    return getCoordinates()
-      .then(({ long, lat }) => {
-        // console.log(`Longitude: ${long}, Latitude: ${lat}`)
-        // this.long = long
-        // this.lat = lat
-        // Do something with the coordinates
-        return { long, lat }  
-      })
-      .catch(error => {
-        console.error('Error getting coordinates:', error)
-      })
+// Wrapper function to get the current position
+export function getCurrentPosition() {
+  return getCoordinates()
+    .then(({ long, lat }) => {
+      console.log(`Longitude: ${long}, Latitude: ${lat}`);
+      return { long, lat };
+    })
+    .catch((error) => {
+      console.error('Error getting coordinates:', error);
+      return { long: 0, lat: 0 }; // Fallback to default values
+    });
 }

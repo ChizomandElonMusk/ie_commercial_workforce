@@ -98,6 +98,13 @@
     "_name": "_4dda24a0"
   },
   {
+    "name": "idb_customer_visitation",
+    "path": "/idb_customer_visitation",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/idb_customer_visitation/index.vue",
+    "chunkName": "pages/idb_customer_visitation/index",
+    "_name": "_58bd967e"
+  },
+  {
     "name": "ie_force",
     "path": "/ie_force",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/ie_force.vue",
