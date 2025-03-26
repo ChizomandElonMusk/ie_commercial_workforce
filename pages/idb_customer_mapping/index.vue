@@ -1034,17 +1034,6 @@ export default {
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
-            this.customer_name = this.customer_name.trim()
-            this.address = this.address.trim()
-            this.feeder_name = this.feeder_name.trim()
-            this.dt_name = this.dt_name.trim()
-            this.alignment_status = this.alignment_status.trim()
-            this.recommended_tariff = this.recommended_tariff.trim()
-            this.meter_type_by_manufacturer = this.meter_type_by_manufacturer.trim()
-            this.credit_reading_on_meter = this.credit_reading_on_meter.trim()
-            this.further_remarks = this.further_remarks.trim()
-            this.phone_number = this.phone_number.trim()
-            this.inspection_conclusion = this.inspection_conclusion.trim()
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -1066,7 +1055,7 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
+                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/customeridbboxmapping', {
                         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
@@ -1085,21 +1074,19 @@ export default {
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             tariff: this.tarrif,
-                            address: this.address,
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
                             phoneNo: this.phone_number,
                             location: this.location,
-                            newDt: this.new_dt_nomenclature,
-                            isDtInOtherUt: this.is_dt_in_another_ut,
                             currentFeederBand: this.current_feeder_band,
-                            proposedDtNo: this.proposed_dt_number,
-                            proposedDtName: this.proposed_dt_name,
-                            proposedUt: this.proposed_ut,
-                            proposedBu: this.proposed_bu,
-                            proposedFeederBand: this.proposed_feeder_band,
-                            mappingStatus: this.mapping_status
+                            proposedIdbBoxNo: this.proposed_idb_box_number,
+                            idbBoxNo: this.idb_box_number,
+                            idbDcuNo: this.dcu_number,
+                            idbPoleNo: this.idb_pole_number,
+                            picIdbBox: this.pic_of_the_customer_idb_box_mapping_idb_box.name,
+                            picShowingIdbMeterNo: this.pic_of_the_customer_idb_mapping_shoing_idb_meter_no.name
+
                         }),
                     })
 

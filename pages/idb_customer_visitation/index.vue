@@ -5,7 +5,7 @@
                 <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
                     Back
                 </nuxt-link>
-                <b class="grey-text btn disabled" style="font-size: 10px;"> Customer Visitation</b>
+                <b class="grey-text btn disabled" style="font-size: 10px;"> IDB Customer Visitation</b>
             </div>
         </div>
 
@@ -76,7 +76,7 @@
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['postpaid']" :default="'postpaid'" class=""
+                                <CustomSelect :options="['prepaid']" :default="'prepaid'" class=""
                                     v-model="service_type" />
                             </div>
                         </div>
@@ -147,68 +147,6 @@
                             <!-- undertaking one -->
                             <div class="col s12">
                                 <b>UT:</b> {{ undertaking_one }}
-                                <!-- <select class="custom-select" v-model="undertaking_one">
-                                <option value="" disabled selected>Undertaking *</option>
-                                <option value="ABORU">ABORU</option>
-                                <option value="ABULE-ODU">ABULE-ODU</option>
-                                <option value="ABULE-TAYLOR">ABULE-TAYLOR</option>
-                                <option value="ADIYAN">ADIYAN</option>
-                                <option value="AGO">AGO</option>
-                                <option value="AIT">AIT</option>
-                                <option value="AJAO">AJAO</option>
-                                <option value="AKUTE">AKUTE</option>
-                                <option value="AMUWO">AMUWO</option>
-                                <option value="ANIFOWOSHE">ANIFOWOSHE</option>
-                                <option value="ANTHONY MEGA">ANTHONY MEGA</option>
-                                <option value="AYANGBUREN">AYANGBUREN</option>
-                                <option value="AYOBO">AYOBO</option>
-                                <option value="BARIGA">BARIGA</option>
-                                <option value="DOPEMU">DOPEMU</option>
-                                <option value="EGBEDA">EGBEDA</option>
-                                <option value="EPE">EPE</option>
-                                <option value="FAGBA">FAGBA</option>
-                                <option value="GOWON-ESTATE">GOWON-ESTATE</option>
-                                <option value="IDIMU">IDIMU</option>
-                                <option value="IFAKO">IFAKO</option>
-                                <option value="IGANDO">IGANDO</option>
-                                <option value="IGBOBI">IGBOBI</option>
-                                <option value="IGBOBI MEGA">IGBOBI MEGA</option>
-                                <option value="IGBOGBO">IGBOGBO</option>
-                                <option value="IJAIYE">IJAIYE</option>
-                                <option value="IJEDE">IJEDE</option>
-                                <option value="IJEGUN">IJEGUN</option>
-                                <option value="IJU">IJU</option>
-                                <option value="IKOSI">IKOSI</option>
-                                <option value="IKOTUN">IKOTUN</option>
-                                <option value="ILUPEJU">ILUPEJU</option>
-                                <option value="ILUPEJU MEGA">ILUPEJU MEGA</option>
-                                <option value="IPAJA">IPAJA</option>
-                                <option value="ISOLO">ISOLO</option>
-                                <option value="KETU">KETU</option>
-                                <option value="LAMBE">LAMBE</option>
-                                <option value="LASUNWON">LASUNWON</option>
-                                <option value="MAGODO">MAGODO</option>
-                                <option value="MAGODO MEGA">MAGODO MEGA</option>
-                                <option value="MENDE">MENDE</option>
-                                <option value="OBA AKRAN">OBA AKRAN</option>
-                                <option value="ODOGUNYAN">ODOGUNYAN</option>
-                                <option value="OGBA">OGBA</option>
-                                <option value="OGUDU">OGUDU</option>
-                                <option value="OJODU">OJODU</option>
-                                <option value="OKE-AFA">OKE-AFA</option>
-                                <option value="OKE-IRA">OKE-IRA</option>
-                                <option value="OKE-ODO">OKE-ODO</option>
-                                <option value="OKOTA">OKOTA</option>
-                                <option value="OLATEJU">OLATEJU</option>
-                                <option value="OLOWORA">OLOWORA</option>
-                                <option value="OREGUN">OREGUN</option>
-                                <option value="ORILE-AGEGE">ORILE-AGEGE</option>
-                                <option value="OSHODI">OSHODI</option>
-                                <option value="OWORO">OWORO</option>
-                                <option value="OWOROSHONKI MEGA">OWOROSHONKI MEGA</option>
-                                <option value="OWUTU">OWUTU</option>
-                                <option value="PTC">PTC</option>
-                            </select> -->
                             </div>
                         </div>
 
@@ -302,16 +240,14 @@
                         <div class="row">
                             <!-- idb box number/dcu number -->
                             <div class="col s12">
-                                <input type="text" placeholder="IDB Box Number" v-model="idb_box_number"
-                                    disabled>
+                                <input type="text" placeholder="IDB Box Number" v-model="idb_box_number" disabled>
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- idb box number/dcu number -->
                             <div class="col s12">
-                                <input type="text" placeholder="DCU Number" v-model="dcu_number"
-                                    disabled>
+                                <input type="text" placeholder="DCU Number" v-model="dcu_number" disabled>
                             </div>
                         </div>
 
@@ -331,13 +267,16 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" :class="{ 'green': is_meter_active }"
-                                        @click="isAccountMappedToCorrectDTYes()">Yes</button>
+                                <div class="col s4">
+                                    <button class="btn btn-small green" @click="isMeterActiveYes()">Yes</button>
                                 </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red"
-                                        @click="isAccountMappedToCorrectDTNo()">No</button>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_meter_active == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_meter_active == 'No'">No</b>
+                                    <b class="red-text" v-if="is_meter_active == ''">--</b>
+                                </div>
+                                <div class="col s4">
+                                    <button class="btn btn-small red" @click="isMeterActiveNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -350,12 +289,16 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" :class="{ 'green': is_uiu_com_with_the_meter }"
-                                        @click="isCustomerPhoneNoCorrectYes()">Yes</button>
+                                <div class="col s4">
+                                    <button class="btn btn-small green" @click="isUIUComWithMeterYes()">Yes</button>
                                 </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerPhoneNoCorrectNo()">No</button>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_uiu_com_with_the_meter == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_uiu_com_with_the_meter == 'No'">No</b>
+                                    <b class="red-text" v-if="is_uiu_com_with_the_meter == ''">--</b>
+                                </div>
+                                <div class="col s4">
+                                    <button class="btn btn-small red" @click="isUIUComWithMeterNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -368,22 +311,22 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
+                                <div class="col s4">
+                                    <button class="btn btn-small green"
+                                        @click="isTheCustomerProperlyAlignedYes()">Yes</button>
+                                </div>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_the_customer_properly_aligned == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_the_customer_properly_aligned == 'No'">No</b>
+                                    <b class="red-text" v-if="is_the_customer_properly_aligned == ''">--</b>
+                                </div>
+                                <div class="col s4">
                                     <button class="btn btn-small red"
-                                        :class="{ 'green': is_the_customer_properly_aligned }"
-                                        @click="isCustomerAddressCorrectYes()">Yes</button>
-                                </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
-                                </div>
-
-                                <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address"
-                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
-                                        v-model="physical_customer_address">
+                                        @click="isTheCustomerProperlyAlignedNo()">No</button>
                                 </div>
                             </form>
                         </div>
+                        <br>
 
                         <div class="row center">
                             <div class="col s12">
@@ -392,21 +335,21 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" :class="{ 'green': is_the_supply_cable_visible }"
-                                        @click="isCustomerAddressCorrectYes()">Yes</button>
+                                <div class="col s4">
+                                    <button class="btn btn-small green"
+                                        @click="isTheSupplyCableVisibleYes()">Yes</button>
                                 </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_the_supply_cable_visible == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_the_supply_cable_visible == 'No'">No</b>
+                                    <b class="red-text" v-if="is_the_supply_cable_visible == ''">--</b>
                                 </div>
-
-                                <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address"
-                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
-                                        v-model="physical_customer_address">
+                                <div class="col s4">
+                                    <button class="btn btn-small red" @click="isTheSupplyCableVisibleNo()">No</button>
                                 </div>
                             </form>
                         </div>
+                        <br>
 
 
 
@@ -417,21 +360,21 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" :class="{ 'green': is_the_meter_sealed_properly }"
-                                        @click="isCustomerAddressCorrectYes()">Yes</button>
+                                <div class="col s4">
+                                    <button class="btn btn-small green"
+                                        @click="isTheMeterSealedProperlyYes()">Yes</button>
                                 </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_the_meter_sealed_properly == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_the_meter_sealed_properly == 'No'">No</b>
+                                    <b class="red-text" v-if="is_the_meter_sealed_properly == ''">--</b>
                                 </div>
-
-                                <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address"
-                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
-                                        v-model="physical_customer_address">
+                                <div class="col s4">
+                                    <button class="btn btn-small red" @click="isTheMeterSealedProperlyNo()">No</button>
                                 </div>
                             </form>
                         </div>
+                        <br>
 
 
 
@@ -443,22 +386,22 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
+                                <div class="col s4">
+                                    <button class="btn btn-small green"
+                                        @click="isTheCircuitBreakerAdequateYes()">Yes</button>
+                                </div>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_the_circuit_breaker_adequate == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_the_circuit_breaker_adequate == 'No'">No</b>
+                                    <b class="red-text" v-if="is_the_circuit_breaker_adequate == ''">--</b>
+                                </div>
+                                <div class="col s4">
                                     <button class="btn btn-small red"
-                                        :class="{ 'green': is_the_circuit_breaker_adequate }"
-                                        @click="isCustomerAddressCorrectYes()">Yes</button>
-                                </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
-                                </div>
-
-                                <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address"
-                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
-                                        v-model="physical_customer_address">
+                                        @click="isTheCircuitBreakerAdequateNo()">No</button>
                                 </div>
                             </form>
                         </div>
+                        <br>
 
 
 
@@ -469,19 +412,18 @@
                                 </b>
                             </div>
                             <form @submit.prevent>
-                                <div class="col s6">
+                                <div class="col s4">
+                                    <button class="btn btn-small green"
+                                        @click="isTheIDBInstallationHeightOkayYes()">Yes</button>
+                                </div>
+                                <div class="col s4">
+                                    <b class="green-text" v-if="is_the_idb_installation_height_okay == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_the_idb_installation_height_okay == 'No'">No</b>
+                                    <b class="red-text" v-if="is_the_idb_installation_height_okay == ''">--</b>
+                                </div>
+                                <div class="col s4">
                                     <button class="btn btn-small red"
-                                        :class="{ 'green': is_the_idb_installation_height_okay }"
-                                        @click="isCustomerAddressCorrectYes()">Yes</button>
-                                </div>
-                                <div class="col s6">
-                                    <button class="btn btn-small red" @click="isCustomerAddressCorrectNo()">No</button>
-                                </div>
-
-                                <div class="col s12 input-field">
-                                    <input type="text" placeholder="Enter Physical Customer Address"
-                                        :class="{ 'hide': hidePhysicalCustomerAddress }"
-                                        v-model="physical_customer_address">
+                                        @click="isTheIDBInstallationHeightOkayNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -518,29 +460,6 @@
                     </div>
                     <br> -->
 
-                        <!-- images start here -->
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    Picture of the meter (*)
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForWireDown()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-wire-down" />
-                            </div>
-                        </div>
-
 
 
 
@@ -552,7 +471,7 @@
                                     <!-- Picture of the service wire from pole metering point -->
                                     Picture of the IDB Box (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForWireDown()">
+                                <button class="btn red btn-large" @click="imagePickerForIDBbox()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -562,7 +481,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-wire-down" />
+                                <img class=" responsive-img" id="output-pic-of-idb-box" />
                             </div>
                         </div>
 
@@ -574,9 +493,9 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Termination Poin (*)
+                                    Termination Point (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForWireDown()">
+                                <button class="btn red btn-large" @click="imagePickerForTerminationPoint()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -586,7 +505,34 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-wire-down" />
+                                <img class=" responsive-img" id="output-pic-of-termination-point" />
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    Picture of Meter (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForMeter()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-meter" />
                             </div>
                         </div>
 
@@ -599,44 +545,27 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    IDB Meter template with the meter number showing (*)
+                                    Picture showing IDB meter No (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForWireDown()">
+                                <button class="btn red btn-large" @click="imagePickerForShowingIDBMeterNo()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+
                             </div>
                         </div>
 
-                        <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-wire-down" />
+                                <img class=" responsive-img" id="output-pic-of-showing-idb-meter-number" />
                             </div>
                         </div>
+
+
                         <!-- images end here -->
 
 
 
 
-
-
-                        <!-- <div class="row">
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    Take pictures of premises, customer wiring (*)
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForPremises()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-premises" />
-                            </div>
-                        </div> -->
 
 
 
@@ -722,9 +651,12 @@ export default {
     data() {
         return {
             // new variables 
+            current_feeder_band: '',
             location_gis: '',
             idb_box_number: '',
+            dcu_number: '',
             idb_pole_number: '',
+
             is_meter_active: '',
             is_uiu_com_with_the_meter: '',
             is_the_customer_properly_aligned: '',
@@ -732,7 +664,15 @@ export default {
             is_the_meter_sealed_properly: '',
             is_the_circuit_breaker_adequate: '',
             is_the_idb_installation_height_okay: '',
+
+
+            pic_of_idb_box: '',
+            pic_of_termination_point: '',
+            pic_of_meter: '',
+            pic_showing_idb_meter_no: '',
             // end of new variables 
+
+
 
             hideNewLocationBtn: true,
             physical_customer_address: '',
@@ -740,7 +680,7 @@ export default {
             service_type: null,
             account_number: '',
             // account_number: '',
-            meter_number: '',
+            meter_number: '43901910984',
             // meter_number: '',
             account_type: '',
             account_name: '',
@@ -777,24 +717,7 @@ export default {
             is_meter_bypassed_green: false,
             customer_complaint_green: false,
 
-            pic_of_the_service_wire_from_pole_to_metering_point: '',
-            pic_of_building: null,
-            pic_of_installation_cutout_metering_point: null,
-            pic_of_installation_cutout_metering_point2: '',
-            pic_of_installation_cutout_metering_point3: '',
-            pic_of_meter_nameplate: '',
-            pic_of_meter_nameplate2: '',
-            pic_of_meter_nameplate3: '',
-            pic_of_seal_as_met: '',
-            pic_of_internal_connection_if_seal_is_broken: '',
-            pic_of_internal_connection_if_seal_is_broken2: '',
-            pic_of_bypass: '',
-            pic_of_bypass2: '',
-            pic_of_bypass3: '',
-            pic_of_last_bill_vending_receipt: '',
-            pic_of_last_bill_vending_receipt2: '',
-            pic_of_last_bill_vending_receipt3: '',
-            pic_of_invitation_notice_to_customer: '',
+
 
             remarks: '',
             additional_remark: '',
@@ -862,112 +785,56 @@ export default {
 
     methods: {
 
-        isAccountMappedToCorrectDTYes() {
-            this.is_account_mapped_to_correct_dt = 'Yes'
-            this.is_account_mapped_to_correct_dt_green = true
-            console.log(this.is_account_mapped_to_correct_dt)
+        isMeterActiveYes() {
+            this.is_meter_active = 'Yes'
+        },
+        isMeterActiveNo() {
+            this.is_meter_active = 'No'
         },
 
-        isAccountMappedToCorrectDTNo() {
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
-            } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
-                this.is_account_mapped_to_correct_dt = 'No'
-                window.location = '../customer_mapping'
-            }
-
+        isUIUComWithMeterYes() {
+            this.is_uiu_com_with_the_meter = 'Yes'
+        },
+        isUIUComWithMeterNo() {
+            this.is_uiu_com_with_the_meter = 'No'
         },
 
-        isCustomerPhoneNoCorrectYes() {
-            this.is_customer_phone_no_correct = 'Yes'
-            this.is_customer_phone_no_correct_green = true
-            console.log(this.is_customer_phone_no_correct)
+        isTheCustomerProperlyAlignedYes() {
+            this.is_the_customer_properly_aligned = 'Yes'
         },
-        isCustomerPhoneNoCorrectNo() {
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
-            } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
-                this.is_customer_phone_no_correct = 'No'
-                window.location = '../customer_details_validation'
-            }
+        isTheCustomerProperlyAlignedNo() {
+            this.is_the_customer_properly_aligned = 'No'
         },
 
-        isCustomerAddressCorrectYes() {
-            this.is_customer_address_correct = 'Yes'
-            this.is_customer_address_correct_green = true
-            console.log(this.is_customer_phone_no_correct)
-            this.hidePhysicalCustomerAddress = true
+        isTheSupplyCableVisibleYes() {
+            this.is_the_supply_cable_visible = 'Yes'
         },
-        isCustomerAddressCorrectNo() {
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
-            } else {
-                this.hidePhysicalCustomerAddress = false
-                this.is_customer_address_correct_green = false
-                // localStorage.setItem('service_type', this.service_type)
-                // localStorage.setItem('meter_number', this.meter_number)
-                // localStorage.setItem('account_number', this.account_number)
-                // this.is_customer_address_correct = 'No'
-                // window.location = '../customer_details_validation'
-            }
+        isTheSupplyCableVisibleNo() {
+            this.is_the_supply_cable_visible = 'No'
         },
 
-        isMeterBypassedtYes() {
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
-            } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
-                this.is_meter_bypassed = 'Yes'
-                window.location = '../energy_theft'
-                console.log(this.is_meter_bypassed)
-            }
+        isTheMeterSealedProperlyYes() {
+            this.is_the_meter_sealed_properly = 'Yes'
         },
-        isMeterBypassedtNo() {
-            this.is_meter_bypassed = 'No'
-            this.is_meter_bypassed_green = true
-
+        isTheMeterSealedProperlyNo() {
+            this.is_the_meter_sealed_properly = 'No'
         },
 
-        customerCompliantYes() {
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
-            } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
-                this.customer_complaint = 'Yes'
-                window.location = '../customer_complaints'
-                console.log(this.is_meter_bypassed)
-            }
+        isTheCircuitBreakerAdequateYes() {
+            this.is_the_circuit_breaker_adequate = 'Yes'
         },
-        customerCompliantNo() {
-            this.customer_complaint = 'No'
-            this.customer_complaint_green = true
-
+        isTheCircuitBreakerAdequateNo() {
+            this.is_the_circuit_breaker_adequate = 'No'
         },
+
+        isTheIDBInstallationHeightOkayYes() {
+            this.is_the_idb_installation_height_okay = 'Yes'
+        },
+        isTheIDBInstallationHeightOkayNo() {
+            this.is_the_idb_installation_height_okay = 'No'
+        },
+
+
 
         async checkNumber() {
 
@@ -1216,7 +1083,11 @@ export default {
             return result;
         },
 
-        async imagePickerForPremises() {
+
+
+        // Image upload starts here
+
+        async imagePickerForIDBbox() {
 
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
@@ -1244,14 +1115,14 @@ export default {
 
 
 
-                this.doSomethingWithFilesimagePickerForPremises(blob)
+                this.doSomethingWithFilesimagePickerForIDBbox(blob)
             }
 
 
         },
 
 
-        async doSomethingWithFilesimagePickerForPremises(event) {
+        async doSomethingWithFilesimagePickerForIDBbox(event) {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
@@ -1264,7 +1135,7 @@ export default {
                 useWebWorker: true
             }
             try {
-                const output = document.getElementById('output-pic-of-premises');
+                const output = document.getElementById('output-pic-of-idb-box');
 
                 const compressedFile = await imageCompression(imageFile, options);
                 // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
@@ -1272,8 +1143,8 @@ export default {
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
 
-                this.pic_of_premise = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_premise)
+                this.pic_of_idb_box = new File([compressedFile], imageFileName + `picIdbBox${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_idb_box)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
                 }
@@ -1281,7 +1152,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Premise', this.pic_of_premise)
+                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_IdbBox', this.pic_of_idb_box)
                 console.log(xx)
 
 
@@ -1296,7 +1167,8 @@ export default {
 
 
 
-        async imagePickerForPaymentReceipt() {
+
+        async imagePickerForTerminationPoint() {
 
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
@@ -1324,14 +1196,14 @@ export default {
 
 
 
-                this.doSomethingWithFilesimagePickerForPaymentReceipt(blob)
+                this.doSomethingWithFilesimagePickerForTerminationPoint(blob)
             }
 
 
         },
 
 
-        async doSomethingWithFilesimagePickerForPaymentReceipt(event) {
+        async doSomethingWithFilesimagePickerForTerminationPoint(event) {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
@@ -1344,7 +1216,7 @@ export default {
                 useWebWorker: true
             }
             try {
-                const output = document.getElementById('output-pic-of-payment-receipt');
+                const output = document.getElementById('output-pic-of-termination-point');
 
                 const compressedFile = await imageCompression(imageFile, options);
                 // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
@@ -1352,8 +1224,8 @@ export default {
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
 
-                this.pic_of_payment_receipt = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_payment_receipt)
+                this.pic_of_termination_point = new File([compressedFile], imageFileName + `picTerminationPoint${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_termination_point)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
                 }
@@ -1361,7 +1233,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_PaymentReceipt', this.pic_of_payment_receipt)
+                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_TerminationPoint', this.pic_of_termination_point)
                 console.log(xx)
 
 
@@ -1373,6 +1245,7 @@ export default {
             }
 
         },
+
 
 
 
@@ -1432,7 +1305,7 @@ export default {
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
 
-                this.pic_of_meter = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                this.pic_of_meter = new File([compressedFile], imageFileName + `picMeters${compressedFile.type.replace('image/', '.')}`)
                 console.log(this.pic_of_meter)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
@@ -1441,7 +1314,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Meters', this.pic_of_meter)
+                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_Meter', this.pic_of_meter)
                 console.log(xx)
 
 
@@ -1457,41 +1330,43 @@ export default {
 
 
 
+        async imagePickerForShowingIDBMeterNo() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
 
 
-        // all test on compression comes here
-
-        async imagePickerForTheServiceWireFromPoleToMeteringPoint() {
-
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
-
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
 
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+
+                this.doSomethingWithFilesimagePickerForShowingIDBMeterNo(blob)
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/jpeg' });
-            console.log(blob)
 
 
-
-            this.doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(blob)
         },
 
 
-
-
-
-        async doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(event) {
+        async doSomethingWithFilesimagePickerForShowingIDBMeterNo(event) {
+            let imageFileName = this.generateRandomString()
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
@@ -1503,7 +1378,7 @@ export default {
                 useWebWorker: true
             }
             try {
-                const output = document.getElementById('output-pic-of-the-service-wire-from-pole-to-metering-point');
+                const output = document.getElementById('output-pic-of-showing-idb-meter-number');
 
                 const compressedFile = await imageCompression(imageFile, options);
                 // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
@@ -1511,11 +1386,21 @@ export default {
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
 
-                this.pic_of_the_service_wire_from_pole_to_metering_point = new File([compressedFile], `pictureOfTheServiceWireFromPole${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_the_service_wire_from_pole_to_metering_point)
+                this.pic_showing_idb_meter_no = new File([compressedFile], imageFileName + `picShowingIdbMeterNo${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_showing_idb_meter_no)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
                 }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_ShowingIdbMeterNo', this.pic_showing_idb_meter_no)
+                console.log(xx)
+
+
+
+
 
             } catch (error) {
                 // // console.log(error);
@@ -1524,1000 +1409,11 @@ export default {
         },
 
 
+        // Image upload ends here
 
 
 
-        // image picker for building
-        async imagePickerBuilding() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
 
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-
-            const file = blob;
-            this.doSomethingWithFilesImagePickerBuilding(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerBuilding(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-building');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-                console.log(compressedFile)
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_building = new File([compressedFile], `pictureOfTheBuilding${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_building)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // image picker for installation cut out metering point one
-        async imagePickerForInstallationCutOutMeteringPointOne() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point = new File([compressedFile], `pictureOfInstallation${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-        // image picker for installation cut out metering point one
-        async imagePickerForInstallationCutOutMeteringPointOne2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point2 = new File([compressedFile], `pictureOfInstallation2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-        // image picker for installation cut out metering point one3
-        async imagePickerForInstallationCutOutMeteringPointOne3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne3(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point3 = new File([compressedFile], `pictureOfInstallation3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-        // pic of meter nameplate one
-        async imagePickerForMeteringNameplateOne() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate = new File([compressedFile], `meterNameplate${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-        // pic of meter nameplate one 2
-        async imagePickerForMeteringNameplateOne2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate2 = new File([compressedFile], `meterNameplate2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of meter nameplate one 3
-        async imagePickerForMeteringNameplateOne3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne3(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate3 = new File([compressedFile], `meterNameplate3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-
-
-        // pic of seal as met
-        async imagePickerForSealAsMet() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-
-            this.doSomethingWithFilesImagePickerForSealAsMet(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForSealAsMet(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-seal-as-met');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_seal_as_met = new File([compressedFile], `pictureOfSealAsMet${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of internal connection if seal is broken
-        async imagePickerForInternalConnectionIfSealIsBroken() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-internal-connection-if-seal-is-broken');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_internal_connection_if_seal_is_broken = new File([compressedFile], `pictureOfInternalConnection${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-        // pic of internal connection if seal is broken
-        async imagePickerForInternalConnectionIfSealIsBroken2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-internal-connection-if-seal-is-broken2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_internal_connection_if_seal_is_broken2 = new File([compressedFile], `pictureOfInternalConnection2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of bypass
-        async imagePickerForByPass() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForByPass(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForByPass(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-bypass');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_bypass = new File([compressedFile], `pictureOfBypass${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-        // pic of bypass2
-        async imagePickerForByPass2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForByPass2(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForByPass2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-bypass2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_bypass2 = new File([compressedFile], `pictureOfBypass2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of bypass3
-        async imagePickerForByPass3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForByPass3(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForByPass3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-bypass3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_bypass3 = new File([compressedFile], `pictureOfBypass3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // pic of last bill vending receipt
-        async imagePickerForLastBillVendingReceipt() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt = new File([compressedFile], `lastBillReceipt${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error); 
-            }
-
-        },
-
-
-
-
-
-
-        // pic of last bill vending receipt2
-        async imagePickerForLastBillVendingReceipt2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt2(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt2 = new File([compressedFile], `lastBillReceipt2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-        // pic of last bill vending receipt3
-        async imagePickerForLastBillVendingReceipt3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt3(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt3 = new File([compressedFile], `lastBillReceipt3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of invitation notice to customer
-        async imagePickerForInvitationNoticeToCustomer() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForInvitationNoticeToCustomer(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInvitationNoticeToCustomer(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-invitation-notice-customer');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_invitation_notice_to_customer = new File([compressedFile], `invitationNoticeToCustomer${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                console.log(this.pic_of_invitation_notice_to_customer)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
 
 
 
@@ -2539,7 +1435,6 @@ export default {
             this.credit_reading_on_meter = this.credit_reading_on_meter.trim()
             this.further_remarks = this.further_remarks.trim()
             this.phone_number = this.phone_number.trim()
-            this.inspection_conclusion = this.inspection_conclusion.trim()
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -2550,24 +1445,29 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
+            // } else if (this.pic_of_premise == '') {
+            //         M.toast({ html: '<b class="red-text">Please add pic of Premises, customer wiring *</b>' })
+            //     } else if (this.pic_of_meter == '') {
+            //         M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
+
+
             if (this.business_unit == '') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
-            } else if (this.pic_of_premise == '') {
-                M.toast({ html: '<b class="red-text">Please add pic of Premises, customer wiring *</b>' })
-            } else if (this.pic_of_meter == '') {
-                M.toast({ html: '<b class="red-text">Please add pic of House number, meter(s) *</b>' })
             } else if (this.long < 3 || this.lat < 6) {
                 M.toast({ 'html': '<b class="red-text">Incorrect Geo Location</b>' })
+                this.hideNewLocationBtn = false
+            } else if (this.is_meter_active == '' || this.is_uiu_com_with_the_meter == '' || this.is_the_customer_properly_aligned == '' || this.is_the_supply_cable_visible == '' || this.is_the_meter_sealed_properly == '' || this.is_the_circuit_breaker_adequate == '' || this.is_the_idb_installation_height_okay == '') {
+                M.toast({ 'html': '<b class="red-text">One or more answers are not selected</b>' })
                 this.hideNewLocationBtn = false
             } else {
 
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/idbvalidation', {
                         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
@@ -2592,22 +1492,24 @@ export default {
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
                             location: this.location,
-                            typeOfBuilding: this.type_of_building,
-                            sharedBillOrMeter: this.shared_bill_or_meter,
-                            sharedBillOrMeterInput: this.shared_bill_or_meter_input,
-                            vacantStatus: this.vacant_status,
-                            useOfPremise: this.user_of_premise,
-                            otherComment: this.other_comment,
-                            isAccountMappedToCorrectDT: this.is_account_mapped_to_correct_dt,
-                            isCustomerPhoneNoCorrect: this.is_customer_phone_no_correct,
-                            isCustomerAddressCorrect: this.is_customer_address_correct,
-                            physicalCustomerAddress: this.physical_customer_address,
-                            isMeterByPassed: this.is_meter_bypassed,
-                            customerComplaint: this.customer_complaint,
-                            otherRemarks: this.other_remarks,
-                            picPremise: this.pic_of_premise.name,
-                            picPaymentReceipt: this.pic_of_payment_receipt.name,
-                            picMeters: this.pic_of_meter.name
+
+                            currentFeederBand: this.current_feeder_band,
+                            idbBoxNo: this.idb_box_number,
+                            idbDcuNo: this.dcu_number,
+                            idbPoleNo: this.idb_pole_number,
+                            isMeterActive: this.is_meter_active,
+                            isUiuComm: this.is_uiu_com_with_the_meter,
+                            isCustAligned: this.is_the_customer_properly_aligned,
+                            isSupplyVisible: this.is_the_supply_cable_visible,
+                            isMeterSealed: this.is_the_meter_sealed_properly,
+                            isCircuitAdequate: this.is_the_circuit_breaker_adequate,
+                            isIdbInstallationHeightOkay: this.is_the_idb_installation_height_okay,
+
+                            furtherRemark: this.other_remarks,
+                            picIdbBox: this.pic_of_idb_box.name,
+                            picTerminationPoint: this.pic_of_termination_point.name,
+                            picMeters: this.pic_of_meter.name,
+                            picShowingIdbMeterNo: this.pic_showing_idb_meter_no.name
                         }),
                     })
 

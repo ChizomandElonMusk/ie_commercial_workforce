@@ -68,7 +68,7 @@ export default {
       // password: '',
       disabled: false,
       username: 'cechehieuka',
-      password: '@@@1KingGod123456789',
+      password: '@@@1KingGod1234567890',
       lat: '',
       long: '',
       hidePreLoader: true,
