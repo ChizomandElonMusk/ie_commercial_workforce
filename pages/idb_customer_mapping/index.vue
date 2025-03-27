@@ -646,6 +646,7 @@ export default {
 
                 this.account_number = response.accountNumber
                 this.account_name = response.accountName
+                this.account_type = response.accountType
                 this.tarrif = response.tariff
                 this.address = response.address
                 this.business_unit = response.bu
@@ -1089,6 +1090,7 @@ export default {
 
                         }),
                     })
+                    
 
                     const response = await rawResponse.json()
 

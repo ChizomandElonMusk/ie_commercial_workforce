@@ -1482,13 +1482,13 @@ export default {
                             accountNo: this.account_number,
                             meterNo: this.meter_number,
                             accountType: this.account_type,
+                            accountStatus: this.account_status,
                             accountName: this.account_name,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
-                            accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
                             location: this.location,
@@ -1497,6 +1497,7 @@ export default {
                             idbBoxNo: this.idb_box_number,
                             idbDcuNo: this.dcu_number,
                             idbPoleNo: this.idb_pole_number,
+
                             isMeterActive: this.is_meter_active,
                             isUiuComm: this.is_uiu_com_with_the_meter,
                             isCustAligned: this.is_the_customer_properly_aligned,
@@ -1512,6 +1513,44 @@ export default {
                             picShowingIdbMeterNo: this.pic_showing_idb_meter_no.name
                         }),
                     })
+
+
+                    // console.log(
+                    //     this.service_type,
+                    //         this.account_number,
+                    //         this.meter_number,
+                    //         this.account_type,
+                    //         this.account_status,
+                    //         this.account_name,
+                    //         this.tarrif,
+                    //         this.address,
+                    //         this.business_unit,
+                    //         this.undertaking_one,
+                    //         this.dt_name,
+                    //         this.dt_no,
+                    //         this.phone_number,
+                    //         this.location,
+
+                    //         this.current_feeder_band,
+                    //         this.idb_box_number,
+                    //         this.dcu_number,
+                    //         this.idb_pole_number,
+
+                    //         this.is_meter_active,
+                    //         this.is_uiu_com_with_the_meter,
+                    //         this.is_the_customer_properly_aligned,
+                    //         this.is_the_supply_cable_visible,
+                    //         this.is_the_meter_sealed_properly,
+                    //         this.is_the_circuit_breaker_adequate,
+                    //         this.is_the_idb_installation_height_okay,
+
+                    //         this.other_remarks,
+                    //         this.pic_of_idb_box.name,
+                    //         this.pic_of_termination_point.name,
+                    //         this.pic_of_meter.name,
+                    //         this.pic_showing_idb_meter_no.name
+                    // );
+                    
 
                     const response = await rawResponse.json()
 
