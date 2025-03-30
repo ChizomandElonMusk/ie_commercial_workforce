@@ -263,20 +263,20 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the merter active
+                                    Is IDB installed?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green" @click="isMeterActiveYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isIDBInstalledYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_meter_active == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_meter_active == 'No'">No</b>
-                                    <b class="red-text" v-if="is_meter_active == ''">--</b>
+                                    <b class="green-text" v-if="is_idb_installed == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_idb_installed == 'No'">No</b>
+                                    <b class="red-text" v-if="is_idb_installed == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red" @click="isMeterActiveNo()">No</button>
+                                    <button class="btn btn-small red" @click="isIDBInstalledNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -285,20 +285,20 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    is the UIU communicating witht the meter
+                                    Is IDB safely secured?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green" @click="isUIUComWithMeterYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isIDBSafelySecuredYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_uiu_com_with_the_meter == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_uiu_com_with_the_meter == 'No'">No</b>
-                                    <b class="red-text" v-if="is_uiu_com_with_the_meter == ''">--</b>
+                                    <b class="green-text" v-if="is_idb_safely_secured == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_idb_safely_secured == 'No'">No</b>
+                                    <b class="red-text" v-if="is_idb_safely_secured == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red" @click="isUIUComWithMeterNo()">No</button>
+                                    <button class="btn btn-small red" @click="isIDBSafelySecuredNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -307,22 +307,22 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the customer properly aligned
+                                    Is Supply Cable Trunked?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
                                     <button class="btn btn-small green"
-                                        @click="isTheCustomerProperlyAlignedYes()">Yes</button>
+                                        @click="isSupplyCableTrunkedYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_the_customer_properly_aligned == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_the_customer_properly_aligned == 'No'">No</b>
-                                    <b class="red-text" v-if="is_the_customer_properly_aligned == ''">--</b>
+                                    <b class="green-text" v-if="is_supply_cable_trunked == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_supply_cable_trunked == 'No'">No</b>
+                                    <b class="red-text" v-if="is_supply_cable_trunked == ''">--</b>
                                 </div>
                                 <div class="col s4">
                                     <button class="btn btn-small red"
-                                        @click="isTheCustomerProperlyAlignedNo()">No</button>
+                                        @click="isSupplyCableTrunkedNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -331,21 +331,21 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the supply cable visible
+                                    Is IDB box functioning?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
                                     <button class="btn btn-small green"
-                                        @click="isTheSupplyCableVisibleYes()">Yes</button>
+                                        @click="isIDBBoxFunctioningYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_the_supply_cable_visible == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_the_supply_cable_visible == 'No'">No</b>
-                                    <b class="red-text" v-if="is_the_supply_cable_visible == ''">--</b>
+                                    <b class="green-text" v-if="is_idb_box_functioning == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_idb_box_functioning == 'No'">No</b>
+                                    <b class="red-text" v-if="is_idb_box_functioning == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red" @click="isTheSupplyCableVisibleNo()">No</button>
+                                    <button class="btn btn-small red" @click="isIDBBoxFunctioningNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -356,21 +356,21 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the meter sealed properly
+                                    Is supply cable neat?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
                                     <button class="btn btn-small green"
-                                        @click="isTheMeterSealedProperlyYes()">Yes</button>
+                                        @click="isSupplyCableNeatYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_the_meter_sealed_properly == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_the_meter_sealed_properly == 'No'">No</b>
-                                    <b class="red-text" v-if="is_the_meter_sealed_properly == ''">--</b>
+                                    <b class="green-text" v-if="is_supply_cable_neat == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_supply_cable_neat == 'No'">No</b>
+                                    <b class="red-text" v-if="is_supply_cable_neat == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red" @click="isTheMeterSealedProperlyNo()">No</button>
+                                    <button class="btn btn-small red" @click="isSupplyCableNeatNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -382,22 +382,22 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the circuit breaker adequate
+                                    Is meter connected?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
                                     <button class="btn btn-small green"
-                                        @click="isTheCircuitBreakerAdequateYes()">Yes</button>
+                                        @click="isMeterConnectedYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_the_circuit_breaker_adequate == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_the_circuit_breaker_adequate == 'No'">No</b>
-                                    <b class="red-text" v-if="is_the_circuit_breaker_adequate == ''">--</b>
+                                    <b class="green-text" v-if="is_meter_connected == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_meter_connected == 'No'">No</b>
+                                    <b class="red-text" v-if="is_meter_connected == ''">--</b>
                                 </div>
                                 <div class="col s4">
                                     <button class="btn btn-small red"
-                                        @click="isTheCircuitBreakerAdequateNo()">No</button>
+                                        @click="isMeterConnectedNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -408,22 +408,22 @@
                         <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Is the IDB installation height okay
+                                    Is meter infraction?
                                 </b>
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
                                     <button class="btn btn-small green"
-                                        @click="isTheIDBInstallationHeightOkayYes()">Yes</button>
+                                        @click="isMeterInfractionYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
-                                    <b class="green-text" v-if="is_the_idb_installation_height_okay == 'Yes'">Yes</b>
-                                    <b class="red-text" v-if="is_the_idb_installation_height_okay == 'No'">No</b>
-                                    <b class="red-text" v-if="is_the_idb_installation_height_okay == ''">--</b>
+                                    <b class="green-text" v-if="is_meter_infraction == 'Yes'">Yes</b>
+                                    <b class="red-text" v-if="is_meter_infraction == 'No'">No</b>
+                                    <b class="red-text" v-if="is_meter_infraction == ''">--</b>
                                 </div>
                                 <div class="col s4">
                                     <button class="btn btn-small red"
-                                        @click="isTheIDBInstallationHeightOkayNo()">No</button>
+                                        @click="isMeterInfractionNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -657,13 +657,13 @@ export default {
             dcu_number: '',
             idb_pole_number: '',
 
-            is_meter_active: '',
-            is_uiu_com_with_the_meter: '',
-            is_the_customer_properly_aligned: '',
-            is_the_supply_cable_visible: '',
-            is_the_meter_sealed_properly: '',
-            is_the_circuit_breaker_adequate: '',
-            is_the_idb_installation_height_okay: '',
+            is_idb_installed: '',
+            is_idb_safely_secured: '',
+            is_supply_cable_trunked: '',
+            is_idb_box_functioning: '',
+            is_supply_cable_neat: '',
+            is_meter_connected: '',
+            is_meter_infraction: '',
 
 
             pic_of_idb_box: '',
@@ -785,53 +785,53 @@ export default {
 
     methods: {
 
-        isMeterActiveYes() {
-            this.is_meter_active = 'Yes'
+        isIDBInstalledYes() {
+            this.is_idb_installed = 'Yes'
         },
-        isMeterActiveNo() {
-            this.is_meter_active = 'No'
-        },
-
-        isUIUComWithMeterYes() {
-            this.is_uiu_com_with_the_meter = 'Yes'
-        },
-        isUIUComWithMeterNo() {
-            this.is_uiu_com_with_the_meter = 'No'
+        isIDBInstalledNo() {
+            this.is_idb_installed = 'No'
         },
 
-        isTheCustomerProperlyAlignedYes() {
-            this.is_the_customer_properly_aligned = 'Yes'
+        isIDBSafelySecuredYes() {
+            this.is_idb_safely_secured = 'Yes'
         },
-        isTheCustomerProperlyAlignedNo() {
-            this.is_the_customer_properly_aligned = 'No'
-        },
-
-        isTheSupplyCableVisibleYes() {
-            this.is_the_supply_cable_visible = 'Yes'
-        },
-        isTheSupplyCableVisibleNo() {
-            this.is_the_supply_cable_visible = 'No'
+        isIDBSafelySecuredNo() {
+            this.is_idb_safely_secured = 'No'
         },
 
-        isTheMeterSealedProperlyYes() {
-            this.is_the_meter_sealed_properly = 'Yes'
+        isSupplyCableTrunkedYes() {
+            this.is_supply_cable_trunked = 'Yes'
         },
-        isTheMeterSealedProperlyNo() {
-            this.is_the_meter_sealed_properly = 'No'
-        },
-
-        isTheCircuitBreakerAdequateYes() {
-            this.is_the_circuit_breaker_adequate = 'Yes'
-        },
-        isTheCircuitBreakerAdequateNo() {
-            this.is_the_circuit_breaker_adequate = 'No'
+        isSupplyCableTrunkedNo() {
+            this.is_supply_cable_trunked = 'No'
         },
 
-        isTheIDBInstallationHeightOkayYes() {
-            this.is_the_idb_installation_height_okay = 'Yes'
+        isIDBBoxFunctioningYes() {
+            this.is_idb_box_functioning = 'Yes'
         },
-        isTheIDBInstallationHeightOkayNo() {
-            this.is_the_idb_installation_height_okay = 'No'
+        isIDBBoxFunctioningNo() {
+            this.is_idb_box_functioning = 'No'
+        },
+
+        isSupplyCableNeatYes() {
+            this.is_supply_cable_neat = 'Yes'
+        },
+        isSupplyCableNeatNo() {
+            this.is_supply_cable_neat = 'No'
+        },
+
+        isMeterConnectedYes() {
+            this.is_meter_connected = 'Yes'
+        },
+        isMeterConnectedNo() {
+            this.is_meter_connected = 'No'
+        },
+
+        isMeterInfractionYes() {
+            this.is_meter_infraction = 'Yes'
+        },
+        isMeterInfractionNo() {
+            this.is_meter_infraction = 'No'
         },
 
 
@@ -1459,7 +1459,7 @@ export default {
             } else if (this.long < 3 || this.lat < 6) {
                 M.toast({ 'html': '<b class="red-text">Incorrect Geo Location</b>' })
                 this.hideNewLocationBtn = false
-            } else if (this.is_meter_active == '' || this.is_uiu_com_with_the_meter == '' || this.is_the_customer_properly_aligned == '' || this.is_the_supply_cable_visible == '' || this.is_the_meter_sealed_properly == '' || this.is_the_circuit_breaker_adequate == '' || this.is_the_idb_installation_height_okay == '') {
+            } else if (this.is_idb_installed == '' || this.is_idb_safely_secured == '' || this.is_supply_cable_trunked == '' || this.is_idb_box_functioning == '' || this.is_supply_cable_neat == '' || this.is_meter_connected == '' || this.is_meter_infraction == '') {
                 M.toast({ 'html': '<b class="red-text">One or more answers are not selected</b>' })
                 this.hideNewLocationBtn = false
             } else {
@@ -1498,13 +1498,13 @@ export default {
                             idbDcuNo: this.dcu_number,
                             idbPoleNo: this.idb_pole_number,
 
-                            isMeterActive: this.is_meter_active,
-                            isUiuComm: this.is_uiu_com_with_the_meter,
-                            isCustAligned: this.is_the_customer_properly_aligned,
-                            isSupplyVisible: this.is_the_supply_cable_visible,
-                            isMeterSealed: this.is_the_meter_sealed_properly,
-                            isCircuitAdequate: this.is_the_circuit_breaker_adequate,
-                            isIdbInstallationHeightOkay: this.is_the_idb_installation_height_okay,
+                            isIdbInstalled: this.is_idb_installed,
+                            isIdbBoxSafelySecured: this.is_idb_safely_secured,
+                            isSupplyCableTrunked: this.is_supply_cable_trunked,
+                            isIdbBoxFunctioning: this.is_idb_box_functioning,
+                            isSupplyCableNeat: this.is_supply_cable_neat,
+                            isMeterConnected: this.is_meter_connected,
+                            isMeterInfraction: this.is_meter_infraction,
 
                             furtherRemark: this.other_remarks,
                             picIdbBox: this.pic_of_idb_box.name,
@@ -1536,13 +1536,13 @@ export default {
                     //         this.dcu_number,
                     //         this.idb_pole_number,
 
-                    //         this.is_meter_active,
-                    //         this.is_uiu_com_with_the_meter,
-                    //         this.is_the_customer_properly_aligned,
-                    //         this.is_the_supply_cable_visible,
-                    //         this.is_the_meter_sealed_properly,
-                    //         this.is_the_circuit_breaker_adequate,
-                    //         this.is_the_idb_installation_height_okay,
+                    //         this.is_idb_installed,
+                    //         this.is_idb_safely_secured,
+                    //         this.is_supply_cable_trunked,
+                    //         this.is_idb_box_functioning,
+                    //         this.is_supply_cable_neat,
+                    //         this.is_meter_connected,
+                    //         this.is_meter_infraction,
 
                     //         this.other_remarks,
                     //         this.pic_of_idb_box.name,
