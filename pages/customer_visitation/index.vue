@@ -525,14 +525,14 @@
 
 
                         <div class="row center safe-area-bottom">
-                            <div class="col s12">
+                            <!-- <div class="col s12">
                                 <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
                                     @click="fakeNegativeGeo" :disabled="disabled_bool">Fake Negative Geo</button>
                             </div>
                             <div class="col s12" :class="{ 'hide': hideNewLocationBtn }">
                                 <button class="btn btn-large green" style="width: 300px; margin-top: 20px;"
                                     @click="printCurrentPosition" :disabled="disabled_bool">Get Geolocation</button>
-                            </div>
+                            </div> -->
                             <div class="col s12">
                                 <button class="btn btn-large red" style="width: 300px; margin-top: 20px;"
                                     @click="submit" :disabled="disabled_bool">Submit</button>
@@ -575,7 +575,7 @@ export default {
             service_type: null,
             account_number: '',
             // account_number: '',
-            meter_number: '',
+            meter_number: '43901910984',
             // meter_number: '',
             account_type: '',
             account_name: '',
@@ -2528,8 +2528,10 @@ export default {
             this.lat = lat
             console.log(this.long, (this.lat));
             if (this.long < 3 || this.lat < 6) {
+                console.log('this is less than the distance');
                 this.hideNewLocationBtn = false
             } else {
+                console.log('this is the exact thing');
                 this.location = `${this.long}, ${this.lat}`
             }
 

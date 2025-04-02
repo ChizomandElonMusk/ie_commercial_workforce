@@ -1056,7 +1056,7 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/customeridbboxmapping', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customeridbboxmapping', {
                         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
