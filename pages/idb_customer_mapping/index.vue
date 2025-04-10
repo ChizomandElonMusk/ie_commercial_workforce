@@ -5,7 +5,7 @@
                 <nuxt-link to="../dashboard_ie_force" class="red white-text btn">
                     Back
                 </nuxt-link>
-                <b class="grey-text btn disabled">IDB Customer Mapping</b>
+                <b class="grey-text btn disabled">IDB Mapping</b>
             </div>
         </div>
 
@@ -193,7 +193,7 @@
                         <div class="row" :class="{ 'hide': hideOtherFormElements }">
                             <!-- IDB Box Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="IDB Box Number" v-model="idb_box_number" disabled>
+                                <input type="text" placeholder="IDB Box Number" v-model="proposed_idb_box_id" disabled>
                             </div>
                         </div>
 
@@ -211,11 +211,11 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row" :class="{'hide': hideOtherFormElements}">
                             <div class="col s12">
                                 <p>
                                     <b>
-                                        Is DT Mapping correct
+                                        Is DCU number correct?
                                     </b>
                                     <br>
                                     <label>
@@ -243,9 +243,131 @@
                         </div>
 
 
+                        <div class="row" :class="{ 'hide': hideProposedData }">
+                            <div class="col s12">
+                                <table class="striped">
+                                    <tbody>
+
+                                        <tr>
+                                            <td>Proposed DCU Number:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_dcu_number }}</b>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Proposed DT No:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_dt_number }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Proposed DT Name:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_dt_name }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>DT Uprising Name:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_dt_upriser_name }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>DT Uprising Number:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_dt_upriser_number }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>IDB Box Number:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_idb_box_id }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>BU:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_bu }}</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>UT:</td>
+                                            <td>
+                                                <b class="black-text">{{ proposed_ut }}</b>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+  
+                        <!-- Form to search proposed DCU number -->
+                        <div class="row center" :class="{ 'hide': hideSearchScreen }">
+                            <div class="col s12">
+                                <button class="btn btn-large red col s12" style="margin-bottom: 20px;"
+                                    @click="cancelSearch">Cancel Search</button>
+                            </div>
+                        </div>
+
+                        <div class="row" :class="{ 'hide': hideSearchScreen }">
+                            <div class="col s9">
+                                <input type="text" placeholder="Enter DCU number" v-model="dtSearchQuery">
+                            </div>
+                            <div class="col s3">
+                                <button class="btn btn-flat red white-text" @click="searchDT()">Search</button>
+                            </div>
+
+                            <!-- dt table list -->
+                            <div class="col s12">
+                                <table class="striped">
+                                    <thead>
+                                        <tr>
+                                            <th>DT No</th>
+                                            <th>DT Name</th>
+                                            <th>IDB Box ID</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td @click="selectedData(dtList)" class="blue-text">
+                                                {{ dtList.dtNumber }}
+                                                <!-- <a href="#!" v-on:click="getPaymentRec(dt.dtNo, trans.agencyCode)">
+                                                {{ index + 1 }}
+                                            </a> -->
+                                            </td>
+                                            <td>{{ dtList.dtName }}</td>
+                                            <td>{{ dtList.idbBoxId }}</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col s12 center" :class="{ 'hide': hideLoading }">
+                                <b class="grey-text">Please wait...</b>
+                            </div>
+
+                            <div class="col s12 center" :class="{ 'hide': hideNoData }">
+                                <b class="grey-text">No data available</b>
+                            </div>
+                        </div>
+                        <!-- Form to search proposed DCU number -->
+                          
 
 
-                        <div class="row">
+
+
+                        <div class="row" :class="{'hide': hideOtherFormElements}">
                             <!-- Pic of the service wire from pole to metering point * -->
                             <div class="col s12">
 
@@ -261,7 +383,7 @@
                         </div>
 
                         <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
+                        <div class="row" :class="{'hide': hideOtherFormElements}">
                             <div class="col s12">
                                 <img class=" responsive-img" id="output-pic-of-idb-box" />
                             </div>
@@ -269,7 +391,7 @@
                         <br>
 
 
-                        <div class="row">
+                        <div class="row" :class="{'hide': hideOtherFormElements}">
                             <!-- Pic of the service wire from pole to metering point * -->
                             <div class="col s12">
 
@@ -285,7 +407,7 @@
                         </div>
 
                         <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
+                        <div class="row" :class="{'hide': hideOtherFormElements}">
                             <div class="col s12">
                                 <img class=" responsive-img" id="output-pic-of-idb-meter-template" />
                             </div>
@@ -347,7 +469,7 @@
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getIDBCustomerInfoApi, getDTSearch, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
+import { checkCustomerMeterNumber, getIDBCustomerInfoApi, getDCUSearch, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -369,7 +491,7 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
-            meter_number: '43901910984',
+            meter_number: '92802433554',
             account_type: '',
             account_name: '',
             dt_no: '',
@@ -390,12 +512,14 @@ export default {
             userId: null,
             dtSearchQuery: '',
 
+            proposed_dcu_number: '',
             proposed_dt_number: '',
             proposed_dt_name: '',
-            proposed_ut: '',
+            proposed_dt_upriser_name: '',
+            proposed_dt_upriser_number: '',
+            proposed_idb_box_id: '',
             proposed_bu: '',
-            proposed_feeder_band: '',
-            mapping_status: '',
+            proposed_ut: '',
 
             feederHierarchy: {
                 'A': 4,
@@ -501,15 +625,32 @@ export default {
     methods: {
 
         async newDTinAnotherUTStateChange() {
-            if (this.is_dt_in_another_ut == 'no' || this.is_dt_in_another_ut == '') {
-                this.hideProposedIDBboxNumber = false
-            } else if (this.is_dt_in_another_ut == 'yes') {
-                this.hideProposedIDBboxNumber = true
+            // if (this.is_dt_in_another_ut == 'no' || this.is_dt_in_another_ut == '') {
+            //     this.hideProposedIDBboxNumber = false
+            // } else if (this.is_dt_in_another_ut == 'yes') {
+            //     this.hideProposedIDBboxNumber = true
+            // }
+
+
+            this.current_feeder_band = this.current_feeder_band.trim()
+            if (this.current_feeder_band == '') {
+                M.toast({ html: `<b class="red-text">Please fetch customer data!</b>` })
+                this.is_dt_in_another_ut = 'yes'
+            } else {
+                this.is_dt_in_another_ut = this.is_dt_in_another_ut.trim()
+                if (this.is_dt_in_another_ut == 'no' || this.is_dt_in_another_ut == '') {
+                    // this.hideSearchBtn = false
+                    this.hideOtherFormElements = true
+                    this.hideSearchBtn = true
+                    this.hideSearchScreen = false
+                    this.dtList = []
+                    // this.hideProposedData = true
+                } else if (this.is_dt_in_another_ut == 'yes') {
+                    this.hideOtherFormElements = false
+                    this.hideSearchScreen = true
+                    this.hideProposedData = true
+                }
             }
-            // this.hideOtherFormElements = true
-            // this.hideSearchBtn = true
-            // this.hideSearchScreen = false
-            // this.hideProposedData =
         },
 
         async showSearchScreen() {
@@ -536,13 +677,10 @@ export default {
                 M.toast({ html: `<b class="red-text">Search field can not be empty!</b>` })
             } else {
                 this.hideSearchBtn = true
-                let responseSearch = await getDTSearch(this.dtSearchQuery)
-                console.log('this is the response for res ', responseSearch)
-                console.log('this is the response for res ', responseSearch)
-                console.log('this is the response for res ', responseSearch)
+                let responseSearch = await getDCUSearch(this.dtSearchQuery)
                 console.log('this is the response for res ', responseSearch)
 
-                if (responseSearch.length == 0) {
+                if (responseSearch.length == 0 || responseSearch.id == null) {
                     this.hideNoData = false
                 } else {
                     this.dtList = responseSearch
@@ -556,17 +694,19 @@ export default {
         async selectedData(dt) {
             this.selectedDT = dt
             console.log('this is the selected DT ', this.selectedDT);
-            this.proposed_dt_number = dt.dtNo
+            this.proposed_dcu_number = dt.dcuNumber
+            this.proposed_dt_number = dt.dtNumber
             this.proposed_dt_name = dt.dtName
-            this.proposed_feeder_band = dt.feederBand
-            this.proposed_ut = dt.ut
+            this.proposed_idb_box_id = dt.idbBoxId
+            this.proposed_dt_upriser_name = dt.dtUpriserName
+            this.proposed_dt_upriser_number = dt.dtUpriserNumber
             this.proposed_bu = dt.bu
+            this.proposed_ut = dt.ut
 
             this.hideOtherFormElements = false
             this.hideSearchScreen = true
             this.hideProposedData = false
             // this.is_dt_in_another_ut = 'no'
-            this.mapping_status = this.compareFeeder(this.current_feeder_band, this.proposed_feeder_band)
             this.dtSearchQuery = ''
         },
 
@@ -1055,6 +1195,7 @@ export default {
 
 
                 try {
+                    console.log(this.location);
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customeridbboxmapping', {
                         // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
@@ -1079,9 +1220,11 @@ export default {
                             ut: this.undertaking_one,
                             dt: this.dt_name,
                             phoneNo: this.phone_number,
-                            location: this.location,
+                            location: "3.334432, 6.322344",
+                            // location: this.location,
                             currentFeederBand: this.current_feeder_band,
-                            proposedIdbBoxNo: this.proposed_idb_box_number,
+                            proposedIdbBoxNo: this.proposed_idb_box_id,
+                            proposedDcuNo: this.proposed_dcu_number,
                             idbBoxNo: this.idb_box_number,
                             idbDcuNo: this.dcu_number,
                             idbPoleNo: this.idb_pole_number,
@@ -1090,7 +1233,7 @@ export default {
 
                         }),
                     })
-                    
+
 
                     const response = await rawResponse.json()
 

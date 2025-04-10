@@ -247,14 +247,14 @@
                         <div class="row">
                             <!-- idb box number/dcu number -->
                             <div class="col s12">
-                                <input type="text" placeholder="DCU Number" v-model="dcu_number" disabled>
+                                <input type="text" placeholder="DCU Number" v-model="idb_dcu_number" disabled>
                             </div>
                         </div>
 
                         <div class="row">
                             <!-- idb pole number -->
                             <div class="col s12">
-                                <input type="text" placeholder="IDB Pole Number" v-model="idb_pole_number" disabled>
+                                <input type="text" placeholder="IDB Pole Number" v-model="idb_pole_number" >
                             </div>
                         </div>
 
@@ -312,8 +312,7 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green"
-                                        @click="isSupplyCableTrunkedYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isSupplyCableTrunkedYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
                                     <b class="green-text" v-if="is_supply_cable_trunked == 'Yes'">Yes</b>
@@ -321,8 +320,7 @@
                                     <b class="red-text" v-if="is_supply_cable_trunked == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red"
-                                        @click="isSupplyCableTrunkedNo()">No</button>
+                                    <button class="btn btn-small red" @click="isSupplyCableTrunkedNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -336,8 +334,7 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green"
-                                        @click="isIDBBoxFunctioningYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isIDBBoxFunctioningYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
                                     <b class="green-text" v-if="is_idb_box_functioning == 'Yes'">Yes</b>
@@ -361,8 +358,7 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green"
-                                        @click="isSupplyCableNeatYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isSupplyCableNeatYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
                                     <b class="green-text" v-if="is_supply_cable_neat == 'Yes'">Yes</b>
@@ -387,8 +383,7 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green"
-                                        @click="isMeterConnectedYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isMeterConnectedYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
                                     <b class="green-text" v-if="is_meter_connected == 'Yes'">Yes</b>
@@ -396,8 +391,7 @@
                                     <b class="red-text" v-if="is_meter_connected == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red"
-                                        @click="isMeterConnectedNo()">No</button>
+                                    <button class="btn btn-small red" @click="isMeterConnectedNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -413,8 +407,7 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s4">
-                                    <button class="btn btn-small green"
-                                        @click="isMeterInfractionYes()">Yes</button>
+                                    <button class="btn btn-small green" @click="isMeterInfractionYes()">Yes</button>
                                 </div>
                                 <div class="col s4">
                                     <b class="green-text" v-if="is_meter_infraction == 'Yes'">Yes</b>
@@ -422,8 +415,7 @@
                                     <b class="red-text" v-if="is_meter_infraction == ''">--</b>
                                 </div>
                                 <div class="col s4">
-                                    <button class="btn btn-small red"
-                                        @click="isMeterInfractionNo()">No</button>
+                                    <button class="btn btn-small red" @click="isMeterInfractionNo()">No</button>
                                 </div>
                             </form>
                         </div>
@@ -640,7 +632,7 @@
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
+import { getIDBCustomerInfoApi, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -654,7 +646,7 @@ export default {
             current_feeder_band: '',
             location_gis: '',
             idb_box_number: '',
-            dcu_number: '',
+            idb_dcu_number: '',
             idb_pole_number: '',
 
             is_idb_installed: '',
@@ -680,7 +672,7 @@ export default {
             service_type: null,
             account_number: '',
             // account_number: '',
-            meter_number: '43901910984',
+            meter_number: '92802433554',
             // meter_number: '',
             account_type: '',
             account_name: '',
@@ -841,26 +833,57 @@ export default {
 
             if (this.service_type == 'prepaid') {
 
-                // await checkCustomerMeterNumber(this.meter_number)
+                // await getIDBCustomerInfoApi(this.meter_number)
                 console.log('make postpaid call')
                 try {
 
-                    const response = await checkCustomerMeterNumber(this.meter_number)
+                    const response = await getIDBCustomerInfoApi(this.meter_number)
+                    this.account_type = ''
+                    this.account_name = ''
+                    this.tarrif = ''
+                    this.address = ''
+                    this.business_unit = ''
+                    this.account_status = ''
+                    this.undertaking_one = ''
+                    this.dt_name = ''
+                    this.phone_number = ''
+                    this.dt_no = ''
+                    this.idb_box_number = ''
+                    this.idb_dcu_number = ''
+                    this.idb_pole_number = ''
 
                     // console.log(response)
 
                     // console.log(response.accountNumber)
-                    console.log('this is response from mods ', response)
 
-                    let users_meter_number = response.meterNumber
 
-                    if (users_meter_number == '') {
+
+                    this.meter_number = this.meter_number.trim()
+
+                    if (this.meter_number == '') {
                         M.toast({ html: `<b class="red-text">Please check meter number agian</b>` })
+                        this.printCurrentPosition()
                     } else {
-                        this.account_number = response.accountNumber
-                        let users_account_number = response.accountNumber
-                        users_account_number = users_account_number.trim()
-                        this.getCustomerInfo(users_account_number)
+                        console.log('this is response from mods ', response)
+                        if (response.accountStatus == null) {
+                            M.toast({ html: `<b class="red-text">Please check IDB Meter Number & try again</b>` })
+                        } else {
+                            this.printCurrentPosition()
+
+                            this.account_type = response.accountType
+                            this.account_name = response.accountName
+                            this.tarrif = response.tariff
+                            this.address = response.address
+                            this.business_unit = response.bu
+                            this.account_status = response.accountStatus
+                            this.undertaking_one = response.ut
+                            this.dt_name = response.dtName
+                            this.phone_number = response.mobileNumber
+                            this.dt_no = response.dtNo
+                            this.idb_box_number = response.idbBoxNo
+                            this.idb_dcu_number = response.idbDcuNo
+                            this.idb_pole_number = response.idbPoleNo
+                        }
                     }
                 } catch (error) {
                     console.log(error)
@@ -876,7 +899,7 @@ export default {
 
             try {
                 let response = await getCustomerInfoApi(accountNumber)
-                console.log(response)
+                // console.log(response)
                 this.printCurrentPosition()
 
                 this.account_type = response.accountType
@@ -889,6 +912,8 @@ export default {
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
                 this.dt_no = response.dtNo
+                this.idb_box_number = response.idbBoxNo
+                this.idb_dcu_number = response.idbDcuNo
 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -1495,7 +1520,7 @@ export default {
 
                             currentFeederBand: this.current_feeder_band,
                             idbBoxNo: this.idb_box_number,
-                            idbDcuNo: this.dcu_number,
+                            idbDcuNo: this.idb_dcu_number,
                             idbPoleNo: this.idb_pole_number,
 
                             isIdbInstalled: this.is_idb_installed,
@@ -1533,7 +1558,7 @@ export default {
 
                     //         this.current_feeder_band,
                     //         this.idb_box_number,
-                    //         this.dcu_number,
+                    //         this.idb_dcu_number,
                     //         this.idb_pole_number,
 
                     //         this.is_idb_installed,
@@ -1550,7 +1575,7 @@ export default {
                     //         this.pic_of_meter.name,
                     //         this.pic_showing_idb_meter_no.name
                     // );
-                    
+
 
                     const response = await rawResponse.json()
 

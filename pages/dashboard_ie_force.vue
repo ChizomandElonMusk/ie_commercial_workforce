@@ -39,7 +39,7 @@
               <div class="card-panel orange">
                 <span class="white-text">
                   <i class="material-icons">folder_open</i>
-                  <h6>IDB Box Number Mapping</h6>
+                  <h6>IDB Mapping</h6>
                 </span>
               </div>
             </nuxt-link>

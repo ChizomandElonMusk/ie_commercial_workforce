@@ -393,6 +393,47 @@ export async function getDTSearch(searchString) {
   }
 }
 
+
+
+export async function getDCUSearch(searchString) {
+  searchString = searchString.toLowerCase();
+
+  try {
+    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getidbboxinfo?dcuNo=" +
+        searchString,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + localStorage.token,
+          Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+        },
+      }
+    );
+
+    console.log(response);
+    const response = await rawResponse.json();
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+
+    // console.log(response)
+
+    // console.log(response.passwords)
+    // console.log(response)
+    // return response
+  } catch (error) {
+    console.log(error);
+    M.toast({ html: `<b class="red-text">${error}</b>` });
+  }
+}
+
+
+
+
 export async function getEsrFormHistory(date_from, date_to) {
   // let token = localStorage.getItem('jdotwdott')
   // var passwords = ""
