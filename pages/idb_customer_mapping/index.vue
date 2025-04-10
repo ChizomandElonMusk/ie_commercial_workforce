@@ -193,7 +193,7 @@
                         <div class="row" :class="{ 'hide': hideOtherFormElements }">
                             <!-- IDB Box Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="IDB Box Number" v-model="proposed_idb_box_id" disabled>
+                                <input type="text" placeholder="IDB Box Number" v-model="idb_box_number" disabled>
                             </div>
                         </div>
 
