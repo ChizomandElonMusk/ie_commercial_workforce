@@ -488,7 +488,7 @@ export default {
             hideProposedIDBboxNumber: true,
 
 
-            disabled_bool: false,
+            disabled_bool: true,
             service_type: null,
             account_number: '',
             meter_number: '92802433554',
@@ -644,11 +644,13 @@ export default {
                     this.hideSearchBtn = true
                     this.hideSearchScreen = false
                     this.dtList = []
+                    this.disabled_bool = false
                     // this.hideProposedData = true
                 } else if (this.is_dt_in_another_ut == 'yes') {
                     this.hideOtherFormElements = false
                     this.hideSearchScreen = true
                     this.hideProposedData = true
+                    this.disabled_bool = true
                 }
             }
         },
@@ -1377,6 +1379,7 @@ export default {
 
         this.trySign()
         this.userId = localStorage.getItem('userId')
+        console.log(this.userId);
     },
 
     created() {

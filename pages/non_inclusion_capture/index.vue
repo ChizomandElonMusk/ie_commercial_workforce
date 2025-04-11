@@ -920,6 +920,10 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
+                if(this.account_name == '') {
+                    this.account_name = ' '
+                }
+
                 var xx = await uploadImage(this.userId, this.account_number, 'NonInclusionCapture_Premise', this.pic_of_premise)
                 console.log(xx)
 

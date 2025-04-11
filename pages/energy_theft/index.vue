@@ -250,6 +250,17 @@
                             </div>
                         </div>
 
+                        <div class="row" v-if="negative_reading == true ">
+                            <div class="col s3">
+                                <b style="font-weight: 800; font-size: 30px;">
+                                    -
+                                </b>
+                            </div>
+                            <div class="col s9" style="margin-left: -70px;">
+                                <input type="text" v-model="negative_reading_value" placeholder="Enter negative reading">
+                            </div>
+                        </div>
+
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -462,6 +473,8 @@ export default {
             pic_of_bypass: '',
             pic_of_additional: '',
             pic_of_meter: '',
+            negative_reading: false,
+            negative_reading_value: '0',
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -547,10 +560,10 @@ export default {
     watch: {
         type_of_infra(newVal) {
             if (newVal === 'Negative reading') {
-                console.log('Negative reading oooo');
-                console.log('Negative reading oooo');
-                console.log('Negative reading oooo');
-                console.log('Negative reading oooo');
+                this.negative_reading = true
+            } else {
+                this.negative_reading_value = '0'
+                this.negative_reading = false
             }
         }
     },

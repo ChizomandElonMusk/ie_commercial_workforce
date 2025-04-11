@@ -116,6 +116,13 @@
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
+                                <input type="text" placeholder="Account status" v-model="account_status" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- cutomer name -->
+                            <div class="col s12">
                                 <input type="text" placeholder="Tarrif" v-model="tarrif" disabled>
                             </div>
                         </div>

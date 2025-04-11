@@ -126,10 +126,30 @@ export async function getIDBCustomerInfoApi(accountNumber) {
   }
 }
 
+export function generateRandomString() {
+  let result = '';
+  let new_date = Date()
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  for (let i = 0; i < 10; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
 
 
 
 export async function uploadImage(userId, accountNumber, docType, file) {
+  // run an open minded check on the accountNumber/Meternumber on next version control (11th April 11:52 2025)
+  if (accountNumber == '' || empty(accountNumber)) {
+    accountNumber = `IE_CWA_${generateRandomString()}`
+  }
+
+  console.log(`this is a dummy account ${accountNumber}`);
+  console.log(`this is a dummy account ${accountNumber}`);
+  console.log(`this is a dummy account ${accountNumber}`);
+
   M.toast({ html: `<b class="yellow-text">Uploading </b>` });
   console.log(userId, accountNumber, docType, file);
 

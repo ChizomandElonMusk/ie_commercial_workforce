@@ -1177,7 +1177,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_IdbBox', this.pic_of_idb_box)
+                var xx = await uploadImage(this.userId, this.meter_number, 'IdbValidation_IdbBox', this.pic_of_idb_box)
                 console.log(xx)
 
 
@@ -1258,7 +1258,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_TerminationPoint', this.pic_of_termination_point)
+                var xx = await uploadImage(this.userId, this.meter_number, 'IdbValidation_TerminationPoint', this.pic_of_termination_point)
                 console.log(xx)
 
 
@@ -1339,7 +1339,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_Meter', this.pic_of_meter)
+                var xx = await uploadImage(this.userId, this.meter_number, 'IdbValidation_Meter', this.pic_of_meter)
                 console.log(xx)
 
 
@@ -1420,7 +1420,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'IdbValidation_ShowingIdbMeterNo', this.pic_showing_idb_meter_no)
+                var xx = await uploadImage(this.userId, this.meter_number, 'IdbValidation_ShowingIdbMeterNo', this.pic_showing_idb_meter_no)
                 console.log(xx)
 
 

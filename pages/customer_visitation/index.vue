@@ -115,6 +115,13 @@
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
+                                <input type="text" placeholder="Account status" v-model="account_status" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- cutomer name -->
+                            <div class="col s12">
                                 <input type="text" placeholder="Tarrif" v-model="tarrif" disabled>
                             </div>
                         </div>
@@ -236,6 +243,14 @@
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect :options="['Bungalow', 'Duplex', 'Storey building']"
                                     :default="'Type of building *'" class="" v-model="type_of_building" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['NMD', 'MD1', 'MD2']"
+                                    :default="'Required customer classification *'" class=""
+                                    v-model="required_customer_classification" />
                             </div>
                         </div>
 
@@ -434,7 +449,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Take pictures of premises, customer wiring (*)
+                                    Take meter installation point/customer wiring (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPremises()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -457,7 +472,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Vending slip/receipt, postpaid payment receipt
+                                    Picture of the building
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPaymentReceipt()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -480,7 +495,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    House number, meter(s) (*)
+                                    Picture of the meter (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForMeter()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -589,6 +604,7 @@ export default {
             phone_number: '',
             location: '',
             type_of_building: '',
+            required_customer_classification: '',
             shared_bill_or_meter: 'No',
             shared_bill_or_meter_input: '',
             vacant_status: '',
@@ -2542,7 +2558,7 @@ export default {
 
         },
 
-        generateRandomNumber () {
+        generateRandomNumber() {
             const date = new Date();
             const year = date.getFullYear();
             const month = date.getMonth() + 1;
