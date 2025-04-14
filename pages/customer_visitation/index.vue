@@ -2445,6 +2445,7 @@ export default {
                             typeOfBuilding: this.type_of_building,
                             sharedBillOrMeter: this.shared_bill_or_meter,
                             sharedBillOrMeterInput: this.shared_bill_or_meter_input,
+                            customerClassification: this.required_customer_classification,
                             vacantStatus: this.vacant_status,
                             useOfPremise: this.user_of_premise,
                             otherComment: this.other_comment,

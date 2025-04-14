@@ -250,14 +250,35 @@
                             </div>
                         </div>
 
-                        <div class="row" v-if="negative_reading == true ">
+                        <div class="row" v-if="negative_reading == true">
                             <div class="col s3">
                                 <b style="font-weight: 800; font-size: 30px;">
                                     -
                                 </b>
                             </div>
                             <div class="col s9" style="margin-left: -70px;">
-                                <input type="text" v-model="negative_reading_value" placeholder="Enter negative reading">
+                                <input type="text" v-model="negative_reading_value"
+                                    placeholder="Enter negative reading">
+                            </div>
+                        </div>
+
+                        <div class="row center" v-if="pumping_maching_on_direct == true">
+                            <div class="col s12" @click="addNewField()">
+                                <b style="font-weight: 800; font-size: 30px;">
+                                    +
+                                </b>
+                            </div>
+
+                            <div v-for="field in formFields" :key="field.id">
+                                <div class="col s9">
+                                    <input type="text" 
+                                        placeholder="Meter number" v-model="field.value">
+                                </div>
+                                <div class="col s3">
+                                    <b class="red-text" style="font-weight: 800; font-size: 30px;" @click="removeForm(field.id)">
+                                        -
+                                    </b>
+                                </div>
                             </div>
                         </div>
 
@@ -474,7 +495,10 @@ export default {
             pic_of_additional: '',
             pic_of_meter: '',
             negative_reading: false,
+            pumping_maching_on_direct: false,
             negative_reading_value: '0',
+            formFields: [],
+            nextId: 1,
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -561,14 +585,36 @@ export default {
         type_of_infra(newVal) {
             if (newVal === 'Negative reading') {
                 this.negative_reading = true
+            } else if (newVal === 'Pumping Machine On Direct') {
+                this.pumping_maching_on_direct = true
             } else {
                 this.negative_reading_value = '0'
                 this.negative_reading = false
+                this.pumping_maching_on_direct = false
             }
         }
     },
 
     methods: {
+
+        addNewField() {
+            this.formFields.push({
+                id: this.nextId,
+                value: ''
+            })
+            this.nextId++
+        },
+
+        removeForm(id){
+            const index = this.formFields.findIndex(field => field.id === id);
+            if (index !== -1) {
+                this.formFields.splice(index, 1)
+            }
+        },
+
+        getAllFormValues () {
+            return this.formFields.map(field => field.value)
+        },
 
         async checkNumber() {
 
@@ -2043,6 +2089,11 @@ export default {
 
 
         async submit() {
+            // get all the form value in the dynamic list 
+            let meter_number_list = this.getAllFormValues()
+            console.log(meter_number_list);
+
+
             M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
@@ -2136,6 +2187,8 @@ export default {
                             location: this.location,
                             typeOfInfraction: this.type_of_infra,
                             durationOfTheft: this.duration_of_theft,
+                            negReading: this.negative_reading,
+                            affectedMeters: meter_number_list,
                             picTheft: this.pic_of_theft.name,
                             picBypass: this.pic_of_bypass.name,
                             picAdditional: this.pic_of_additional.name,
