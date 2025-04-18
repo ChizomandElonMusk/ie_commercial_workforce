@@ -142,13 +142,13 @@ export function generateRandomString() {
 
 export async function uploadImage(userId, accountNumber, docType, file) {
   // run an open minded check on the accountNumber/Meternumber on next version control (11th April 11:52 2025)
-  if (accountNumber == '' || empty(accountNumber)) {
-    accountNumber = `IE_CWA_${generateRandomString()}`
-  }
+  // if (accountNumber == '' || empty(accountNumber)) {
+  //   accountNumber = `IE_CWA_${generateRandomString()}`
+  // }
 
-  console.log(`this is a dummy account ${accountNumber}`);
-  console.log(`this is a dummy account ${accountNumber}`);
-  console.log(`this is a dummy account ${accountNumber}`);
+  // console.log(`this is a dummy account ${accountNumber}`);
+  // console.log(`this is a dummy account ${accountNumber}`);
+  // console.log(`this is a dummy account ${accountNumber}`);
 
   M.toast({ html: `<b class="yellow-text">Uploading </b>` });
   console.log(userId, accountNumber, docType, file);
@@ -160,6 +160,7 @@ export async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
 
   try {
+    // 92802433505
     const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
     // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {

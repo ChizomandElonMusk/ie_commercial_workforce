@@ -1148,7 +1148,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerIdbBoxMapping_IdbBox', this.pic_of_the_customer_idb_mapping_shoing_idb_meter_no)
+                var xx = await uploadImage(this.userId, this.account_number, 'CustomerIdbBoxMapping_ShowingIdbMeterNo', this.pic_of_the_customer_idb_mapping_shoing_idb_meter_no)
                 console.log(xx)
 
 
@@ -1322,7 +1322,8 @@ export default {
             this.long = long
             this.lat = lat
 
-            this.location = `${this.long}, ${this.lat}`
+            // this.location = `${this.long}, ${this.lat}`
+            this.location = `3.3701606391207375, 6.537343544052812`
         },
 
         // let me try to create a new signature

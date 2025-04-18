@@ -1971,8 +1971,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountReactivation', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountReactivation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountReactivation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountReactivation', { 
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
