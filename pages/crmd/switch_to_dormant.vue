@@ -1942,7 +1942,9 @@ export default {
                         console.log(response.status)
                         M.toast({ html: `<b class="red-text">Session expired</b>` })
                         await logOut()
-                    }
+                    } else if (response.code == '98') {
+                        M.toast({ html: `<b class="green-text">${content.message}</b>` })
+                    } 
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })

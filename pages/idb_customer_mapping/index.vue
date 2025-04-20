@@ -491,7 +491,7 @@ export default {
             disabled_bool: true,
             service_type: null,
             account_number: '',
-            meter_number: '92802433554',
+            meter_number: '',
             account_type: '',
             account_name: '',
             dt_no: '',
@@ -1199,8 +1199,8 @@ export default {
                 try {
                     console.log(this.location);
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customeridbboxmapping', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customeridbboxmapping', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customeridbboxmapping', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1250,7 +1250,9 @@ export default {
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({ html: `<b class="red-text">Network Error</b>` })
-                    }
+                    } else if (response.code == '98') {
+                        M.toast({ html: `<b class="green-text">${content.message}</b>` })
+                    } 
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })

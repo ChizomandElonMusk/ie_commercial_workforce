@@ -102,7 +102,8 @@ export async function getIDBCustomerInfoApi(accountNumber) {
   // CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
   try {
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo?meterNo="+accountNumber,
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo?meterNo="+accountNumber,
+      // "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo?meterNo="+accountNumber,
       {
         method: "GET",
         headers: {
@@ -161,8 +162,8 @@ export async function uploadImage(userId, accountNumber, docType, file) {
 
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {
         method: "POST",
         headers: {
@@ -422,7 +423,7 @@ export async function getDCUSearch(searchString) {
   try {
     // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getidbboxinfo?dcuNo=" +
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getidbboxinfo?dcuNo=" +
         searchString,
       {
         method: "GET",

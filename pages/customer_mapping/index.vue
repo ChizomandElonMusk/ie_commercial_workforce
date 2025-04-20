@@ -1995,8 +1995,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
-                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2045,7 +2045,9 @@ export default {
                     } else if (response.status == 500) {
                         console.log(response.status)
                         M.toast({ html: `<b class="red-text">Network Error</b>` })
-                    }
+                    } else if (response.code == '98') {
+                        M.toast({ html: `<b class="green-text">${content.message}</b>` })
+                    } 
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })

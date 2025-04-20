@@ -34,7 +34,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center" v-if="hasCustomerMapping == true">
+          <div class="col s12 center" v-if="hasCustomerIdbboxMapping == true">
             <nuxt-link to="/idb_customer_mapping">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -143,7 +143,7 @@
             </nuxt-link>
           </div>
 
-          <div class="col s12 center" v-if="hasCustomerVisitation == true">
+          <div class="col s12 center" v-if="hasIdbValidation == true">
             <nuxt-link to="/idb_customer_visitation">
               <div class="card-panel orange">
                 <span class="white-text">
@@ -235,6 +235,14 @@
         // not done
         hasCustomerVisitation() {
             return this.permissions.includes('SUSPENDED_CUSTOMER_VISITATION')
+        },
+
+        hasIdbValidation() {
+            return this.permissions.includes('IDB_VALIDATION')
+        },
+        
+        hasCustomerIdbboxMapping() {
+            return this.permissions.includes('CUSTOMER_IDBBOX_MAPPING')
         },
 
       },

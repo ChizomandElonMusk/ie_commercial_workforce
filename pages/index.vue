@@ -64,11 +64,9 @@ export default {
       backgroundUrl,
       user_test: '',
       password_test: '',
-      // username: '',
-      // password: '',
+      username: '',
+      password: '',
       disabled: false,
-      username: 'cechehieuka',
-      password: '@@@1KingGod1234567890',
       lat: '',
       long: '',
       hidePreLoader: true,
@@ -178,8 +176,8 @@ export default {
 
 
         this.disabled = true
-        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
-        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
+        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -241,6 +239,8 @@ export default {
 
           this.hidePreLoader = true
           this.$router.push('./menu')
+        } else {
+          M.toast({ html: `<b class="green-text">${content.message}</b>` })
         }
 
 
