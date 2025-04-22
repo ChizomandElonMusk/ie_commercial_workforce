@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5b110d8e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5b110d8e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5b110d8e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5b110d8e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_5b110d8e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7acafbe4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7acafbe4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7acafbe4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7acafbe4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7acafbe4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-5b110d8e]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-7acafbe4]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/idb_customer_mapping/index.vue?vue&type=template&id=5b110d8e&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/idb_customer_mapping/index.vue?vue&type=template&id=7acafbe4&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,18 +44,18 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-5b110d8e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-5b110d8e>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-7acafbe4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-7acafbe4>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-5b110d8e>IDB Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-5b110d8e>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-7acafbe4>IDB Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-7acafbe4>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-5b110d8e><div class=\"row\" data-v-5b110d8e><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-5b110d8e>DONE</a></div> <div class=\"row\" data-v-5b110d8e><div class=\"container\" data-v-5b110d8e><div class=\"row\" data-v-5b110d8e><div class=\"col s12 center\" data-v-5b110d8e><h6 data-v-5b110d8e>Sign here!</h6></div></div> <div class=\"row\" data-v-5b110d8e><div class=\"col s12 center\" data-v-5b110d8e><canvas id=\"sig-canvas\" width=\"250px\" data-v-5b110d8e>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-5b110d8e><div class=\"col s12 center\" data-v-5b110d8e><div class=\"col s6\" data-v-5b110d8e><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-5b110d8e>Save</button></div> <div class=\"col s6\" data-v-5b110d8e><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-5b110d8e>Clear</button></div></div></div> <br data-v-5b110d8e> <div class=\"row\" data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-5b110d8e>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"row\" data-v-7acafbe4><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-7acafbe4>DONE</a></div> <div class=\"row\" data-v-7acafbe4><div class=\"container\" data-v-7acafbe4><div class=\"row\" data-v-7acafbe4><div class=\"col s12 center\" data-v-7acafbe4><h6 data-v-7acafbe4>Sign here!</h6></div></div> <div class=\"row\" data-v-7acafbe4><div class=\"col s12 center\" data-v-7acafbe4><canvas id=\"sig-canvas\" width=\"250px\" data-v-7acafbe4>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-7acafbe4><div class=\"col s12 center\" data-v-7acafbe4><div class=\"col s6\" data-v-7acafbe4><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-7acafbe4>Save</button></div> <div class=\"col s6\" data-v-7acafbe4><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-7acafbe4>Clear</button></div></div></div> <br data-v-7acafbe4> <div class=\"row\" data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-7acafbe4>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-5b110d8e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-5b110d8e>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-5b110d8e>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-7acafbe4>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-7acafbe4>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-5b110d8e>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-7acafbe4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-7acafbe4>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['prepaid'],
       "default": 'prepaid'
@@ -69,65 +69,65 @@ var render = function render() {
     }
   })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s9\" data-v-5b110d8e><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-5b110d8e></div> <div class=\"col s3\" data-v-5b110d8e><button class=\"btn btn-flat red white-text\" data-v-5b110d8e>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s9\" data-v-7acafbe4><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-7acafbe4></div> <div class=\"col s3\" data-v-7acafbe4><button class=\"btn btn-flat red white-text\" data-v-7acafbe4>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s9\" data-v-5b110d8e><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-5b110d8e></div> <div class=\"col s3\" data-v-5b110d8e><button class=\"btn btn-flat red white-text\" data-v-5b110d8e>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s9\" data-v-7acafbe4><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-7acafbe4></div> <div class=\"col s3\" data-v-7acafbe4><button class=\"btn btn-flat red white-text\" data-v-7acafbe4>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-5b110d8e> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-7acafbe4> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><b data-v-5b110d8e>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><b data-v-7acafbe4>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"IDB Box Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.idb_box_number) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"IDB Box Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.idb_box_number) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"DCU Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dcu_number) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"DCU Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dcu_number) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"IDB Pole Number\"" + _vm._ssrAttr("value", _vm.idb_pole_number) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"IDB Pole Number\"" + _vm._ssrAttr("value", _vm.idb_pole_number) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><p data-v-5b110d8e><b data-v-5b110d8e>\n                                    Is DCU number correct?\n                                </b> <br data-v-5b110d8e> <label data-v-5b110d8e><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-5b110d8e> <span data-v-5b110d8e>Yes</span></label></p> <p data-v-5b110d8e><label data-v-5b110d8e><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-5b110d8e> <span data-v-5b110d8e>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><p data-v-7acafbe4><b data-v-7acafbe4>\n                                    Is DCU number correct?\n                                </b> <br data-v-7acafbe4> <label data-v-7acafbe4><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-7acafbe4> <span data-v-7acafbe4>Yes</span></label></p> <p data-v-7acafbe4><label data-v-7acafbe4><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-7acafbe4> <span data-v-7acafbe4>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideProposedIDBboxNumber
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><input type=\"text\" placeholder=\"Proposed IDB Box Number\"" + _vm._ssrAttr("value", _vm.proposed_idb_box_number) + " data-v-5b110d8e></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><input type=\"text\" placeholder=\"Proposed IDB Box Number\"" + _vm._ssrAttr("value", _vm.proposed_idb_box_number) + " data-v-7acafbe4></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideProposedData
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><table class=\"striped\" data-v-5b110d8e><tbody data-v-5b110d8e><tr data-v-5b110d8e><td data-v-5b110d8e>Proposed DCU Number:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_dcu_number)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>Proposed DT No:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>Proposed DT Name:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>DT Uprising Name:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_upriser_name)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>DT Uprising Number:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_upriser_number)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>IDB Box Number:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_idb_box_id)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>BU:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-5b110d8e><td data-v-5b110d8e>UT:</td> <td data-v-5b110d8e><b class=\"black-text\" data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><table class=\"striped\" data-v-7acafbe4><tbody data-v-7acafbe4><tr data-v-7acafbe4><td data-v-7acafbe4>Proposed DCU Number:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dcu_number)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>Proposed DT No:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>Proposed DT Name:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>DT Uprising Name:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_upriser_name)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>DT Uprising Number:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_upriser_number)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>IDB Box Number:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_idb_box_id)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>BU:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-7acafbe4><td data-v-7acafbe4>UT:</td> <td data-v-7acafbe4><b class=\"black-text\" data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-5b110d8e>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-7acafbe4>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-5b110d8e><div class=\"col s9\" data-v-5b110d8e><input type=\"text\" placeholder=\"Enter DCU number\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-5b110d8e></div> <div class=\"col s3\" data-v-5b110d8e><button class=\"btn btn-flat red white-text\" data-v-5b110d8e>Search</button></div> <div class=\"col s12\" data-v-5b110d8e><table class=\"striped\" data-v-5b110d8e><thead data-v-5b110d8e><tr data-v-5b110d8e><th data-v-5b110d8e>DT No</th> <th data-v-5b110d8e>DT Name</th> <th data-v-5b110d8e>IDB Box ID</th></tr></thead> <tbody data-v-5b110d8e><tr data-v-5b110d8e><td class=\"blue-text\" data-v-5b110d8e>" + _vm._ssrEscape("\n                                            " + _vm._s(_vm.dtList.dtNumber) + "\n                                            ") + "</td> <td data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.dtList.dtName)) + "</td> <td data-v-5b110d8e>" + _vm._ssrEscape(_vm._s(_vm.dtList.idbBoxId)) + "</td></tr></tbody></table></div> <div" + _vm._ssrClass("col s12 center", {
+  }) + " data-v-7acafbe4><div class=\"col s9\" data-v-7acafbe4><input type=\"text\" placeholder=\"Enter DCU number\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-7acafbe4></div> <div class=\"col s3\" data-v-7acafbe4><button class=\"btn btn-flat red white-text\" data-v-7acafbe4>Search</button></div> <div class=\"col s12\" data-v-7acafbe4><table class=\"striped\" data-v-7acafbe4><thead data-v-7acafbe4><tr data-v-7acafbe4><th data-v-7acafbe4>DT No</th> <th data-v-7acafbe4>DT Name</th> <th data-v-7acafbe4>IDB Box ID</th></tr></thead> <tbody data-v-7acafbe4><tr data-v-7acafbe4><td class=\"blue-text\" data-v-7acafbe4>" + _vm._ssrEscape("\n                                            " + _vm._s(_vm.dtList.dtNumber) + "\n                                            ") + "</td> <td data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.dtList.dtName)) + "</td> <td data-v-7acafbe4>" + _vm._ssrEscape(_vm._s(_vm.dtList.idbBoxId)) + "</td></tr></tbody></table></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideLoading
-  }) + " data-v-5b110d8e><b class=\"grey-text\" data-v-5b110d8e>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
+  }) + " data-v-7acafbe4><b class=\"grey-text\" data-v-7acafbe4>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideNoData
-  }) + " data-v-5b110d8e><b class=\"grey-text\" data-v-5b110d8e>No data available</b></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><b class=\"grey-text\" data-v-7acafbe4>No data available</b></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><h6 class=\"red-text\" data-v-5b110d8e>\n                                Picture of the IDB Box (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-5b110d8e><i class=\"material-icons white-text\" data-v-5b110d8e>camera_alt</i></button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><h6 class=\"red-text\" data-v-7acafbe4>\n                                Picture of the IDB Box (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7acafbe4><i class=\"material-icons white-text\" data-v-7acafbe4>camera_alt</i></button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><img id=\"output-pic-of-idb-box\" class=\"responsive-img\" data-v-5b110d8e></div></div> <br data-v-5b110d8e> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><img id=\"output-pic-of-idb-box\" class=\"responsive-img\" data-v-7acafbe4></div></div> <br data-v-7acafbe4> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><h6 class=\"red-text\" data-v-5b110d8e>\n                                IDB meter template with meter number showing (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-5b110d8e><i class=\"material-icons white-text\" data-v-5b110d8e>camera_alt</i></button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><h6 class=\"red-text\" data-v-7acafbe4>\n                                IDB meter template with meter number showing (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7acafbe4><i class=\"material-icons white-text\" data-v-7acafbe4>camera_alt</i></button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><img id=\"output-pic-of-idb-meter-template\" class=\"responsive-img\" data-v-5b110d8e></div></div> <div class=\"row center\" data-v-5b110d8e></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><img id=\"output-pic-of-idb-meter-template\" class=\"responsive-img\" data-v-7acafbe4></div></div> <div class=\"row center\" data-v-7acafbe4></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-5b110d8e><div class=\"col s12\" data-v-5b110d8e><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-5b110d8e>Submit</button></div></div>")], 2)])])], 2)], 2);
+  }) + " data-v-7acafbe4><div class=\"col s12\" data-v-7acafbe4><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-7acafbe4>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/idb_customer_mapping/index.vue?vue&type=template&id=5b110d8e&scoped=true
+// CONCATENATED MODULE: ./pages/idb_customer_mapping/index.vue?vue&type=template&id=7acafbe4&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/idb_customer_mapping/index.vue?vue&type=script&lang=js
 var idb_customer_mappingvue_type_script_lang_js = __webpack_require__(59);
@@ -156,7 +156,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "5b110d8e",
+  "7acafbe4",
   "494e009e"
   
 )
@@ -289,14 +289,14 @@ var component = Object(componentNormalizer["a" /* default */])(
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getCustomerInfoApi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return getIDBCustomerInfoApi; });
 /* unused harmony export generateRandomString */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return uploadImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return uploadImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return getPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getBillingHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getAllDTList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getDTSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getDCUSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getEsrFormHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return logOut; });
+/* unused harmony export logOut */
 /* unused harmony export getCoordinates */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getCurrentPosition; });
 async function checkCustomerMeterNumber(meterNumber, internal) {
@@ -1482,7 +1482,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
         console.log(`Here is the id ${this.userId}, account number: ${this.meter_number}`);
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "l"])(this.userId, this.account_number, 'CustomerIdbBoxMapping_IdbBox', this.pic_of_the_customer_idb_box_mapping_idb_box);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "k"])(this.userId, this.account_number, 'CustomerIdbBoxMapping_IdbBox', this.pic_of_the_customer_idb_box_mapping_idb_box);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1544,7 +1544,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "l"])(this.userId, this.account_number, 'CustomerIdbBoxMapping_ShowingIdbMeterNo', this.pic_of_the_customer_idb_mapping_shoing_idb_meter_no);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "k"])(this.userId, this.account_number, 'CustomerIdbBoxMapping_ShowingIdbMeterNo', this.pic_of_the_customer_idb_mapping_shoing_idb_meter_no);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1611,21 +1611,17 @@ module.exports = ___CSS_LOADER_EXPORT___;
           });
           const response = await rawResponse.json();
           console.log(response);
-          if (response.statusMsg == 'Success') {
+          if (response.code == '00') {
             this.hideLoader = true;
             this.$router.push('../sent');
             localStorage.setItem('service_type', '');
             localStorage.setItem('meter_number', '');
             localStorage.setItem('account_number', '');
-          } else if (response.status == 500) {
-            console.log(response.status);
+          } else {
             M.toast({
-              html: `<b class="red-text">Network Error</b>`
+              html: `<b class="green-text">${response.message}</b>`
             });
-          } else if (response.code == '98') {
-            M.toast({
-              html: `<b class="green-text">${content.message}</b>`
-            });
+            this.disabled_bool = false;
           }
         } catch (error) {
           console.log(error);
@@ -1758,7 +1754,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("008156e7", content, true, context)
+  add("5e38eafc", content, true, context)
 };
 
 /***/ })

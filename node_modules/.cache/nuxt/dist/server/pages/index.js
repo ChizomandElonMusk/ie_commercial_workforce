@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=1c7c111e
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=32abe63d
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -23,7 +23,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=1c7c111e
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=32abe63d
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -320,14 +320,14 @@ installComponents(component, {Logo: __webpack_require__(50).default,PreLoader: _
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getCustomerInfoApi; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return getIDBCustomerInfoApi; });
 /* unused harmony export generateRandomString */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return uploadImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return uploadImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return getPaymentHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getBillingHistory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getAllDTList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getDTSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getDCUSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getEsrFormHistory; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return logOut; });
+/* unused harmony export logOut */
 /* unused harmony export getCoordinates */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getCurrentPosition; });
 async function checkCustomerMeterNumber(meterNumber, internal) {
