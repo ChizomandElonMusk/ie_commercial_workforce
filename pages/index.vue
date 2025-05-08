@@ -64,8 +64,8 @@ export default {
       backgroundUrl,
       user_test: '',
       password_test: '',
-      username: '',
-      password: '',
+      username: 'cechehieuka',
+      password: '@@@1KingGod1234567890',
       disabled: false,
       lat: '',
       long: '',
@@ -176,8 +176,8 @@ export default {
 
 
         this.disabled = true
-        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
-        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', { 
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
+        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', { 
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -224,6 +224,7 @@ export default {
         } else if (responseCode === '00') {
 
           M.toast({ html: `<b class="green-text">Welcome</b>` })
+          this.disabled = false
           let token = content.token
           let forms = content.forms
           let userId = content.userId
@@ -241,6 +242,7 @@ export default {
           this.$router.push('./menu')
         } else {
           M.toast({ html: `<b class="green-text">${content.message}</b>` })
+          this.disabled = false
         }
 
 

@@ -16,44 +16,8 @@
             <nuxt-link to="/crmd">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>CRMD</h6>
-                </span>
-              </div>
-            </nuxt-link>
-          </div>
-
-          <div class="col s12 center" v-if="hasCustomerMapping == true">
-            <nuxt-link to="/customer_mapping">
-              <div class="card-panel orange">
-                <span class="white-text">
-                  <i class="material-icons">folder_open</i>
-                  <h6>Customer Mapping</h6>
-                </span>
-              </div>
-            </nuxt-link>
-          </div>
-
-          <div class="col s12 center" v-if="hasCustomerIdbboxMapping == true">
-            <nuxt-link to="/idb_customer_mapping">
-              <div class="card-panel orange">
-                <span class="white-text">
-                  <i class="material-icons">folder_open</i>
-                  <h6>IDB Mapping</h6>
-                </span>
-              </div>
-            </nuxt-link>
-          </div>
-
-          
-
-
-          <div class="col s12 center" v-if="hasCustomerDetailsValidation == true">
-            <nuxt-link to="/customer_details_validation">
-              <div class="card-panel orange">
-                <span class="white-text">
-                  <i class="material-icons">folder_open</i>
-                  <h6>Customer Details Validation</h6>
                 </span>
               </div>
             </nuxt-link>
@@ -63,18 +27,53 @@
             <nuxt-link to="/energy_theft">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>Energy Theft</h6>
                 </span>
               </div>
             </nuxt-link>
           </div>
 
+          <div class="col s12 center" v-if="hasCustomerMapping == true">
+            <nuxt-link to="/customer_mapping">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  
+                  <h6>Customer Mapping</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center" v-if="hasCustomerVisitation == true">
+            <nuxt-link to="/customer_visitation">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  
+                  <h6>Customer visitation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center" v-if="hasCustomerIdbboxMapping == true">
+            <nuxt-link to="/idb_customer_mapping">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  
+                  <h6>IDB Mapping</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          
+
           <div class="col s12 center" v-if="hasNewlyInstalledMeterCV == true">
             <nuxt-link to="/newly_installed_ppm">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>Newly Installed Meter CV</h6>
                 </span>
               </div>
@@ -87,7 +86,7 @@
             <nuxt-link to="/customer_complaints">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons white-text">folder_open</i>
+                  
                   <h6 class="white-text">Customer Complaints</h6>
                 </span>
               </div>
@@ -101,7 +100,7 @@
             <nuxt-link to="/suspended_cv">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>Suspended Customers Validation</h6>
                 </span>
               </div>
@@ -114,7 +113,7 @@
             <nuxt-link to="/none_vending_cv">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>Non vending Customer Validation</h6>
                 </span>
               </div>
@@ -125,30 +124,33 @@
             <nuxt-link to="/non_inclusion_capture">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>Non-inclusion capture</h6>
                 </span>
               </div>
             </nuxt-link>
           </div>
+          
 
-          <div class="col s12 center" v-if="hasCustomerVisitation == true">
-            <nuxt-link to="/customer_visitation">
-              <div class="card-panel orange">
-                <span class="white-text">
-                  <i class="material-icons">folder_open</i>
-                  <h6>Customer visitation</h6>
-                </span>
-              </div>
-            </nuxt-link>
-          </div>
+          
 
           <div class="col s12 center" v-if="hasIdbValidation == true">
             <nuxt-link to="/idb_customer_visitation">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  
                   <h6>IDB Customer visitation</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center" v-if="hasCustomerDetailsValidation == true">
+            <nuxt-link to="/customer_details_validation">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  
+                  <h6>Customer Details Validation</h6>
                 </span>
               </div>
             </nuxt-link>

@@ -11,45 +11,49 @@
   
         <div class="row">
 
-            <div class="col s12 center">
+            <div class="col s6">
                 <nuxt-link to="/dashboard_ie_force">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>Forms</h6>
+                            <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <h6 style="font-size: 12px;">Forms</h6>
                         </span>
                     </div>
                 </nuxt-link>
             </div>
 
-            <div class="col s12 center">
+            <div class="col s6">
                 <nuxt-link to="/esr_form_history">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>ESR Form History</h6>
+                            <img src="~/assets/images/history.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <h6 style="font-size: 12px;">ESR Form History</h6>
                         </span>
                     </div>
                 </nuxt-link>
             </div>
 
-            <div class="col s12 center">
+            </div>
+
+            <div class="row">
+
+            <div class="col s6">
                 <nuxt-link to="/dt_assigned">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>DTs Assigned</h6>
+                            <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <h6 style="font-size: 12px;">DTs Assigned</h6>
                         </span>
                     </div>
                 </nuxt-link>
             </div>
 
-            <div class="col s12 center">
+            <div class="col s6">
                 <nuxt-link to="../e_services">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <i class="material-icons">folder_open</i>
-                            <h6>E-Services</h6>
+                            <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <h6 style="font-size: 12px;">E-Services</h6>
                         </span>
                     </div>
                 </nuxt-link>
