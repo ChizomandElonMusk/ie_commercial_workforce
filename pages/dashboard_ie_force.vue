@@ -23,6 +23,17 @@
             </nuxt-link>
           </div>
 
+          <div class="col s12 center">
+            <nuxt-link to="/token_request">
+              <div class="card-panel orange">
+                <span class="white-text">
+                  
+                  <h6>Token Request</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
           <div class="col s12 center" v-if="hasEnergyTheft == true">
             <nuxt-link to="/energy_theft">
               <div class="card-panel orange">

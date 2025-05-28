@@ -196,6 +196,13 @@
     "_name": "_1954fefc"
   },
   {
+    "name": "token_request",
+    "path": "/token_request",
+    "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/token_request/index.vue",
+    "chunkName": "pages/token_request/index",
+    "_name": "_7cb80958"
+  },
+  {
     "name": "user-info",
     "path": "/user-info",
     "component": "/Users/chizom/Dev/office/ie_commercial_workforce/pages/user-info.vue",

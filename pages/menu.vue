@@ -27,7 +27,7 @@
             <nuxt-link to="/ie_force">
               <div class="card-panel orange">
                 <span class="white-text">
-                  <i class="material-icons">folder_open</i>
+                  <img src="~/assets/images/ie_force.svg" style="max-width: 30px;" alt="">
                   <h6>IE Force</h6>
                 </span>
               </div>

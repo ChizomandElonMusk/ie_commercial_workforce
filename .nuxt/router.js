@@ -32,6 +32,7 @@ const _6e306bf8 = () => interopDefault(import('../pages/payment-channel.vue' /* 
 const _18dc6b00 = () => interopDefault(import('../pages/sent.vue' /* webpackChunkName: "pages/sent" */))
 const _08a55880 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
 const _1954fefc = () => interopDefault(import('../pages/suspended_cv/index.vue' /* webpackChunkName: "pages/suspended_cv/index" */))
+const _7cb80958 = () => interopDefault(import('../pages/token_request/index.vue' /* webpackChunkName: "pages/token_request/index" */))
 const _f3926d90 = () => interopDefault(import('../pages/user-info.vue' /* webpackChunkName: "pages/user-info" */))
 const _21cee4b1 = () => interopDefault(import('../pages/vsm-checklist.vue' /* webpackChunkName: "pages/vsm-checklist" */))
 const _59dc5a4c = () => interopDefault(import('../pages/crmd/account_reactivation.vue' /* webpackChunkName: "pages/crmd/account_reactivation" */))
@@ -169,6 +170,10 @@ export const routerOptions = {
     path: "/suspended_cv",
     component: _1954fefc,
     name: "suspended_cv"
+  }, {
+    path: "/token_request",
+    component: _7cb80958,
+    name: "token_request"
   }, {
     path: "/user-info",
     component: _f3926d90,

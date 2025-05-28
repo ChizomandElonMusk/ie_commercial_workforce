@@ -41,7 +41,7 @@
                 <nuxt-link to="/dt_assigned">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <img src="~/assets/images/assigned_dt.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">DTs Assigned</h6>
                         </span>
                     </div>
@@ -52,7 +52,7 @@
                 <nuxt-link to="../e_services">
                     <div class="card-panel orange">
                         <span class="white-text">
-                            <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
+                            <img src="~/assets/images/e_service.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">E-Services</h6>
                         </span>
                     </div>

@@ -65,7 +65,7 @@ export default {
       user_test: '',
       password_test: '',
       username: 'cechehieuka',
-      password: '@@@1KingGod1234567890',
+      password: '@@@1KingGod12345678901',
       disabled: false,
       lat: '',
       long: '',
