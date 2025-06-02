@@ -341,6 +341,30 @@
                         <!-- Search proposed DT  -->
 
 
+                        <div class="row" :class="{ 'hide': hideOtherFormElements }">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formerly Picture of theft -->
+                                    Picture of Building (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-theft" />
+                            </div>
+                        </div>
+
+
 
 
 

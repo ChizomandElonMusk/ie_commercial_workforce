@@ -25,10 +25,11 @@
 
           <div class="col s12 center">
             <nuxt-link to="/ie_force">
-              <div class="card-panel orange">
+              <div class="card-panel grey">
                 <span class="white-text">
-                  <img src="~/assets/images/ie_force.svg" style="max-width: 30px;" alt="">
-                  <h6>IE Force</h6>
+                  <!-- <img src="~/assets/images/logo.png" style="max-width: 50px;" alt=""> -->
+                  <img src="~/assets/images/ie_force.svg" style="max-width: 50px;" alt="">
+                  <h6 class="white-text">IE Force</h6>
                 </span>
               </div>
             </nuxt-link>

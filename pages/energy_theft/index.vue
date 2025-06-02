@@ -128,6 +128,60 @@
                             </div>
                         </div>
 
+                        <!-- start of new field -->
+                        <div class="row">
+                            <!-- feeder name -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Feeder Name" v-model="feeder_name" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Meter Manufacturer -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Meter Manufacturer" v-model="meter_manufacturer"
+                                    disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Meter Type -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Meter Type" v-model="meter_type" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Wiring Mode -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Wiring Mode" v-model="wiring_mode" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- DT Capacity -->
+                            <div class="col s12">
+                                <input type="text" placeholder="DT Capacity" v-model="dt_capacity" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Customer Email" v-model="customer_email">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Phone Number -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Customer Phone Number" v-model="customer_phone_number">
+                            </div>
+                        </div>
+                        <!-- end of new field -->
+
+
+
                         <div class="row">
                             <!-- business unit -->
                             <div class="col s12">
@@ -271,11 +325,11 @@
 
                             <div v-for="field in formFields" :key="field.id">
                                 <div class="col s9">
-                                    <input type="text" 
-                                        placeholder="Meter number" v-model="field.value">
+                                    <input type="text" placeholder="Meter number" v-model="field.value">
                                 </div>
                                 <div class="col s3">
-                                    <b class="red-text" style="font-weight: 800; font-size: 30px;" @click="removeForm(field.id)">
+                                    <b class="red-text" style="font-weight: 800; font-size: 30px;"
+                                        @click="removeForm(field.id)">
                                         -
                                     </b>
                                 </div>
@@ -316,30 +370,7 @@
                         </div>
 
 
-
-
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    <!-- Formerly Picture of theft -->
-                                    Picture of notification (*)
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
-                            </div>
-                        </div>
+                        
 
 
 
@@ -394,15 +425,66 @@
                             </div>
                         </div>
 
+                        
+
+
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formerly Picture of theft -->
+                                    Additional Picture 1 (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-theft" />
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formerly Picture of theft -->
+                                    Additional Picture 2 (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-theft" />
+                            </div>
+                        </div>
+
+
+
+                        
+
                         <div class="row">
                             <div class="col s12 input-field">
                                 <textarea class=" materialize-textarea" name="" id="" placeholder="Further Remarks (*)"
                                     v-model="further_remarks"></textarea>
                             </div>
                         </div>
-
-
-
 
 
 
@@ -531,6 +613,9 @@ export default {
             feeder_name: '',
 
             dt_capacity: '',
+            customer_email: '',
+            customer_phone_number: '',
+
             alignment_status: '',
             current_tariff: '',
             recommended_tariff: '',
@@ -541,6 +626,7 @@ export default {
             meter_type_by_manufacturer: '',
             meter_payment_type: '',
             meter_type: '',
+            wiring_mode: '',
             meter_type_box: '',
             tube: false,
             mcb: '',
@@ -605,14 +691,14 @@ export default {
             this.nextId++
         },
 
-        removeForm(id){
+        removeForm(id) {
             const index = this.formFields.findIndex(field => field.id === id);
             if (index !== -1) {
                 this.formFields.splice(index, 1)
             }
         },
 
-        getAllFormValues () {
+        getAllFormValues() {
             return this.formFields.map(field => field.value)
         },
 
@@ -2161,7 +2247,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', { 
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2210,7 +2296,7 @@ export default {
                     } else {
                         M.toast({ html: `<b class="green-text">${response.message}</b>` })
                         this.disabled_bool = false
-                    } 
+                    }
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })
