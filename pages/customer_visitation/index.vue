@@ -291,14 +291,7 @@
                         </div>
                         <!-- end of new field -->
 
-                        <div class="row">
-                            <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect
-                                    :options="['Access Denied', 'Broken Seal', 'Demolished Building', 'Further Checks Required', 'Meter Okaay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
-                                    :default="'Inspection Conclusion *'" class=""
-                                    v-model="type_of_inspection_conclusion" />
-                            </div>
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -478,6 +471,16 @@
                         <br>
 
                         <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect
+                                    :options="['Access Denied', 'Broken Seal', 'Demolished Building', 'Further Checks Required', 'Meter Okaay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
+                                    :default="'Inspection Conclusion *'" class=""
+                                    v-model="type_of_inspection_conclusion" />
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
                             <!-- address -->
                             <div class="col s12">
                                 <input type="text" placeholder="Other remarks" v-model="other_remarks">
@@ -537,7 +540,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Picture of the building
+                                    Picture of the building (*)
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPaymentReceipt()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -584,7 +587,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Additional Picture (*)
+                                    Additional Picture 
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForPremises()">
                                     <i class="material-icons white-text">camera_alt</i>

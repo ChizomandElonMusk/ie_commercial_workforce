@@ -75,6 +75,18 @@
                     <form @submit.prevent style="margin-top: 20px">
 
 
+                        
+
+
+                        
+
+                        <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['Tampered Token', 'Clear Negative Token']"
+                                    :default="'Tampered Token'" class="" v-model="tamper_type" />
+                            </div>
+                        </div>
+
                         <!-- tracking id -->
                         <div class="row">
                             <div class="col s9">
@@ -86,14 +98,6 @@
                         </div>
 
 
-                        
-
-                        <div class="row">
-                            <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['Tampered Token', 'Clear Negative Token']"
-                                    :default="'Tampered Token'" class="" v-model="tamper_type" />
-                            </div>
-                        </div>
 
                         <div class="row">
                             <!-- account name -->
@@ -134,6 +138,13 @@
                             <!-- Account status -->
                             <div class="col s12">
                                 <input type="text" v-model="account_status" placeholder="Account status" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Account status -->
+                            <div class="col s12">
+                                <input type="text" v-model="request_type" placeholder="Request Type" disabled>
                             </div>
                         </div>
 
@@ -487,6 +498,7 @@ export default {
             location: '',
             duration_of_theft: '',
             account_status: '',
+            request_type: '',
             userId: null,
             pic_of_theft: '',
             pic_of_bypass: '',
