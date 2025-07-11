@@ -275,11 +275,11 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col s12">
                                 <input type="text" v-model="phone_number" placeholder="Phone number" disabled>
                             </div>
-                        </div>
+                        </div>  -->
 
                         <div class="row">
                             <div class="col s12">
@@ -544,7 +544,7 @@
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
+import { checkCustomerMeterNumber, getCustomerInfoApi2, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -556,7 +556,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
-            account_number: '',
+            account_number: '54150007976',
             meter_number: '',
             account_type: '',
             account_name: '',
@@ -611,6 +611,7 @@ export default {
             customer_type: '',
             nature_of_business: '',
             feeder_name: '',
+            feeder_no: '',
 
             dt_capacity: '',
             customer_email: '',
@@ -671,6 +672,7 @@ export default {
         type_of_infra(newVal) {
             if (newVal === 'Negative reading') {
                 this.negative_reading = true
+                this.pumping_maching_on_direct = false
             } else if (newVal === 'Pumping Machine On Direct') {
                 this.pumping_maching_on_direct = true
             } else {
@@ -741,7 +743,7 @@ export default {
         async getCustomerInfo(accountNumber) {
 
             try {
-                let response = await getCustomerInfoApi(accountNumber)
+                let response = await getCustomerInfoApi2(accountNumber)
                 console.log(response)
                 await this.printCurrentPosition()
 
@@ -753,8 +755,13 @@ export default {
                 this.account_status = response.accountStatus
                 this.undertaking_one = response.ut
                 this.dt_name = response.dtName
-                this.phone_number = response.mobileNumber
+                this.customer_phone_number = response.mobileNumber
                 this.dt_no = response.dtNo
+                this.feeder_name = response.lastName
+                this.feeder_no = response.feederNo
+                this.meter_manufacturer = response.manufacturer
+                this.wiring_mode = response.wiringMode
+                this.meter_type = response.meterModel
 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})

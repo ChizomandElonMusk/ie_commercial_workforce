@@ -75,10 +75,10 @@
                     <form @submit.prevent style="margin-top: 20px">
 
 
-                        
 
 
-                        
+
+
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -90,10 +90,10 @@
                         <!-- tracking id -->
                         <div class="row">
                             <div class="col s9">
-                                <input type="text" placeholder="Tracking ID" v-model="meter_number">
+                                <input type="text" placeholder="Tracking ID" v-model="tracking_id">
                             </div>
                             <div class="col s3">
-                                <button class="btn btn-flat red white-text" @click="checkNumber()">Check</button>
+                                <button class="btn btn-flat red white-text" @click="getRequestDetails()">Check</button>
                             </div>
                         </div>
 
@@ -306,58 +306,6 @@
                                     <!-- Picture of the service wire from pole metering point -->
                                     Picture of the Meter (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForBypass()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-bypass" />
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    <!-- Formerly Picture of theft -->
-                                    Picture of the Meter Installation Point (*)
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    <!-- Formerly Picture of customer meter if any -->
-                                    Picture of building (*)
-                                </h6>
                                 <button class="btn red btn-large" @click="imagePickerForMeter()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
@@ -375,6 +323,58 @@
 
 
 
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formerly Picture of theft -->
+                                    Picture of the Meter Installation Point (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForMeterInstallationPoint()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-meter-installation-point" />
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formerly Picture of customer meter if any -->
+                                    Picture of building (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForBuilding()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-building" />
+                            </div>
+                        </div>
+
+
+
+
 
                         <div class="row">
                             <!-- Pic of the service wire from pole to metering point * -->
@@ -385,7 +385,7 @@
                                     <!-- Fomerly Additional Pic -->
                                     Picture of the Seal (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForAdditional()">
+                                <button class="btn red btn-large" @click="imagePickerForSeal()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -395,7 +395,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-additional" />
+                                <img class=" responsive-img" id="output-pic-of-seal" />
                             </div>
                         </div>
 
@@ -467,7 +467,7 @@
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
+import { getRequestDetailsWithTrackingId, checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -479,6 +479,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
+            tracking_id: '1749037629235458',
             account_number: '',
             meter_number: '',
             account_type: '',
@@ -500,10 +501,10 @@ export default {
             account_status: '',
             request_type: '',
             userId: null,
-            pic_of_theft: '',
-            pic_of_bypass: '',
-            pic_of_additional: '',
             pic_of_meter: '',
+            pic_of_meter_installation_point: '',
+            pic_of_building: '',
+            pic_of_seal: '',
             negative_reading: false,
             pumping_maching_on_direct: false,
             negative_reading_value: '0',
@@ -521,8 +522,8 @@ export default {
             pic_of_seal_as_met: '',
             pic_of_internal_connection_if_seal_is_broken: '',
             pic_of_internal_connection_if_seal_is_broken2: '',
-            pic_of_bypass2: '',
-            pic_of_bypass3: '',
+            pic_of_meter_installation_point2: '',
+            pic_of_meter_installation_point3: '',
             pic_of_last_bill_vending_receipt: '',
             pic_of_last_bill_vending_receipt2: '',
             pic_of_last_bill_vending_receipt3: '',
@@ -689,6 +690,38 @@ export default {
             } catch (error) {
                 console.log(error)
                 console.log(this.service_type)
+                M.toast({ html: `<b class="red-text">${error}</b>` })
+            }
+        },
+
+
+        async getRequestDetails() {
+
+            try {
+                let response = await getRequestDetailsWithTrackingId(this.tracking_id)
+                console.log(response)
+                await this.printCurrentPosition()
+
+                // this.account_type = response.accountType
+                this.account_name = response[0].accountName
+                console.log(this.account_name);
+                console.log(this.account_name);
+                console.log(this.account_name);
+                this.account_number = response[0].accountNo
+                this.tarrif = response[0].tariff
+                this.address = response[0].address
+                this.business_unit = response[0].bu
+                this.account_status = response[0].accountStatus
+                this.undertaking_one = response[0].ut
+                this.feeder_name = response[0].feederName
+                this.meter_number = response[0].meterNo
+                this.phone_number = response[0].phoneNo
+                this.dt_no = response[0].dtNo
+
+
+            } catch (error) {
+                console.log(error)
+
                 M.toast({ html: `<b class="red-text">${error}</b>` })
             }
         },
@@ -873,244 +906,6 @@ export default {
             return result;
         },
 
-        async imagePickerForTheft() {
-
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
-            } else {
-                // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
-
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
-
-
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
-                }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForTheft(blob)
-            }
-
-
-        },
-
-
-        async doSomethingWithFilesimagePickerForTheft(event) {
-            let imageFileName = this.generateRandomString()
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-theft');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // console.log(`${compressedFile.size / 50 / 50} MB`)
-
-                this.pic_of_theft = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_theft)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-
-                // console.log('account number ', this.account_number)
-                // console.log('pic_of_cwd ', this.pic_of_cwd)
-                // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Theft', this.pic_of_theft)
-                console.log(xx)
-
-
-
-
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-        async imagePickerForBypass() {
-
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
-            } else {
-                // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
-
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
-
-
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
-                }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForBypass(blob)
-            }
-
-
-        },
-
-
-        async doSomethingWithFilesimagePickerForBypass(event) {
-            let imageFileName = this.generateRandomString()
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-bypass');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // console.log(`${compressedFile.size / 50 / 50} MB`)
-
-                this.pic_of_bypass = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_bypass)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-
-                // console.log('account number ', this.account_number)
-                // console.log('pic_of_cwd ', this.pic_of_cwd)
-                // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_ByPass', this.pic_of_bypass)
-                console.log(xx)
-
-
-
-
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-        async imagePickerForAdditional() {
-
-            this.meter_number = this.meter_number.trim()
-            this.account_number = this.account_number.trim()
-            if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
-            } else {
-                // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
-
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
-
-
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
-                }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForAdditional(blob)
-            }
-
-
-        },
-
-
-        async doSomethingWithFilesimagePickerForAdditional(event) {
-            let imageFileName = this.generateRandomString()
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-additional');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // console.log(`${compressedFile.size / 50 / 50} MB`)
-
-                this.pic_of_additional = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_additional)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-
-                // console.log('account number ', this.account_number)
-                // console.log('pic_of_cwd ', this.pic_of_cwd)
-                // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Additional', this.pic_of_additional)
-                console.log(xx)
-
-
-
-
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
 
 
 
@@ -1180,7 +975,251 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Meter', this.pic_of_meter)
+                var xx = await uploadImage(this.userId, this.account_number, 'TokenRequest_Meter', this.pic_of_meter)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
+
+        async imagePickerForMeterInstallationPoint() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForMeterInstallationPoint(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForMeterInstallationPoint(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-meter-installation-point');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_meter_installation_point = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'TokenRequest_MeterInstPoint', this.pic_of_meter_installation_point)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
+
+
+
+
+
+
+
+
+        async imagePickerForBuilding() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForBuilding(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForBuilding(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-building');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_building = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'TokenRequest_Building', this.pic_of_building)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
+
+        async imagePickerForSeal() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForSeal(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForSeal(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-seal');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_seal = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'TokenRequest_Seal', this.pic_of_seal)
                 console.log(xx)
 
 
@@ -1197,901 +1236,7 @@ export default {
 
         // all test on compression comes here
 
-        async imagePickerForTheServiceWireFromPoleToMeteringPoint() {
 
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
-
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/jpeg' });
-            console.log(blob)
-
-
-
-            this.doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(blob)
-        },
-
-
-
-
-
-        async doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-the-service-wire-from-pole-to-metering-point');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // console.log(`${compressedFile.size / 50 / 50} MB`)
-
-                this.pic_of_the_service_wire_from_pole_to_metering_point = new File([compressedFile], `pictureOfTheServiceWireFromPole${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_the_service_wire_from_pole_to_metering_point)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-        // image picker for building
-        async imagePickerBuilding() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-
-            const file = blob;
-            this.doSomethingWithFilesImagePickerBuilding(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerBuilding(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-building');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-                console.log(compressedFile)
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_building = new File([compressedFile], `pictureOfTheBuilding${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_building)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // image picker for installation cut out metering point one
-        async imagePickerForInstallationCutOutMeteringPointOne() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point = new File([compressedFile], `pictureOfInstallation${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-        // image picker for installation cut out metering point one
-        async imagePickerForInstallationCutOutMeteringPointOne2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point2 = new File([compressedFile], `pictureOfInstallation2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-        // image picker for installation cut out metering point one3
-        async imagePickerForInstallationCutOutMeteringPointOne3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            console.log(blob)
-            this.doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne3(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInstallationCutOutMeteringPointOne3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-installation-cut-out-metering-point-one3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_installation_cutout_metering_point3 = new File([compressedFile], `pictureOfInstallation3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-        // pic of meter nameplate one
-        async imagePickerForMeteringNameplateOne() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate = new File([compressedFile], `meterNameplate${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-        // pic of meter nameplate one 2
-        async imagePickerForMeteringNameplateOne2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate2 = new File([compressedFile], `meterNameplate2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of meter nameplate one 3
-        async imagePickerForMeteringNameplateOne3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForMeteringNameplateOne3(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForMeteringNameplateOne3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-meter-nameplate-one3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_meter_nameplate3 = new File([compressedFile], `meterNameplate3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-
-
-        // pic of seal as met
-        async imagePickerForSealAsMet() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-
-            this.doSomethingWithFilesImagePickerForSealAsMet(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForSealAsMet(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-seal-as-met');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_seal_as_met = new File([compressedFile], `pictureOfSealAsMet${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of internal connection if seal is broken
-        async imagePickerForInternalConnectionIfSealIsBroken() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-internal-connection-if-seal-is-broken');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_internal_connection_if_seal_is_broken = new File([compressedFile], `pictureOfInternalConnection${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-        // pic of internal connection if seal is broken
-        async imagePickerForInternalConnectionIfSealIsBroken2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // // console.log(blob)
-
-            this.doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken2(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInternalConnectionIfSealIsBroken2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-internal-connection-if-seal-is-broken2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_internal_connection_if_seal_is_broken2 = new File([compressedFile], `pictureOfInternalConnection2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // pic of last bill vending receipt
-        async imagePickerForLastBillVendingReceipt() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt = new File([compressedFile], `lastBillReceipt${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error); 
-            }
-
-        },
-
-
-
-
-
-
-        // pic of last bill vending receipt2
-        async imagePickerForLastBillVendingReceipt2() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt2(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt2(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt2');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt2 = new File([compressedFile], `lastBillReceipt2${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-
-
-
-        // pic of last bill vending receipt3
-        async imagePickerForLastBillVendingReceipt3() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForLastBillVendingReceipt3(blob)
-        },
-
-        async doSomethingWithFilesImagePickerForLastBillVendingReceipt3(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-last-billing-vending-receipt3');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_last_bill_vending_receipt3 = new File([compressedFile], `lastBillReceipt3${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                // // console.log(this.pic_of_premises)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
-
-
-
-
-        // pic of invitation notice to customer
-        async imagePickerForInvitationNoticeToCustomer() {
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
-            }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/png' });
-            // console.log(blob)
-            this.doSomethingWithFilesImagePickerForInvitationNoticeToCustomer(blob)
-        },
-
-
-        async doSomethingWithFilesImagePickerForInvitationNoticeToCustomer(event) {
-
-            const imageFile = event;
-            // const imageFile = event.target.files[0];
-            // console.log('originalFile instanceof Blob', imageFile instanceof Blob); // true
-            // console.log(`originalFile size ${imageFile.size} MB`);
-
-            const options = {
-                maxSizeMB: 0.7,
-                initialQuality: 2,
-                maxWidthOrHeight: 500,
-                useWebWorker: true
-            }
-            try {
-                const output = document.getElementById('output-pic-of-invitation-notice-customer');
-
-                const compressedFile = await imageCompression(imageFile, options);
-                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
-                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
-
-                // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_invitation_notice_to_customer = new File([compressedFile], `invitationNoticeToCustomer${compressedFile.type.replace('image/', '.')}`)
-                if (compressedFile !== null) {
-                    output.src = URL.createObjectURL(compressedFile);
-                }
-                console.log(this.pic_of_invitation_notice_to_customer)
-
-            } catch (error) {
-                // console.log(error);
-            }
-
-        },
 
 
 
@@ -2100,27 +1245,20 @@ export default {
 
         async submit() {
             // get all the form value in the dynamic list 
-            let meter_number_list = this.getAllFormValues()
-            console.log(meter_number_list);
 
 
-            M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
-            this.hideLoader = false
-            this.business_unit = this.business_unit.trim()
-            this.type_of_infra = this.type_of_infra.trim()
-            this.duration_of_theft = this.duration_of_theft.trim()
-            this.undertaking_one = this.undertaking_one.trim()
-            this.customer_name = this.customer_name.trim()
-            this.address = this.address.trim()
-            this.feeder_name = this.feeder_name.trim()
-            this.dt_name = this.dt_name.trim()
-            this.alignment_status = this.alignment_status.trim()
-            this.recommended_tariff = this.recommended_tariff.trim()
-            this.meter_type_by_manufacturer = this.meter_type_by_manufacturer.trim()
-            this.credit_reading_on_meter = this.credit_reading_on_meter.trim()
-            this.further_remarks = this.further_remarks.trim()
-            this.phone_number = this.phone_number.trim()
-            this.inspection_conclusion = this.inspection_conclusion.trim()
+
+            // Add null checks before calling trim()
+            this.business_unit = (this.business_unit || '').trim()
+            this.undertaking_one = (this.undertaking_one || '').trim()
+            // this.customer_name = (this.customer_name || '').trim()
+            this.address = (this.address || '').trim()
+            this.feeder_name = (this.feeder_name || '').trim()
+            this.dt_name = (this.dt_name || '').trim()
+            this.further_remarks = (this.further_remarks || '').trim()
+            this.phone_number = (this.phone_number || '').trim()
+
+            
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -2132,34 +1270,21 @@ export default {
 
 
 
-
-            // Debug logging with explicit type and length information
-            console.log('business_unit:', `"${this.business_unit}"`, 'length:', this.business_unit.length)
-            console.log('type_of_infra:', `"${this.type_of_infra}"`, 'length:', this.type_of_infra.length)
-            console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
-
             // Check each condition separately
             const isBusinessUnitEmpty = this.business_unit === ''
-            const isTypeOfInfraDefault = this.type_of_infra === 'Type of Infraction *'
-            const isDurationDefault = this.duration_of_theft === 'Duration of theft *'
 
-            console.log('Conditions:', {
-                isBusinessUnitEmpty,
-                isTypeOfInfraDefault,
-                isDurationDefault
-            })
 
-            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault) {
+            if (isBusinessUnitEmpty) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
-            } else if (this.pic_of_bypass == '') {
-                M.toast({ html: '<b class="red-text">Please add pic of Bypass *</b>' })
-            } else if (this.pic_of_theft == '') {
-                M.toast({ html: '<b class="red-text">Please add pic of notification *</b>' })
             } else if (this.pic_of_meter == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Meter *</b>' })
+            } else if (this.pic_of_meter_installation_point == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Installation point *</b>' })
+            } else if (this.pic_of_building == '') {
                 M.toast({ html: '<b class="red-text">Please add pic of building *</b>' })
-            } else if (this.pic_of_additional == '') {
-                M.toast({ html: '<b class="red-text">Please add pic of Seal as met *</b>' })
+            } else if (this.pic_of_seal == '') {
+                M.toast({ html: '<b class="red-text">Please add pic of Seal *</b>' })
             } else if (this.further_remarks == '') {
                 M.toast({ html: '<b class="red-text">Please add Further remarks *</b>' })
             } else {
@@ -2170,8 +1295,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2181,7 +1306,6 @@ export default {
 
                         },
                         body: JSON.stringify({
-                            serviceType: this.service_type,
                             accountNo: this.account_number,
                             meterNo: this.meter_number,
                             accountType: this.account_type,
@@ -2191,19 +1315,18 @@ export default {
                             bu: this.business_unit,
                             ut: this.undertaking_one,
                             dt: this.dt_name,
+                            feederName: this.feeder_name,
+                            email: this.customer_email,
+                            requestType: this.request_type,
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
                             location: this.location,
-                            typeOfInfraction: this.type_of_infra,
-                            durationOfTheft: this.duration_of_theft,
-                            negReading: this.negative_reading,
-                            affectedMeters: meter_number_list,
-                            picTheft: this.pic_of_theft.name,
-                            picBypass: this.pic_of_bypass.name,
-                            picAdditional: this.pic_of_additional.name,
-                            picMeter: this.pic_of_meter.name,
-                            furtherRemark: this.further_remarks,
+                            picOfMeter: this.pic_of_meter.name,
+                            picOfMeterInstallationPoint: this.pic_of_meter_installation_point.name,
+                            picOfBuilding: this.pic_of_building.name,
+                            picOfSeal: this.pic_of_seal.name,
+                            reqTrackingId: this.tracking_id,
                         }),
                     })
 

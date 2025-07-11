@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _cedb2656 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _098aca9e = () => interopDefault(import('../pages/crmd/index.vue' /* webpackChunkName: "pages/crmd/index" */))
+const _028ba116 = () => interopDefault(import('../pages/customer_categorization/index.vue' /* webpackChunkName: "pages/customer_categorization/index" */))
 const _724fad34 = () => interopDefault(import('../pages/customer_complaints/index.vue' /* webpackChunkName: "pages/customer_complaints/index" */))
 const _39223022 = () => interopDefault(import('../pages/customer_details_validation/index.vue' /* webpackChunkName: "pages/customer_details_validation/index" */))
 const _b123b5d0 = () => interopDefault(import('../pages/customer_mapping/index.vue' /* webpackChunkName: "pages/customer_mapping/index" */))
@@ -66,6 +67,10 @@ export const routerOptions = {
     path: "/crmd",
     component: _098aca9e,
     name: "crmd"
+  }, {
+    path: "/customer_categorization",
+    component: _028ba116,
+    name: "customer_categorization"
   }, {
     path: "/customer_complaints",
     component: _724fad34,

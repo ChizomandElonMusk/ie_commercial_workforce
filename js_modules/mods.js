@@ -29,7 +29,7 @@ export async function checkCustomerMeterNumber(meterNumber, internal) {
     let users_meter_number = response.meterNumber;
 
     if (users_meter_number == "") {
-      if(internal == true){
+      if (internal == true) {
         M.toast({
           html: `<b class="yellow-text">Please wait</b>`,
         });
@@ -89,11 +89,46 @@ export async function getCustomerInfoApi(accountNumber) {
   }
 }
 
+export async function getCustomerInfoApi2(accountNumber) {
+  M.toast({ html: `<b class="yellow-text">Please wait</b>` });
+  let token = localStorage.getItem("token");
+  var customer_account_number = "";
+  customer_account_number = accountNumber;
+  // "https://api.ikejaelectric.com/ie/harmony/v1/customer/info",
+  // use the customer2 api here when you wake up by God's grace. Jesus is Lord
+
+  try {
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+        customer_account_number,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + token,
+          Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const response = await rawResponse.json();
+    console.log(`This is the response ${response}`);
+    if (response.status == 500) {
+      await logOut();
+    } else {
+      return response;
+    }
+  } catch (error) {
+    console.log(error);
+    M.toast({ html: `<b class="red-text">${error}</b>` });
+  }
+}
+
 // this is DT customerInfoApi 43901910984
 export async function getIDBCustomerInfoApi(accountNumber) {
   console.log(`this is the meter number from the mode ${accountNumber}`);
   M.toast({ html: `<b class="yellow-text">Please wait</b>` });
-  let token = localStorage.getItem('token')
+  let token = localStorage.getItem("token");
   console.log(token);
   var CustomerAccountNumber = "";
   // CustomerAccountNumber = {
@@ -102,12 +137,13 @@ export async function getIDBCustomerInfoApi(accountNumber) {
   // CustomerAccountNumber = JSON.stringify(CustomerAccountNumber);
   try {
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo?meterNo="+accountNumber,
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo?meterNo=" +
+        accountNumber,
       // "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo?meterNo="+accountNumber,
       {
         method: "GET",
         headers: {
-          Authorization: "Bearer "+ token,
+          Authorization: "Bearer " + token,
           Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
           "Content-Type": "application/json",
         },
@@ -127,19 +163,90 @@ export async function getIDBCustomerInfoApi(accountNumber) {
   }
 }
 
+export async function getRequestDetailsWithTrackingId(trackingId) {
+  console.log("this is the trackingId", trackingId);
+
+  try {
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+        trackingId,
+      {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+          Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    const response = await rawResponse.json();
+    // return response
+
+    // console.log(response)
+
+    // console.log(response.accountNumber)
+    console.log(response);
+
+    // let users_meter_number = response.meterNumber;
+
+    // if (users_meter_number == "") {
+    //   if(internal == true){
+    //     M.toast({
+    //       html: `<b class="yellow-text">Please wait</b>`,
+    //     });
+    //   } else {
+    //     M.toast({
+    //       html: `<b class="red-text">Please check meter number agian</b>`,
+    //     });
+    //   }
+    //   return response;
+    // } else {
+    //   if (response.status == 500) {
+    //     await logOut();
+    //   } else {
+    //     return response;
+    //   }
+    // }
+
+    // if (users_meter_number == "") {
+    //   if(internal == true){
+    //     M.toast({
+    //       html: `<b class="yellow-text">Please wait</b>`,
+    //     });
+    //   } else {
+    //     M.toast({
+    //       html: `<b class="red-text">Please check meter number agian</b>`,
+    //     });
+    //   }
+    //   return response;
+    // } else {
+    //   if (response.status == 500) {
+    //     await logOut();
+    //   } else {
+    //     return response;
+    //   }
+    // }
+
+    return response;
+  } catch (error) {
+    console.log(error);
+    // console.log(this.service_type);
+    M.toast({ html: `<b class="red-text">${error}</b>` });
+  }
+}
+
 export function generateRandomString() {
-  let result = '';
-  let new_date = Date()
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = "";
+  let new_date = Date();
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   const charactersLength = characters.length;
   for (let i = 0; i < 10; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   return result;
 }
-
-
-
 
 export async function uploadImage(userId, accountNumber, docType, file) {
   // run an open minded check on the accountNumber/Meternumber on next version control (11th April 11:52 2025)
@@ -163,7 +270,8 @@ export async function uploadImage(userId, accountNumber, docType, file) {
   try {
     // 92802433505
     // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {
         method: "POST",
         headers: {
@@ -200,11 +308,51 @@ export async function getPaymentHistory(meter_numberX, date_from, date_to) {
   // }
   // meter_number = JSON.stringify(meter_number)
   // let meter_number = '0102111612'
-  let meter_number = meter_numberX
-  let x = await checkCustomerMeterNumber(meter_number, true)
+  let meter_number = meter_numberX;
+  let x = await checkCustomerMeterNumber(meter_number, true);
   console.log(`this is the account number ${x}`);
 
-  if(x.meterNumber == '' || x == 'undefined') {
+  if (x.meterNumber == "" || x == "undefined") {
+    try {
+      console.log(date_from, date_to);
+      // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
+      const rawResponse = await fetch(
+        "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" +
+          meter_number +
+          "&startDate=" +
+          date_from +
+          "&endDate=" +
+          date_to,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.token,
+            Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
+          },
+        }
+      );
+
+      const response = await rawResponse.json();
+      // console.log(response)
+      if (response.status == 500) {
+        await logOut();
+      } else {
+        return response;
+      }
+
+      // console.log(response)
+
+      // console.log(response.passwords)
+      // console.log(response)
+      // return response
+    } catch (error) {
+      console.log(error);
+      M.toast({ html: `<b class="red-text">${error}</b>` });
+    }
+  } else if (x.accountNumber != "" && x.code == "00") {
+    meter_number = x.accountNumber;
 
     try {
       console.log(date_from, date_to);
@@ -226,7 +374,7 @@ export async function getPaymentHistory(meter_numberX, date_from, date_to) {
           },
         }
       );
-  
+
       const response = await rawResponse.json();
       // console.log(response)
       if (response.status == 500) {
@@ -234,9 +382,9 @@ export async function getPaymentHistory(meter_numberX, date_from, date_to) {
       } else {
         return response;
       }
-  
+
       // console.log(response)
-  
+
       // console.log(response.passwords)
       // console.log(response)
       // return response
@@ -244,51 +392,7 @@ export async function getPaymentHistory(meter_numberX, date_from, date_to) {
       console.log(error);
       M.toast({ html: `<b class="red-text">${error}</b>` });
     }
-
-  }else if(x.accountNumber != '' && x.code == '00') {
-    meter_number = x.accountNumber
-
-    try {
-      console.log(date_from, date_to);
-      // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=' + meter_number + '&startDate=01/15/2024&endDate=03/30/2024', {
-      const rawResponse = await fetch(
-        "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getPaymentHistory?accountNumber=" +
-          meter_number +
-          "&startDate=" +
-          date_from +
-          "&endDate=" +
-          date_to,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + localStorage.token,
-            Auth: "Bearer c49cf8b4-56bf-3bc6-bd6f-d2ae876cc2e6",
-          },
-        }
-      );
-  
-      const response = await rawResponse.json();
-      // console.log(response)
-      if (response.status == 500) {
-        await logOut();
-      } else {
-        return response;
-      }
-  
-      // console.log(response)
-  
-      // console.log(response.passwords)
-      // console.log(response)
-      // return response
-    } catch (error) {
-      console.log(error);
-      M.toast({ html: `<b class="red-text">${error}</b>` });
-    }
-  }  
-
-  
+  }
 }
 
 export async function getBillingHistory(meter_number, date_from, date_to) {
@@ -415,8 +519,6 @@ export async function getDTSearch(searchString) {
   }
 }
 
-
-
 export async function getDCUSearch(searchString) {
   searchString = searchString.toLowerCase();
 
@@ -452,9 +554,6 @@ export async function getDCUSearch(searchString) {
     M.toast({ html: `<b class="red-text">${error}</b>` });
   }
 }
-
-
-
 
 export async function getEsrFormHistory(date_from, date_to) {
   // let token = localStorage.getItem('jdotwdott')
@@ -546,7 +645,7 @@ export async function logOut() {
 //         const long = 0;
 //         const lat = 0;
 //         resolve({ long, lat });
-        
+
 //         // resolve(error);
 //       },
 //       { enableHighAccuracy: true, timeout: 7000, maximumAge: 0 }
@@ -586,14 +685,12 @@ export async function logOut() {
 //         // this.long = long
 //         // this.lat = lat
 //         // Do something with the coordinates
-//         return { long, lat }  
+//         return { long, lat }
 //       })
 //       .catch(error => {
 //         console.error('Error getting coordinates:', error)
 //       })
 // }
-
-
 
 export function getCoordinates() {
   return new Promise((resolve, reject) => {
@@ -626,8 +723,13 @@ export function getCoordinates() {
         handleError(error); // Show error toast
 
         // Handle specific errors
-        if (error.code === error.POSITION_UNAVAILABLE || error.message.includes("kCLErrorLocationUnknown")) {
-          console.warn("Location unknown. Retrying or falling back to default values.");
+        if (
+          error.code === error.POSITION_UNAVAILABLE ||
+          error.message.includes("kCLErrorLocationUnknown")
+        ) {
+          console.warn(
+            "Location unknown. Retrying or falling back to default values."
+          );
           resolve({ long: 0, lat: 0 }); // Resolve with default values
         } else {
           resolve({ long: 0, lat: 0 }); // Resolve with default values for other errors
@@ -672,7 +774,7 @@ export function getCurrentPosition() {
       return { long, lat };
     })
     .catch((error) => {
-      console.error('Error getting coordinates:', error);
+      console.error("Error getting coordinates:", error);
       return { long: 0, lat: 0 }; // Fallback to default values
     });
 }

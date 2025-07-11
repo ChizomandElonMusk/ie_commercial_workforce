@@ -14,10 +14,21 @@
 
           <div class="col s12 center">
             <nuxt-link to="/crmd">
+              <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
+                <span class="white-text">
+                  
+                  <h6 style="font-weight: 900;">CRMD</h6>
+                </span>
+              </div>
+            </nuxt-link>
+          </div>
+
+          <div class="col s12 center">
+            <nuxt-link to="/customer_categorization">
               <div class="card-panel orange">
                 <span class="white-text">
                   
-                  <h6>CRMD</h6>
+                  <h6>Customer Categorization</h6>
                 </span>
               </div>
             </nuxt-link>

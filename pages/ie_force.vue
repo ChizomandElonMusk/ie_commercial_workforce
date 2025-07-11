@@ -13,7 +13,7 @@
 
             <div class="col s6">
                 <nuxt-link to="/dashboard_ie_force">
-                    <div class="card-panel orange">
+                    <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                         <span class="white-text">
                             <img src="~/assets/images/forms.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">Forms</h6>
@@ -24,7 +24,7 @@
 
             <div class="col s6">
                 <nuxt-link to="/esr_form_history">
-                    <div class="card-panel orange">
+                    <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                         <span class="white-text">
                             <img src="~/assets/images/history.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">ESR Form History</h6>
@@ -39,7 +39,7 @@
 
             <div class="col s6">
                 <nuxt-link to="/dt_assigned">
-                    <div class="card-panel orange">
+                    <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                         <span class="white-text">
                             <img src="~/assets/images/assigned_dt.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">DTs Assigned</h6>
@@ -50,7 +50,7 @@
 
             <div class="col s6">
                 <nuxt-link to="../e_services">
-                    <div class="card-panel orange">
+                    <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                         <span class="white-text">
                             <img src="~/assets/images/e_service.svg" class="responsive-img" style="max-height: 50px;" alt="">
                             <h6 style="font-size: 12px;">E-Services</h6>

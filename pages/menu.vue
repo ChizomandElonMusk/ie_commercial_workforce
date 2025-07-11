@@ -25,7 +25,7 @@
 
           <div class="col s12 center">
             <nuxt-link to="/ie_force">
-              <div class="card-panel grey">
+              <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                 <span class="white-text">
                   <!-- <img src="~/assets/images/logo.png" style="max-width: 50px;" alt=""> -->
                   <img src="~/assets/images/ie_force.svg" style="max-width: 50px;" alt="">
