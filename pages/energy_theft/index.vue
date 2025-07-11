@@ -411,7 +411,7 @@
                                     <!-- Fomerly Additional Pic -->
                                     Seal as met (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForAdditional()">
+                                <button class="btn red btn-large" @click="imagePickerForTheft()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -421,7 +421,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-additional" />
+                                <img class=" responsive-img" id="output-pic-of-theft" />
                             </div>
                         </div>
 
@@ -437,7 +437,7 @@
                                     <!-- Formerly Picture of theft -->
                                     Additional Picture 1 (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                <button class="btn red btn-large" @click="imagePickerForAdditional()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -447,7 +447,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
+                                <img class=" responsive-img" id="output-pic-of-additional" />
                             </div>
                         </div>
 
@@ -461,7 +461,7 @@
                                     <!-- Formerly Picture of theft -->
                                     Additional Picture 2 (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                <button class="btn red btn-large" @click="imagePickerForAdditionalPic2()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -471,7 +471,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
+                                <img class=" responsive-img" id="output-pic-of-additional-pic2" />
                             </div>
                         </div>
 
@@ -575,6 +575,7 @@ export default {
             pic_of_theft: '',
             pic_of_bypass: '',
             pic_of_additional: '',
+            pic_of_additional_pic2: '',
             pic_of_meter: '',
             negative_reading: false,
             pumping_maching_on_direct: false,
@@ -675,6 +676,7 @@ export default {
                 this.pumping_maching_on_direct = false
             } else if (newVal === 'Pumping Machine On Direct') {
                 this.pumping_maching_on_direct = true
+                this.negative_reading = false
             } else {
                 this.negative_reading_value = '0'
                 this.negative_reading = false
@@ -955,6 +957,90 @@ export default {
             }
             return result;
         },
+
+
+
+
+
+        async imagePickerForAdditionalPic2() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForAdditionalPic2(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForAdditionalPic2(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-additional-pic2');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_additional_pic2 = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_additional_pic2)
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Additional1', this.pic_of_additional_pic2)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
+        
 
         async imagePickerForTheft() {
 
@@ -2222,6 +2308,8 @@ export default {
             console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
 
             // Check each condition separately
+            const isCustomerEmail = this.customer_email === ''
+            const isCustomerPhone = this.customer_phone_number === ''
             const isBusinessUnitEmpty = this.business_unit === ''
             const isTypeOfInfraDefault = this.type_of_infra === 'Type of Infraction *'
             const isDurationDefault = this.duration_of_theft === 'Duration of theft *'
@@ -2232,7 +2320,7 @@ export default {
                 isDurationDefault
             })
 
-            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault) {
+            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault || isCustomerEmail || isCustomerPhone) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
             } else if (this.pic_of_bypass == '') {
@@ -2253,8 +2341,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2276,7 +2364,9 @@ export default {
                             dt: this.dt_name,
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
-                            phoneNo: this.phone_number,
+                            phoneNo: this.customer_phone_number,
+                            customerEmail: this.customer_email,
+                            customerPhoneNo: this.customer_phone_number,
                             location: this.location,
                             typeOfInfraction: this.type_of_infra,
                             durationOfTheft: this.duration_of_theft,
@@ -2285,6 +2375,7 @@ export default {
                             picTheft: this.pic_of_theft.name,
                             picBypass: this.pic_of_bypass.name,
                             picAdditional: this.pic_of_additional.name,
+                            picAdditional1: this.pic_of_additional_pic2.name,
                             picMeter: this.pic_of_meter.name,
                             furtherRemark: this.further_remarks,
                         }),

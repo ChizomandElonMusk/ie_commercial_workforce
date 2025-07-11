@@ -223,6 +223,12 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col s12">
+                                <input type="text" placeholder="Location" v-model="location" disabled>
+                            </div>
+                        </div>
+
 
 
 
@@ -479,7 +485,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
-            tracking_id: '1749037629235458',
+            tracking_id: '1752241720636548',
             account_number: '',
             meter_number: '',
             account_type: '',
@@ -677,7 +683,8 @@ export default {
                 this.business_unit = response.bu
                 this.account_status = response.accountStatus
                 this.undertaking_one = response.ut
-                this.dt_name = response.dtName
+                this.dt_name = response.dt
+                this.request_type = response.dt
                 this.phone_number = response.mobileNumber
                 this.dt_no = response.dtNo
 
@@ -717,6 +724,8 @@ export default {
                 this.meter_number = response[0].meterNo
                 this.phone_number = response[0].phoneNo
                 this.dt_no = response[0].dtNo
+                this.dt_name = response[0].dt
+                this.request_type = "(Fix this part)"
 
 
             } catch (error) {
@@ -1321,6 +1330,7 @@ export default {
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
+                            // location: "3.334432, 6.322344",
                             location: this.location,
                             picOfMeter: this.pic_of_meter.name,
                             picOfMeterInstallationPoint: this.pic_of_meter_installation_point.name,
