@@ -204,12 +204,6 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <!-- DT Capacity -->
-                            <div class="col s12">
-                                <input type="text" placeholder="DT Capacity" v-model="dt_capacity" disabled>
-                            </div>
-                        </div>
 
 
 
@@ -256,7 +250,7 @@
 
                         <!-- Single phase logic -->
                         <div class="row" v-if="single_phase_check == true">
-                            <div class="col s12">
+                            <!-- <div class="col s12">
                                 <h2>
                                     Single phase
                                 </h2>
@@ -266,18 +260,16 @@
                                 {{ r_y_b }} x 220 x 0.95 x {{ feeder_availability }} / 1000
                                 <br>
                                 {{ avgLoadForSinglePhase }}
-                                <!-- {{ (r_y_b) * 220 * 0.95 * feeder_availability / 1000 }} -->
-                            </div>
+                            </div> -->
 
-                            <div class="col s12">
+                            <!-- <div class="col s12">
                                 <b>Peak Load Calculation:</b> <br>
                                 (R/Y/B) * 220 * 0.95 * Feeder availability /1000
                                 <br>
                                 {{ r_y_b }} x 220 x 0.95 x 0.6 x {{ feeder_availability }} / 1000
                                 <br>
                                 {{ peakLoadForSinglePhase }}
-                                <!-- {{ (r_y_b) * 220 * 0.95 * 0.6 * feeder_availability / 1000 }} -->
-                            </div>
+                            </div> -->
 
                             <div class="col s12">
                                 <label for="r_y_b">R/Y/B</label>
@@ -364,23 +356,23 @@
                                 <h2>
                                     Three phase
                                 </h2>
-                                <b>Average Load Calculation:</b> <br>
+                                <!-- <b>Average Load Calculation:</b> <br>
                                 (R/Y/B) * 220 * 0.95 * Feeder availability /1000
                                 <br>
                                 ({{ r_box }} + {{ y_box }} + {{ b_box }}) x 220 x 0.95 x {{ feeder_availability }} /
                                 1000
                                 <br>
-                                {{ avgLoadForThreePhase }}
+                                {{ avgLoadForThreePhase }} -->
                             </div>
 
                             <div class="col s12">
-                                <b>Peak Load Calculation:</b> <br>
+                                <!-- <b>Peak Load Calculation:</b> <br>
                                 (R + Y + B) * 220 * 0.95 * Feeder availability /1000
                                 <br>
                                 ({{ r_box }} + {{ y_box }} + {{ b_box }}) x 220 x 0.95 x 0.6 x {{ feeder_availability }}
                                 / 1000
                                 <br>
-                                {{ peakLoadForThreePhase }}
+                                {{ peakLoadForThreePhase }} -->
                             </div>
 
                             <div class="col s12">
@@ -523,13 +515,13 @@
 
 
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col s12 input-field">
                                 <b style="font-weight: 600; font-size: 18px;">
                                     {{ total_kwh }}
                                 </b>
                             </div>
-                        </div>
+                        </div> -->
 
 
 
@@ -601,7 +593,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
-            account_number: '54150007976',
+            account_number: '0238111702748',
             meter_number: '',
             account_type: '',
             account_name: '',
@@ -1702,12 +1694,12 @@ export default {
             }
 
 
-
+            console.log('I made it here as well');
 
             // Debug logging with explicit type and length information
-            console.log('business_unit:', `"${this.business_unit}"`, 'length:', this.business_unit.length)
-            console.log('customer_wiring:', `"${this.customer_wiring}"`, 'length:', this.customer_wiring.length)
-            console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
+            // console.log('business_unit:', `"${this.business_unit}"`, 'length:', this.business_unit.length)
+            // console.log('customer_wiring:', `"${this.customer_wiring}"`, 'length:', this.customer_wiring.length)
+            // console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
 
             // Check each condition separately
             const isBusinessUnitEmpty = this.business_unit === ''
@@ -1719,34 +1711,45 @@ export default {
             if (isBusinessUnitEmpty) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
-            }
-
-            if (this.customer_wiring == 'Single-Phase') {
-                if (this.pic_of_the_ryb == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of R/Y/B *</b>' })
-                } else if (this.pic_of_the_n == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of N *</b>' })
-                } else if (this.pic_of_the_buidling == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of building *</b>' })
-                }
-            } else if (this.customer_wiring == 'Three-Phase') {
-                if (this.pic_of_the_r_threephase == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of R *</b>' })
-                } else if (this.pic_of_the_y_threephase == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of Y *</b>' })
-                } else if (this.pic_of_the_b_threephase == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of B *</b>' })
-                } else if (this.pic_of_the_n == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of N *</b>' })
-                } else if (this.pic_of_the_buidling == '') {
-                    M.toast({ html: '<b class="red-text">Please add pic of Building *</b>' })
-                }
-            } else if (this.total_kwh == 0) {
-                M.toast({ html: '<b class="red-text">Total KWH is below 0 *</b>' })
             } else {
 
 
+                if (this.customer_wiring == 'Single-Phase') {
+                    if (this.pic_of_the_ryb == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of R/Y/B *</b>' })
+                        return
+                    } else if (this.pic_of_the_n == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of N *</b>' })
+                        return
+                    } else if (this.pic_of_the_buidling == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of building *</b>' })
+                        return
+                    }
+                } else if (this.customer_wiring == 'Three-Phase') {
+                    if (this.pic_of_the_r_threephase == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of R *</b>' })
+                        return
+                    } else if (this.pic_of_the_y_threephase == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of Y *</b>' })
+                        return
+                    } else if (this.pic_of_the_b_threephase == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of B *</b>' })
+                        return
+                    } else if (this.pic_of_the_n == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of N *</b>' })
+                        return
+                    } else if (this.pic_of_the_buidling == '') {
+                        M.toast({ html: '<b class="red-text">Please add pic of Building *</b>' })
+                        return
+                    }
+                }
 
+
+                console.log('I got here in the sub');
+                console.log('I got here in the sub');
+                console.log('I got here in the sub');
+                console.log('I got here in the sub');
+                console.log('I got here in the sub');
 
 
 
@@ -1754,7 +1757,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerCategorization', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1777,6 +1780,7 @@ export default {
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             location: this.location,
+                            // location:  "3.334432, 6.322344",
                             loadStatus: this.load_type,
                             customerWiring: this.customer_wiring,
                             feederAvailability: this.feeder_availability,

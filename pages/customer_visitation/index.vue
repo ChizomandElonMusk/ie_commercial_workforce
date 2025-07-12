@@ -228,7 +228,7 @@
 
                         <div class="row">
                             <div class="col s12">
-                                <input type="text" v-model="phone_number" placeholder="Phone number">
+                                <input type="text" v-model="installation_date" placeholder="Installation Date" disabled>
                             </div>
                         </div>
 
@@ -269,12 +269,12 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <!-- DT Capacity -->
+                        <!-- DT Capacity -->
+                        <!-- <div class="row">
                             <div class="col s12">
                                 <input type="text" placeholder="DT Capacity" v-model="dt_capacity" disabled>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="row">
                             <!-- Customer Email -->
@@ -286,7 +286,7 @@
                         <div class="row">
                             <!-- Customer Phone Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="Customer Phone Number" v-model="customer_phone_number">
+                                <input type="text" placeholder="Customer Phone Number *" v-model="customer_phone_number">
                             </div>
                         </div>
                         <!-- end of new field -->
@@ -473,7 +473,7 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect
-                                    :options="['Access Denied', 'Broken Seal', 'Demolished Building', 'Further Checks Required', 'Meter Okaay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
+                                    :options="['Access Denied', 'Broken Seal', 'Demolished Building', 'Meter Retrieved', 'Further Checks Required', 'Meter Okay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
                                     :default="'Inspection Conclusion *'" class=""
                                     v-model="type_of_inspection_conclusion" />
                             </div>
@@ -589,7 +589,7 @@
                                     <!-- Picture of the service wire from pole metering point -->
                                     Additional Picture 
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForPremises()">
+                                <button class="btn red btn-large" @click="imagePickerForAdditionalPic()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -599,7 +599,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-premises" />
+                                <img class=" responsive-img" id="output-pic-of-additional-pic" />
                             </div>
                         </div>
 
@@ -666,7 +666,7 @@
 import imageCompression from 'browser-image-compression';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
+import { checkCustomerMeterNumber, getCustomerInfoApi2, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
 
 export default {
@@ -689,6 +689,7 @@ export default {
             account_type: '',
             account_name: '',
             account_status: '',
+            installation_date: '',
             dt_no: '',
             tarrif: '',
             address: '',
@@ -957,7 +958,7 @@ export default {
         async getCustomerInfo(accountNumber) {
 
             try {
-                let response = await getCustomerInfoApi(accountNumber)
+                let response = await getCustomerInfoApi2(accountNumber)
                 console.log(response)
                 this.printCurrentPosition()
 
@@ -971,6 +972,13 @@ export default {
                 this.dt_name = response.dtName
                 this.phone_number = response.mobileNumber
                 this.dt_no = response.dtNo
+                this.feeder_name = response.feederName
+                this.meter_manufacturer = response.manufacturer
+                this.meter_type = response.meterModel
+                this.wiring_mode = response.wiringMode
+                this.customer_email = response.email
+                this.customer_phone_number = response.mobileNumber
+                this.installation_date = response.installationDate
 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -1242,6 +1250,87 @@ export default {
             }
 
         },
+
+
+
+        async imagePickerForAdditionalPic() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForAdditionalPic(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForAdditionalPic(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-additional-pic');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_additional_pic = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_additional_pic)
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Additional', this.pic_of_additional_pic)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
 
 
 
@@ -2499,7 +2588,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.customer_phone_number == '') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
@@ -2516,8 +2605,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2554,10 +2643,12 @@ export default {
                             physicalCustomerAddress: this.physical_customer_address,
                             isMeterByPassed: this.is_meter_bypassed,
                             customerComplaint: this.customer_complaint,
+                            inspectionConclusion: this.type_of_inspection_conclusion,
                             otherRemarks: this.other_remarks,
                             picPremise: this.pic_of_premise.name,
                             picPaymentReceipt: this.pic_of_payment_receipt.name,
-                            picMeters: this.pic_of_meter.name
+                            picMeters: this.pic_of_meter.name,
+                            picAdditional: this.pic_of_additional_pic.name
                         }),
                     })
 

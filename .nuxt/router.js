@@ -31,6 +31,7 @@ const _5de6653c = () => interopDefault(import('../pages/non_inclusion_capture/in
 const _57e91787 = () => interopDefault(import('../pages/none_vending_cv/index.vue' /* webpackChunkName: "pages/none_vending_cv/index" */))
 const _6e306bf8 = () => interopDefault(import('../pages/payment-channel.vue' /* webpackChunkName: "pages/payment-channel" */))
 const _18dc6b00 = () => interopDefault(import('../pages/sent.vue' /* webpackChunkName: "pages/sent" */))
+const _0e434446 = () => interopDefault(import('../pages/sent_tracking.vue' /* webpackChunkName: "pages/sent_tracking" */))
 const _08a55880 = () => interopDefault(import('../pages/signup.vue' /* webpackChunkName: "pages/signup" */))
 const _1954fefc = () => interopDefault(import('../pages/suspended_cv/index.vue' /* webpackChunkName: "pages/suspended_cv/index" */))
 const _7cb80958 = () => interopDefault(import('../pages/token_request/index.vue' /* webpackChunkName: "pages/token_request/index" */))
@@ -167,6 +168,10 @@ export const routerOptions = {
     path: "/sent",
     component: _18dc6b00,
     name: "sent"
+  }, {
+    path: "/sent_tracking",
+    component: _0e434446,
+    name: "sent_tracking"
   }, {
     path: "/signup",
     component: _08a55880,

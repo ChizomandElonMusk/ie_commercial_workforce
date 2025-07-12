@@ -159,9 +159,8 @@
                         </div>
 
                         <div class="row">
-                            <!-- DT Capacity -->
                             <div class="col s12">
-                                <input type="text" placeholder="DT Capacity" v-model="dt_capacity" disabled>
+                                <input type="text" v-model="installation_date" placeholder="Installation Date" disabled>
                             </div>
                         </div>
 
@@ -175,7 +174,7 @@
                         <div class="row">
                             <!-- Customer Phone Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="Customer Phone Number" v-model="customer_phone_number">
+                                <input type="text" placeholder="Customer Phone Number *" v-model="customer_phone_number">
                             </div>
                         </div>
                         <!-- end of new field -->
@@ -567,6 +566,7 @@ export default {
             type_of_infra: '',
             undertaking_one: '',
             dt_name: '',
+            installation_date: '',
             phone_number: '',
             location: '',
             duration_of_theft: '',
@@ -764,6 +764,8 @@ export default {
                 this.meter_manufacturer = response.manufacturer
                 this.wiring_mode = response.wiringMode
                 this.meter_type = response.meterModel
+                this.installation_date = response.installationDate
+
 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -2308,7 +2310,7 @@ export default {
             console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
 
             // Check each condition separately
-            const isCustomerEmail = this.customer_email === ''
+            
             const isCustomerPhone = this.customer_phone_number === ''
             const isBusinessUnitEmpty = this.business_unit === ''
             const isTypeOfInfraDefault = this.type_of_infra === 'Type of Infraction *'
@@ -2320,7 +2322,7 @@ export default {
                 isDurationDefault
             })
 
-            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault || isCustomerEmail || isCustomerPhone) {
+            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault || isCustomerPhone) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
             } else if (this.pic_of_bypass == '') {
@@ -2368,6 +2370,7 @@ export default {
                             customerEmail: this.customer_email,
                             customerPhoneNo: this.customer_phone_number,
                             location: this.location,
+                            // location:  "3.334432, 6.322344",
                             typeOfInfraction: this.type_of_infra,
                             durationOfTheft: this.duration_of_theft,
                             negReading: this.negative_reading,
@@ -2387,7 +2390,8 @@ export default {
 
                     if (response.code == '00') {
                         this.hideLoader = true
-                        this.$router.push('../sent')
+                        localStorage.setItem('tracking_id', response.trackingId)
+                        this.$router.push('../sent_tracking')
                         localStorage.setItem('service_type', '')
                         localStorage.setItem('meter_number', '')
                         localStorage.setItem('account_number', '')

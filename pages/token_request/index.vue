@@ -722,10 +722,13 @@ export default {
                 this.undertaking_one = response[0].ut
                 this.feeder_name = response[0].feederName
                 this.meter_number = response[0].meterNo
+                this.meter_type = response[0].meterType
+                this.meter_manufacturer = response[0].meterManufacturer
+                this.wiring_mode = response[0].wiringMode
                 this.phone_number = response[0].phoneNo
                 this.dt_no = response[0].dtNo
                 this.dt_name = response[0].dt
-                this.request_type = "(Fix this part)"
+                this.request_type = response[0].reqType
 
 
             } catch (error) {

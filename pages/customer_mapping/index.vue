@@ -350,7 +350,7 @@
                                     <!-- Formerly Picture of theft -->
                                     Picture of Building (*)
                                 </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                <button class="btn red btn-large" @click="imagePickerForBuilding()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
@@ -360,7 +360,7 @@
                         <!-- output for pic of the service wire from pole to metering point -->
                         <div class="row">
                             <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
+                                <img class=" responsive-img" id="output-pic-of-building" />
                             </div>
                         </div>
 
@@ -482,8 +482,8 @@ export default {
 
 
 
-            pic_of_the_service_wire_from_pole_to_metering_point: '',
-            pic_of_building: null,
+            // pic_of_the_service_wire_from_pole_to_metering_point: '',
+            pic_of_building: '',
             pic_of_installation_cutout_metering_point: null,
             pic_of_installation_cutout_metering_point2: '',
             pic_of_installation_cutout_metering_point3: '',
@@ -916,40 +916,61 @@ export default {
         },
 
 
-
-        // all test on compression comes here
-
-        async imagePickerForTheServiceWireFromPoleToMeteringPoint() {
-
-            // Call the element loader after the app has been rendered the first time
-            defineCustomElements(window);
-
-            const image = await Camera.getPhoto({
-                quality: 100,
-                allowEditing: false,
-                resultType: CameraResultType.Base64
-            });
-
-
-            const rawData = window.atob(image.base64String);
-            const bytes = new Array(rawData.length);
-            for (var x = 0; x < rawData.length; x++) {
-                bytes[x] = rawData.charCodeAt(x);
+        generateRandomString() {
+            let result = '';
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const charactersLength = characters.length;
+            for (let i = 0; i < 10; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
-            const arr = new Uint8Array(bytes);
-            const blob = new Blob([arr], { type: 'image/jpeg' });
-            console.log(blob)
-
-
-
-            this.doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(blob)
+            return result;
         },
 
 
 
+        // all test on compression comes here
+
+        
 
 
-        async doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(event) {
+
+        async imagePickerForBuilding() {
+
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForBuilding(blob)
+            }
+
+
+        },
+
+
+        async doSomethingWithFilesimagePickerForBuilding(event) {
+            let imageFileName = this.generateRandomString()
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
@@ -961,7 +982,7 @@ export default {
                 useWebWorker: true
             }
             try {
-                const output = document.getElementById('output-pic-of-the-service-wire-from-pole-to-metering-point');
+                const output = document.getElementById('output-pic-of-building');
 
                 const compressedFile = await imageCompression(imageFile, options);
                 // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
@@ -969,11 +990,21 @@ export default {
 
                 // console.log(`${compressedFile.size / 50 / 50} MB`)
 
-                this.pic_of_the_service_wire_from_pole_to_metering_point = new File([compressedFile], `pictureOfTheServiceWireFromPole${compressedFile.type.replace('image/', '.')}`)
-                console.log(this.pic_of_the_service_wire_from_pole_to_metering_point)
+                this.pic_of_building = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_theft)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
                 }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_cwd ', this.pic_of_cwd)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'CustomerMapping_Building', this.pic_of_building)
+                console.log(xx)
+
+
+
+
 
             } catch (error) {
                 // // console.log(error);
@@ -1029,7 +1060,7 @@ export default {
                 console.log(compressedFile)
 
                 // await uploadToServer(compressedFile); // write your own logic
-                this.pic_of_building = new File([compressedFile], `pictureOfTheBuilding${compressedFile.type.replace('image/', '.')}`)
+                this.pic_of_building = new File([compressedFile], `CustomerMapping_Building${compressedFile.type.replace('image/', '.')}`)
                 console.log(this.pic_of_building)
                 if (compressedFile !== null) {
                     output.src = URL.createObjectURL(compressedFile);
@@ -2008,7 +2039,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.pic_of_building == '') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
@@ -2019,8 +2050,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2052,6 +2083,7 @@ export default {
                             proposedUt: this.proposed_ut,
                             proposedBu: this.proposed_bu,
                             proposedFeederBand: this.proposed_feeder_band,
+                            picOfBuilding: this.pic_of_building.name,
                             mappingStatus: this.mapping_status
                         }),
                     })

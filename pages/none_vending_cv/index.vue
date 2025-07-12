@@ -2112,6 +2112,7 @@ export default {
                             phoneNo: this.phone_number,
                             location: this.location,
                             validationOutcome: this.validation_outcomes,
+                            additionalComment: this.remarks,
                             picMeters: this.pic_of_meter.name,
                             picApartment: this.pic_of_apartment.name,
                             picApartmentDisconnection: this.pic_of_diconnection.name,
