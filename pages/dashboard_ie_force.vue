@@ -109,7 +109,7 @@
               <div class="card-panel " style="background: linear-gradient(to right, #E75309, #C60606);">
                 <span class="white-text">
                   
-                  <h6 class="white-text">Customer Complaints</h6>
+                  <h6 style="font-weight: 900;">Customer Complaints</h6>
                 </span>
               </div>
             </nuxt-link>

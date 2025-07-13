@@ -353,9 +353,9 @@
                         <!-- Three phase logic -->
                         <div class="row" v-if="three_phase_check == true">
                             <div class="col s12">
-                                <h2>
+                                <!-- <h2>
                                     Three phase
-                                </h2>
+                                </h2> -->
                                 <!-- <b>Average Load Calculation:</b> <br>
                                 (R/Y/B) * 220 * 0.95 * Feeder availability /1000
                                 <br>
@@ -737,9 +737,40 @@ export default {
     },
 
     computed: {
+        // avgLoadForSinglePhase() {
+        //     const r_y_b = parseFloat(this.r_y_b) || 0;
+        //     const feeder = parseFloat(this.feeder_availability) || 0;
+        //     console.log((r_y_b) * 220 * 0.95 * feeder / 1000);
+        //     return (r_y_b) * 220 * 0.95 * feeder / 1000;
+        // },
+        // peakLoadForSinglePhase() {
+        //     const r_y_b = parseFloat(this.r_y_b) || 0;
+        //     const feeder = parseFloat(this.feeder_availability) || 0;
+        //     return (r_y_b) * 220 * 0.95 * 0.6 * feeder / 1000;
+        // },
+
+        // avgLoadForThreePhase() {
+        //     const r = parseFloat(this.r_box) || 0;
+        //     const y = parseFloat(this.y_box) || 0;
+        //     const b = parseFloat(this.b_box) || 0;
+        //     const feeder = parseFloat(this.feeder_availability) || 0;
+        //     return (r + y + b) * 220 * 0.95 * feeder / 1000;
+        // },
+        // peakLoadForThreePhase() {
+        //     const r = parseFloat(this.r_box) || 0;
+        //     const y = parseFloat(this.y_box) || 0;
+        //     const b = parseFloat(this.b_box) || 0;
+        //     const feeder = parseFloat(this.feeder_availability) || 0;
+        //     return (r + y + b) * 220 * 0.95 * 0.6 * feeder / 1000;
+        // }
+    },
+
+    methods: {
+
         avgLoadForSinglePhase() {
             const r_y_b = parseFloat(this.r_y_b) || 0;
             const feeder = parseFloat(this.feeder_availability) || 0;
+            console.log((r_y_b) * 220 * 0.95 * feeder / 1000);
             return (r_y_b) * 220 * 0.95 * feeder / 1000;
         },
         peakLoadForSinglePhase() {
@@ -761,10 +792,7 @@ export default {
             const b = parseFloat(this.b_box) || 0;
             const feeder = parseFloat(this.feeder_availability) || 0;
             return (r + y + b) * 220 * 0.95 * 0.6 * feeder / 1000;
-        }
-    },
-
-    methods: {
+        },
 
         addNewField() {
             this.formFields.push({
@@ -829,6 +857,10 @@ export default {
                             this.dt_no = response.dtNo
                             this.feeder_name = response.lastName
                             this.feeder_no = response.feederNo
+                            this.feeder_availability = response.feederAvailability
+                            let [firstValue, lastValue] = this.feeder_availability.split(":")
+                            this.feeder_availability = `${firstValue} : ${lastValue}`
+                            this.feeder_cap = response.feederCap
                             this.meter_manufacturer = response.manufacturer
                             this.wiring_mode = response.wiringMode
                             this.meter_type = response.meterModel
@@ -1110,6 +1142,16 @@ export default {
         async doSomethingWithFilesimagePickerForRYB(event) {
             let imageFileName = this.generateRandomString()
 
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
+
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
@@ -1184,8 +1226,17 @@ export default {
         async doSomethingWithFilesimagePickerForNSinglePhase(event) {
             let imageFileName = this.generateRandomString()
 
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1259,8 +1310,19 @@ export default {
         async doSomethingWithFilesimagePickerForBuildingSinglePhase(event) {
             let imageFileName = this.generateRandomString()
 
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1333,8 +1395,17 @@ export default {
         async doSomethingWithFilesimagePickerForRThreePhase(event) {
             let imageFileName = this.generateRandomString()
 
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1407,8 +1478,17 @@ export default {
         async doSomethingWithFilesimagePickerForYThreePhase(event) {
             let imageFileName = this.generateRandomString()
 
+            this.account_number = this.account_number.trim()
+            this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1484,6 +1564,13 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1558,6 +1645,13 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1632,6 +1726,13 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '') {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1672,6 +1773,8 @@ export default {
             let meter_number_list = this.getAllFormValues()
             console.log(meter_number_list);
 
+            console.log('this is feeder cap', this.feeder_cap);
+
 
             M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
             this.hideLoader = false
@@ -1703,17 +1806,18 @@ export default {
             console.log('I was called here');
             if (this.load_type == 'Average load') {
                 if (this.customer_wiring == 'Single-Phase') {
-                    this.total_kwh = this.avgLoadForSinglePhase
+                    this.total_kwh = this.avgLoadForSinglePhase()
+                    console.log('this.total_kwh:', this.total_kwh);
                 } else if (this.customer_wiring == 'Three-Phase') {
-                    this.total_kwh = this.avgLoadForThreePhase
+                    this.total_kwh = this.avgLoadForThreePhase()
                 } else {
                     M.toast({ html: '<b class="red-text">Select Customer Wiring *</b>' })
                 }
             } else if (this.load_type == 'Peak load') {
                 if (this.customer_wiring == 'Single-Phase') {
-                    this.total_kwh = this.peakLoadForSinglePhase
+                    this.total_kwh = this.peakLoadForSinglePhase()
                 } else if (this.customer_wiring == 'Three-Phase') {
-                    this.total_kwh = this.peakLoadForThreePhase
+                    this.total_kwh = this.peakLoadForThreePhase()
                 } else {
                     M.toast({ html: '<b class="red-text">Select Customer Wiring *</b>' })
                 }
@@ -1782,6 +1886,7 @@ export default {
 
 
 
+
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerCategorization', {
@@ -1825,7 +1930,7 @@ export default {
                             picNeutral: this.pic_of_the_n.name,
                             picRed: this.pic_of_the_r_threephase.name,
                             picYellow: this.pic_of_the_y_threephase.name,
-                            picBlue: this.pic_of_the_y_threephase.name,
+                            picBlue: this.pic_of_the_b_threephase.name,
                             picBuilding: this.pic_of_the_buidling.name,
                         }),
                     })

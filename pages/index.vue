@@ -27,7 +27,7 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <button class="red btn btn-large col s12" @click="signIn" :disabled="disabled">
+                <button class="red btn btn-large col s12" @click="signIn" :disabled="disabled" style="background: linear-gradient(to right, #E75309, #C60606);">
                   Login
                 </button>
               </div>

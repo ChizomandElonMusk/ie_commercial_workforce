@@ -13,7 +13,7 @@
 
             <div class="col s12 center">
               <a href="https://www.ie-payments.com/pay-bill" target="_blank">
-                  <div class="card-panel orange">
+                  <div class="card-panel " style="background: linear-gradient(to right, #E75309, #C60606);">
                       <span class="white-text">
                           <i class="material-icons">folder_open</i>
                           <h6>Bill Payment</h6>
@@ -24,7 +24,7 @@
 
             <div class="col s12 center">
               <nuxt-link to="/e_services/payment_history">
-                  <div class="card-panel orange">
+                  <div class="card-panel " style="background: linear-gradient(to right, #E75309, #C60606);">
                       <span class="white-text">
                           <i class="material-icons">folder_open</i>
                           <h6>Payment History</h6>
@@ -35,7 +35,7 @@
 
             <div class="col s12 center">
               <nuxt-link to="/e_services/billing_history">
-                  <div class="card-panel orange">
+                  <div class="card-panel " style="background: linear-gradient(to right, #E75309, #C60606);">
                       <span class="white-text">
                           <i class="material-icons">folder_open</i>
                           <h6>Billing History</h6>

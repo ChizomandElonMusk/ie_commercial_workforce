@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard_ie_force.vue?vue&type=template&id=e0912f0a&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard_ie_force.vue?vue&type=template&id=1901d53a&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -17,12 +17,12 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-e0912f0a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-1901d53a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "./ie_force"
     }
-  }, [_vm._v("\n          Back \n      ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-e0912f0a>IE FORCE</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-e0912f0a>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-e0912f0a>", "</div>", [_vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n          Back \n      ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-1901d53a>IE FORCE</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-1901d53a>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-1901d53a>", "</div>", [_vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/crmd"
     }
@@ -37,7 +37,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("CRMD")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("CRMD")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/customer_categorization"
     }
@@ -52,7 +52,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Customer Categorization")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Customer Categorization")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/token_request"
     }
@@ -67,7 +67,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Token Request")])])])])], 1), _vm._ssrNode(" "), _vm.hasEnergyTheft == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Token Request")])])])])], 1), _vm._ssrNode(" "), _vm.hasEnergyTheft == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/energy_theft"
     }
@@ -82,7 +82,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Energy Theft")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerMapping == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Energy Theft")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerMapping == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/customer_mapping"
     }
@@ -97,7 +97,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Customer Mapping")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerVisitation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Customer Mapping")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerVisitation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/customer_visitation"
     }
@@ -112,7 +112,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Customer visitation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerIdbboxMapping == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Customer visitation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerIdbboxMapping == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/idb_customer_mapping"
     }
@@ -127,7 +127,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("IDB Mapping")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNewlyInstalledMeterCV == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("IDB Mapping")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNewlyInstalledMeterCV == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/newly_installed_ppm"
     }
@@ -142,7 +142,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Newly Installed Meter CV")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerComplaint == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Newly Installed Meter CV")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerComplaint == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/customer_complaints"
     }
@@ -154,8 +154,10 @@ var render = function render() {
   }, [_c('span', {
     staticClass: "white-text"
   }, [_c('h6', {
-    staticClass: "white-text"
-  }, [_vm._v("Customer Complaints")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasSuspendedCustomerValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+    staticStyle: {
+      "font-weight": "900"
+    }
+  }, [_vm._v("Customer Complaints")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasSuspendedCustomerValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/suspended_cv"
     }
@@ -170,7 +172,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Suspended Customers Validation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNonVendingCustomerValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Suspended Customers Validation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNonVendingCustomerValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/none_vending_cv"
     }
@@ -185,7 +187,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Non vending Customer Validation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNonInclusionCapture == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Non vending Customer Validation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasNonInclusionCapture == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/non_inclusion_capture"
     }
@@ -200,7 +202,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("Non-inclusion capture")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasIdbValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Non-inclusion capture")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasIdbValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/idb_customer_visitation"
     }
@@ -215,7 +217,7 @@ var render = function render() {
     staticStyle: {
       "font-weight": "900"
     }
-  }, [_vm._v("IDB Customer visitation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerDetailsValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-e0912f0a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("IDB Customer visitation")])])])])], 1) : _vm._e(), _vm._ssrNode(" "), _vm.hasCustomerDetailsValidation == true ? _vm._ssrNode("<div class=\"col s12 center\" data-v-1901d53a>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/customer_details_validation"
     }
@@ -234,7 +236,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/dashboard_ie_force.vue?vue&type=template&id=e0912f0a&scoped=true
+// CONCATENATED MODULE: ./pages/dashboard_ie_force.vue?vue&type=template&id=1901d53a&scoped=true
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard_ie_force.vue?vue&type=script&lang=js
 /* harmony default export */ var dashboard_ie_forcevue_type_script_lang_js = ({
@@ -327,7 +329,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "e0912f0a",
+  "1901d53a",
   "ac343f88"
   
 )

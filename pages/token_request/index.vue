@@ -485,7 +485,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
-            tracking_id: '1752241720636548',
+            tracking_id: '',
             account_number: '',
             meter_number: '',
             account_type: '',

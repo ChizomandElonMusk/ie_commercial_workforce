@@ -1035,6 +1035,13 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1116,6 +1123,15 @@ export default {
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
+            
+
             const options = {
                 maxSizeMB: 0.7,
                 initialQuality: 2,
@@ -1196,6 +1212,14 @@ export default {
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            } 
+
             const options = {
                 maxSizeMB: 0.7,
                 initialQuality: 2,
@@ -1275,6 +1299,14 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1357,6 +1389,14 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
+
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
 
             const options = {
                 maxSizeMB: 0.7,
