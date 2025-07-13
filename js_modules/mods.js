@@ -89,18 +89,18 @@ export async function getCustomerInfoApi(accountNumber) {
   }
 }
 
-export async function getCustomerInfoApi2(accountNumber) {
+export async function getCustomerInfoApi2(meterNumber, service_type) {
   M.toast({ html: `<b class="yellow-text">Please wait</b>` });
   let token = localStorage.getItem("token");
-  var customer_account_number = "";
-  customer_account_number = accountNumber;
+  var customer_meter_number = "";
+  customer_meter_number = meterNumber;
   // "https://api.ikejaelectric.com/ie/harmony/v1/customer/info",
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
     const rawResponse = await fetch(
       "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
-        customer_account_number,
+        customer_meter_number + "&serviceType=" + service_type,
       {
         method: "GET",
         headers: {

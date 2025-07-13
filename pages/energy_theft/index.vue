@@ -174,7 +174,8 @@
                         <div class="row">
                             <!-- Customer Phone Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="Customer Phone Number *" v-model="customer_phone_number">
+                                <input type="text" placeholder="Customer Phone Number *"
+                                    v-model="customer_phone_number">
                             </div>
                         </div>
                         <!-- end of new field -->
@@ -369,7 +370,7 @@
                         </div>
 
 
-                        
+
 
 
 
@@ -424,7 +425,7 @@
                             </div>
                         </div>
 
-                        
+
 
 
                         <div class="row">
@@ -476,7 +477,7 @@
 
 
 
-                        
+
 
                         <div class="row">
                             <div class="col s12 input-field">
@@ -555,7 +556,7 @@ export default {
         return {
             disabled_bool: false,
             service_type: null,
-            account_number: '54150007976',
+            account_number: '',
             meter_number: '',
             account_type: '',
             account_name: '',
@@ -715,22 +716,46 @@ export default {
                 console.log('make postpaid call')
                 try {
 
-                    const response = await checkCustomerMeterNumber(this.meter_number)
+                    // const response = await checkCustomerMeterNumber(this.meter_number)
+
 
                     // console.log(response)
 
+
                     // console.log(response.accountNumber)
-                    console.log('this is response from mods ', response)
+                    // console.log('this is response from mods ', response)
 
-                    let users_meter_number = response.meterNumber
+                    // let users_meter_number = response.meterNumber
 
-                    if (users_meter_number == '') {
-                        M.toast({ html: `<b class="red-text">Please check meter number agian</b>` })
+                    if (this.meter_number == '') {
+                        M.toast({ html: `<b class="red-text">Please enter your meter number</b>` })
                     } else {
-                        this.account_number = response.accountNumber
-                        let users_account_number = response.accountNumber
-                        users_account_number = users_account_number.trim()
-                        this.getCustomerInfo(users_account_number)
+                        // instant change for customerinfo2 api (which is already doing the lookup on the server)
+                        let response = await getCustomerInfoApi2(this.meter_number, 'Prepaid')
+                        console.log(response)
+                        if (response.meterNumber == null) {
+                            // error message
+                            M.toast({ html: `<b class="red-text">Please check the meter number and try again</b>` })
+                        } else {
+                            await this.printCurrentPosition()
+
+                            this.account_type = response.accountType
+                            this.account_name = response.accountName
+                            this.tarrif = response.tariff
+                            this.address = response.address
+                            this.business_unit = response.bu
+                            this.account_status = response.accountStatus
+                            this.undertaking_one = response.ut
+                            this.dt_name = response.dtName
+                            this.customer_phone_number = response.mobileNumber
+                            this.dt_no = response.dtNo
+                            this.feeder_name = response.lastName
+                            this.feeder_no = response.feederNo
+                            this.meter_manufacturer = response.manufacturer
+                            this.wiring_mode = response.wiringMode
+                            this.meter_type = response.meterModel
+                            this.installation_date = response.installationDate
+                        }
                     }
                 } catch (error) {
                     console.log(error)
@@ -745,26 +770,32 @@ export default {
         async getCustomerInfo(accountNumber) {
 
             try {
-                let response = await getCustomerInfoApi2(accountNumber)
+                let response = await getCustomerInfoApi2(accountNumber, 'Postpaid')
                 console.log(response)
-                await this.printCurrentPosition()
+                if (response.accountNumber == null) {
+                    // error message
+                    M.toast({ html: `<b class="red-text">Please check the account number and try again</b>` })
+                    return
+                } else {
+                    await this.printCurrentPosition()
 
-                this.account_type = response.accountType
-                this.account_name = response.accountName
-                this.tarrif = response.tariff
-                this.address = response.address
-                this.business_unit = response.bu
-                this.account_status = response.accountStatus
-                this.undertaking_one = response.ut
-                this.dt_name = response.dtName
-                this.customer_phone_number = response.mobileNumber
-                this.dt_no = response.dtNo
-                this.feeder_name = response.lastName
-                this.feeder_no = response.feederNo
-                this.meter_manufacturer = response.manufacturer
-                this.wiring_mode = response.wiringMode
-                this.meter_type = response.meterModel
-                this.installation_date = response.installationDate
+                    this.account_type = response.accountType
+                    this.account_name = response.accountName
+                    this.tarrif = response.tariff
+                    this.address = response.address
+                    this.business_unit = response.bu
+                    this.account_status = response.accountStatus
+                    this.undertaking_one = response.ut
+                    this.dt_name = response.dtName
+                    this.customer_phone_number = response.mobileNumber
+                    this.dt_no = response.dtNo
+                    this.feeder_name = response.lastName
+                    this.feeder_no = response.feederNo
+                    this.meter_manufacturer = response.manufacturer
+                    this.wiring_mode = response.wiringMode
+                    this.meter_type = response.meterModel
+                    this.installation_date = response.installationDate
+                }
 
 
                 // if (users_meter_number == '') {
@@ -1042,7 +1073,7 @@ export default {
 
         },
 
-        
+
 
         async imagePickerForTheft() {
 
@@ -2310,7 +2341,7 @@ export default {
             console.log('duration_of_theft:', `"${this.duration_of_theft}"`, 'length:', this.duration_of_theft.length)
 
             // Check each condition separately
-            
+
             const isCustomerPhone = this.customer_phone_number === ''
             const isBusinessUnitEmpty = this.business_unit === ''
             const isTypeOfInfraDefault = this.type_of_infra === 'Type of Infraction *'
@@ -2344,7 +2375,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

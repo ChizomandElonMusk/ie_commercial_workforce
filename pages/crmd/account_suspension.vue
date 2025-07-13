@@ -585,6 +585,12 @@ export default {
                 this.phone_number = response.mobileNumber
                 this.dtNumber = response.dtNo
 
+                if (this.account_status == 'Suspended' || this.account_status == 'Dormant' || this.account_status == 'Deactivated') {
+                    this.disabled_bool = true
+                } else {
+                    this.disabled_bool = false
+                }
+
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
                 // } else {

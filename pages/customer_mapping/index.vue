@@ -734,6 +734,12 @@ export default {
                 this.current_feeder_band = response.feederBand
                 this.account_status = response.accountStatus
 
+                if (this.account_status == 'Deactivated') {
+                    this.disabled_bool = true
+                } else {
+                    this.disabled_bool = false
+                }
+
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
                 // } else {
