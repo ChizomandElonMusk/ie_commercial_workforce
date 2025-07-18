@@ -2024,6 +2024,7 @@ export default {
                             dt: this.dt_name,
                             phoneNo: this.phone_number,
                             location: this.location,
+                            remark: this.remarks,
                             validationOutcome: this.validation_outcomes,
                             picWireDown: this.pic_of_wire_down.name,
                             picFrontView: this.pic_of_fv.name,

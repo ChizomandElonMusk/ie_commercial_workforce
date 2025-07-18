@@ -346,6 +346,30 @@
                         </div>
 
 
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Fomerly Additional Pic -->
+                                    Seal as met (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForTheft()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-theft" />
+                            </div>
+                        </div>
+
+
 
                         <div class="row">
                             <!-- Pic of the service wire from pole to metering point * -->
@@ -402,28 +426,7 @@
 
 
 
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
-
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    <!-- Fomerly Additional Pic -->
-                                    Seal as met (*)
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForTheft()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-theft" />
-                            </div>
-                        </div>
+                        
 
 
 
@@ -572,6 +575,8 @@ export default {
             location: '',
             duration_of_theft: '',
             account_status: '',
+            random_id: '',
+            account_number_psudo: '',
             userId: null,
             pic_of_theft: '',
             pic_of_bypass: '',
@@ -626,6 +631,7 @@ export default {
             meter_serial_number: '',
             replacement_meter_serial_number: '',/*here*/
             meter_manufacturer: '',
+            feed_availability: '',
             meter_type_by_manufacturer: '',
             meter_payment_type: '',
             meter_type: '',
@@ -716,17 +722,6 @@ export default {
                 console.log('make postpaid call')
                 try {
 
-                    // const response = await checkCustomerMeterNumber(this.meter_number)
-
-
-                    // console.log(response)
-
-
-                    // console.log(response.accountNumber)
-                    // console.log('this is response from mods ', response)
-
-                    // let users_meter_number = response.meterNumber
-
                     if (this.meter_number == '') {
                         M.toast({ html: `<b class="red-text">Please enter your meter number</b>` })
                     } else {
@@ -749,8 +744,9 @@ export default {
                             this.dt_name = response.dtName
                             this.customer_phone_number = response.mobileNumber
                             this.dt_no = response.dtNo
-                            this.feeder_name = response.lastName
+                            this.feeder_name = response.feederName
                             this.feeder_no = response.feederNo
+                            this.feed_availability = response.feederAvailability
                             this.meter_manufacturer = response.manufacturer
                             this.wiring_mode = response.wiringMode
                             this.meter_type = response.meterModel
@@ -789,8 +785,9 @@ export default {
                     this.dt_name = response.dtName
                     this.customer_phone_number = response.mobileNumber
                     this.dt_no = response.dtNo
-                    this.feeder_name = response.lastName
+                    this.feeder_name = response.feederName
                     this.feeder_no = response.feederNo
+                    this.feed_availability = response.feederAvailability
                     this.meter_manufacturer = response.manufacturer
                     this.wiring_mode = response.wiringMode
                     this.meter_type = response.meterModel
@@ -1087,7 +1084,22 @@ export default {
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
             if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+                let random_str = this.generateRandomString()
+                let todays_date = new Date()
+                let day = todays_date.getDay()
+                let hour = todays_date.getHours()
+                let mins = todays_date.getMinutes()
+                let seconds = todays_date.getSeconds()
+                let millisecs = todays_date.getUTCMilliseconds()
+                // console.log(todays_date.getDay());
+                // console.log(todays_date.getUTCMilliseconds());
+                // M.toast({ html: `<b class="red-text">Random string: ${random_str}${day}${hour}${mins}${seconds}${millisecs}</b>` })
+                this.account_number = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
+                this.account_number = String(this.account_number)
+                this.random_id = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
+                this.random_id = String(this.random_id)
+                console.log(this.random_id);
+                console.log(this.random_id);
             } else {
                 // Call the element loader after the app has been rendered the first time
                 defineCustomElements(window);
@@ -1158,6 +1170,9 @@ export default {
                 // hello()
                 var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Theft', this.pic_of_theft)
                 console.log(xx)
+                if (this.random_id != '') {
+                    this.account_number = ''
+                }
 
 
 
@@ -2440,12 +2455,20 @@ export default {
                             phoneNo: this.customer_phone_number,
                             customerEmail: this.customer_email,
                             customerPhoneNo: this.customer_phone_number,
+                            dtCapacity: this.feed_availability,
+                            feederCap: this.feeder_cap,
+                            feederNo: this.feeder_no,
+                            feederName: this.feeder_name,
+                            wiringMode: this.wiring_mode,
+                            meterManufacturer: this.meter_manufacturer,
+                            meterType: this.meter_type,
                             location: this.location,
                             // location:  "3.334432, 6.322344",
                             typeOfInfraction: this.type_of_infra,
                             durationOfTheft: this.duration_of_theft,
                             negReading: this.negative_reading,
                             affectedMeters: meter_number_list,
+                            requestId: this.random_id,
                             picTheft: this.pic_of_theft.name,
                             picBypass: this.pic_of_bypass.name,
                             picAdditional: this.pic_of_additional.name,

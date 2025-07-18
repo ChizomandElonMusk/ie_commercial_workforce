@@ -70,7 +70,7 @@
 
 
             <!-- form starts here -->
-            <div class="row" :class="{ 'hide': hideForm }" @change="newDTinAnotherUTStateChange">
+            <div class="row" :class="{ 'hide': hideForm }" @change="newDTinAnotherUTStateChange()">
                 <div class="col s12">
                     <form @submit.prevent style="margin-top: 20px">
 
@@ -564,6 +564,8 @@ export default {
         }
     },
 
+    
+
     methods: {
 
         async newDTinAnotherUTStateChange() {
@@ -734,12 +736,20 @@ export default {
                 this.current_feeder_band = response.feederBand
                 this.account_status = response.accountStatus
 
-                if (this.account_status == 'Deactivated') {
+                if (this.account_status == 'Deactivated' || this.is_dt_in_another_ut == 'yes') {
                     this.disabled_bool = true
                 } else {
                     this.disabled_bool = false
                 }
+                
 
+                console.log('this is the ut condition', this.is_dt_in_another_ut);
+                console.log('this is the ut condition', this.is_dt_in_another_ut);
+                console.log('this is the ut condition', this.is_dt_in_another_ut);
+
+                // if (this.this.is_dt_in_another_ut == 'yes') {
+                //     this.disabled_bool = true
+                // }
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
                 // } else {

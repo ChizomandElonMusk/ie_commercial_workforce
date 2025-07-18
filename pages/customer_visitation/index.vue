@@ -286,12 +286,13 @@
                         <div class="row">
                             <!-- Customer Phone Number -->
                             <div class="col s12">
-                                <input type="text" placeholder="Customer Phone Number *" v-model="customer_phone_number">
+                                <input type="text" placeholder="Customer Phone Number *"
+                                    v-model="customer_phone_number">
                             </div>
                         </div>
                         <!-- end of new field -->
 
-                        
+
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -473,7 +474,7 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect
-                                    :options="['Access Denied', 'Broken Seal', 'Demolished Building', 'Meter Retrieved', 'Further Checks Required', 'Meter Okay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
+                                    :options="['Access Denied', 'Meter on Tamper', 'Broken Seal', 'Demolished Building', 'Meter Retrieved', 'Further Checks Required', 'Meter Okay', 'Infraction Now Corrected', 'Meter Abandoned Due To Huge Outstanding', 'meter Not in use', 'Meter Not Seen At Address', 'Meter Relocation Advised', 'Meter Replaced', 'No Access', 'Vacant Apartment', 'Vulnerable To Bypass']"
                                     :default="'Inspection Conclusion *'" class=""
                                     v-model="type_of_inspection_conclusion" />
                             </div>
@@ -587,7 +588,7 @@
 
                                 <h6 class="red-text">
                                     <!-- Picture of the service wire from pole metering point -->
-                                    Additional Picture 
+                                    Additional Picture
                                 </h6>
                                 <button class="btn red btn-large" @click="imagePickerForAdditionalPic()">
                                     <i class="material-icons white-text">camera_alt</i>
@@ -683,6 +684,7 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
+            feed_availability: '',
             // account_number: '',
             meter_number: '',
             // meter_number: '',
@@ -928,22 +930,36 @@ export default {
                 console.log('make postpaid call')
                 try {
 
-                    const response = await checkCustomerMeterNumber(this.meter_number)
-
-                    // console.log(response)
-
-                    // console.log(response.accountNumber)
-                    console.log('this is response from mods ', response)
-
-                    let users_meter_number = response.meterNumber
-
-                    if (users_meter_number == '') {
-                        M.toast({ html: `<b class="red-text">Please check meter number agian</b>` })
+                    if (this.meter_number == '') {
+                        M.toast({ html: `<b class="red-text">Please enter your meter number</b>` })
                     } else {
-                        this.account_number = response.accountNumber
-                        let users_account_number = response.accountNumber
-                        users_account_number = users_account_number.trim()
-                        this.getCustomerInfo(users_account_number)
+                        // instant change for customerinfo2 api (which is already doing the lookup on the server)
+                        let response = await getCustomerInfoApi2(this.meter_number, 'Prepaid')
+                        console.log(response)
+                        if (response.meterNumber == null) {
+                            // error message
+                            M.toast({ html: `<b class="red-text">Please check the meter number and try again</b>` })
+                        } else {
+                            await this.printCurrentPosition()
+
+                            this.account_type = response.accountType
+                            this.account_name = response.accountName
+                            this.tarrif = response.tariff
+                            this.address = response.address
+                            this.business_unit = response.bu
+                            this.account_status = response.accountStatus
+                            this.undertaking_one = response.ut
+                            this.dt_name = response.dtName
+                            this.customer_phone_number = response.mobileNumber
+                            this.dt_no = response.dtNo
+                            this.feeder_name = response.feederName
+                            this.feeder_no = response.feederNo
+                            this.feed_availability = response.feederAvailability
+                            this.meter_manufacturer = response.manufacturer
+                            this.wiring_mode = response.wiringMode
+                            this.meter_type = response.meterModel
+                            this.installation_date = response.installationDate
+                        }
                     }
                 } catch (error) {
                     console.log(error)
@@ -956,29 +972,35 @@ export default {
         },
 
         async getCustomerInfo(accountNumber) {
-
             try {
-                let response = await getCustomerInfoApi2(accountNumber)
+                let response = await getCustomerInfoApi2(accountNumber, 'Postpaid')
                 console.log(response)
-                this.printCurrentPosition()
+                if (response.accountNumber == null) {
+                    // error message
+                    M.toast({ html: `<b class="red-text">Please check the account number and try again</b>` })
+                    return
+                } else {
+                    await this.printCurrentPosition()
 
-                this.account_type = response.accountType
-                this.account_name = response.accountName
-                this.tarrif = response.tariff
-                this.address = response.address
-                this.business_unit = response.bu
-                this.account_status = response.accountStatus
-                this.undertaking_one = response.ut
-                this.dt_name = response.dtName
-                this.phone_number = response.mobileNumber
-                this.dt_no = response.dtNo
-                this.feeder_name = response.feederName
-                this.meter_manufacturer = response.manufacturer
-                this.meter_type = response.meterModel
-                this.wiring_mode = response.wiringMode
-                this.customer_email = response.email
-                this.customer_phone_number = response.mobileNumber
-                this.installation_date = response.installationDate
+                    this.account_type = response.accountType
+                    this.account_name = response.accountName
+                    this.tarrif = response.tariff
+                    this.address = response.address
+                    this.business_unit = response.bu
+                    this.account_status = response.accountStatus
+                    this.undertaking_one = response.ut
+                    this.dt_name = response.dtName
+                    this.customer_phone_number = response.mobileNumber
+                    this.dt_no = response.dtNo
+                    this.feeder_name = response.feederName
+                    this.feeder_no = response.feederNo
+                    this.feed_availability = response.feederAvailability
+                    this.meter_manufacturer = response.manufacturer
+                    this.wiring_mode = response.wiringMode
+                    this.meter_type = response.meterModel
+                    this.installation_date = response.installationDate
+                }
+
 
                 // if (users_meter_number == '') {
                 //     M.toast({html: `<b class="red-text">Please check account number agian</b>`})
@@ -1212,6 +1234,13 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
             // const imageFile = event.target.files[0];
 
             const options = {
@@ -1292,6 +1321,13 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
             // const imageFile = event.target.files[0];
 
             const options = {
@@ -1373,6 +1409,13 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
             // const imageFile = event.target.files[0];
 
             const options = {
@@ -1453,6 +1496,13 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
             // const imageFile = event.target.files[0];
 
             const options = {
@@ -1532,6 +1582,13 @@ export default {
         async doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(event) {
 
             const imageFile = event;
+            if (this.account_number !== '' ) {
+                console.log('acc number is not empty');
+                this.account_number = this.account_number
+            } else if (this.meter_number !== '') {
+                console.log('meter number is not empty');
+                this.account_number = this.meter_number
+            }
             // const imageFile = event.target.files[0];
 
             const options = {
@@ -2601,12 +2658,21 @@ export default {
                 M.toast({ 'html': '<b class="red-text">Incorrect Geo Location</b>' })
                 this.hideNewLocationBtn = false
             } else {
+                console.log('this is addition pic info', this.pic_of_additional_pic);
+
+                let pic_of_additional_pic_parser = ''
+
+                if (this.pic_of_additional_pic == undefined) {
+                    pic_of_additional_pic_parser = ''
+                } else {
+                    pic_of_additional_pic_parser = this.pic_of_additional_pic.name
+                }
 
 
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2629,6 +2695,15 @@ export default {
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
+                            customerEmail: this.customer_email,
+                            customerPhoneNo: this.customer_phone_number,
+                            dtCapacity: this.feed_availability,
+                            feederCap: this.feeder_cap,
+                            feederNo: this.feeder_no,
+                            feederName: this.feeder_name,
+                            wiringMode: this.wiring_mode,
+                            meterManufacturer: this.meter_manufacturer,
+                            meterType: this.meter_type,
                             location: this.location,
                             typeOfBuilding: this.type_of_building,
                             sharedBillOrMeter: this.shared_bill_or_meter,
@@ -2648,7 +2723,7 @@ export default {
                             picPremise: this.pic_of_premise.name,
                             picPaymentReceipt: this.pic_of_payment_receipt.name,
                             picMeters: this.pic_of_meter.name,
-                            picAdditional: this.pic_of_additional_pic.name
+                            picAdditional: pic_of_additional_pic_parser
                         }),
                     })
 
@@ -2658,7 +2733,8 @@ export default {
 
                     if (response.code == '00') {
                         this.hideLoader = true
-                        this.$router.push('../sent')
+                        localStorage.setItem('tracking_id', response.trackingId)
+                        this.$router.push('../sent_tracking')
                     } else {
                         M.toast({ html: `<b class="green-text">${response.message}</b>` })
                         this.disabled_bool = false

@@ -99,11 +99,20 @@
                         </div> -->
 
                         <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['Free Rider',
+                                    'New Customer Capture',]" :default="'Capture Type'" class="" v-model="capture_type" />
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
                                 <input type="text" placeholder="Customer type" v-model="account_type">
                             </div>
                         </div>
+
+                        
 
                         <div class="row">
                             <!-- cutomer name -->
@@ -266,6 +275,8 @@
                                     'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
                             </div>
                         </div>
+
+                        
 
                         <div class="row">
                             <div class="col s12">
@@ -502,6 +513,7 @@ export default {
             type_of_building: '',
             number_of_occupants: '',
             user_of_premise: '',
+            capture_type: '',
             other_comments: '',
             is_account_mapped_to_correct_dt: 'Yes',
             is_meter_bypassed: 'Yes',
@@ -1162,6 +1174,7 @@ export default {
                             phoneNo: this.phone_number,
                             location: this.location,
                             typeOfBuilding: this.type_of_building,
+                            captureType: this.capture_type,
                             isAccountMappedToCorrectDT: this.is_account_mapped_to_correct_dt,
                             isMeterByPassed: this.is_meter_bypassed,
                             isCustomerFreeRider: this.is_customer_free_rider,

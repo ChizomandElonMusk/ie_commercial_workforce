@@ -204,19 +204,37 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
                         <div class="row">
                             <!-- address -->
                             <div class="col s12">
                                 <input type="text" placeholder="Location" v-model="location" disabled>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['Residential',
+                                    'Commercial',
+                                    'Bar or lounge',
+                                    'Motel',
+                                    'School',
+                                    'Church',
+                                    'Mosque',
+                                    'Agriculture',
+                                    'Nylon factory',
+                                    'Pure water factory',
+                                    'Other']" :default="'Use of premise'" class="" v-model="user_of_premise" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- address -->
+                            <div class="col s12">
+                                <input type="text" v-if="user_of_premise === 'Others'" placeholder="How many?"
+                                    v-model="other_comment">
+                            </div>
+                        </div>
+                        <br>
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -597,6 +615,7 @@ export default {
             meter_number: '',
             account_type: '',
             account_name: '',
+            user_of_premise: '',
             dt_no: '',
             tarrif: '',
             address: '',
@@ -855,7 +874,7 @@ export default {
                             this.dt_name = response.dtName
                             this.customer_phone_number = response.mobileNumber
                             this.dt_no = response.dtNo
-                            this.feeder_name = response.lastName
+                            this.feeder_name = response.feederName
                             this.feeder_no = response.feederNo
                             this.feeder_availability = response.feederAvailability
                             let [firstValue, lastValue] = this.feeder_availability.split(":")
@@ -899,8 +918,12 @@ export default {
                     this.dt_name = response.dtName
                     this.customer_phone_number = response.mobileNumber
                     this.dt_no = response.dtNo
-                    this.feeder_name = response.lastName
+                    this.feeder_name = response.feederName
                     this.feeder_no = response.feederNo
+                    this.feeder_availability = response.feederAvailability
+                    let [firstValue, lastValue] = this.feeder_availability.split(":")
+                    this.feeder_availability = `${firstValue} : ${lastValue}`
+                    this.feeder_cap = response.feederCap
                     this.meter_manufacturer = response.manufacturer
                     this.wiring_mode = response.wiringMode
                     this.meter_type = response.meterModel
@@ -1835,12 +1858,13 @@ export default {
 
             // Check each condition separately
             const isBusinessUnitEmpty = this.business_unit === ''
+            const useOfPremise_check = this.user_of_premise === ''
 
             // if (this.customer_wiring == 'Three-Phase'){
 
             // }
 
-            if (isBusinessUnitEmpty) {
+            if (isBusinessUnitEmpty || useOfPremise_check) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
             } else {
@@ -1915,6 +1939,7 @@ export default {
                             location: this.location,
                             // location:  "3.334432, 6.322344",
                             loadStatus: this.load_type,
+                            useOfPremise: this.user_of_premise,
                             customerWiring: this.customer_wiring,
                             feederAvailability: this.feeder_availability,
                             feederCap: this.feeder_cap,
