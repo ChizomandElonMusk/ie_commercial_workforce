@@ -511,6 +511,30 @@
 
 
 
+                        <div class="row">
+                            <!-- Pic of the service wire from pole to metering point * -->
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    <!-- Picture of the service wire from pole metering point -->
+                                    <!-- Formally Additional picture -->
+                                    Seal As Met (*)
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForAdditionalPic()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-additional-pic" />
+                            </div>
+                        </div>
+
+
 
                         <div class="row">
                             <!-- Pic of the service wire from pole to metering point * -->
@@ -582,27 +606,7 @@
 
 
 
-                        <div class="row">
-                            <!-- Pic of the service wire from pole to metering point * -->
-                            <div class="col s12">
 
-                                <h6 class="red-text">
-                                    <!-- Picture of the service wire from pole metering point -->
-                                    Additional Picture
-                                </h6>
-                                <button class="btn red btn-large" @click="imagePickerForAdditionalPic()">
-                                    <i class="material-icons white-text">camera_alt</i>
-                                </button>
-                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
-                            </div>
-                        </div>
-
-                        <!-- output for pic of the service wire from pole to metering point -->
-                        <div class="row">
-                            <div class="col s12">
-                                <img class=" responsive-img" id="output-pic-of-additional-pic" />
-                            </div>
-                        </div>
 
 
 
@@ -684,10 +688,9 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
+            random_id: '',
             feed_availability: '',
-            // account_number: '',
             meter_number: '',
-            // meter_number: '',
             account_type: '',
             account_name: '',
             account_status: '',
@@ -1234,7 +1237,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number = this.account_number
             } else if (this.meter_number !== '') {
@@ -1287,7 +1290,22 @@ export default {
             this.meter_number = this.meter_number.trim()
             this.account_number = this.account_number.trim()
             if (this.meter_number == '' && this.account_number == '') {
-                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+                let random_str = this.generateRandomString()
+                let todays_date = new Date()
+                let day = todays_date.getDay()
+                let hour = todays_date.getHours()
+                let mins = todays_date.getMinutes()
+                let seconds = todays_date.getSeconds()
+                let millisecs = todays_date.getUTCMilliseconds()
+                // console.log(todays_date.getDay());
+                // console.log(todays_date.getUTCMilliseconds());
+                // M.toast({ html: `<b class="red-text">Random string: ${random_str}${day}${hour}${mins}${seconds}${millisecs}</b>` })
+                this.account_number = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
+                this.account_number = String(this.account_number)
+                this.random_id = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
+                this.random_id = String(this.random_id)
+                console.log(this.random_id);
+                console.log(this.random_id);
             } else {
                 // Call the element loader after the app has been rendered the first time
                 defineCustomElements(window);
@@ -1321,7 +1339,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number = this.account_number
             } else if (this.meter_number !== '') {
@@ -1356,6 +1374,9 @@ export default {
                 // hello()
                 var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Additional', this.pic_of_additional_pic)
                 console.log(xx)
+                if (this.random_id != '') {
+                    this.account_number = ''
+                }
 
 
 
@@ -1409,7 +1430,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number = this.account_number
             } else if (this.meter_number !== '') {
@@ -1496,7 +1517,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number = this.account_number
             } else if (this.meter_number !== '') {
@@ -1582,7 +1603,7 @@ export default {
         async doSomethingWithFilesImagePickerForTheServiceWireFromPoleToMeteringPoint(event) {
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number = this.account_number
             } else if (this.meter_number !== '') {
@@ -2705,6 +2726,7 @@ export default {
                             meterManufacturer: this.meter_manufacturer,
                             meterType: this.meter_type,
                             location: this.location,
+                            requestId: this.random_id,
                             typeOfBuilding: this.type_of_building,
                             sharedBillOrMeter: this.shared_bill_or_meter,
                             sharedBillOrMeterInput: this.shared_bill_or_meter_input,

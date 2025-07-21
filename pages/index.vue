@@ -7,8 +7,10 @@
         <div class="container">
           <div class="row">
             <h5 class="center red-text">
-              IE Commercial Workforce
+              IE Commercial Workforce <br>
+              <b class="center red-text" style="font-weight: 300; font-size: 12px;">Version: {{ version_number }}</b>
             </h5>
+            
             <PreLoader class="center" :class="{ 'hide': hidePreLoader }" />
           </div>
           <form @submit.prevent>
@@ -46,6 +48,7 @@
 </template>
 
 <script>
+
 import backgroundUrl from '~/assets/images/angled_background.jpg'
 import PreLoader from '~/components/PreLoader.vue'
 import { getCurrentPosition } from '~/js_modules/mods'
@@ -66,6 +69,7 @@ export default {
       password_test: '',
       username: 'cechehieuka',
       password: '@@@1KingGod12345678901',
+      version_number: '1.13.2',
       disabled: false,
       lat: '',
       long: '',
@@ -188,7 +192,8 @@ export default {
             usernameOrEmail: encrytedUsername,
             password: encrytedPassword,
             latitude: this.lat,
-            longitude: this.long
+            longitude: this.long,
+            versionNumber: this.version_number
           })
 
         });
