@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_fce6ab5c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_fce6ab5c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_fce6ab5c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_fce6ab5c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_fce6ab5c_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c6b73cdc_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c6b73cdc_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c6b73cdc_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c6b73cdc_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_c6b73cdc_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-fce6ab5c]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-c6b73cdc]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=template&id=fce6ab5c&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=template&id=c6b73cdc&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,18 +44,18 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-fce6ab5c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-fce6ab5c>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-c6b73cdc>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-c6b73cdc>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-fce6ab5c>Customer Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-fce6ab5c>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-c6b73cdc>Customer Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-c6b73cdc>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-fce6ab5c><div class=\"row\" data-v-fce6ab5c><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-fce6ab5c>DONE</a></div> <div class=\"row\" data-v-fce6ab5c><div class=\"container\" data-v-fce6ab5c><div class=\"row\" data-v-fce6ab5c><div class=\"col s12 center\" data-v-fce6ab5c><h6 data-v-fce6ab5c>Sign here!</h6></div></div> <div class=\"row\" data-v-fce6ab5c><div class=\"col s12 center\" data-v-fce6ab5c><canvas id=\"sig-canvas\" width=\"250px\" data-v-fce6ab5c>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-fce6ab5c><div class=\"col s12 center\" data-v-fce6ab5c><div class=\"col s6\" data-v-fce6ab5c><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-fce6ab5c>Save</button></div> <div class=\"col s6\" data-v-fce6ab5c><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-fce6ab5c>Clear</button></div></div></div> <br data-v-fce6ab5c> <div class=\"row\" data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-fce6ab5c>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"row\" data-v-c6b73cdc><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-c6b73cdc>DONE</a></div> <div class=\"row\" data-v-c6b73cdc><div class=\"container\" data-v-c6b73cdc><div class=\"row\" data-v-c6b73cdc><div class=\"col s12 center\" data-v-c6b73cdc><h6 data-v-c6b73cdc>Sign here!</h6></div></div> <div class=\"row\" data-v-c6b73cdc><div class=\"col s12 center\" data-v-c6b73cdc><canvas id=\"sig-canvas\" width=\"250px\" data-v-c6b73cdc>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-c6b73cdc><div class=\"col s12 center\" data-v-c6b73cdc><div class=\"col s6\" data-v-c6b73cdc><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-c6b73cdc>Save</button></div> <div class=\"col s6\" data-v-c6b73cdc><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-c6b73cdc>Clear</button></div></div></div> <br data-v-c6b73cdc> <div class=\"row\" data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-c6b73cdc>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-fce6ab5c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-fce6ab5c>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-fce6ab5c>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-c6b73cdc>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-c6b73cdc>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-fce6ab5c>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-c6b73cdc>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-c6b73cdc>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -69,55 +69,55 @@ var render = function render() {
     }
   })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s9\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-fce6ab5c></div> <div class=\"col s3\" data-v-fce6ab5c><button class=\"btn btn-flat red white-text\" data-v-fce6ab5c>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s9\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-c6b73cdc></div> <div class=\"col s3\" data-v-c6b73cdc><button class=\"btn btn-flat red white-text\" data-v-c6b73cdc>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s9\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-fce6ab5c></div> <div class=\"col s3\" data-v-fce6ab5c><button class=\"btn btn-flat red white-text\" data-v-fce6ab5c>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s9\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-c6b73cdc></div> <div class=\"col s3\" data-v-c6b73cdc><button class=\"btn btn-flat red white-text\" data-v-c6b73cdc>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-fce6ab5c> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-c6b73cdc> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><b data-v-fce6ab5c>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><b data-v-c6b73cdc>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-fce6ab5c></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-c6b73cdc></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><p data-v-fce6ab5c><b data-v-fce6ab5c>\n                                    Is DT Mapping correct\n                                </b> <br data-v-fce6ab5c> <label data-v-fce6ab5c><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-fce6ab5c> <span data-v-fce6ab5c>Yes</span></label></p> <p data-v-fce6ab5c><label data-v-fce6ab5c><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-fce6ab5c> <span data-v-fce6ab5c>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><p data-v-c6b73cdc><b data-v-c6b73cdc>\n                                    Is DT Mapping correct\n                                </b> <br data-v-c6b73cdc> <label data-v-c6b73cdc><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-c6b73cdc> <span data-v-c6b73cdc>Yes</span></label></p> <p data-v-c6b73cdc><label data-v-c6b73cdc><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-c6b73cdc> <span data-v-c6b73cdc>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideProposedData
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><table class=\"striped\" data-v-fce6ab5c><tbody data-v-fce6ab5c><tr data-v-fce6ab5c><td data-v-fce6ab5c>Proposed DT No:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Current DT Name:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.dt_name)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Proposed DT Name:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Proposed UT:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Proposed BU:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Proposed Feeder Band:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.proposed_feeder_band)) + "</b></td></tr> <tr data-v-fce6ab5c><td data-v-fce6ab5c>Mapping Status:</td> <td data-v-fce6ab5c><b class=\"black-text\" data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(_vm.mapping_status)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><table class=\"striped\" data-v-c6b73cdc><tbody data-v-c6b73cdc><tr data-v-c6b73cdc><td data-v-c6b73cdc>Proposed DT No:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Current DT Name:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.dt_name)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Proposed DT Name:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Proposed UT:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Proposed BU:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Proposed Feeder Band:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.proposed_feeder_band)) + "</b></td></tr> <tr data-v-c6b73cdc><td data-v-c6b73cdc>Mapping Status:</td> <td data-v-c6b73cdc><b class=\"black-text\" data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(_vm.mapping_status)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-fce6ab5c>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-c6b73cdc>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-fce6ab5c><div class=\"col s9\" data-v-fce6ab5c><input type=\"text\" placeholder=\"Enter DT\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-fce6ab5c></div> <div class=\"col s3\" data-v-fce6ab5c><button class=\"btn btn-flat red white-text\" data-v-fce6ab5c>Search</button></div> <div class=\"col s12\" data-v-fce6ab5c><table class=\"striped\" data-v-fce6ab5c><thead data-v-fce6ab5c><tr data-v-fce6ab5c><th data-v-fce6ab5c>DT No</th> <th data-v-fce6ab5c>DT Name</th> <th data-v-fce6ab5c>Feeder Band</th></tr></thead> " + _vm._ssrList(_vm.dtList, function (dt, index) {
-    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-fce6ab5c><tr data-v-fce6ab5c><td class=\"blue-text\" data-v-fce6ab5c>" + _vm._ssrEscape("\n                                            " + _vm._s(dt.dtNo) + "\n                                            ") + "</td> <td data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td> <td data-v-fce6ab5c>" + _vm._ssrEscape(_vm._s(dt.feederBand)) + "</td></tr></tbody>";
+  }) + " data-v-c6b73cdc><div class=\"col s9\" data-v-c6b73cdc><input type=\"text\" placeholder=\"Enter DT\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-c6b73cdc></div> <div class=\"col s3\" data-v-c6b73cdc><button class=\"btn btn-flat red white-text\" data-v-c6b73cdc>Search</button></div> <div class=\"col s12\" data-v-c6b73cdc><table class=\"striped\" data-v-c6b73cdc><thead data-v-c6b73cdc><tr data-v-c6b73cdc><th data-v-c6b73cdc>DT No</th> <th data-v-c6b73cdc>DT Name</th> <th data-v-c6b73cdc>Feeder Band</th></tr></thead> " + _vm._ssrList(_vm.dtList, function (dt, index) {
+    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-c6b73cdc><tr data-v-c6b73cdc><td class=\"blue-text\" data-v-c6b73cdc>" + _vm._ssrEscape("\n                                            " + _vm._s(dt.dtNo) + "\n                                            ") + "</td> <td data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td> <td data-v-c6b73cdc>" + _vm._ssrEscape(_vm._s(dt.feederBand)) + "</td></tr></tbody>";
   }) + "</table></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideLoading
-  }) + " data-v-fce6ab5c><b class=\"grey-text\" data-v-fce6ab5c>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
+  }) + " data-v-c6b73cdc><b class=\"grey-text\" data-v-c6b73cdc>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideNoData
-  }) + " data-v-fce6ab5c><b class=\"grey-text\" data-v-fce6ab5c>No data available</b></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-c6b73cdc><b class=\"grey-text\" data-v-c6b73cdc>No data available</b></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><h6 class=\"red-text\" data-v-fce6ab5c>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-fce6ab5c><i class=\"material-icons white-text\" data-v-fce6ab5c>camera_alt</i></button></div></div> <div class=\"row\" data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-fce6ab5c></div></div> <div class=\"row center\" data-v-fce6ab5c></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><h6 class=\"red-text\" data-v-c6b73cdc>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-c6b73cdc><i class=\"material-icons white-text\" data-v-c6b73cdc>camera_alt</i></button></div></div> <div class=\"row\" data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-c6b73cdc></div></div> <div class=\"row center\" data-v-c6b73cdc></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-fce6ab5c><div class=\"col s12\" data-v-fce6ab5c><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-fce6ab5c>Submit</button></div></div>")], 2)])])], 2)], 2);
+  }) + " data-v-c6b73cdc><div class=\"col s12\" data-v-c6b73cdc><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-c6b73cdc>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/customer_mapping/index.vue?vue&type=template&id=fce6ab5c&scoped=true
+// CONCATENATED MODULE: ./pages/customer_mapping/index.vue?vue&type=template&id=c6b73cdc&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=script&lang=js
 var customer_mappingvue_type_script_lang_js = __webpack_require__(55);
@@ -146,7 +146,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "fce6ab5c",
+  "c6b73cdc",
   "45c75f99"
   
 )
@@ -386,7 +386,10 @@ async function getCustomerInfoApi2(meterNumber, service_type) {
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -451,7 +454,11 @@ async function getIDBCustomerInfoApi(accountNumber) {
 async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" + trackingId, {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" + trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
+    {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -547,10 +554,8 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
-    {
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + localStorage.token,
@@ -2421,8 +2426,8 @@ module.exports = ___CSS_LOADER_EXPORT___;
       } else {
         try {
           this.disabled_bool = true;
-          // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
-          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
+          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customermapping', {
+            // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customermapping', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -2597,7 +2602,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("f02e14c0", content, true, context)
+  add("734ca7e6", content, true, context)
 };
 
 /***/ })

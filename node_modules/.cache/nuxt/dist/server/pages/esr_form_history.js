@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_1fc96c7b_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(89);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_1fc96c7b_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_1fc96c7b_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_1fc96c7b_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_1fc96c7b_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_cb2d4182_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(89);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_cb2d4182_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_cb2d4182_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_cb2d4182_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_esr_form_history_vue_vue_type_style_index_0_id_cb2d4182_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-1fc96c7b]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-cb2d4182]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/esr_form_history.vue?vue&type=template&id=1fc96c7b&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/esr_form_history.vue?vue&type=template&id=cb2d4182&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,24 +44,24 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-1fc96c7b>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1fc96c7b>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-cb2d4182>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-cb2d4182>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "./ie_force"
     }
-  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-1fc96c7b>ESR Form History</b>")], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-1fc96c7b><div class=\"row\" data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-cb2d4182>Form History</b>")], 2)]), _vm._ssrNode(" <div class=\"row\" data-v-cb2d4182><div class=\"row\" data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-1fc96c7b><div class=\"row\" data-v-1fc96c7b><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-1fc96c7b>DONE</a></div> <div class=\"row\" data-v-1fc96c7b><div class=\"container\" data-v-1fc96c7b><div class=\"row\" data-v-1fc96c7b><div class=\"col s12 center\" data-v-1fc96c7b><h6 data-v-1fc96c7b>Sign here!</h6></div></div> <div class=\"row\" data-v-1fc96c7b><div class=\"col s12 center\" data-v-1fc96c7b><canvas id=\"sig-canvas\" width=\"250px\" data-v-1fc96c7b>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-1fc96c7b><div class=\"col s12 center\" data-v-1fc96c7b><div class=\"col s6\" data-v-1fc96c7b><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-1fc96c7b>Save</button></div> <div class=\"col s6\" data-v-1fc96c7b><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-1fc96c7b>Clear</button></div></div></div> <br data-v-1fc96c7b> <div class=\"row\" data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-1fc96c7b>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-cb2d4182><div class=\"row\" data-v-cb2d4182><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-cb2d4182>DONE</a></div> <div class=\"row\" data-v-cb2d4182><div class=\"container\" data-v-cb2d4182><div class=\"row\" data-v-cb2d4182><div class=\"col s12 center\" data-v-cb2d4182><h6 data-v-cb2d4182>Sign here!</h6></div></div> <div class=\"row\" data-v-cb2d4182><div class=\"col s12 center\" data-v-cb2d4182><canvas id=\"sig-canvas\" width=\"250px\" data-v-cb2d4182>\n                                    Your phone not supporting signature\n                                </canvas></div></div> <div class=\"row\" data-v-cb2d4182><div class=\"col s12 center\" data-v-cb2d4182><div class=\"col s6\" data-v-cb2d4182><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-cb2d4182>Save</button></div> <div class=\"col s6\" data-v-cb2d4182><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-cb2d4182>Clear</button></div></div></div> <br data-v-cb2d4182> <div class=\"row\" data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-cb2d4182>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b><form style=\"margin-top: 20px\" data-v-1fc96c7b><div class=\"row\" data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b><div class=\"flexcontainerSearch\" data-v-1fc96c7b><div class=\"input-field flexitem-datepicker\" data-v-1fc96c7b><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + " data-v-1fc96c7b></div> <div style=\"width: 3px;\" data-v-1fc96c7b></div> <div class=\"input-field flexitem-datepicker\" data-v-1fc96c7b><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + " data-v-1fc96c7b></div></div></div></div> <div class=\"row\" data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b><button class=\"btn btn-flat red white-text col s12\" data-v-1fc96c7b>Check</button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182><form style=\"margin-top: 20px\" data-v-cb2d4182><div class=\"row\" data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182><div class=\"flexcontainerSearch\" data-v-cb2d4182><div class=\"input-field flexitem-datepicker\" data-v-cb2d4182><input type=\"date\" placeholder=\"From\"" + _vm._ssrAttr("value", _vm.date_from) + " data-v-cb2d4182></div> <div style=\"width: 3px;\" data-v-cb2d4182></div> <div class=\"input-field flexitem-datepicker\" data-v-cb2d4182><input type=\"date\" placeholder=\"To\"" + _vm._ssrAttr("value", _vm.date_to) + " data-v-cb2d4182></div></div></div></div> <div class=\"row\" data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182><button class=\"btn btn-flat red white-text col s12\" data-v-cb2d4182>Check</button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideNoData
-  }) + " data-v-1fc96c7b><div class=\"col s12 grey-text center\" data-v-1fc96c7b><h5 data-v-1fc96c7b>\n                            No data available\n                        </h5></div></div> <div class=\"row\" data-v-1fc96c7b><div class=\"col s12\" data-v-1fc96c7b>" + _vm._ssrList(_vm.esrFormHistoryList, function (history, index) {
-    return "<div" + _vm._ssrAttr("id", history.trackingId) + " class=\"card red white-text\" data-v-1fc96c7b><div class=\"card-content white-text\" data-v-1fc96c7b><p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>ID:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.trackingId) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>Category:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.approvalCategory) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>DT:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.dt) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>Account Type:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.accountType) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>BU:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.bu) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>Address:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.address) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>DT No:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.dtNo) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>Meter No:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.meterNo) + " ") + "</p> <p data-v-1fc96c7b><b class=\"yellow-text\" data-v-1fc96c7b>serviceType:</b> <br data-v-1fc96c7b>" + _vm._ssrEscape(" " + _vm._s(history.serviceType) + " ") + "</p></div></div>";
+  }) + " data-v-cb2d4182><div class=\"col s12 grey-text center\" data-v-cb2d4182><h5 data-v-cb2d4182>\n                            No data available\n                        </h5></div></div> <div class=\"row\" data-v-cb2d4182><div class=\"col s12\" data-v-cb2d4182>" + _vm._ssrList(_vm.esrFormHistoryList, function (history, index) {
+    return "<div" + _vm._ssrAttr("id", history.trackingId) + " class=\"card red white-text\" data-v-cb2d4182><div class=\"card-content white-text\" data-v-cb2d4182><p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>ID:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.trackingId) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>Category:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.approvalCategory) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>DT:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.dt) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>Account Type:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.accountType) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>BU:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.bu) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>Address:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.address) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>DT No:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.dtNo) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>Meter No:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.meterNo) + " ") + "</p> <p data-v-cb2d4182><b class=\"yellow-text\" data-v-cb2d4182>serviceType:</b> <br data-v-cb2d4182>" + _vm._ssrEscape(" " + _vm._s(history.serviceType) + " ") + "</p></div></div>";
   }) + "</div></div></form></div></div></div>")], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/esr_form_history.vue?vue&type=template&id=1fc96c7b&scoped=true
+// CONCATENATED MODULE: ./pages/esr_form_history.vue?vue&type=template&id=cb2d4182&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/esr_form_history.vue?vue&type=script&lang=js
 var esr_form_historyvue_type_script_lang_js = __webpack_require__(59);
@@ -90,7 +90,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "1fc96c7b",
+  "cb2d4182",
   "5b154f9d"
   
 )
@@ -326,7 +326,10 @@ async function getCustomerInfoApi2(meterNumber, service_type) {
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -391,7 +394,11 @@ async function getIDBCustomerInfoApi(accountNumber) {
 async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" + trackingId, {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" + trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
+    {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -487,10 +494,8 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
-    {
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + localStorage.token,
@@ -2483,7 +2488,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("690e4d02", content, true, context)
+  add("25993c1a", content, true, context)
 };
 
 /***/ })

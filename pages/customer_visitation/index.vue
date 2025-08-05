@@ -727,6 +727,8 @@ export default {
             is_customer_address_correct_green: false,
             is_meter_bypassed_green: false,
             customer_complaint_green: false,
+            pic_of_additional_pic_parser: '',
+            pic_of_additional_pic: '',
 
             pic_of_the_service_wire_from_pole_to_metering_point: '',
             pic_of_building: null,
@@ -925,6 +927,13 @@ export default {
         },
 
         async checkNumber() {
+
+            if (this.pic_of_additional_pic.name == undefined) {
+                M.toast({ html: `<b class="red-text">Please upload Seal as Met* first</b>` })
+                this.account_number = ''
+                this.meter_number = ''
+                return
+            }
 
 
             if (this.service_type == 'prepaid') {
@@ -2681,19 +2690,19 @@ export default {
             } else {
                 console.log('this is addition pic info', this.pic_of_additional_pic);
 
-                let pic_of_additional_pic_parser = ''
+                this.pic_of_additional_pic_parser = ''
 
                 if (this.pic_of_additional_pic == undefined) {
-                    pic_of_additional_pic_parser = ''
+                    this.pic_of_additional_pic_parser = ''
                 } else {
-                    pic_of_additional_pic_parser = this.pic_of_additional_pic.name
+                    this.pic_of_additional_pic_parser = this.pic_of_additional_pic.name
                 }
 
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2745,7 +2754,7 @@ export default {
                             picPremise: this.pic_of_premise.name,
                             picPaymentReceipt: this.pic_of_payment_receipt.name,
                             picMeters: this.pic_of_meter.name,
-                            picAdditional: pic_of_additional_pic_parser
+                            picAdditional: this.pic_of_additional_pic_parser
                         }),
                     })
 

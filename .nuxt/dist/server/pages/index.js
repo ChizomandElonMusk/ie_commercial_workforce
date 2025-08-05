@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=187cbef0
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=79d76412
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -23,7 +23,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=187cbef0
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=79d76412
 
 // EXTERNAL MODULE: ./assets/images/angled_background.jpg
 var angled_background = __webpack_require__(51);
@@ -55,9 +55,9 @@ var mods = __webpack_require__(45);
       backgroundUrl: angled_background_default.a,
       user_test: '',
       password_test: '',
-      username: 'cechehieuka',
-      password: '@@@1KingGod12345678901',
-      version_number: '1.13.2',
+      username: '',
+      password: '',
+      version_number: '1.13.3',
       disabled: false,
       lat: '',
       long: '',
@@ -155,8 +155,8 @@ var mods = __webpack_require__(45);
 
       try {
         this.disabled = true;
-        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
-          // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {   
+        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -431,7 +431,10 @@ async function getCustomerInfoApi2(meterNumber, service_type) {
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -496,7 +499,11 @@ async function getIDBCustomerInfoApi(accountNumber) {
 async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" + trackingId, {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" + trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
+    {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -592,10 +599,8 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
-    {
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + localStorage.token,

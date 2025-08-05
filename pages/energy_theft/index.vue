@@ -715,6 +715,16 @@ export default {
 
         async checkNumber() {
 
+            
+            
+            console.log(this.pic_of_theft.name);
+            if (this.pic_of_theft.name == undefined) {
+                M.toast({ html: `<b class="red-text">Please upload Seal as Met* first</b>` })
+                this.account_number = ''
+                this.meter_number = ''
+                return
+            }
+
 
             if (this.service_type == 'prepaid') {
 
@@ -2356,6 +2366,8 @@ export default {
 
 
         async submit() {
+            this.negative_reading_value = `-${this.negative_reading_value}`
+            console.log('Negative reading ', this.negative_reading_value);
             // get all the form value in the dynamic list 
             let meter_number_list = this.getAllFormValues()
             console.log(meter_number_list);
@@ -2428,9 +2440,10 @@ export default {
 
 
                 try {
+                    
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2466,7 +2479,7 @@ export default {
                             // location:  "3.334432, 6.322344",
                             typeOfInfraction: this.type_of_infra,
                             durationOfTheft: this.duration_of_theft,
-                            negReading: this.negative_reading,
+                            negReading: this.negative_reading_value,
                             affectedMeters: meter_number_list,
                             requestId: this.random_id,
                             picTheft: this.pic_of_theft.name,

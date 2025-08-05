@@ -148,6 +148,13 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <!-- Account status -->
+                            <div class="col s12">
+                                <input type="text" v-model="negative_reading_value" placeholder="Negative Reading" disabled>
+                            </div>
+                        </div>
+
 
                         <div class="row">
                             <!-- business unit -->
@@ -506,12 +513,12 @@ export default {
             duration_of_theft: '',
             account_status: '',
             request_type: '',
+            negative_reading: '',
             userId: null,
             pic_of_meter: '',
             pic_of_meter_installation_point: '',
             pic_of_building: '',
             pic_of_seal: '',
-            negative_reading: false,
             pumping_maching_on_direct: false,
             negative_reading_value: '0',
             formFields: [],
@@ -729,6 +736,13 @@ export default {
                 this.dt_no = response[0].dtNo
                 this.dt_name = response[0].dt
                 this.request_type = response[0].reqType
+                this.negative_reading_value = response[0].negReading
+                console.log(this.account_status);
+                console.log(this.account_status);
+                console.log(this.account_status);
+                if (this.negative_reading_value == null) {
+                    this.negative_reading_value = 0
+                }
 
 
             } catch (error) {
@@ -1307,8 +1321,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -1330,9 +1344,11 @@ export default {
                             feederName: this.feeder_name,
                             email: this.customer_email,
                             requestType: this.request_type,
+                            negReading: this.negative_reading_value,
                             accountStatus: this.account_status,
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
+                            typeOfToken: this.tamper_type,
                             // location: "3.334432, 6.322344",
                             location: this.location,
                             picOfMeter: this.pic_of_meter.name,

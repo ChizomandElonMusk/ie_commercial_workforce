@@ -27,7 +27,7 @@
                     <div class="card-panel" style="background: linear-gradient(to right, #E75309, #C60606);">
                         <span class="white-text">
                             <img src="~/assets/images/history.svg" class="responsive-img" style="max-height: 50px;" alt="">
-                            <h6 style="font-size: 12px;">ESR Form History</h6>
+                            <h6 style="font-size: 12px;">Form History</h6>
                         </span>
                     </div>
                 </nuxt-link>

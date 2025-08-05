@@ -36,7 +36,7 @@ module.exports = __webpack_require__.p + "img/e_service.7175cd3.svg";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/ie_force.vue?vue&type=template&id=027f815a&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/ie_force.vue?vue&type=template&id=dd68f0d2&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -45,12 +45,12 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-027f815a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-027f815a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-dd68f0d2>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-dd68f0d2>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "./menu"
     }
-  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-027f815a>IE FORCE</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-027f815a>", "</div>", [_vm._ssrNode("<div class=\"col s6\" data-v-027f815a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\n                Back \n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-dd68f0d2>IE FORCE</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-dd68f0d2>", "</div>", [_vm._ssrNode("<div class=\"col s6\" data-v-dd68f0d2>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/dashboard_ie_force"
     }
@@ -74,7 +74,7 @@ var render = function render() {
     staticStyle: {
       "font-size": "12px"
     }
-  }, [_vm._v("Forms")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s6\" data-v-027f815a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Forms")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s6\" data-v-dd68f0d2>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/esr_form_history"
     }
@@ -98,7 +98,7 @@ var render = function render() {
     staticStyle: {
       "font-size": "12px"
     }
-  }, [_vm._v("ESR Form History")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-027f815a>", "</div>", [_vm._ssrNode("<div class=\"col s6\" data-v-027f815a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("Form History")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-dd68f0d2>", "</div>", [_vm._ssrNode("<div class=\"col s6\" data-v-dd68f0d2>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/dt_assigned"
     }
@@ -122,7 +122,7 @@ var render = function render() {
     staticStyle: {
       "font-size": "12px"
     }
-  }, [_vm._v("DTs Assigned")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s6\" data-v-027f815a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("DTs Assigned")])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"col s6\" data-v-dd68f0d2>", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "../e_services"
     }
@@ -150,7 +150,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/ie_force.vue?vue&type=template&id=027f815a&scoped=true
+// CONCATENATED MODULE: ./pages/ie_force.vue?vue&type=template&id=dd68f0d2&scoped=true
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/ie_force.vue?vue&type=script&lang=js
 /* harmony default export */ var ie_forcevue_type_script_lang_js = ({
@@ -204,7 +204,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "027f815a",
+  "dd68f0d2",
   "63f8f1b1"
   
 )

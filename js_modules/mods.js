@@ -98,8 +98,12 @@ export async function getCustomerInfoApi2(meterNumber, service_type) {
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
+    
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" +
         customer_meter_number + "&serviceType=" + service_type,
       {
         method: "GET",
@@ -168,8 +172,11 @@ export async function getRequestDetailsWithTrackingId(trackingId) {
 
   try {
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" +
         trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
       {
         method: "GET",
         headers: {
@@ -269,9 +276,9 @@ export async function uploadImage(userId, accountNumber, docType, file) {
 
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {
         method: "POST",
         headers: {

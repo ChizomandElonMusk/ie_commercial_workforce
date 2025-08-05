@@ -14,7 +14,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("439155be", content, true, context)
+  add("5eca5f88", content, true, context)
 };
 
 /***/ }),
@@ -24,9 +24,9 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_f6f1272a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(102);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_f6f1272a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_f6f1272a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_f6f1272a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_f6f1272a_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_788b7f2e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(102);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_788b7f2e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_788b7f2e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_788b7f2e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_788b7f2e_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -38,7 +38,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-f6f1272a]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-788b7f2e]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -53,7 +53,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/token_request/index.vue?vue&type=template&id=f6f1272a&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/token_request/index.vue?vue&type=template&id=788b7f2e&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -62,16 +62,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-f6f1272a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-f6f1272a>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-788b7f2e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-788b7f2e>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-f6f1272a>Token Request</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-f6f1272a>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-788b7f2e>Token Request</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-788b7f2e>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-f6f1272a><div class=\"row\" data-v-f6f1272a><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-f6f1272a>DONE</a></div> <div class=\"row\" data-v-f6f1272a><div class=\"container\" data-v-f6f1272a><div class=\"row\" data-v-f6f1272a><div class=\"col s12 center\" data-v-f6f1272a><h6 data-v-f6f1272a>Sign here!</h6></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12 center\" data-v-f6f1272a><canvas id=\"sig-canvas\" width=\"250px\" data-v-f6f1272a>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12 center\" data-v-f6f1272a><div class=\"col s6\" data-v-f6f1272a><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-f6f1272a>Save</button></div> <div class=\"col s6\" data-v-f6f1272a><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-f6f1272a>Clear</button></div></div></div> <br data-v-f6f1272a> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-f6f1272a>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-788b7f2e><div class=\"row\" data-v-788b7f2e><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-788b7f2e>DONE</a></div> <div class=\"row\" data-v-788b7f2e><div class=\"container\" data-v-788b7f2e><div class=\"row\" data-v-788b7f2e><div class=\"col s12 center\" data-v-788b7f2e><h6 data-v-788b7f2e>Sign here!</h6></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12 center\" data-v-788b7f2e><canvas id=\"sig-canvas\" width=\"250px\" data-v-788b7f2e>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12 center\" data-v-788b7f2e><div class=\"col s6\" data-v-788b7f2e><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-788b7f2e>Save</button></div> <div class=\"col s6\" data-v-788b7f2e><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-788b7f2e>Clear</button></div></div></div> <br data-v-788b7f2e> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-788b7f2e>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-f6f1272a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-f6f1272a>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-f6f1272a>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-f6f1272a>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-f6f1272a>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-788b7f2e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-788b7f2e>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-788b7f2e>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-788b7f2e>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-788b7f2e>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Tampered Token', 'Clear Negative Token'],
       "default": 'Tampered Token'
@@ -83,11 +83,11 @@ var render = function render() {
       },
       expression: "tamper_type"
     }
-  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-f6f1272a><div class=\"col s9\" data-v-f6f1272a><input type=\"text\" placeholder=\"Tracking ID\"" + _vm._ssrAttr("value", _vm.tracking_id) + " data-v-f6f1272a></div> <div class=\"col s3\" data-v-f6f1272a><button class=\"btn btn-flat red white-text\" data-v-f6f1272a>Check</button></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Account Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Account Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Meter Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Request Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.request_type) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><b data-v-f6f1272a>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-f6f1272a> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><b data-v-f6f1272a>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Customer email\"" + _vm._ssrAttr("value", _vm.customer_email) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Customer Phone Number\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><h6 class=\"red-text\" data-v-f6f1272a>\n                                Picture of the Meter (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-f6f1272a><i class=\"material-icons white-text\" data-v-f6f1272a>camera_alt</i></button></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><h6 class=\"red-text\" data-v-f6f1272a>\n                                Picture of the Meter Installation Point (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-f6f1272a><i class=\"material-icons white-text\" data-v-f6f1272a>camera_alt</i></button></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><img id=\"output-pic-of-meter-installation-point\" class=\"responsive-img\" data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><h6 class=\"red-text\" data-v-f6f1272a>\n                                Picture of building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-f6f1272a><i class=\"material-icons white-text\" data-v-f6f1272a>camera_alt</i></button></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><h6 class=\"red-text\" data-v-f6f1272a>\n                                Picture of the Seal (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-f6f1272a><i class=\"material-icons white-text\" data-v-f6f1272a>camera_alt</i></button></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><img id=\"output-pic-of-seal\" class=\"responsive-img\" data-v-f6f1272a></div></div> <div class=\"row\" data-v-f6f1272a><div class=\"col s12 input-field\" data-v-f6f1272a><textarea name id placeholder=\"Further Remarks (*)\" class=\"materialize-textarea\" data-v-f6f1272a>" + _vm._ssrEscape(_vm._s(_vm.further_remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-f6f1272a></div> <div class=\"row center safe-area-bottom\" data-v-f6f1272a><div class=\"col s12\" data-v-f6f1272a><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-f6f1272a>Submit</button></div></div>")], 2)])])], 2)], 2);
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-788b7f2e><div class=\"col s9\" data-v-788b7f2e><input type=\"text\" placeholder=\"Tracking ID\"" + _vm._ssrAttr("value", _vm.tracking_id) + " data-v-788b7f2e></div> <div class=\"col s3\" data-v-788b7f2e><button class=\"btn btn-flat red white-text\" data-v-788b7f2e>Check</button></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Account Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Account Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Meter Number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Request Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.request_type) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Negative Reading\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.negative_reading_value) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><b data-v-788b7f2e>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-788b7f2e> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><b data-v-788b7f2e>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Customer email\"" + _vm._ssrAttr("value", _vm.customer_email) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Customer Phone Number\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><h6 class=\"red-text\" data-v-788b7f2e>\n                                Picture of the Meter (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-788b7f2e><i class=\"material-icons white-text\" data-v-788b7f2e>camera_alt</i></button></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><h6 class=\"red-text\" data-v-788b7f2e>\n                                Picture of the Meter Installation Point (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-788b7f2e><i class=\"material-icons white-text\" data-v-788b7f2e>camera_alt</i></button></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><img id=\"output-pic-of-meter-installation-point\" class=\"responsive-img\" data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><h6 class=\"red-text\" data-v-788b7f2e>\n                                Picture of building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-788b7f2e><i class=\"material-icons white-text\" data-v-788b7f2e>camera_alt</i></button></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><h6 class=\"red-text\" data-v-788b7f2e>\n                                Picture of the Seal (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-788b7f2e><i class=\"material-icons white-text\" data-v-788b7f2e>camera_alt</i></button></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><img id=\"output-pic-of-seal\" class=\"responsive-img\" data-v-788b7f2e></div></div> <div class=\"row\" data-v-788b7f2e><div class=\"col s12 input-field\" data-v-788b7f2e><textarea name id placeholder=\"Further Remarks (*)\" class=\"materialize-textarea\" data-v-788b7f2e>" + _vm._ssrEscape(_vm._s(_vm.further_remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-788b7f2e></div> <div class=\"row center safe-area-bottom\" data-v-788b7f2e><div class=\"col s12\" data-v-788b7f2e><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-788b7f2e>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/token_request/index.vue?vue&type=template&id=f6f1272a&scoped=true
+// CONCATENATED MODULE: ./pages/token_request/index.vue?vue&type=template&id=788b7f2e&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/token_request/index.vue?vue&type=script&lang=js
 var token_requestvue_type_script_lang_js = __webpack_require__(70);
@@ -116,7 +116,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "f6f1272a",
+  "788b7f2e",
   "3ce3b873"
   
 )
@@ -356,7 +356,10 @@ async function getCustomerInfoApi2(meterNumber, service_type) {
   // use the customer2 api here when you wake up by God's grace. Jesus is Lord
 
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" + customer_meter_number + "&serviceType=" + service_type, {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
@@ -421,7 +424,11 @@ async function getIDBCustomerInfoApi(accountNumber) {
 async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
   try {
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" + trackingId, {
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" + trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
+    {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -517,10 +524,8 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
-    {
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + localStorage.token,
@@ -1065,12 +1070,12 @@ module.exports = ___CSS_LOADER_EXPORT___;
       duration_of_theft: '',
       account_status: '',
       request_type: '',
+      negative_reading: '',
       userId: null,
       pic_of_meter: '',
       pic_of_meter_installation_point: '',
       pic_of_building: '',
       pic_of_seal: '',
-      negative_reading: false,
       pumping_maching_on_direct: false,
       negative_reading_value: '0',
       formFields: [],
@@ -1262,6 +1267,13 @@ module.exports = ___CSS_LOADER_EXPORT___;
         this.dt_no = response[0].dtNo;
         this.dt_name = response[0].dt;
         this.request_type = response[0].reqType;
+        this.negative_reading_value = response[0].negReading;
+        console.log(this.account_status);
+        console.log(this.account_status);
+        console.log(this.account_status);
+        if (this.negative_reading_value == null) {
+          this.negative_reading_value = 0;
+        }
       } catch (error) {
         console.log(error);
         M.toast({
@@ -1714,8 +1726,8 @@ module.exports = ___CSS_LOADER_EXPORT___;
       } else {
         try {
           this.disabled_bool = true;
-          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
-            // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
+          // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
+          const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
@@ -1736,9 +1748,11 @@ module.exports = ___CSS_LOADER_EXPORT___;
               feederName: this.feeder_name,
               email: this.customer_email,
               requestType: this.request_type,
+              negReading: this.negative_reading_value,
               accountStatus: this.account_status,
               dtNo: this.dt_no,
               phoneNo: this.phone_number,
+              typeOfToken: this.tamper_type,
               // location: "3.334432, 6.322344",
               location: this.location,
               picOfMeter: this.pic_of_meter.name,
