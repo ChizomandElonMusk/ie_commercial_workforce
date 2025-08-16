@@ -1,33 +1,4 @@
 /*!
-DOMTokenList
-*/
-
-/*!
-Element.closest and Element.matches
-https://github.com/jonathantneal/closest
-Creative Commons Zero v1.0 Universal
-*/
-
-/*!
-Element.getRootNode()
-*/
-
-/*!
-Element.isConnected()
-*/
-
-
-/*!
- * Vue.js v2.7.16
- * (c) 2014-2023 Evan You
- * Released under the MIT License.
- */
-
-
-/*! Capacitor: https://capacitorjs.com/ - MIT License */
-
-
-/*!
  * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
@@ -66,3 +37,32 @@ Element.isConnected()
  * @param {Object=} options
  * @returns {Function}
  */
+
+
+/*!
+DOMTokenList
+*/
+
+/*!
+Element.closest and Element.matches
+https://github.com/jonathantneal/closest
+Creative Commons Zero v1.0 Universal
+*/
+
+/*!
+Element.getRootNode()
+*/
+
+/*!
+Element.isConnected()
+*/
+
+
+/*!
+ * Vue.js v2.7.16
+ * (c) 2014-2023 Evan You
+ * Released under the MIT License.
+ */
+
+
+/*! Capacitor: https://capacitorjs.com/ - MIT License */

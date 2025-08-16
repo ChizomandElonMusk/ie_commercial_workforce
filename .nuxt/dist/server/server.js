@@ -2345,17 +2345,17 @@ var materialize = __webpack_require__(26);
 // EXTERNAL MODULE: ./assets/css/style.css
 var style = __webpack_require__(28);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/admin_main.vue?vue&type=template&id=4975a598
-var admin_mainvue_type_template_id_4975a598_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/admin_main.vue?vue&type=template&id=89017cee
+var admin_mainvue_type_template_id_89017cee_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "row"
   }, [_c('AdminNavBar'), _vm._ssrNode(" "), _c('nuxt')], 2);
 };
-var admin_mainvue_type_template_id_4975a598_staticRenderFns = [];
+var admin_mainvue_type_template_id_89017cee_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./layouts/admin_main.vue?vue&type=template&id=4975a598
+// CONCATENATED MODULE: ./layouts/admin_main.vue?vue&type=template&id=89017cee
 
 // EXTERNAL MODULE: ./components/AdminNavBar.vue + 4 modules
 var AdminNavBar = __webpack_require__(7);
@@ -2365,7 +2365,67 @@ var AdminNavBar = __webpack_require__(7);
 /* harmony default export */ var admin_mainvue_type_script_lang_js = ({
   components: {
     AdminNavBar: AdminNavBar["default"]
-  }
+  },
+  data() {
+    return {
+      activityTimeout: null,
+      inactivityDuration: 60000 // 1 minute
+    };
+  },
+  beforeUnmount() {
+    this.cleanupActivityTracking();
+  },
+  methods: {
+    initializeActivityTracking() {
+      // Reset initial timer
+      this.resetActivityTimer();
+
+      // Add event listeners
+      window.addEventListener('touchstart', this.resetActivityTimer);
+      window.addEventListener('touchmove', this.resetActivityTimer);
+      window.addEventListener('click', this.resetActivityTimer);
+      document.addEventListener('visibilitychange', this.handleVisibilityChange);
+    },
+    cleanupActivityTracking() {
+      this.clearActivityTimer();
+      window.removeEventListener('touchstart', this.resetActivityTimer);
+      window.removeEventListener('touchmove', this.resetActivityTimer);
+      window.removeEventListener('click', this.resetActivityTimer);
+      document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    },
+    resetActivityTimer() {
+      if (this.activityTimeout) {
+        clearTimeout(this.activityTimeout);
+      }
+      this.activityTimeout = setTimeout(() => {
+        this.logoutUser();
+      }, this.inactivityDuration);
+    },
+    handleVisibilityChange() {
+      if (document.visibilityState === 'hidden') {
+        this.clearActivityTimer();
+      } else {
+        this.resetActivityTimer();
+      }
+    },
+    async logoutUser() {
+      try {
+        // Redirect to login
+        this.$router.push('/');
+      } catch (error) {
+        console.error('Logout error:', error);
+      }
+    },
+    clearActivityTimer() {
+      if (this.activityTimeout) {
+        clearTimeout(this.activityTimeout);
+      }
+    }
+  },
+  mounted() {
+    this.initializeActivityTracking();
+  },
+  created() {}
 });
 // CONCATENATED MODULE: ./layouts/admin_main.vue?vue&type=script&lang=js
  /* harmony default export */ var layouts_admin_mainvue_type_script_lang_js = (admin_mainvue_type_script_lang_js); 
@@ -2382,8 +2442,8 @@ function admin_main_injectStyles (context) {
 
 var admin_main_component = Object(componentNormalizer["a" /* default */])(
   layouts_admin_mainvue_type_script_lang_js,
-  admin_mainvue_type_template_id_4975a598_render,
-  admin_mainvue_type_template_id_4975a598_staticRenderFns,
+  admin_mainvue_type_template_id_89017cee_render,
+  admin_mainvue_type_template_id_89017cee_staticRenderFns,
   false,
   admin_main_injectStyles,
   null,
@@ -2396,20 +2456,81 @@ var admin_main_component = Object(componentNormalizer["a" /* default */])(
 /* nuxt-component-imports */
 installComponents(admin_main_component, {AdminNavBar: __webpack_require__(7).default})
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=c2ecd536
-var defaultvue_type_template_id_c2ecd536_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=7a750afe
+var defaultvue_type_template_id_7a750afe_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "row"
   }, [_vm._ssrNode("<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\"> <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin> <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin> <link href=\"https://fonts.googleapis.com/css2?family=Poppins&display=swap\" rel=\"stylesheet\"> <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" rel=\"stylesheet\"> <meta name=\"viewport\" content=\"viewport-fit=contain, width=device-width, initial-scale=1\"> "), _c('nuxt')], 2);
 };
-var defaultvue_type_template_id_c2ecd536_staticRenderFns = [];
+var defaultvue_type_template_id_7a750afe_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=c2ecd536
+// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=7a750afe
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=script&lang=js
-/* harmony default export */ var defaultvue_type_script_lang_js = ({});
+/* harmony default export */ var defaultvue_type_script_lang_js = ({
+  data() {
+    return {
+      activityTimeout: null,
+      inactivityDuration: 600000 // 1 minute
+    };
+  },
+  beforeUnmount() {
+    this.cleanupActivityTracking();
+  },
+  methods: {
+    initializeActivityTracking() {
+      // Reset initial timer
+      this.resetActivityTimer();
+
+      // Add event listeners
+      window.addEventListener('touchstart', this.resetActivityTimer);
+      window.addEventListener('touchmove', this.resetActivityTimer);
+      window.addEventListener('click', this.resetActivityTimer);
+      document.addEventListener('visibilitychange', this.handleVisibilityChange);
+    },
+    cleanupActivityTracking() {
+      this.clearActivityTimer();
+      window.removeEventListener('touchstart', this.resetActivityTimer);
+      window.removeEventListener('touchmove', this.resetActivityTimer);
+      window.removeEventListener('click', this.resetActivityTimer);
+      document.removeEventListener('visibilitychange', this.handleVisibilityChange);
+    },
+    resetActivityTimer() {
+      if (this.activityTimeout) {
+        clearTimeout(this.activityTimeout);
+      }
+      this.activityTimeout = setTimeout(() => {
+        this.logoutUser();
+      }, this.inactivityDuration);
+    },
+    handleVisibilityChange() {
+      if (document.visibilityState === 'hidden') {
+        this.clearActivityTimer();
+      } else {
+        this.resetActivityTimer();
+      }
+    },
+    async logoutUser() {
+      try {
+        // Redirect to login
+        this.$router.push('/');
+      } catch (error) {
+        console.error('Logout error:', error);
+      }
+    },
+    clearActivityTimer() {
+      if (this.activityTimeout) {
+        clearTimeout(this.activityTimeout);
+      }
+    }
+  },
+  mounted() {
+    this.initializeActivityTracking();
+  },
+  created() {}
+});
 // CONCATENATED MODULE: ./layouts/default.vue?vue&type=script&lang=js
  /* harmony default export */ var layouts_defaultvue_type_script_lang_js = (defaultvue_type_script_lang_js); 
 // CONCATENATED MODULE: ./layouts/default.vue
@@ -2425,8 +2546,8 @@ function default_injectStyles (context) {
 
 var default_component = Object(componentNormalizer["a" /* default */])(
   layouts_defaultvue_type_script_lang_js,
-  defaultvue_type_template_id_c2ecd536_render,
-  defaultvue_type_template_id_c2ecd536_staticRenderFns,
+  defaultvue_type_template_id_7a750afe_render,
+  defaultvue_type_template_id_7a750afe_staticRenderFns,
   false,
   default_injectStyles,
   null,
@@ -2435,17 +2556,17 @@ var default_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var layouts_default = (default_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/main.vue?vue&type=template&id=fda38f4c
-var mainvue_type_template_id_fda38f4c_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/main.vue?vue&type=template&id=3da8df9a
+var mainvue_type_template_id_3da8df9a_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "row"
   }, [_c('NavBar'), _vm._ssrNode(" "), _c('nuxt')], 2);
 };
-var mainvue_type_template_id_fda38f4c_staticRenderFns = [];
+var mainvue_type_template_id_3da8df9a_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./layouts/main.vue?vue&type=template&id=fda38f4c
+// CONCATENATED MODULE: ./layouts/main.vue?vue&type=template&id=3da8df9a
 
 // EXTERNAL MODULE: ./components/NavBar.vue + 4 modules
 var NavBar = __webpack_require__(8);
@@ -2472,8 +2593,8 @@ function main_injectStyles (context) {
 
 var main_component = Object(componentNormalizer["a" /* default */])(
   layouts_mainvue_type_script_lang_js,
-  mainvue_type_template_id_fda38f4c_render,
-  mainvue_type_template_id_fda38f4c_staticRenderFns,
+  mainvue_type_template_id_3da8df9a_render,
+  mainvue_type_template_id_3da8df9a_staticRenderFns,
   false,
   main_injectStyles,
   null,
