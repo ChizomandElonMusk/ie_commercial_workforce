@@ -12,7 +12,7 @@
 data() {
         return {
             activityTimeout: null,
-            inactivityDuration: 60000 // 1 minute
+            inactivityDuration: 1800000 // 1 minute
         }
     },
 
