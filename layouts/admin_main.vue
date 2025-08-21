@@ -1,15 +1,15 @@
 <template>
     <div class="row">
-      <AdminNavBar/>
-      <nuxt/>
+        <AdminNavBar />
+        <nuxt />
     </div>
-  </template>
-  
-  <script>
-  import AdminNavBar from '~/components/AdminNavBar.vue';
-  export default {
-      components: { AdminNavBar },
-data() {
+</template>
+
+<script>
+import AdminNavBar from '~/components/AdminNavBar.vue';
+export default {
+    components: { AdminNavBar },
+    data() {
         return {
             activityTimeout: null,
             inactivityDuration: 1800000 // 1 minute
@@ -76,11 +76,9 @@ data() {
     },
 
     created() {
-        
+
     },
-  }
-  </script>
-  
-  <style>
-  
-  </style>
+}
+</script>
+
+<style></style>

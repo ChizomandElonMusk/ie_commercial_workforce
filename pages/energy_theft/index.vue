@@ -560,6 +560,7 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
+            account_number2: '',
             meter_number: '',
             account_type: '',
             account_name: '',
@@ -1044,10 +1045,10 @@ export default {
             // const imageFile = event.target.files[0];
             if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1074,7 +1075,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Additional1', this.pic_of_additional_pic2)
+                var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Additional1', this.pic_of_additional_pic2)
                 console.log(xx)
 
 
@@ -1147,10 +1148,10 @@ export default {
 
             if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
             
 
@@ -1178,7 +1179,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Theft', this.pic_of_theft)
+                var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Theft', this.pic_of_theft)
                 console.log(xx)
                 if (this.random_id != '') {
                     this.account_number = ''
@@ -1239,10 +1240,10 @@ export default {
 
             if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             } 
 
             const options = {
@@ -1269,7 +1270,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_ByPass', this.pic_of_bypass)
+                var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_ByPass', this.pic_of_bypass)
                 console.log(xx)
 
 
@@ -1327,10 +1328,10 @@ export default {
 
             if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1357,7 +1358,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Additional', this.pic_of_additional)
+                var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Additional', this.pic_of_additional)
                 console.log(xx)
 
 
@@ -1417,10 +1418,10 @@ export default {
 
             if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1447,7 +1448,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'EnergyTheft_Meter', this.pic_of_meter)
+                var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Meter', this.pic_of_meter)
                 console.log(xx)
 
 

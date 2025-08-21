@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4bfa0ba4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(82);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4bfa0ba4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4bfa0ba4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4bfa0ba4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_4bfa0ba4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_71d59851_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(82);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_71d59851_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_71d59851_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_71d59851_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_71d59851_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-4bfa0ba4]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-71d59851]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_categorization/index.vue?vue&type=template&id=4bfa0ba4&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_categorization/index.vue?vue&type=template&id=71d59851&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,16 +44,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-4bfa0ba4>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-71d59851>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-4bfa0ba4>Customer Categorization</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-71d59851>Customer Categorization</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-4bfa0ba4><div class=\"row\" data-v-4bfa0ba4><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-4bfa0ba4>DONE</a></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"container\" data-v-4bfa0ba4><div class=\"row\" data-v-4bfa0ba4><div class=\"col s12 center\" data-v-4bfa0ba4><h6 data-v-4bfa0ba4>Sign here!</h6></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12 center\" data-v-4bfa0ba4><canvas id=\"sig-canvas\" width=\"250px\" data-v-4bfa0ba4>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12 center\" data-v-4bfa0ba4><div class=\"col s6\" data-v-4bfa0ba4><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-4bfa0ba4>Save</button></div> <div class=\"col s6\" data-v-4bfa0ba4><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-4bfa0ba4>Clear</button></div></div></div> <br data-v-4bfa0ba4> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-4bfa0ba4>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-71d59851><div class=\"row\" data-v-71d59851><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-71d59851>DONE</a></div> <div class=\"row\" data-v-71d59851><div class=\"container\" data-v-71d59851><div class=\"row\" data-v-71d59851><div class=\"col s12 center\" data-v-71d59851><h6 data-v-71d59851>Sign here!</h6></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12 center\" data-v-71d59851><canvas id=\"sig-canvas\" width=\"250px\" data-v-71d59851>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12 center\" data-v-71d59851><div class=\"col s6\" data-v-71d59851><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-71d59851>Save</button></div> <div class=\"col s6\" data-v-71d59851><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-71d59851>Clear</button></div></div></div> <br data-v-71d59851> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-71d59851>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-4bfa0ba4>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4bfa0ba4>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-71d59851>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-71d59851>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-71d59851>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -65,7 +65,7 @@ var render = function render() {
       },
       expression: "service_type"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-4bfa0ba4><div class=\"col s9\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-4bfa0ba4></div> <div class=\"col s3\" data-v-4bfa0ba4><button class=\"btn btn-flat red white-text\" data-v-4bfa0ba4>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-4bfa0ba4><div class=\"col s9\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-4bfa0ba4></div> <div class=\"col s3\" data-v-4bfa0ba4><button class=\"btn btn-flat red white-text\" data-v-4bfa0ba4>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><b data-v-4bfa0ba4>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-4bfa0ba4> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><b data-v-4bfa0ba4>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Feeder cap\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_cap) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Feeder Availability\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_availability) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-4bfa0ba4></div></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-4bfa0ba4></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4bfa0ba4>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-71d59851><div class=\"col s9\" data-v-71d59851><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-71d59851></div> <div class=\"col s3\" data-v-71d59851><button class=\"btn btn-flat red white-text\" data-v-71d59851>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-71d59851><div class=\"col s9\" data-v-71d59851><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-71d59851></div> <div class=\"col s3\" data-v-71d59851><button class=\"btn btn-flat red white-text\" data-v-71d59851>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><b data-v-71d59851>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-71d59851> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><b data-v-71d59851>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Feeder cap\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_cap) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Feeder Availability\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_availability) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-71d59851></div></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-71d59851></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-71d59851>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Residential', 'Commercial', 'Bar or lounge', 'Motel', 'School', 'Church', 'Mosque', 'Agriculture', 'Nylon factory', 'Pure water factory', 'Other'],
       "default": 'Use of premise'
@@ -77,7 +77,7 @@ var render = function render() {
       },
       expression: "user_of_premise"
     }
-  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4>" + (_vm.user_of_premise === 'Others' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.other_comment) + " data-v-4bfa0ba4>" : "<!---->") + "</div></div> <br data-v-4bfa0ba4> "), _vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4bfa0ba4>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851>" + (_vm.user_of_premise === 'Others' ? "<input type=\"text\" placeholder=\"How many?\"" + _vm._ssrAttr("value", _vm.other_comment) + " data-v-71d59851>" : "<!---->") + "</div></div> <br data-v-71d59851> "), _vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-71d59851>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Average load', 'Peak load'],
       "default": 'Load type *'
@@ -89,7 +89,7 @@ var render = function render() {
       },
       expression: "load_type"
     }
-  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-4bfa0ba4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-4bfa0ba4>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-71d59851>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-71d59851>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Single-Phase', 'Three-Phase'],
       "default": 'Customer Wiring *'
@@ -101,11 +101,11 @@ var render = function render() {
       },
       expression: "customer_wiring"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.single_phase_check == true ? "<div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><label for=\"r_y_b\" data-v-4bfa0ba4>R/Y/B</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"r_y_b\" placeholder=\"R/Y/B\"" + _vm._ssrAttr("value", _vm.r_y_b) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of R/Y/B (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-ryb\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><label for=\"n_n_n\" data-v-4bfa0ba4>N</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"n_n_n\" placeholder=\"N\"" + _vm._ssrAttr("value", _vm.n_n_n) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of N (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-n-singlephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-building-singlephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div></div>" : "<!---->") + " " + (_vm.three_phase_check == true ? "<div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><label for=\"r_box\" data-v-4bfa0ba4>R</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"r_box\" placeholder=\"R\"" + _vm._ssrAttr("value", _vm.r_box) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of R (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-r-threephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><label for=\"y_box\" data-v-4bfa0ba4>Y</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"y_box\" placeholder=\"Y\"" + _vm._ssrAttr("value", _vm.y_box) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of Y (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-y-threephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><label for=\"b_box\" data-v-4bfa0ba4>B</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"b_box\" placeholder=\"B\"" + _vm._ssrAttr("value", _vm.b_box) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of B (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-b-threephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><label for=\"n_n_n\" data-v-4bfa0ba4>N</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"n_n_n\" placeholder=\"N\"" + _vm._ssrAttr("value", _vm.n_n_n) + " data-v-4bfa0ba4></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of N (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-n-threephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div> <div class=\"col s12\" data-v-4bfa0ba4><h6 class=\"red-text\" data-v-4bfa0ba4>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-4bfa0ba4><i class=\"material-icons white-text\" data-v-4bfa0ba4>camera_alt</i></button></div> <div class=\"row\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><img id=\"output-pic-of-building-threephase\" class=\"responsive-img\" data-v-4bfa0ba4></div></div></div>" : "<!---->") + " <div class=\"row center\" data-v-4bfa0ba4></div> <div class=\"row center safe-area-bottom\" data-v-4bfa0ba4><div class=\"col s12\" data-v-4bfa0ba4><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" style=\"margin-top: 20px;\" data-v-4bfa0ba4>Submit</button></div></div>")], 2)])])], 2)], 2);
+  })], 1)]), _vm._ssrNode(" " + (_vm.single_phase_check == true ? "<div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><label for=\"r_y_b\" data-v-71d59851>R/Y/B</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"r_y_b\" placeholder=\"R/Y/B\"" + _vm._ssrAttr("value", _vm.r_y_b) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of R/Y/B (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-ryb\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><label for=\"n_n_n\" data-v-71d59851>N</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"n_n_n\" placeholder=\"N\"" + _vm._ssrAttr("value", _vm.n_n_n) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of N (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-n-singlephase\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-building-singlephase\" class=\"responsive-img\" data-v-71d59851></div></div></div>" : "<!---->") + " " + (_vm.three_phase_check == true ? "<div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><label for=\"r_box\" data-v-71d59851>R</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"r_box\" placeholder=\"R\"" + _vm._ssrAttr("value", _vm.r_box) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of R (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-r-threephase\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><label for=\"y_box\" data-v-71d59851>Y</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"y_box\" placeholder=\"Y\"" + _vm._ssrAttr("value", _vm.y_box) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of Y (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-y-threephase\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><label for=\"b_box\" data-v-71d59851>B</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"b_box\" placeholder=\"B\"" + _vm._ssrAttr("value", _vm.b_box) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of B (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-b-threephase\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><label for=\"n_n_n\" data-v-71d59851>N</label> <input type=\"number\" min=\"0\" max=\"1000\" step=\"0.01\" id=\"n_n_n\" placeholder=\"N\"" + _vm._ssrAttr("value", _vm.n_n_n) + " data-v-71d59851></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of N (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-n-threephase\" class=\"responsive-img\" data-v-71d59851></div></div> <div class=\"col s12\" data-v-71d59851><h6 class=\"red-text\" data-v-71d59851>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-71d59851><i class=\"material-icons white-text\" data-v-71d59851>camera_alt</i></button></div> <div class=\"row\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><img id=\"output-pic-of-building-threephase\" class=\"responsive-img\" data-v-71d59851></div></div></div>" : "<!---->") + " <div class=\"row center\" data-v-71d59851></div> <div class=\"row center safe-area-bottom\" data-v-71d59851><div class=\"col s12\" data-v-71d59851><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" style=\"margin-top: 20px;\" data-v-71d59851>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/customer_categorization/index.vue?vue&type=template&id=4bfa0ba4&scoped=true
+// CONCATENATED MODULE: ./pages/customer_categorization/index.vue?vue&type=template&id=71d59851&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_categorization/index.vue?vue&type=script&lang=js
 var customer_categorizationvue_type_script_lang_js = __webpack_require__(52);
@@ -134,7 +134,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "4bfa0ba4",
+  "71d59851",
   "d2395c58"
   
 )
@@ -1071,6 +1071,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       disabled_bool: false,
       service_type: null,
       account_number: '',
+      account_number2: '',
       meter_number: '',
       account_type: '',
       account_name: '',
@@ -1560,10 +1561,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       this.meter_number = this.meter_number.trim();
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const imageFile = event;
       // const imageFile = event.target.files[0];
@@ -1587,7 +1588,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_RYB', this.pic_of_the_ryb);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_RYB', this.pic_of_the_ryb);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1629,10 +1630,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1653,7 +1654,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Neutral', this.pic_of_the_n);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Neutral', this.pic_of_the_n);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1697,10 +1698,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       this.meter_number = this.meter_number.trim();
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1721,7 +1722,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Building', this.pic_of_the_buidling);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Building', this.pic_of_the_buidling);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1763,10 +1764,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1787,7 +1788,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Red', this.pic_of_the_r_threephase);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Red', this.pic_of_the_r_threephase);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1829,10 +1830,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1853,7 +1854,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Yellow', this.pic_of_the_y_threephase);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Yellow', this.pic_of_the_y_threephase);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1893,10 +1894,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1917,7 +1918,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Blue', this.pic_of_the_b_threephase);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Blue', this.pic_of_the_b_threephase);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1957,10 +1958,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1981,7 +1982,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Neutral', this.pic_of_the_n);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Neutral', this.pic_of_the_n);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -2021,10 +2022,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -2045,7 +2046,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         if (compressedFile !== null) {
           output.src = URL.createObjectURL(compressedFile);
         }
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'CustomerCat_Building', this.pic_of_the_buidling);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'CustomerCat_Building', this.pic_of_the_buidling);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -2367,7 +2368,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("4c428f44", content, true, context)
+  add("91d76f14", content, true, context)
 };
 
 /***/ })

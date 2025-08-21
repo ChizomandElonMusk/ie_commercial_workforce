@@ -612,6 +612,7 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
+            account_number2: '',
             meter_number: '',
             account_type: '',
             account_name: '',
@@ -1167,12 +1168,12 @@ export default {
 
             this.account_number = this.account_number.trim()
             this.meter_number = this.meter_number.trim()
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const imageFile = event;
@@ -1199,7 +1200,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_RYB', this.pic_of_the_ryb)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_RYB', this.pic_of_the_ryb)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1253,12 +1254,12 @@ export default {
             this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1282,7 +1283,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Neutral', this.pic_of_the_n)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Neutral', this.pic_of_the_n)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1339,12 +1340,12 @@ export default {
             // const imageFile = event.target.files[0];
             this.account_number = this.account_number.trim()
             this.meter_number = this.meter_number.trim()
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1368,7 +1369,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Building', this.pic_of_the_buidling)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Building', this.pic_of_the_buidling)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1422,12 +1423,12 @@ export default {
             this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1451,7 +1452,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Red', this.pic_of_the_r_threephase)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Red', this.pic_of_the_r_threephase)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1505,12 +1506,12 @@ export default {
             this.meter_number = this.meter_number.trim()
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1534,7 +1535,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Yellow', this.pic_of_the_y_threephase)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Yellow', this.pic_of_the_y_threephase)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1587,12 +1588,12 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1616,7 +1617,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Blue', this.pic_of_the_b_threephase)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Blue', this.pic_of_the_b_threephase)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1668,12 +1669,12 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1697,7 +1698,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Neutral', this.pic_of_the_n)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Neutral', this.pic_of_the_n)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);
@@ -1749,12 +1750,12 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
 
             const options = {
@@ -1778,7 +1779,7 @@ export default {
                     output.src = URL.createObjectURL(compressedFile);
                 }
 
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerCat_Building', this.pic_of_the_buidling)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerCat_Building', this.pic_of_the_buidling)
                 console.log(xx)
             } catch (error) {
                 // // console.log(error);

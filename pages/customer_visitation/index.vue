@@ -688,6 +688,7 @@ export default {
             disabled_bool: false,
             service_type: null,
             account_number: '',
+            account_number2: '',
             random_id: '',
             feed_availability: '',
             meter_number: '',
@@ -1246,12 +1247,12 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
             // const imageFile = event.target.files[0];
 
@@ -1279,7 +1280,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Premise', this.pic_of_premise)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerVisitation_Premise', this.pic_of_premise)
                 console.log(xx)
 
 
@@ -1348,12 +1349,12 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
             // const imageFile = event.target.files[0];
 
@@ -1381,7 +1382,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Additional', this.pic_of_additional_pic)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerVisitation_Additional', this.pic_of_additional_pic)
                 console.log(xx)
                 if (this.random_id != '') {
                     this.account_number = ''
@@ -1439,12 +1440,12 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
             // const imageFile = event.target.files[0];
 
@@ -1472,7 +1473,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_PaymentReceipt', this.pic_of_payment_receipt)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerVisitation_PaymentReceipt', this.pic_of_payment_receipt)
                 console.log(xx)
 
 
@@ -1526,12 +1527,12 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '') {
+            if (this.account_number !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number = this.account_number
+                this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
-                this.account_number = this.meter_number
+                this.account_number2 = this.meter_number
             }
             // const imageFile = event.target.files[0];
 
@@ -1559,7 +1560,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                var xx = await uploadImage(this.userId, this.account_number, 'CustomerVisitation_Meters', this.pic_of_meter)
+                var xx = await uploadImage(this.userId, this.account_number2, 'CustomerVisitation_Meters', this.pic_of_meter)
                 console.log(xx)
 
 

@@ -2345,17 +2345,17 @@ var materialize = __webpack_require__(26);
 // EXTERNAL MODULE: ./assets/css/style.css
 var style = __webpack_require__(28);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/admin_main.vue?vue&type=template&id=89017cee
-var admin_mainvue_type_template_id_89017cee_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/admin_main.vue?vue&type=template&id=87d2ad98
+var admin_mainvue_type_template_id_87d2ad98_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "row"
   }, [_c('AdminNavBar'), _vm._ssrNode(" "), _c('nuxt')], 2);
 };
-var admin_mainvue_type_template_id_89017cee_staticRenderFns = [];
+var admin_mainvue_type_template_id_87d2ad98_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./layouts/admin_main.vue?vue&type=template&id=89017cee
+// CONCATENATED MODULE: ./layouts/admin_main.vue?vue&type=template&id=87d2ad98
 
 // EXTERNAL MODULE: ./components/AdminNavBar.vue + 4 modules
 var AdminNavBar = __webpack_require__(7);
@@ -2369,7 +2369,7 @@ var AdminNavBar = __webpack_require__(7);
   data() {
     return {
       activityTimeout: null,
-      inactivityDuration: 60000 // 1 minute
+      inactivityDuration: 1800000 // 1 minute
     };
   },
   beforeUnmount() {
@@ -2442,8 +2442,8 @@ function admin_main_injectStyles (context) {
 
 var admin_main_component = Object(componentNormalizer["a" /* default */])(
   layouts_admin_mainvue_type_script_lang_js,
-  admin_mainvue_type_template_id_89017cee_render,
-  admin_mainvue_type_template_id_89017cee_staticRenderFns,
+  admin_mainvue_type_template_id_87d2ad98_render,
+  admin_mainvue_type_template_id_87d2ad98_staticRenderFns,
   false,
   admin_main_injectStyles,
   null,

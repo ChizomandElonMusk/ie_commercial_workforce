@@ -229,7 +229,7 @@
 
                         <div class="row">
                             <div class="col s12">
-                                <input type="text" v-model="phone_number" placeholder="Phone number">
+                                <input type="text" v-model="phone_number" placeholder="Phone number *">
                             </div>
                         </div>
 
@@ -1961,7 +1961,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '') {
+            if (this.business_unit == '' || this.phone_number == '') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })

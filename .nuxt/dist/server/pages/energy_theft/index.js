@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_8b3ba3da_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(88);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_8b3ba3da_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_8b3ba3da_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_8b3ba3da_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_8b3ba3da_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7f8b4798_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(88);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7f8b4798_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7f8b4798_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7f8b4798_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_7f8b4798_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-8b3ba3da]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-7f8b4798]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=template&id=8b3ba3da&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=template&id=7f8b4798&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,16 +44,16 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-8b3ba3da>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-7f8b4798>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-8b3ba3da>Energy Theft</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-7f8b4798>Energy Theft</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-8b3ba3da><div class=\"row\" data-v-8b3ba3da><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-8b3ba3da>DONE</a></div> <div class=\"row\" data-v-8b3ba3da><div class=\"container\" data-v-8b3ba3da><div class=\"row\" data-v-8b3ba3da><div class=\"col s12 center\" data-v-8b3ba3da><h6 data-v-8b3ba3da>Sign here!</h6></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12 center\" data-v-8b3ba3da><canvas id=\"sig-canvas\" width=\"250px\" data-v-8b3ba3da>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12 center\" data-v-8b3ba3da><div class=\"col s6\" data-v-8b3ba3da><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-8b3ba3da>Save</button></div> <div class=\"col s6\" data-v-8b3ba3da><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-8b3ba3da>Clear</button></div></div></div> <br data-v-8b3ba3da> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-8b3ba3da>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-7f8b4798><div class=\"row\" data-v-7f8b4798><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-7f8b4798>DONE</a></div> <div class=\"row\" data-v-7f8b4798><div class=\"container\" data-v-7f8b4798><div class=\"row\" data-v-7f8b4798><div class=\"col s12 center\" data-v-7f8b4798><h6 data-v-7f8b4798>Sign here!</h6></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12 center\" data-v-7f8b4798><canvas id=\"sig-canvas\" width=\"250px\" data-v-7f8b4798>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12 center\" data-v-7f8b4798><div class=\"col s6\" data-v-7f8b4798><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-7f8b4798>Save</button></div> <div class=\"col s6\" data-v-7f8b4798><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-7f8b4798>Clear</button></div></div></div> <br data-v-7f8b4798> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-7f8b4798>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-8b3ba3da>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-8b3ba3da>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-7f8b4798>", "</form>", [_vm._ssrNode("<div class=\"row\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-7f8b4798>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -65,7 +65,7 @@ var render = function render() {
       },
       expression: "service_type"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-8b3ba3da><div class=\"col s9\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-8b3ba3da></div> <div class=\"col s3\" data-v-8b3ba3da><button class=\"btn btn-flat red white-text\" data-v-8b3ba3da>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-8b3ba3da><div class=\"col s9\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-8b3ba3da></div> <div class=\"col s3\" data-v-8b3ba3da><button class=\"btn btn-flat red white-text\" data-v-8b3ba3da>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Installation Date\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.installation_date) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Customer Email\"" + _vm._ssrAttr("value", _vm.customer_email) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Customer Phone Number *\"" + _vm._ssrAttr("value", _vm.customer_phone_number) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><b data-v-8b3ba3da>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-8b3ba3da> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><b data-v-8b3ba3da>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                            ") + "</div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-8b3ba3da></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-8b3ba3da>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div class=\"row\" data-v-7f8b4798><div class=\"col s9\" data-v-7f8b4798><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-7f8b4798></div> <div class=\"col s3\" data-v-7f8b4798><button class=\"btn btn-flat red white-text\" data-v-7f8b4798>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div class=\"row\" data-v-7f8b4798><div class=\"col s9\" data-v-7f8b4798><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-7f8b4798></div> <div class=\"col s3\" data-v-7f8b4798><button class=\"btn btn-flat red white-text\" data-v-7f8b4798>Check</button></div></div>" : "<!---->") + " <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Feeder Name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.feeder_name) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Meter Manufacturer\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_manufacturer) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Meter Type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.meter_type) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Wiring Mode\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.wiring_mode) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Installation Date\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.installation_date) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Customer Email\"" + _vm._ssrAttr("value", _vm.customer_email) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Customer Phone Number *\"" + _vm._ssrAttr("value", _vm.customer_phone_number) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><b data-v-7f8b4798>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                            ") + "</div></div> <br data-v-7f8b4798> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><b data-v-7f8b4798>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                            ") + "</div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"DT name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-7f8b4798></div></div> "), _vm._ssrNode("<div class=\"row\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-7f8b4798>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['Meter Bypass', 'Pumping Machine On Direct', 'Meter Tampered', 'Under Billing', 'Burnt Meter or Faulty meter not on postpaid', 'Meter dispensing free', 'Free rider', 'Suspended account but connected to power', 'Negative reading', 'Others'],
       "default": 'Type of Infraction *'
@@ -77,9 +77,9 @@ var render = function render() {
       },
       expression: "type_of_infra"
     }
-  })], 1)]), _vm._ssrNode(" " + (_vm.negative_reading == true ? "<div class=\"row\" data-v-8b3ba3da><div class=\"col s3\" data-v-8b3ba3da><b style=\"font-weight: 800; font-size: 30px;\" data-v-8b3ba3da>\n                                -\n                            </b></div> <div class=\"col s9\" style=\"margin-left: -70px;\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Enter negative reading\"" + _vm._ssrAttr("value", _vm.negative_reading_value) + " data-v-8b3ba3da></div></div>" : "<!---->") + " " + (_vm.pumping_maching_on_direct == true ? "<div class=\"row center\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><b style=\"font-weight: 800; font-size: 30px;\" data-v-8b3ba3da>\n                                +\n                            </b></div> " + _vm._ssrList(_vm.formFields, function (field) {
-    return "<div data-v-8b3ba3da><div class=\"col s9\" data-v-8b3ba3da><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", field.value) + " data-v-8b3ba3da></div> <div class=\"col s3\" data-v-8b3ba3da><b class=\"red-text\" style=\"font-weight: 800; font-size: 30px;\" data-v-8b3ba3da>\n                                    -\n                                </b></div></div>";
-  }) + "</div>" : "<!---->") + " "), _vm._ssrNode("<div class=\"row\" data-v-8b3ba3da>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-8b3ba3da>", "</div>", [_c('CustomSelect', {
+  })], 1)]), _vm._ssrNode(" " + (_vm.negative_reading == true ? "<div class=\"row\" data-v-7f8b4798><div class=\"col s3\" data-v-7f8b4798><b style=\"font-weight: 800; font-size: 30px;\" data-v-7f8b4798>\n                                -\n                            </b></div> <div class=\"col s9\" style=\"margin-left: -70px;\" data-v-7f8b4798><input type=\"text\" placeholder=\"Enter negative reading\"" + _vm._ssrAttr("value", _vm.negative_reading_value) + " data-v-7f8b4798></div></div>" : "<!---->") + " " + (_vm.pumping_maching_on_direct == true ? "<div class=\"row center\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><b style=\"font-weight: 800; font-size: 30px;\" data-v-7f8b4798>\n                                +\n                            </b></div> " + _vm._ssrList(_vm.formFields, function (field) {
+    return "<div data-v-7f8b4798><div class=\"col s9\" data-v-7f8b4798><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", field.value) + " data-v-7f8b4798></div> <div class=\"col s3\" data-v-7f8b4798><b class=\"red-text\" style=\"font-weight: 800; font-size: 30px;\" data-v-7f8b4798>\n                                    -\n                                </b></div></div>";
+  }) + "</div>" : "<!---->") + " "), _vm._ssrNode("<div class=\"row\" data-v-7f8b4798>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-7f8b4798>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['unknown', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
       "default": 'Duration of theft *'
@@ -91,11 +91,11 @@ var render = function render() {
       },
       expression: "duration_of_theft"
     }
-  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><h6 class=\"red-text\" data-v-8b3ba3da>\n                                Seal as met (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-8b3ba3da><i class=\"material-icons white-text\" data-v-8b3ba3da>camera_alt</i></button></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><img id=\"output-pic-of-theft\" class=\"responsive-img\" data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><h6 class=\"red-text\" data-v-8b3ba3da>\n                                Picture of Bypass (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-8b3ba3da><i class=\"material-icons white-text\" data-v-8b3ba3da>camera_alt</i></button></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><img id=\"output-pic-of-bypass\" class=\"responsive-img\" data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><h6 class=\"red-text\" data-v-8b3ba3da>\n                                Picture of building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-8b3ba3da><i class=\"material-icons white-text\" data-v-8b3ba3da>camera_alt</i></button></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><h6 class=\"red-text\" data-v-8b3ba3da>\n                                Additional Picture 1 (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-8b3ba3da><i class=\"material-icons white-text\" data-v-8b3ba3da>camera_alt</i></button></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><img id=\"output-pic-of-additional\" class=\"responsive-img\" data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><h6 class=\"red-text\" data-v-8b3ba3da>\n                                Additional Picture 2 (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-8b3ba3da><i class=\"material-icons white-text\" data-v-8b3ba3da>camera_alt</i></button></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><img id=\"output-pic-of-additional-pic2\" class=\"responsive-img\" data-v-8b3ba3da></div></div> <div class=\"row\" data-v-8b3ba3da><div class=\"col s12 input-field\" data-v-8b3ba3da><textarea name id placeholder=\"Further Remarks (*)\" class=\"materialize-textarea\" data-v-8b3ba3da>" + _vm._ssrEscape(_vm._s(_vm.further_remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-8b3ba3da></div> <div class=\"row center safe-area-bottom\" data-v-8b3ba3da><div class=\"col s12\" data-v-8b3ba3da><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-8b3ba3da>Submit</button></div></div>")], 2)])])], 2)], 2);
+  })], 1)]), _vm._ssrNode(" <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><h6 class=\"red-text\" data-v-7f8b4798>\n                                Seal as met (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7f8b4798><i class=\"material-icons white-text\" data-v-7f8b4798>camera_alt</i></button></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><img id=\"output-pic-of-theft\" class=\"responsive-img\" data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><h6 class=\"red-text\" data-v-7f8b4798>\n                                Picture of Bypass (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7f8b4798><i class=\"material-icons white-text\" data-v-7f8b4798>camera_alt</i></button></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><img id=\"output-pic-of-bypass\" class=\"responsive-img\" data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><h6 class=\"red-text\" data-v-7f8b4798>\n                                Picture of building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7f8b4798><i class=\"material-icons white-text\" data-v-7f8b4798>camera_alt</i></button></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><img id=\"output-pic-of-meter\" class=\"responsive-img\" data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><h6 class=\"red-text\" data-v-7f8b4798>\n                                Additional Picture 1 (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7f8b4798><i class=\"material-icons white-text\" data-v-7f8b4798>camera_alt</i></button></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><img id=\"output-pic-of-additional\" class=\"responsive-img\" data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><h6 class=\"red-text\" data-v-7f8b4798>\n                                Additional Picture 2 (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-7f8b4798><i class=\"material-icons white-text\" data-v-7f8b4798>camera_alt</i></button></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><img id=\"output-pic-of-additional-pic2\" class=\"responsive-img\" data-v-7f8b4798></div></div> <div class=\"row\" data-v-7f8b4798><div class=\"col s12 input-field\" data-v-7f8b4798><textarea name id placeholder=\"Further Remarks (*)\" class=\"materialize-textarea\" data-v-7f8b4798>" + _vm._ssrEscape(_vm._s(_vm.further_remarks)) + "</textarea></div></div> <div class=\"row center\" data-v-7f8b4798></div> <div class=\"row center safe-area-bottom\" data-v-7f8b4798><div class=\"col s12\" data-v-7f8b4798><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red\" style=\"width: 300px; margin-top: 20px;\" data-v-7f8b4798>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/energy_theft/index.vue?vue&type=template&id=8b3ba3da&scoped=true
+// CONCATENATED MODULE: ./pages/energy_theft/index.vue?vue&type=template&id=7f8b4798&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/energy_theft/index.vue?vue&type=script&lang=js
 var energy_theftvue_type_script_lang_js = __webpack_require__(58);
@@ -124,7 +124,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "8b3ba3da",
+  "7f8b4798",
   "f0256518"
   
 )
@@ -1061,6 +1061,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       disabled_bool: false,
       service_type: null,
       account_number: '',
+      account_number2: '',
       meter_number: '',
       account_type: '',
       account_name: '',
@@ -1479,10 +1480,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
       // const imageFile = event.target.files[0];
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1507,7 +1508,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'EnergyTheft_Additional1', this.pic_of_additional_pic2);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'EnergyTheft_Additional1', this.pic_of_additional_pic2);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1561,10 +1562,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1589,7 +1590,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'EnergyTheft_Theft', this.pic_of_theft);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'EnergyTheft_Theft', this.pic_of_theft);
         console.log(xx);
         if (this.random_id != '') {
           this.account_number = '';
@@ -1633,10 +1634,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1661,7 +1662,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'EnergyTheft_ByPass', this.pic_of_bypass);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'EnergyTheft_ByPass', this.pic_of_bypass);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1702,10 +1703,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1730,7 +1731,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'EnergyTheft_Additional', this.pic_of_additional);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'EnergyTheft_Additional', this.pic_of_additional);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -1771,10 +1772,10 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
       if (this.account_number !== '') {
         console.log('acc number is not empty');
-        this.account_number = this.account_number;
+        this.account_number2 = this.account_number;
       } else if (this.meter_number !== '') {
         console.log('meter number is not empty');
-        this.account_number = this.meter_number;
+        this.account_number2 = this.meter_number;
       }
       const options = {
         maxSizeMB: 0.7,
@@ -1799,7 +1800,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
         // console.log('account number ', this.account_number)
         // console.log('pic_of_cwd ', this.pic_of_cwd)
         // hello()
-        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number, 'EnergyTheft_Meter', this.pic_of_meter);
+        var xx = await Object(_js_modules_mods__WEBPACK_IMPORTED_MODULE_3__[/* uploadImage */ "m"])(this.userId, this.account_number2, 'EnergyTheft_Meter', this.pic_of_meter);
         console.log(xx);
       } catch (error) {
         // // console.log(error);
@@ -2786,7 +2787,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("278db460", content, true, context)
+  add("5f27d27d", content, true, context)
 };
 
 /***/ })
