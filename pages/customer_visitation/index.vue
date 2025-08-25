@@ -453,7 +453,7 @@
                         </div>
                         <br>
 
-                        <div class="row center">
+                        <!-- <div class="row center">
                             <div class="col s12">
                                 <b>
                                     Any complaints from the customer?
@@ -469,7 +469,7 @@
                                 </div>
                             </form>
                         </div>
-                        <br>
+                        <br> -->
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">

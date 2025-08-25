@@ -127,6 +127,31 @@
                             </div>
                         </div>
 
+
+
+
+
+
+                        <!-- new feature  -->
+                        <div class="row">
+                            <!-- cutomer name -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Energy Balance" v-model="energy_balance" disabled>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['Meter faulty', 'Meter burnt', 'Meter bypassed', 'Postpaid reactivation']" :default="'Reason for reactivation'" class=""
+                                    v-model="reason_for_reactivation" />
+                            </div>
+                        </div>
+                        <!-- new feature ends here -->
+
+
+
+
+
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
