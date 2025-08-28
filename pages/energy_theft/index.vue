@@ -1077,6 +1077,7 @@ export default {
                 // hello()
                 var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Additional1', this.pic_of_additional_pic2)
                 console.log(xx)
+                console.log('account number on Additional2 ', this.account_number)
 
 
 
@@ -1273,6 +1274,8 @@ export default {
                 var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_ByPass', this.pic_of_bypass)
                 console.log(xx)
 
+                console.log('account number on Bypass ', this.account_number)
+
 
 
 
@@ -1360,6 +1363,7 @@ export default {
                 // hello()
                 var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Additional', this.pic_of_additional)
                 console.log(xx)
+                console.log('account number on Additional ', this.account_number)
 
 
 
@@ -1450,6 +1454,7 @@ export default {
                 // hello()
                 var xx = await uploadImage(this.userId, this.account_number2, 'EnergyTheft_Meter', this.pic_of_meter)
                 console.log(xx)
+                console.log('account number on Building ', this.account_number)
 
 
 
@@ -2367,6 +2372,7 @@ export default {
 
 
         async submit() {
+            console.log('account number in SUBMIT ', this.account_number)
             this.negative_reading_value = `-${this.negative_reading_value}`
             console.log('Negative reading ', this.negative_reading_value);
             // get all the form value in the dynamic list 

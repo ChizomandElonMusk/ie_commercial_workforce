@@ -453,10 +453,10 @@
                         </div>
                         <br>
 
-                        <!-- <div class="row center">
+                        <div class="row center">
                             <div class="col s12">
                                 <b>
-                                    Any complaints from the customer?
+                                    Direct connection
                                 </b>
                             </div>
                             <form @submit.prevent>
@@ -469,7 +469,7 @@
                                 </div>
                             </form>
                         </div>
-                        <br> -->
+                        <br>
 
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
@@ -1247,7 +1247,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1349,7 +1349,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1440,7 +1440,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1527,7 +1527,7 @@ export default {
             let imageFileName = this.generateRandomString()
 
             const imageFile = event;
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -2703,7 +2703,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

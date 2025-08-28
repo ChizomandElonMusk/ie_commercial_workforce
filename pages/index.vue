@@ -68,7 +68,7 @@ export default {
       user_test: '',
       password_test: '',
       username: '',
-      password: '',
+      password: '@@@1KingGod123456789012',
       
       version_number: '1.13.3',
       disabled: false,

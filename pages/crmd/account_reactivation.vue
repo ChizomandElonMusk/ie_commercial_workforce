@@ -129,29 +129,6 @@
 
 
 
-
-
-
-                        <!-- new feature  -->
-                        <div class="row">
-                            <!-- cutomer name -->
-                            <div class="col s12">
-                                <input type="text" placeholder="Energy Balance" v-model="energy_balance" disabled>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col s12" style="margin-bottom: 15px;">
-                                <CustomSelect :options="['Meter faulty', 'Meter burnt', 'Meter bypassed', 'Postpaid reactivation']" :default="'Reason for reactivation'" class=""
-                                    v-model="reason_for_reactivation" />
-                            </div>
-                        </div>
-                        <!-- new feature ends here -->
-
-
-
-
-
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
@@ -270,9 +247,33 @@
                             <div class="col s12">
                                 <h6 class="red-text">Date of suspension:</h6>
                                 <input type="date" v-model="date_of_suspension" id="date_of_suspension">
-                                <label for="date_of_suspension">Date of suspension:</label>
+                                <!-- <label for="date_of_suspension">Date of suspension:</label> -->
                             </div>
                         </div>
+
+
+
+
+
+                        <!-- new feature  -->
+                        <div class="row">
+                            <!-- cutomer name -->
+                            <div class="col s12">
+                                <input type="number" placeholder="Energy Balance" v-model="energy_balance">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12" style="margin-bottom: 15px;">
+                                <CustomSelect :options="['Meter faulty', 'Meter burnt', 'Meter bypassed', 'Postpaid reactivation']" :default="'Reason for reactivation *'" class=""
+                                    v-model="reason_for_reactivation" />
+                            </div>
+                        </div>
+                        <!-- new feature ends here -->
+
+
+
+
 
 
 
@@ -322,6 +323,32 @@
                         <div class="row">
                             <div class="col s12">
                                 <img class=" responsive-img" id="output-pic-of-psf" />
+                                <!-- <img class=" responsive-img" id="output-pic-of-connection" /> -->
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="row">
+                            
+                            <div class="col s12">
+
+                                <h6 class="red-text">
+                                    Picture of Energy balance
+                                </h6>
+                                <button class="btn red btn-large" @click="imagePickerForPictureOfEnergyBalance()">
+                                    <i class="material-icons white-text">camera_alt</i>
+                                </button>
+                                <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
+                            </div>
+                        </div>
+
+                        <!-- output for pic of the service wire from pole to metering point -->
+                        <div class="row">
+                            <div class="col s12">
+                                <img class=" responsive-img" id="output-pic-of-energy-balance" />
                                 <!-- <img class=" responsive-img" id="output-pic-of-connection" /> -->
                             </div>
                         </div>
@@ -428,6 +455,8 @@ export default {
             account_name: '',
             account_status: '',
             tarrif: '',
+            energy_balance: '',
+            reason_for_reactivation: '',
             address: '',
             business_unit: '',
             undertaking_one: '',
@@ -439,6 +468,7 @@ export default {
             dtNumber: '',
 
             pic_of_connection: '',
+            pic_of_energy_balance: '',
             pic_of_psf: '',
 
 
@@ -955,6 +985,95 @@ export default {
             }
 
         },
+
+
+
+
+
+
+        async imagePickerForPictureOfEnergyBalance() {
+            // image checker
+            this.meter_number = this.meter_number.trim()
+            this.account_number = this.account_number.trim()
+            if (this.meter_number == '' && this.account_number == '') {
+                M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
+            } else {
+                // Call the element loader after the app has been rendered the first time
+                defineCustomElements(window);
+
+                const image = await Camera.getPhoto({
+                    quality: 100,
+                    allowEditing: false,
+                    resultType: CameraResultType.Base64
+                });
+
+
+                const rawData = window.atob(image.base64String);
+                const bytes = new Array(rawData.length);
+                for (var x = 0; x < rawData.length; x++) {
+                    bytes[x] = rawData.charCodeAt(x);
+                }
+                const arr = new Uint8Array(bytes);
+                const blob = new Blob([arr], { type: 'image/jpeg' });
+                console.log(blob)
+
+
+
+                this.doSomethingWithFilesimagePickerForPictureOfEnergyBalance(blob)
+            }
+        },
+
+
+
+
+
+        async doSomethingWithFilesimagePickerForPictureOfEnergyBalance(event) {
+            let imageFileName = this.generateRandomString()
+
+            const imageFile = event;
+            // const imageFile = event.target.files[0];
+
+            const options = {
+                maxSizeMB: 0.7,
+                initialQuality: 2,
+                maxWidthOrHeight: 500,
+                useWebWorker: true
+            }
+            try {
+                const output = document.getElementById('output-pic-of-energy-balance');
+
+                const compressedFile = await imageCompression(imageFile, options);
+                // console.log('compressedFile instanceof Blob', compressedFile instanceof Blob); // true
+                // console.log(`compressedFile size ${compressedFile.size / 50 / 50} MB`); // smaller than maxSizeMB
+
+                // console.log(`${compressedFile.size / 50 / 50} MB`)
+
+                this.pic_of_energy_balance = new File([compressedFile], imageFileName + `${compressedFile.type.replace('image/', '.')}`)
+                console.log(this.pic_of_energy_balance)
+                if (compressedFile !== null) {
+                    output.src = URL.createObjectURL(compressedFile);
+                }
+
+                // console.log('account number ', this.account_number)
+                // console.log('pic_of_connection ', this.pic_of_connection)
+                // hello()
+                var xx = await uploadImage(this.userId, this.account_number, 'AccountReactivation_EnergyBalance', this.pic_of_energy_balance)
+                console.log(xx)
+
+
+
+
+
+            } catch (error) {
+                // // console.log(error);
+            }
+
+        },
+
+
+
+
+        
 
 
 
@@ -1976,6 +2095,7 @@ export default {
             this.further_remarks = this.further_remarks.trim()
             this.phone_number = this.phone_number.trim()
             this.inspection_conclusion = this.inspection_conclusion.trim()
+            this.reason_for_reactivation = this.reason_for_reactivation.trim()
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -1986,7 +2106,7 @@ export default {
             this.last_purchase_date = date + ' ' + time
 
 
-            if (this.business_unit == '' || this.phone_number == '') {
+            if (this.business_unit == '' || this.phone_number == '' || this.reason_for_reactivation == '' || this.reason_for_reactivation == 'Reason for reactivation *') {
 
 
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
@@ -2005,8 +2125,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountReactivation', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountReactivation', { 
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/crmd/accountReactivation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/crmd/accountReactivation', { 
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2031,8 +2151,11 @@ export default {
                             phoneNo: this.phone_number,
                             location: this.location,
                             dateOfSuspension: this.date_of_suspension,
+                            energyBalance: this.energy_balance,
+                            reasonForReactivation: this.reason_for_reactivation,
                             remarks: this.remarks,
                             picOfConnection: this.pic_of_connection.name,
+                            picOfEnergyBalance: this.pic_of_energy_balance.name,
                             picOfFrontView: this.pic_of_psf.name
                         }),
                     })
