@@ -867,6 +867,7 @@ export default {
 
                             this.account_type = response.accountType
                             this.account_name = response.accountName
+                            this.account_number = response.accountNumber
                             this.tarrif = response.tariff
                             this.address = response.address
                             this.business_unit = response.bu
@@ -1849,6 +1850,12 @@ export default {
                 M.toast({ html: '<b class="red-text">Select a Load Type *</b>' })
             }
 
+            if (this.total_kwh == 0) {
+                M.toast({ html: '<b class="red-text">Total KWH cannot be 0. *</b>' })
+                this.hideLoader = true
+                return
+            }
+
 
             console.log('I made it here as well');
 
@@ -1914,8 +1921,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerCategorization', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerCategorization', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerCategorization', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerCategorization', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

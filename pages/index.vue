@@ -68,9 +68,9 @@ export default {
       user_test: '',
       password_test: '',
       username: '',
-      password: '@@@1KingGod123456789012',
+      password: '',
       
-      version_number: '1.13.3',
+      version_number: '1.13.4',
       disabled: false,
       lat: '',
       long: '',
@@ -181,8 +181,8 @@ export default {
 
 
         this.disabled = true
-        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
-        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {   
+        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/auth/login', {
+        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/auth/login', {   
           method: 'POST',
           headers: {
             'Accept': 'application/json',

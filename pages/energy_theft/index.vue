@@ -746,6 +746,7 @@ export default {
                             await this.printCurrentPosition()
 
                             this.account_type = response.accountType
+                            this.account_number = response.accountNumber
                             this.account_name = response.accountName
                             this.tarrif = response.tariff
                             this.address = response.address
@@ -1106,13 +1107,13 @@ export default {
                 // console.log(todays_date.getDay());
                 // console.log(todays_date.getUTCMilliseconds());
                 // M.toast({ html: `<b class="red-text">Random string: ${random_str}${day}${hour}${mins}${seconds}${millisecs}</b>` })
-                this.account_number = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
-                this.account_number = String(this.account_number)
+                // this.account_number = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
+                // this.account_number = String(this.account_number)
                 this.random_id = `${random_str}${day}${hour}${mins}${seconds}${millisecs}`
                 this.random_id = String(this.random_id)
                 console.log(this.random_id);
                 console.log(this.random_id);
-            } else {
+            
                 // Call the element loader after the app has been rendered the first time
                 defineCustomElements(window);
 
@@ -1135,7 +1136,7 @@ export default {
 
 
                 this.doSomethingWithFilesimagePickerForTheft(blob)
-            }
+            } 
 
 
         },
@@ -1147,9 +1148,9 @@ export default {
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
-            if (this.account_number !== '' ) {
+            if (this.random_id !== '' ) {
                 console.log('acc number is not empty');
-                this.account_number2 = this.account_number
+                this.account_number2 = this.random_id
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
                 this.account_number2 = this.meter_number
@@ -2427,9 +2428,11 @@ export default {
                 isDurationDefault
             })
 
-            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault || isCustomerPhone) {
+            if (isBusinessUnitEmpty || isTypeOfInfraDefault || isDurationDefault) {
                 M.toast({ html: '<b class="red-text">Fill all the field marked with *</b>' })
                 this.hideLoader = true
+            } else if (isCustomerPhone) {
+                M.toast({ html: '<b class="red-text">Please fill the phone number *</b>' })
             } else if (this.pic_of_bypass == '') {
                 M.toast({ html: '<b class="red-text">Please add pic of Bypass *</b>' })
             } else if (this.pic_of_theft == '') {
@@ -2449,8 +2452,8 @@ export default {
                 try {
                     
                     this.disabled_bool = true
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
+                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

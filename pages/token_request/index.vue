@@ -1349,6 +1349,8 @@ export default {
                             dtNo: this.dt_no,
                             phoneNo: this.phone_number,
                             typeOfToken: this.tamper_type,
+                            wiringMode: this.wiring_mode,
+                            meterManufacturer: this.meter_manufacturer,
                             // location: "3.334432, 6.322344",
                             location: this.location,
                             picOfMeter: this.pic_of_meter.name,

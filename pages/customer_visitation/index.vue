@@ -461,11 +461,11 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s6">
-                                    <button class="btn btn-small red" @click="customerCompliantYes()">Yes</button>
+                                    <button class="btn btn-small red" :class="{ 'green': customer_complaint_green_yes }" @click="customerCompliantYes()">Yes</button>
                                 </div>
                                 <div class="col s6">
                                     <button class="btn btn-small red" @click="customerCompliantNo()"
-                                        :class="{ 'green': customer_complaint_green }">No</button>
+                                        :class="{ 'green': customer_complaint_green_no }">No</button>
                                 </div>
                             </form>
                         </div>
@@ -727,7 +727,8 @@ export default {
             is_customer_phone_no_correct_green: false,
             is_customer_address_correct_green: false,
             is_meter_bypassed_green: false,
-            customer_complaint_green: false,
+            customer_complaint_green_yes: false,
+            customer_complaint_green_no: false,
             pic_of_additional_pic_parser: '',
             pic_of_additional_pic: '',
 
@@ -913,17 +914,20 @@ export default {
             if (this.meter_number == '' && this.account_number == '') {
                 M.toast({ html: `<b class="red-text">Please enter a valid meter number</b>` })
             } else {
-                localStorage.setItem('service_type', this.service_type)
-                localStorage.setItem('meter_number', this.meter_number)
-                localStorage.setItem('account_number', this.account_number)
+                // localStorage.setItem('service_type', this.service_type)
+                // localStorage.setItem('meter_number', this.meter_number)
+                // localStorage.setItem('account_number', this.account_number)
                 this.customer_complaint = 'Yes'
-                window.location = '../customer_complaints'
+                this.customer_complaint_green_yes = true
+                this.customer_complaint_green_no = false
+                // window.location = '../customer_complaints'
                 console.log(this.is_meter_bypassed)
             }
         },
         customerCompliantNo() {
             this.customer_complaint = 'No'
-            this.customer_complaint_green = true
+            this.customer_complaint_green_no = true
+            this.customer_complaint_green_yes = false
 
         },
 
@@ -956,6 +960,7 @@ export default {
                             await this.printCurrentPosition()
 
                             this.account_type = response.accountType
+                            this.account_number = response.accountNumber
                             this.account_name = response.accountName
                             this.tarrif = response.tariff
                             this.address = response.address
