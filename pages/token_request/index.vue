@@ -151,7 +151,8 @@
                         <div class="row">
                             <!-- Account status -->
                             <div class="col s12">
-                                <input type="text" v-model="negative_reading_value" placeholder="Negative Reading" disabled>
+                                <input type="text" v-model="negative_reading_value" placeholder="Negative Reading"
+                                    disabled>
                             </div>
                         </div>
 
@@ -949,7 +950,7 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
                 });
 
 
@@ -1028,7 +1029,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1114,7 +1116,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1193,7 +1196,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1284,7 +1288,7 @@ export default {
             this.further_remarks = (this.further_remarks || '').trim()
             this.phone_number = (this.phone_number || '').trim()
 
-            
+
             this.getDataURLFromLocalStorage()
 
             var today = new Date(this.last_purchase_date);
@@ -1322,7 +1326,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/tokenrequest', {
-                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/tokenrequest', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',

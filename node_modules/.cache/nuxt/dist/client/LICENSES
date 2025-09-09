@@ -39,6 +39,9 @@
  */
 
 
+/*! Capacitor: https://capacitorjs.com/ - MIT License */
+
+
 /*!
 DOMTokenList
 */
@@ -63,6 +66,3 @@ Element.isConnected()
  * (c) 2014-2023 Evan You
  * Released under the MIT License.
  */
-
-
-/*! Capacitor: https://capacitorjs.com/ - MIT License */

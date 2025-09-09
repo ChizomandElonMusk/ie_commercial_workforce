@@ -99,12 +99,13 @@ export async function getCustomerInfoApi2(meterNumber, service_type) {
 
   try {
     
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
-    //     customer_meter_number + "&serviceType=" + service_type,
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" +
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
         customer_meter_number + "&serviceType=" + service_type,
+
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" +
+    //     customer_meter_number + "&serviceType=" + service_type,
       {
         method: "GET",
         headers: {
@@ -276,9 +277,10 @@ export async function uploadImage(userId, accountNumber, docType, file) {
 
   try {
     // 92802433505
-    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
       {
         method: "POST",
         headers: {

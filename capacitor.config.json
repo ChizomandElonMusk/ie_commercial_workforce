@@ -2,5 +2,10 @@
   "appId": "com.ikejaelectric.cwf.ios",
   "appName": "IE CWF",
   "webDir": "dist",
-  "bundledWebRuntime": false
+  "bundledWebRuntime": false,
+  "plugins": {
+    "Camera": {
+      "permissions": ["camera", "photos"]
+    }
+  }
 }

@@ -461,7 +461,8 @@
                             </div>
                             <form @submit.prevent>
                                 <div class="col s6">
-                                    <button class="btn btn-small red" :class="{ 'green': customer_complaint_green_yes }" @click="customerCompliantYes()">Yes</button>
+                                    <button class="btn btn-small red" :class="{ 'green': customer_complaint_green_yes }"
+                                        @click="customerCompliantYes()">Yes</button>
                                 </div>
                                 <div class="col s6">
                                     <button class="btn btn-small red" @click="customerCompliantNo()"
@@ -570,6 +571,9 @@
                                 <button class="btn red btn-large" @click="imagePickerForPaymentReceipt()">
                                     <i class="material-icons white-text">camera_alt</i>
                                 </button>
+                                <!-- <button class="btn red btn-large" @click="imagePickerForPaymentReceipt('gallery')">
+                                    <i class="material-icons white-text">photo_library</i>
+                                </button> -->
                                 <!-- <input type="file" accept="image/*" capture="environment" id="pic-of-the-service-wire-from-pole-to-metering-point" /> -->
                             </div>
                         </div>
@@ -669,10 +673,11 @@
 <script>
 // import { Geolocation } from '@capacitor/geolocation';
 import imageCompression from 'browser-image-compression';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { checkCustomerMeterNumber, getCustomerInfoApi2, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
+
 
 export default {
     layout: 'admin_main',
@@ -1226,7 +1231,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt,
                 });
 
 
@@ -1328,7 +1334,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1414,27 +1421,36 @@ export default {
                 M.toast({ html: `<b class="red-text">Please enter an Account OR Meter Number</b>` })
             } else {
                 // Call the element loader after the app has been rendered the first time
-                defineCustomElements(window);
+                try {
 
-                const image = await Camera.getPhoto({
-                    quality: 100,
-                    allowEditing: false,
-                    resultType: CameraResultType.Base64
-                });
+                    defineCustomElements(window);
+
+                    const image = await Camera.getPhoto({
+                        quality: 100,
+                        allowEditing: false,
+                        resultType: CameraResultType.Base64,
+                        source: CameraSource.Prompt
+                    });
 
 
-                const rawData = window.atob(image.base64String);
-                const bytes = new Array(rawData.length);
-                for (var x = 0; x < rawData.length; x++) {
-                    bytes[x] = rawData.charCodeAt(x);
+                    const rawData = window.atob(image.base64String);
+                    const bytes = new Array(rawData.length);
+                    for (var x = 0; x < rawData.length; x++) {
+                        bytes[x] = rawData.charCodeAt(x);
+                    }
+                    const arr = new Uint8Array(bytes);
+                    const blob = new Blob([arr], { type: 'image/jpeg' });
+                    console.log(blob)
+
+
+
+                    this.doSomethingWithFilesimagePickerForPaymentReceipt(blob)
+                } catch (error) {
+                    console.error('Error picking image:', error);
+                    if (error.message !== 'User cancelled photos app') {
+                        M.toast({ html: `<b class="red-text">Error selecting image: ${error.message}</b>` });
+                    }
                 }
-                const arr = new Uint8Array(bytes);
-                const blob = new Blob([arr], { type: 'image/jpeg' });
-                console.log(blob)
-
-
-
-                this.doSomethingWithFilesimagePickerForPaymentReceipt(blob)
             }
 
 
@@ -1506,7 +1522,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1593,7 +1610,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
 
@@ -1663,7 +1681,7 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
             });
 
             const rawData = window.atob(image.base64String);
@@ -1723,7 +1741,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1783,7 +1802,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1843,7 +1863,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1901,7 +1922,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1957,7 +1979,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2016,7 +2039,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2079,7 +2103,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2137,7 +2162,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2196,7 +2222,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2253,7 +2280,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2308,7 +2336,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2363,7 +2392,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2432,7 +2462,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2489,7 +2520,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2547,7 +2579,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2602,7 +2635,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2707,8 +2741,8 @@ export default {
 
                 try {
                     this.disabled_bool = true
-                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
+                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
