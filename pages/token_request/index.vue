@@ -1030,7 +1030,6 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Prompt
                 });
 
 
@@ -1117,7 +1116,6 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Prompt
                 });
 
 
@@ -1197,7 +1195,6 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Prompt
                 });
 
 

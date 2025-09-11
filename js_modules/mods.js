@@ -172,12 +172,12 @@ export async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
 
   try {
-    const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" +
-        trackingId,
     // const rawResponse = await fetch(
-      // "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
-      //   trackingId,
+    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+        trackingId,
       {
         method: "GET",
         headers: {

@@ -426,7 +426,7 @@
 
 
 
-                        
+
 
 
 
@@ -545,7 +545,7 @@
 <script>
 //   import { Geolocation } from '@capacitor/geolocation';
 import imageCompression from 'browser-image-compression';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { checkCustomerMeterNumber, getCustomerInfoApi2, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
@@ -716,8 +716,8 @@ export default {
 
         async checkNumber() {
 
-            
-            
+
+
             console.log(this.pic_of_theft.name);
             if (this.pic_of_theft.name == undefined) {
                 M.toast({ html: `<b class="red-text">Please upload Seal as Met* first</b>` })
@@ -1044,7 +1044,7 @@ export default {
 
             const imageFile = event;
             // const imageFile = event.target.files[0];
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1113,7 +1113,7 @@ export default {
                 this.random_id = String(this.random_id)
                 console.log(this.random_id);
                 console.log(this.random_id);
-            
+
                 // Call the element loader after the app has been rendered the first time
                 defineCustomElements(window);
 
@@ -1121,7 +1121,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
+                    source: CameraSource.Prompt
                 });
 
 
@@ -1137,7 +1137,7 @@ source: CameraSource.Prompt
 
 
                 this.doSomethingWithFilesimagePickerForTheft(blob)
-            } 
+            }
 
 
         },
@@ -1149,14 +1149,14 @@ source: CameraSource.Prompt
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
-            if (this.random_id !== '' ) {
+            if (this.random_id !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.random_id
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
                 this.account_number2 = this.meter_number
             }
-            
+
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1214,7 +1214,6 @@ source: CameraSource.Prompt
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
                 });
 
 
@@ -1242,13 +1241,13 @@ source: CameraSource.Prompt
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
                 console.log('meter number is not empty');
                 this.account_number2 = this.meter_number
-            } 
+            }
 
             const options = {
                 maxSizeMB: 0.7,
@@ -1305,7 +1304,6 @@ source: CameraSource.Prompt
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
                 });
 
 
@@ -1333,7 +1331,7 @@ source: CameraSource.Prompt
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1397,7 +1395,6 @@ source: CameraSource.Prompt
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
                 });
 
 
@@ -1425,7 +1422,7 @@ source: CameraSource.Prompt
             const imageFile = event;
             // const imageFile = event.target.files[0];
 
-            if (this.account_number !== '' ) {
+            if (this.account_number !== '') {
                 console.log('acc number is not empty');
                 this.account_number2 = this.account_number
             } else if (this.meter_number !== '') {
@@ -1484,7 +1481,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
 
@@ -1548,7 +1544,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1609,7 +1604,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1670,7 +1664,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1731,7 +1724,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1790,7 +1782,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1847,7 +1838,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1907,7 +1897,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -1971,7 +1960,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2030,7 +2018,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2090,7 +2077,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2165,7 +2151,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2223,7 +2208,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2282,7 +2266,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2338,7 +2321,6 @@ source: CameraSource.Prompt
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
-source: CameraSource.Prompt
             });
 
             const rawData = window.atob(image.base64String);
@@ -2469,10 +2451,10 @@ source: CameraSource.Prompt
 
 
                 try {
-                    
+
                     this.disabled_bool = true
                     // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/energyTheft', {
-                        const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
+                    const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/energyTheft', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
