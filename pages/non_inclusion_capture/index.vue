@@ -101,7 +101,8 @@
                         <div class="row">
                             <div class="col s12" style="margin-bottom: 15px;">
                                 <CustomSelect :options="['Free Rider',
-                                    'New Customer Capture',]" :default="'Capture Type'" class="" v-model="capture_type" />
+                                    'New Customer Capture',]" :default="'Capture Type'" class=""
+                                    v-model="capture_type" />
                             </div>
                         </div>
 
@@ -112,7 +113,7 @@
                             </div>
                         </div>
 
-                        
+
 
                         <div class="row">
                             <!-- cutomer name -->
@@ -276,7 +277,7 @@
                             </div>
                         </div>
 
-                        
+
 
                         <div class="row">
                             <div class="col s12">
@@ -881,7 +882,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
 
@@ -932,7 +934,7 @@ export default {
                 // console.log('account number ', this.account_number)
                 // console.log('pic_of_cwd ', this.pic_of_cwd)
                 // hello()
-                if(this.account_name == '') {
+                if (this.account_name == '') {
                     this.account_name = ' '
                 }
 
@@ -964,7 +966,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1039,7 +1042,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
 
@@ -1195,8 +1199,8 @@ export default {
                         this.$router.push('../sent')
                     } else {
                         M.toast({ html: `<b class="green-text">${response.message}</b>` })
-                    } 
-                    
+                    }
+
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })

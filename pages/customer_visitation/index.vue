@@ -292,6 +292,59 @@
                         </div>
                         <!-- end of new field -->
 
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Pole Number" v-model="poleNumber">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Pole Status" v-model="poleStatus">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Estimate Additional Acct"
+                                    v-model="estimatedAdditionalAcct"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Meter Type P1" v-model="meterTypeP1"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Meter Type P3" v-model="meterTypeP3"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Customer Email -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Wire Cable Length" v-model="wireCableLength">
+                            </div>
+                        </div>
+
+                        <!-- <div class="row">
+                            <div class="col s12">
+                                <input type="text" placeholder="Type Of Inspection Conclusion"
+                                    v-model="type_of_inspection_conclusion">
+                            </div>
+                        </div> -->
+
 
 
                         <div class="row">
@@ -686,6 +739,12 @@ export default {
     },
     data() {
         return {
+            poleNumber: "dssd",
+            poleStatus: "sadf",
+            estimatedAdditionalAcct: "23",
+            meterTypeP1: "2343",
+            meterTypeP3: "345",
+            wireCableLength: "dsdasdd",
             type_of_inspection_conclusion: '',
 
             hideNewLocationBtn: true,
@@ -2685,6 +2744,13 @@ export default {
             this.phone_number = this.phone_number.trim()
             this.inspection_conclusion = this.inspection_conclusion.trim()
             this.getDataURLFromLocalStorage()
+            this.poleNumber = this.poleNumber.trim()
+            this.poleStatus = this.poleStatus.trim()
+            this.estimatedAdditionalAcct = this.estimatedAdditionalAcct.trim()
+            this.meterTypeP1 = this.meterTypeP1.trim()
+            this.meterTypeP3 = this.meterTypeP3.trim()
+            this.wireCableLength = this.wireCableLength.trim()
+            this.type_of_inspection_conclusion = this.type_of_inspection_conclusion.trim()
 
             var today = new Date(this.last_purchase_date);
             const months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
@@ -2721,7 +2787,7 @@ export default {
                 try {
                     this.disabled_bool = true
                     const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/suspendedCustomerVisitation', {
-                        // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
+                    // const rawResponse = await fetch('https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/suspendedCustomerVisitation', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -2762,6 +2828,13 @@ export default {
                             vacantStatus: this.vacant_status,
                             useOfPremise: this.user_of_premise,
                             otherComment: this.other_comment,
+                            poleNumber: this.poleNumber,
+                            poleStatus: this.poleStatus,
+                            estimatedAdditionalAcct: this.estimatedAdditionalAcct,
+                            meterTypeP1: this.meterTypeP1,
+                            meterTypeP3: this.meterTypeP3,
+                            wireCableLength: this.weireCableLength,
+                            type_of_inspection_conclusion: this.type_of_inspection_conclusion,
                             isAccountMappedToCorrectDT: this.is_account_mapped_to_correct_dt,
                             isCustomerPhoneNoCorrect: this.is_customer_phone_no_correct,
                             isCustomerAddressCorrect: this.is_customer_address_correct,

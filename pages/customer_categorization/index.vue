@@ -1142,7 +1142,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1226,7 +1227,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1310,7 +1312,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1395,7 +1398,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1478,7 +1482,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1562,7 +1567,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1643,7 +1649,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1724,7 +1731,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 

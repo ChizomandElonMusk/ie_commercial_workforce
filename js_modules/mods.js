@@ -99,13 +99,13 @@ export async function getCustomerInfoApi2(meterNumber, service_type) {
 
   try {
     
-    const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
-        customer_meter_number + "&serviceType=" + service_type,
-
     // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" +
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/customerinfo2?meterNo=" +
     //     customer_meter_number + "&serviceType=" + service_type,
+
+    const rawResponse = await fetch(
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/customerinfo2?meterNo=" +
+        customer_meter_number + "&serviceType=" + service_type,
       {
         method: "GET",
         headers: {
@@ -172,12 +172,12 @@ export async function getRequestDetailsWithTrackingId(trackingId) {
   console.log("this is the trackingId", trackingId);
 
   try {
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" +
-    //     trackingId,
     const rawResponse = await fetch(
-      "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+      "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/getRequestDetails?trackingId=" +
         trackingId,
+    // const rawResponse = await fetch(
+    //   "https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/getRequestDetails?trackingId=" +
+    //     trackingId,
       {
         method: "GET",
         headers: {

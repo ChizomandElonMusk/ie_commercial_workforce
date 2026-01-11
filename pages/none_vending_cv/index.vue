@@ -349,8 +349,7 @@
 
                         <div class="row center safe-area-bottom">
                             <div class="col s12">
-                                <button class="btn btn-large red"
-                                    style="width: 300px; margin-top: 20px;"
+                                <button class="btn btn-large red" style="width: 300px; margin-top: 20px;"
                                     @click="submit" :disabled="disabled_bool">Submit</button>
                             </div>
                         </div>
@@ -754,7 +753,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -834,7 +834,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -916,7 +917,8 @@ export default {
                 const image = await Camera.getPhoto({
                     quality: 100,
                     allowEditing: false,
-                    resultType: CameraResultType.Base64
+                    resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -994,7 +996,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
 
@@ -1057,7 +1060,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1117,7 +1121,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1177,7 +1182,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1237,7 +1243,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1295,7 +1302,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1351,7 +1359,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1410,7 +1419,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1473,7 +1483,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1531,7 +1542,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1590,7 +1602,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1647,7 +1660,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1702,7 +1716,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1757,7 +1772,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1826,7 +1842,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1883,7 +1900,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1941,7 +1959,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1996,7 +2015,8 @@ export default {
             const image = await Camera.getPhoto({
                 quality: 100,
                 allowEditing: false,
-                resultType: CameraResultType.Base64
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2050,7 +2070,7 @@ export default {
 
 
         async submit() {
-            M.toast({html: '<b class="yellow-text">Please wait...</b>'})
+            M.toast({ html: '<b class="yellow-text">Please wait...</b>' })
             this.hideLoader = false
             this.business_unit = this.business_unit.trim()
             this.undertaking_one = this.undertaking_one.trim()
@@ -2129,7 +2149,7 @@ export default {
                     } else {
                         M.toast({ html: `<b class="green-text">${response.message}</b>` })
                         this.disabled_bool = false
-                    } 
+                    }
                 } catch (error) {
                     console.log(error)
                     M.toast({ html: `<b class="red-text">${error}</b>` })
@@ -2195,13 +2215,13 @@ export default {
         // },
 
         // get longitude and latitude
-        async printCurrentPosition () {
+        async printCurrentPosition() {
             const { long, lat } = await getCurrentPosition();
 
             this.long = long
             this.lat = lat
-            
-            this.location = `${ this.long }, ${ this.lat }`
+
+            this.location = `${this.long}, ${this.lat}`
         },
 
         // let me try to create a new signature

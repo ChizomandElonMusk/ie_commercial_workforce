@@ -68,9 +68,10 @@ export default {
       user_test: '',
       password_test: '',
       username: '',
-      password: '@@@1KingGod123456789012',
+      password: '@@@1KingGod12345678901234',
       
-      version_number: '1.13.4',
+      version_number_: '1.13.5', //production
+      version_number: '1.13.4',//test
       disabled: false,
       lat: '',
       long: '',

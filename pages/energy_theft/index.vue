@@ -1018,6 +1018,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1121,7 +1122,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Prompt
+                    source: CameraSource.Camera
                 });
 
 
@@ -1214,6 +1215,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1304,6 +1306,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1395,6 +1398,7 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
                 });
 
 
@@ -1481,6 +1485,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
 
@@ -1544,6 +1549,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1604,6 +1610,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1664,6 +1671,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1724,6 +1732,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1782,6 +1791,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1838,6 +1848,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1897,6 +1908,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -1960,6 +1972,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2018,6 +2031,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2077,6 +2091,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2151,6 +2166,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2208,6 +2224,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2266,6 +2283,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
@@ -2321,6 +2339,7 @@ export default {
                 quality: 100,
                 allowEditing: false,
                 resultType: CameraResultType.Base64,
+                    source: CameraSource.Camera
             });
 
             const rawData = window.atob(image.base64String);
