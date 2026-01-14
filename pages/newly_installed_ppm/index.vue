@@ -437,7 +437,7 @@
 <script>
 // import { Geolocation } from '@capacitor/geolocation';
 import imageCompression from 'browser-image-compression';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { checkCustomerMeterNumber, getCustomerInfoApi, uploadImage, logOut, getCurrentPosition } from '~/js_modules/mods'
 import CustomSelect from '~/components/CustomSelect.vue'
@@ -820,8 +820,9 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Camera,
                     source: CameraSource.Camera
+                    
+                    
                 });
 
 
@@ -902,8 +903,9 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Camera,
                     source: CameraSource.Camera
+                    
+                    
                 });
 
 
@@ -986,8 +988,9 @@ export default {
                     quality: 100,
                     allowEditing: false,
                     resultType: CameraResultType.Base64,
-                    source: CameraSource.Camera,
                     source: CameraSource.Camera
+                    
+                    
                 });
 
 

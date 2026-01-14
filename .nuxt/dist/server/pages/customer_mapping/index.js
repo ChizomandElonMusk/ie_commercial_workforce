@@ -6,9 +6,9 @@ exports.modules = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_a64661d4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_a64661d4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_a64661d4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_a64661d4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_a64661d4_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1cd86782_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(85);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1cd86782_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1cd86782_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1cd86782_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1cd86782_prod_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(3);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-a64661d4]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
+___CSS_LOADER_EXPORT___.push([module.i, "#sig-canvas[data-v-1cd86782]{border:2px dotted #ccc;border-radius:15px;cursor:crosshair}", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {};
 module.exports = ___CSS_LOADER_EXPORT___;
@@ -35,7 +35,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=template&id=a64661d4&scoped=true
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=template&id=1cd86782&scoped=true
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -44,18 +44,18 @@ var render = function render() {
     staticStyle: {
       "padding-top": "20px"
     }
-  }, [_vm._ssrNode("<div class=\"row\" data-v-a64661d4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-a64661d4>", "</div>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div class=\"row\" data-v-1cd86782>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1cd86782>", "</div>", [_c('nuxt-link', {
     staticClass: "red white-text btn",
     attrs: {
       "to": "../dashboard_ie_force"
     }
-  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-a64661d4>Customer Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-a64661d4>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><div" + _vm._ssrClass("row", {
+  }, [_vm._v("\n                Back\n            ")]), _vm._ssrNode(" <b class=\"grey-text btn disabled\" data-v-1cd86782>Customer Mapping</b>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"row\" data-v-1cd86782>", "</div>", [_vm._ssrNode("<div class=\"row\" data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><div" + _vm._ssrClass("row", {
     'hide': _vm.hideModal
-  }) + " data-v-a64661d4><div class=\"row\" data-v-a64661d4><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-a64661d4>DONE</a></div> <div class=\"row\" data-v-a64661d4><div class=\"container\" data-v-a64661d4><div class=\"row\" data-v-a64661d4><div class=\"col s12 center\" data-v-a64661d4><h6 data-v-a64661d4>Sign here!</h6></div></div> <div class=\"row\" data-v-a64661d4><div class=\"col s12 center\" data-v-a64661d4><canvas id=\"sig-canvas\" width=\"250px\" data-v-a64661d4>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-a64661d4><div class=\"col s12 center\" data-v-a64661d4><div class=\"col s6\" data-v-a64661d4><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-a64661d4>Save</button></div> <div class=\"col s6\" data-v-a64661d4><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-a64661d4>Clear</button></div></div></div> <br data-v-a64661d4> <div class=\"row\" data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-a64661d4>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"row\" data-v-1cd86782><a href=\"#!\" class=\"waves-effect waves-red btn-large white red-text right\" data-v-1cd86782>DONE</a></div> <div class=\"row\" data-v-1cd86782><div class=\"container\" data-v-1cd86782><div class=\"row\" data-v-1cd86782><div class=\"col s12 center\" data-v-1cd86782><h6 data-v-1cd86782>Sign here!</h6></div></div> <div class=\"row\" data-v-1cd86782><div class=\"col s12 center\" data-v-1cd86782><canvas id=\"sig-canvas\" width=\"250px\" data-v-1cd86782>\n                                        Your phone not supporting signature\n                                    </canvas></div></div> <div class=\"row\" data-v-1cd86782><div class=\"col s12 center\" data-v-1cd86782><div class=\"col s6\" data-v-1cd86782><button id=\"sig-submitBtn\" class=\"btn btn-large red\" data-v-1cd86782>Save</button></div> <div class=\"col s6\" data-v-1cd86782><button id=\"sig-clearBtn\" class=\"btn btn-large red\" data-v-1cd86782>Clear</button></div></div></div> <br data-v-1cd86782> <div class=\"row\" data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><textarea id=\"sig-dataUrl\" rows=\"5\" class=\"form-control hide\" data-v-1cd86782>Data URL for your signature will go here!</textarea></div></div></div></div></div></div></div> "), _vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideForm
-  }) + " data-v-a64661d4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-a64661d4>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-a64661d4>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782>", "</div>", [_vm._ssrNode("<div class=\"col s12\" data-v-1cd86782>", "</div>", [_vm._ssrNode("<form style=\"margin-top: 20px\" data-v-1cd86782>", "</form>", [_vm._ssrNode("<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-a64661d4>", "</div>", [_c('CustomSelect', {
+  }) + " data-v-1cd86782>", "</div>", [_vm._ssrNode("<div class=\"col s12\" style=\"margin-bottom: 15px;\" data-v-1cd86782>", "</div>", [_c('CustomSelect', {
     attrs: {
       "options": ['postpaid', 'prepaid'],
       "default": 'postpaid'
@@ -69,55 +69,55 @@ var render = function render() {
     }
   })], 1)]), _vm._ssrNode(" " + (_vm.service_type == 'postpaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s9\" data-v-a64661d4><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-a64661d4></div> <div class=\"col s3\" data-v-a64661d4><button class=\"btn btn-flat red white-text\" data-v-a64661d4>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s9\" data-v-1cd86782><input type=\"text\" placeholder=\"Account number\"" + _vm._ssrAttr("value", _vm.account_number) + " data-v-1cd86782></div> <div class=\"col s3\" data-v-1cd86782><button class=\"btn btn-flat red white-text\" data-v-1cd86782>Check</button></div></div>" : "<!---->") + " " + (_vm.service_type == 'prepaid' ? "<div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s9\" data-v-a64661d4><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-a64661d4></div> <div class=\"col s3\" data-v-a64661d4><button class=\"btn btn-flat red white-text\" data-v-a64661d4>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s9\" data-v-1cd86782><input type=\"text\" placeholder=\"Meter number\"" + _vm._ssrAttr("value", _vm.meter_number) + " data-v-1cd86782></div> <div class=\"col s3\" data-v-1cd86782><button class=\"btn btn-flat red white-text\" data-v-1cd86782>Check</button></div></div>" : "<!---->") + " <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Account type\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_type) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Account name\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_name) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Account status\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.account_status) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Tarrif\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.tarrif) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Address\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.address) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-a64661d4> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>BU:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.business_unit) + "\n                        ") + "</div></div> <br data-v-1cd86782> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>UT:</b>" + _vm._ssrEscape(" " + _vm._s(_vm.undertaking_one) + "\n                        ") + "</div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>DT:</b> <input type=\"text\" placeholder=\"DT\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_name) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>DT number:</b> <input type=\"text\" placeholder=\"DT number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.dt_no) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>Current feeder band:</b> <input type=\"text\" placeholder=\"Current feeder band\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.current_feeder_band) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><b data-v-a64661d4>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><b data-v-1cd86782>Phone number:</b> <input type=\"text\" placeholder=\"Phone number\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.phone_number) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-a64661d4></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><input type=\"text\" placeholder=\"Location\" disabled=\"disabled\"" + _vm._ssrAttr("value", _vm.location) + " data-v-1cd86782></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><p data-v-a64661d4><b data-v-a64661d4>\n                                    Is DT Mapping correct\n                                </b> <br data-v-a64661d4> <label data-v-a64661d4><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-a64661d4> <span data-v-a64661d4>Yes</span></label></p> <p data-v-a64661d4><label data-v-a64661d4><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-a64661d4> <span data-v-a64661d4>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><p data-v-1cd86782><b data-v-1cd86782>\n                                    Is DT Mapping correct\n                                </b> <br data-v-1cd86782> <label data-v-1cd86782><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"yes\" checked=\"checked\" data-v-1cd86782> <span data-v-1cd86782>Yes</span></label></p> <p data-v-1cd86782><label data-v-1cd86782><input name=\"is_dt_in_another_ut\" type=\"radio\" value=\"no\"" + _vm._ssrAttr("checked", _vm._q(_vm.is_dt_in_another_ut, "no")) + " data-v-1cd86782> <span data-v-1cd86782>No</span></label></p></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideProposedData
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><table class=\"striped\" data-v-a64661d4><tbody data-v-a64661d4><tr data-v-a64661d4><td data-v-a64661d4>Proposed DT No:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Current DT Name:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.dt_name)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Proposed DT Name:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Proposed UT:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Proposed BU:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Proposed Feeder Band:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.proposed_feeder_band)) + "</b></td></tr> <tr data-v-a64661d4><td data-v-a64661d4>Mapping Status:</td> <td data-v-a64661d4><b class=\"black-text\" data-v-a64661d4>" + _vm._ssrEscape(_vm._s(_vm.mapping_status)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><table class=\"striped\" data-v-1cd86782><tbody data-v-1cd86782><tr data-v-1cd86782><td data-v-1cd86782>Proposed DT No:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_number)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Current DT Name:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.dt_name)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Proposed DT Name:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.proposed_dt_name)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Proposed UT:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.proposed_ut)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Proposed BU:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.proposed_bu)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Proposed Feeder Band:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.proposed_feeder_band)) + "</b></td></tr> <tr data-v-1cd86782><td data-v-1cd86782>Mapping Status:</td> <td data-v-1cd86782><b class=\"black-text\" data-v-1cd86782>" + _vm._ssrEscape(_vm._s(_vm.mapping_status)) + "</b></td></tr></tbody></table></div></div> <div" + _vm._ssrClass("row center", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-a64661d4>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><button class=\"btn btn-large red col s12\" style=\"margin-bottom: 20px;\" data-v-1cd86782>Cancel Search</button></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideSearchScreen
-  }) + " data-v-a64661d4><div class=\"col s9\" data-v-a64661d4><input type=\"text\" placeholder=\"Enter DT\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-a64661d4></div> <div class=\"col s3\" data-v-a64661d4><button class=\"btn btn-flat red white-text\" data-v-a64661d4>Search</button></div> <div class=\"col s12\" data-v-a64661d4><table class=\"striped\" data-v-a64661d4><thead data-v-a64661d4><tr data-v-a64661d4><th data-v-a64661d4>DT No</th> <th data-v-a64661d4>DT Name</th> <th data-v-a64661d4>Feeder Band</th></tr></thead> " + _vm._ssrList(_vm.dtList, function (dt, index) {
-    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-a64661d4><tr data-v-a64661d4><td class=\"blue-text\" data-v-a64661d4>" + _vm._ssrEscape("\n                                            " + _vm._s(dt.dtNo) + "\n                                            ") + "</td> <td data-v-a64661d4>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td> <td data-v-a64661d4>" + _vm._ssrEscape(_vm._s(dt.feederBand)) + "</td></tr></tbody>";
+  }) + " data-v-1cd86782><div class=\"col s9\" data-v-1cd86782><input type=\"text\" placeholder=\"Enter DT\"" + _vm._ssrAttr("value", _vm.dtSearchQuery) + " data-v-1cd86782></div> <div class=\"col s3\" data-v-1cd86782><button class=\"btn btn-flat red white-text\" data-v-1cd86782>Search</button></div> <div class=\"col s12\" data-v-1cd86782><table class=\"striped\" data-v-1cd86782><thead data-v-1cd86782><tr data-v-1cd86782><th data-v-1cd86782>DT No</th> <th data-v-1cd86782>DT Name</th> <th data-v-1cd86782>Feeder Band</th></tr></thead> " + _vm._ssrList(_vm.dtList, function (dt, index) {
+    return "<tbody" + _vm._ssrAttr("id", dt.dtNo) + " data-v-1cd86782><tr data-v-1cd86782><td class=\"blue-text\" data-v-1cd86782>" + _vm._ssrEscape("\n                                            " + _vm._s(dt.dtNo) + "\n                                            ") + "</td> <td data-v-1cd86782>" + _vm._ssrEscape(_vm._s(dt.dtName)) + "</td> <td data-v-1cd86782>" + _vm._ssrEscape(_vm._s(dt.feederBand)) + "</td></tr></tbody>";
   }) + "</table></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideLoading
-  }) + " data-v-a64661d4><b class=\"grey-text\" data-v-a64661d4>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
+  }) + " data-v-1cd86782><b class=\"grey-text\" data-v-1cd86782>Please wait...</b></div> <div" + _vm._ssrClass("col s12 center", {
     'hide': _vm.hideNoData
-  }) + " data-v-a64661d4><b class=\"grey-text\" data-v-a64661d4>No data available</b></div></div> <div" + _vm._ssrClass("row", {
+  }) + " data-v-1cd86782><b class=\"grey-text\" data-v-1cd86782>No data available</b></div></div> <div" + _vm._ssrClass("row", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><h6 class=\"red-text\" data-v-a64661d4>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-a64661d4><i class=\"material-icons white-text\" data-v-a64661d4>camera_alt</i></button></div></div> <div class=\"row\" data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-a64661d4></div></div> <div class=\"row center\" data-v-a64661d4></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><h6 class=\"red-text\" data-v-1cd86782>\n                                Picture of Building (*)\n                            </h6> <button class=\"btn red btn-large\" data-v-1cd86782><i class=\"material-icons white-text\" data-v-1cd86782>camera_alt</i></button></div></div> <div class=\"row\" data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><img id=\"output-pic-of-building\" class=\"responsive-img\" data-v-1cd86782></div></div> <div class=\"row center\" data-v-1cd86782></div> <div" + _vm._ssrClass("row center safe-area-bottom", {
     'hide': _vm.hideOtherFormElements
-  }) + " data-v-a64661d4><div class=\"col s12\" data-v-a64661d4><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-a64661d4>Submit</button></div></div>")], 2)])])], 2)], 2);
+  }) + " data-v-1cd86782><div class=\"col s12\" data-v-1cd86782><button" + _vm._ssrAttr("disabled", _vm.disabled_bool) + " class=\"btn btn-large red col s12\" data-v-1cd86782>Submit</button></div></div>")], 2)])])], 2)], 2);
 };
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/customer_mapping/index.vue?vue&type=template&id=a64661d4&scoped=true
+// CONCATENATED MODULE: ./pages/customer_mapping/index.vue?vue&type=template&id=1cd86782&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/customer_mapping/index.vue?vue&type=script&lang=js
 var customer_mappingvue_type_script_lang_js = __webpack_require__(55);
@@ -146,7 +146,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   injectStyles,
-  "a64661d4",
+  "1cd86782",
   "45c75f99"
   
 )
@@ -1539,7 +1539,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
           quality: 100,
           allowEditing: false,
           resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-          source: CameraSource.Camera
+          source: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraSource"].Camera
         });
         const rawData = window.atob(image.base64String);
         const bytes = new Array(rawData.length);
@@ -1593,8 +1593,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1644,8 +1643,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1692,8 +1690,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1740,8 +1737,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1788,8 +1784,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1837,8 +1832,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1886,8 +1880,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1935,8 +1928,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -1984,8 +1976,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2033,8 +2024,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2082,8 +2072,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2131,8 +2120,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2179,8 +2167,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2227,8 +2214,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2275,8 +2261,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2323,8 +2308,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2371,8 +2355,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
       const image = await _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["Camera"].getPhoto({
         quality: 100,
         allowEditing: false,
-        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64,
-        source: CameraSource.Camera
+        resultType: _capacitor_camera__WEBPACK_IMPORTED_MODULE_1__["CameraResultType"].Base64
       });
       const rawData = window.atob(image.base64String);
       const bytes = new Array(rawData.length);
@@ -2623,7 +2606,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(4).default
 module.exports.__inject__ = function (context) {
-  add("bb8cac4a", content, true, context)
+  add("5206171c", content, true, context)
 };
 
 /***/ })

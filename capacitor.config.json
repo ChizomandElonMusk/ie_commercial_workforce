@@ -5,7 +5,7 @@
   "bundledWebRuntime": false,
   "plugins": {
     "Camera": {
-      "permissions": ["camera", "photos"]
+      "permissions": ["camera"]
     }
   }
 }
