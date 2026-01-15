@@ -543,10 +543,9 @@ async function uploadImage(userId, accountNumber, docType, file) {
   formData.append("file", file);
   try {
     // 92802433505
-    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
-    // const rawResponse = await fetch(
-    //   "https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document",
-    {
+    // const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/test/v1/api/v1/upload/document",
+
+    const rawResponse = await fetch("https://api.ikejaelectric.com/cwfrestapi/v1/api/v1/upload/document", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + localStorage.token,
