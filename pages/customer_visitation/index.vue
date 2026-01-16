@@ -739,12 +739,12 @@ export default {
     },
     data() {
         return {
-            poleNumber: "dssd",
-            poleStatus: "sadf",
-            estimatedAdditionalAcct: "23",
-            meterTypeP1: "2343",
-            meterTypeP3: "345",
-            wireCableLength: "dsdasdd",
+            poleNumber: "",
+            poleStatus: "",
+            estimatedAdditionalAcct: "",
+            meterTypeP1: "",
+            meterTypeP3: "",
+            wireCableLength: "",
             type_of_inspection_conclusion: '',
 
             hideNewLocationBtn: true,
