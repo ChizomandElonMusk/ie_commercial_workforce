@@ -123,6 +123,13 @@
                         </div>
 
                         <div class="row">
+                            <!-- request id -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Request ID" v-model="request_id2">
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
                                 <input type="text" placeholder="Tarrif" v-model="tarrif">
@@ -497,6 +504,7 @@ export default {
     },
     data() {
         return {
+            request_id2: '',
             disabled_bool: false,
             service_type: 'postpaid',
             account_number: '',
@@ -1171,6 +1179,7 @@ export default {
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
+                            requestId2: this.request_id2,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,

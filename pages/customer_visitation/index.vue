@@ -105,6 +105,14 @@
                             </div>
                         </div>
 
+
+                        <div class="row">
+                            <!-- request id -->
+                            <div class="col s12">
+                                <input type="text" placeholder="Request ID" v-model="request_id2">
+                            </div>
+                        </div>
+
                         <div class="row">
                             <!-- cutomer name -->
                             <div class="col s12">
@@ -754,6 +762,7 @@ export default {
             account_number: '',
             account_number2: '',
             random_id: '',
+            request_id2: '',
             feed_availability: '',
             meter_number: '',
             account_type: '',
@@ -2843,6 +2852,7 @@ export default {
                             meterType: this.meter_type,
                             location: this.location,
                             requestId: this.random_id,
+                            requestId2: this.request_id2,
                             typeOfBuilding: this.type_of_building,
                             sharedBillOrMeter: this.shared_bill_or_meter,
                             sharedBillOrMeterInput: this.shared_bill_or_meter_input,

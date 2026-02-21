@@ -70,7 +70,7 @@ export default {
       username: '',
       password: '',
       
-      version_number: '1.13.6', //production
+      version_number: '1.13.7', //production
       // version_number: '1.13.4',//test
       disabled: false,
       lat: '',
