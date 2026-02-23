@@ -217,7 +217,7 @@ export default {
       // Concatenate
       var encryptedData = salt.clone().concat(iv).concat(cipherText.ciphertext);  // Concatenate on binary level
       var encryptedDataB64 = encryptedData.toString(CryptoJS.enc.Base64);         // Base64 encode the result
-      // console.log("aes encrypted text:\n", encryptedDataB64.replace(/(.{56})/g,'$1\n')); 
+      
       return encryptedDataB64.replace(/(.{56})/g, '$1\n');
     },
 
@@ -249,18 +249,5 @@ export default {
 
     this.getUsernameFromLocalStorage()
   },
-
-  created() {
-    // this.testAPI()
-    // let v = this.$store.state.token
-    // console.log(v)
-
-    // this.$store.commit('setToken', '294039480398029842i42ik3lnsdkhgosih')
-
-    // let vv = this.$store.getters.myGetter;
-    // console.log(vv)
-
-
-  }
 }
 </script>
