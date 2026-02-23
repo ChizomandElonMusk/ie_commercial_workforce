@@ -1179,7 +1179,7 @@ export default {
                             meterNo: this.meter_number,
                             accountType: this.account_type,
                             accountName: this.account_name,
-                            requestId2: this.request_id2,
+                            requestId: this.request_id2,
                             tariff: this.tarrif,
                             address: this.address,
                             bu: this.business_unit,

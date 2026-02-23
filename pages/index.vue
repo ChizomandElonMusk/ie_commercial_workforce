@@ -105,64 +105,6 @@ export default {
     },
 
 
-    // async callLoginApi () {
-    //   try {
-
-
-
-    //     const rawResponse = await fetch('http://192.168.6.183:8087/cwfrestapi/api/v1/auth/login', {
-    //       method: 'POST',
-    //       headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //       },
-    //       body: JSON.stringify({
-    //         usernameOrEmail: this.username, 
-    //         password: this.password,
-    //       })
-    //     });
-
-    //     console.log('content is being converted to json')
-    //     const content = await rawResponse.json();
-
-    //     console.log(content)
-
-
-    //     let responseCode = content.code
-    //     let message = content.message
-
-    //     console.log('if statement is being ran to check response')
-    //     console.log('response code ', responseCode)
-    //     console.log('response token ', content.token)
-    //     if(responseCode == "09" || responseCode == null || responseCode == undefined) {
-
-    //       M.toast({html: `<b class="red-text">${message}</b>`})
-    //       this.hidePreLoader = true
-
-    //     } else if(responseCode === '00') {
-
-    //         M.toast({html: `<b class="green-text">Welcome</b>`})
-    //         let token = content.token
-
-    //         if (process.client) {
-    //           localStorage.setItem('token', token)
-    //           // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
-    //         }
-
-    //         this.hidePreLoader = true
-    //         window.location = './dashboard'
-    //         // this.$router.push('./dashboard')
-    //     }
-
-    //   } catch (error) {
-    //     console.log(`Your error says -> ${error}`)
-    //     console.log(error)
-    //     M.toast({html: `<b class="red-text">${error}</b>`})
-    //     this.hidePreLoader = true
-    //   }
-
-
-    // },
 
     async convertEmail(uname, password) {
 
@@ -174,9 +116,7 @@ export default {
       let encrytedUsername = username
       let encrytedPassword = this.encryptWithAes256(pWord, encrptionKey)
 
-      // console.log(`username -> ${encrytedUsername}   password -> ${encrytedPassword}`)
-
-      // console.log('trying api now........')
+     
 
       try {
 
@@ -199,19 +139,7 @@ export default {
           })
 
         });
-        // body: JSON.stringify({
-        //     usernameOrEmail: encrytedUsername, 
-        //     password: encrytedPassword,
-        //     latitude: '6.595176845',
-        //     longitude: '3.358090054'
-        //   })
-
-        // body: JSON.stringify({
-        //     usernameOrEmail: encrytedUsername, 
-        //     password: encrytedPassword,
-        //     latitude: this.lat,
-        //     longitude: this.long
-        //   })
+        
         console.log('content is being converted to json')
         const content = await rawResponse.json();
 
@@ -242,7 +170,7 @@ export default {
             localStorage.setItem('forms', forms)
             localStorage.setItem('userId', userId)
             localStorage.setItem('username', username)
-            // localStorage.setItem('fullname', `${content.payload.first_name} ${content.payload.last_name}`)
+            
           }
 
           this.hidePreLoader = true
